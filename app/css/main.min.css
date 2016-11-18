@@ -675,7 +675,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .what_else_do .what_else_do_items .what_else_do_item{display:inline-block;margin-right:20px}
 .what_else_do .what_else_do_items .what_else_do_item p{width:190px;margin-top:3px;color:#fff;font:16px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.2}
 .what_else_do .what_else_do_line{position:absolute;top:200px;left:14px;z-index:1}
-.what_else_do .what_else_do_cloud{position:absolute;bottom:-470px;left:303px;z-index:0}
+.what_else_do .what_else_do_cloud{position:absolute;bottom:-434px;left:303px;z-index:0}
 .our_portfolio{min-height:990px;background-color:#031420}
 .footer{background-color:#333;height:200px;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto}
 @media only screen and (max-width:1200px){body{width:1200px}

@@ -87,7 +87,7 @@ $(document).ready(function() {
     tl3.from("#g6391", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.1);
     tl3.from("#g6814", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.3);
     tl3.from("#g4995", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.5);
-    tl3.from($(this).find("p"), 0.7, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1);
+    tl3.from($(this).find(".what_else_do_item_p"), 0.7, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1);
     tl3.from("#g42911111", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.7);
     
      

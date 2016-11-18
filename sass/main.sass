@@ -1,0 +1,90 @@
+@import "bourbon"
+@import "vars.sass"
+@import "sprite/sprite.sass"
+
+// loads Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/owl.carousel/assets/owl.carousel.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//	Секция what_else_do
+.what_else_do
+	min-height: 768px
+	background-color: #0b2848
+	text-align: center
+	.container
+		position: relative
+	h2
+		text-transform: uppercase
+		margin-bottom: -3px
+		@include font($main_color, 36px, $font_Amazing_Grotesk_Demi_Bold)
+	p
+		margin: auto
+		width: 264px
+		@include font(#fff, 18px, $font_Amazing_Grotesk_Demi_Bold, 1.2)
+	.what_else_do_items
+		margin-top: 70px
+		position: relative
+		z-index: 2
+		.what_else_do_item
+			display: inline-block
+			margin-right: 20px
+			p
+				width: 190px
+				margin-top: 3px
+				@include font(#fff, 16px, $font_Amazing_Grotesk_Demi_Bold, 1.2)
+	.what_else_do_line
+		position: absolute
+		top: 200px
+		left: 14px
+		z-index: 1
+	.what_else_do_cloud
+		position: absolute
+		bottom: -470px
+		left: 303px
+		z-index: 0
+//	Секция our_portfolio
+.our_portfolio
+	min-height: 990px
+	background-color: #031420	
+//	Секция 
+
+//	Секция
+//	Секция 
+//	Секция 
+//	Секция
+//	Секция
+
+
+// Секия footer 
+.footer
+	background-color: #333
+	height: 200px
+	flex: 0 0 auto	
+
+
+//ALWAYS END
+@import "media"
+

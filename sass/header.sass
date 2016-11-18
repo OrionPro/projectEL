@@ -1,0 +1,311 @@
+@import "bourbon"
+@import "vars.sass"
+@import "fonts.sass"
+@import "sprite/sprite.sass"
+// @import "app/libs/jquery/jquery-ui.min"  //Если мы хотим подключить стили для  jquery-ui (например для рабочих tooltips)
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: $font_Amazing_Grotesk_Demi_Bold
+	overflow-x: auto
+	color: $main_txt_color
+	//background: url('../EliteStudio Главная.jpg') center top no-repeat
+h1
+	color: $main_color
+	font: 48px $font_Amazing_Grotesk_Demi_Bold
+	letter-spacing: 0.2px
+p
+	padding: 0
+	margin: 0
+	
+html .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+.hidden
+	display: none
+// Модальное окно
+.popup3
+	position: fixed
+	top: 0
+	left: 0
+	display: none
+	overflow: auto
+	width: 100%
+	height: 100%	
+	z-index: 1000
+.popup2
+	position: fixed
+	top: 0
+	left: 0
+	display: none
+	overflow: auto
+	width: 100%
+	height: 100%	
+	z-index: 1000
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	display: none
+	overflow: auto	
+	width: 100%
+	height: 100%	
+	z-index: 1000
+.dm-table
+	display: table
+	width: 100%
+	height: 100%
+.overlay
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	background: rgba(0, 0, 0, 0.65)
+	z-index: 1001
+.dm-cell
+	display: table-cell
+	padding: 0 1em
+	vertical-align: middle
+	text-align: center
+
+.dm-modal
+	display: inline-block
+	padding: 50px 46px 50px 46px
+	max-width: 50em
+	width: 470px		
+	border: 3px solid $main_color	
+	text-align: center
+	position: relative	
+	animation: fade .8s
+	background-color: #fff
+	border-radius: 20px
+	z-index: 1002
+	.modal_form_input_wrap
+		position: relative
+		display: block
+		.modal_input_error
+			width: 141px
+			height: 35px
+			display: none
+			position: absolute
+			right: -25px
+			top: 40px
+			padding-left: 10px
+			font: 15px/35px $font_Amazing_Grotesk_Regular
+			background-color: #F4F4F4
+			border: 1px solid #C8C8C8
+			-webkit-border-radius: 5px
+			border-radius: 5px
+			-webkit-box-shadow: 0 0 10px rgba(0,0,0,.3)
+			box-shadow: 0 0 10px rgba(0,0,0,.3)
+			z-index: 100
+			&.input_error_email
+				width: 215px
+			&.input_error_phone
+				width: 235px
+			&.form_error
+				display: block
+		.modal_error_chest_img
+			width: 9px
+			position: relative
+			background-image: url('../img/modal_error_chest_img.png')
+		.modal_error_triangle
+			width: 9px
+			position: relative
+			background-image: url('../img/modal_error_triangle.png')
+		.modal_error_chest_img
+			top: -33px
+			left: 0				
+			height: 9px
+		.modal_error_triangle
+			top: -43px
+			left: 10px				
+			height: 8px			
+		
+
+	label
+		margin-bottom: 7px
+		margin-left: 5px
+		text-align: left
+		display: block
+		font: 14px $font_Amazing_Grotesk_Regular
+		color: $main_txt_color
+		&.active
+			color: $main_color
+	input
+		width: 100%
+		height: 40px
+		margin-bottom: 10px
+		padding-left: 20px
+		border: none		
+		background-color: #F4F4F4		
+		border-radius: 5px		
+		box-shadow: 0 1px 0 rgba(0,0,2,.28)		
+		transition: 1s
+		&:focus		
+			outline: 0
+			box-shadow: 0 1px 0 rgba(255,81,46,.88)
+	
+	.sucess_mail
+		display: none
+		color: $main_color
+		font: 24px $font_Amazing_Grotesk_Regular
+		&.active
+			display: block
+	input[type=submit]
+		margin-bottom: 0
+		margin-top: 20px
+		padding-left: 0
+		padding-right: 0
+		@extend %main_btn
+		&:hover
+			@extend %main_btn_hover		
+		&:active		
+			@extend %main_btn_active				
+		&:focus
+			@extend %main_btn_focus
+			outline: 0
+
+.close
+	position: absolute
+	right: 25px
+	top: 25px
+	width: 35px
+	height: 36px
+	display: block
+	background: url('../img/modal_close.png') 0 0 no-repeat
+// конец модального
+.main_content_item_img
+
+// Header 
+.header
+	width: 100%
+	min-height: 90px
+	background-color: #001027
+	position: fixed	
+	z-index: 100	
+.header_logo
+	display: inline-block
+	float: left
+	margin-top: 15px
+	margin-left: 13px 
+	a
+		
+		&:hover
+			color: $main_color
+			text-decoration: none
+.header_nav		
+	display: inline-block
+	position: relative	
+	ul
+		padding: 0
+		margin: 0 0 0 60px
+		li		
+			list-style: none
+			display: inline-block
+			margin-right: 24px
+			a
+				color: $main_txt_color
+				font: 15px $font_Amazing_Grotesk_Ultra
+				line-height: 90px
+				text-transform: uppercase
+				transition: 0.5s
+				&:hover
+					color: $main_color
+					text-decoration: none
+.header_modal
+	display: inline-block
+	a
+		text-transform: uppercase
+
+		padding: 10px 8px
+		color: $auxiliary_txt_color
+		background-color:  #ffb819
+		transition: 0.5s
+		text-decoration: none
+		&:hover
+			background-color: #c45237
+
+.header_phone
+	display: inline-block
+	vertical-align: middle
+	margin-left: 20px
+	.header_phone_country
+		a
+			font: 15px $font_Amazing_Grotesk_Demi_Bold
+			margin-right: 5px
+			margin-left: 5px
+
+	a
+		text-transform: uppercase
+		color: #fff
+		transition: 0.5s
+		font: 15px $font_Amazing_Grotesk_Ultra	
+		text-decoration: none
+		&:hover
+			color: $main_color
+.main_content
+	height: 1275px
+	text-align: center
+	overflow: hidden
+	background: url('../img/main_clouds.png') center top 242px no-repeat, #03142e url('../img/main_rays.png') center bottom -50px no-repeat
+	h1
+		margin-top: 160px
+		margin-bottom: -5px
+	p
+		font: 24px $font_Amazing_Grotesk_Demi_Bold
+.main_content_item_wrap
+	margin: 108px auto
+	text-align: center
+	display: inline-block
+.main_content_item
+	float: left
+	margin-right: 119px
+	position: relative
+	.main_content_item_img_arrow
+		position: absolute
+		&.arrow1
+			top: -102px
+			right: -554px
+	&:last-of-type
+		margin-right: 0
+.main_content_item_txt
+	width: 180px
+	position: absolute
+	top: 94px
+	left: 28px
+	text-align: center
+	span
+		display: block
+		@include font(#fff, 30px, $font_Traktir)
+#top_city
+	position: relative
+	bottom: 152px
+// Секция 
+// Секция 
+// Секция 

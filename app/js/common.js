@@ -23,16 +23,21 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 650 && $(window).scrollTop() <= 800) {
         tl3.play();
     }
+    if ($(window).scrollTop() >= 1400 && $(window).scrollTop() <= 1600) {
+        tl4.play();
+    }
 });
 var tl = new TimelineMax({ useFrames: false });
 var tl2 = new TimelineMax();
 var tl3 = new TimelineMax();
+var tl4 = new TimelineMax();
 $(document).ready(function() {
     // Основные анимации
 
     tl.pause();
     tl2.pause();
     tl3.pause();
+    tl4.pause();
     // цели
     TweenMax.from("#g4378", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
     TweenMax.from("#g4950", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
@@ -87,8 +92,15 @@ $(document).ready(function() {
     tl3.from("#g6391", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.1);
     tl3.from("#g6814", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.3);
     tl3.from("#g4995", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.5);
-    tl3.from($(this).find(".what_else_do_item_p"), 0.7, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1);
+    tl3.from((".what_else_do_item_p"), 0.7, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1);
     tl3.from("#g42911111", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.7);
+
+    // Наше порфтолио
+    tl4.from("#g4388", 0.8, { opacity: 0, x: 100, ease: Power2.easeInOut, }, 0.3);
+    tl4.from("#g4474", 0.8, { opacity: 0, y: -100, ease: Power2.easeInOut, }, 0.4);
+    tl4.from("#g4420", 0.8, { opacity: 0, y: -100, ease: Power2.easeInOut, }, 0.5);
+    tl4.from("#g4504", 0.8, { opacity: 0, x: -100, ease: Power2.easeInOut, }, 0.6);
+    tl4.from("#rect4286", 0.8, { opacity: 0, x: -100, ease: Power2.easeInOut, }, 0.7);
     
      
 
@@ -110,6 +122,9 @@ $(document).ready(function() {
     }
     if ($(window).scrollTop() >= 750) {
         tl3.play();
+    }
+    if ($(window).scrollTop() >= 1300) {
+        tl4.play();
     }
     // для инициализации tooltips
     // $( document ).tooltip({

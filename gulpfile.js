@@ -63,6 +63,7 @@ gulp.task('scripts', function() {
 		'app/libs/animate/animate-css.js',
 		'app/libs/plugins-scroll/plugins-scroll.js',
 		'app/libs/owl.carousel/owl.carousel.min.js',
+		'app/libs/owl.carousel/jquery.mousewheel.min.js',
 		'app/libs/matchMedia/matchMedia.js',
 		'app/libs/matchMedia/matchMedia.addListener.js'
 		])

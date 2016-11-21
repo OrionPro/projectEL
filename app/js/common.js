@@ -72,28 +72,28 @@ $(document).ready(function() {
     // what_else_do
     $(".what_else_do_item").hover(
         function() {
-            TweenMax.to($(this).find(".path4213-item"), 0.7, { fill: "#d45b3e"});
-            TweenMax.to($(this).find(".path4278"), 0.7, { fill: "#c45237"});
-            TweenMax.to($(this).find(".path4393"), 0.7, { fill: "#a2361f"});
-            TweenMax.to($(this).find("p"), 0.7, { color: "#a2361f"});
+            TweenMax.to($(this).find(".path4213-item"), 0.7, { fill: "#d45b3e" });
+            TweenMax.to($(this).find(".path4278"), 0.7, { fill: "#c45237" });
+            TweenMax.to($(this).find(".path4393"), 0.7, { fill: "#a2361f" });
+            TweenMax.to($(this).find("p"), 0.7, { color: "#a2361f" });
         },
         function() {
-            TweenMax.to($(this).find(".path4213-item"), 0.7, { fill: "#177898"});           
-            TweenMax.to($(this).find(".path4278"), 0.7, { fill: "#0f7289"});          
-            TweenMax.to($(this).find(".path4393"), 0.7, { fill: "#0f4e5d"});
-            TweenMax.to($(this).find("p"), 0.7, { color: "#fff"});         
+            TweenMax.to($(this).find(".path4213-item"), 0.7, { fill: "#177898" });
+            TweenMax.to($(this).find(".path4278"), 0.7, { fill: "#0f7289" });
+            TweenMax.to($(this).find(".path4393"), 0.7, { fill: "#0f4e5d" });
+            TweenMax.to($(this).find("p"), 0.7, { color: "#fff" });
         }
     );
     // what_else_do_line
-    tl3.from("#path4159", 0.5, { drawSVG: "0%"}, 0.4);
-    tl3.from("#path4157", 5.5, { drawSVG: "0%"}, 0.4);
-    tl3.from("#path4164", 2, { fill: "#031420", drawSVG: "0%"}, 5);
-    tl3.from("#g4409", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 0.9);
-    tl3.from("#g6391", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.1);
-    tl3.from("#g6814", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.3);
-    tl3.from("#g4995", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.5);
-    tl3.from((".what_else_do_item_p"), 0.7, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1);
-    tl3.from("#g42911111", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.7);
+    tl3.from("#path4159", 0.5, { drawSVG: "0%" }, 0.4);
+    tl3.from("#path4157", 5.5, { drawSVG: "0%" }, 0.4);
+    tl3.from("#path4164", 2, { fill: "#031420", drawSVG: "0%" }, 5);
+    tl3.from("#g4409", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0 }, 0.9);
+    tl3.from("#g6391", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0 }, 1.1);
+    tl3.from("#g6814", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0 }, 1.3);
+    tl3.from("#g4995", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0 }, 1.5);
+    tl3.from((".what_else_do_item_p"), 0.7, { opacity: 0, transformOrigin: "50% 50%", scale: 0 }, 1);
+    tl3.from("#g42911111", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0 }, 1.7);
 
     // Наше порфтолио
     tl4.from("#g4388", 0.8, { opacity: 0, x: 100, ease: Power2.easeInOut, }, 0.3);
@@ -101,12 +101,12 @@ $(document).ready(function() {
     tl4.from("#g4420", 0.8, { opacity: 0, y: -100, ease: Power2.easeInOut, }, 0.5);
     tl4.from("#g4504", 0.8, { opacity: 0, x: -100, ease: Power2.easeInOut, }, 0.6);
     tl4.from("#rect4286", 0.8, { opacity: 0, x: -100, ease: Power2.easeInOut, }, 0.7);
-    
-     
+
+
 
 
     if ($(window).scrollTop() > 10) {
-        tl.play();        
+        tl.play();
         if (window.matchMedia("(max-width: 992px)").matches) {
 
         }
@@ -148,13 +148,64 @@ $(document).ready(function() {
     //     }, 500);
     //     return false;
     // });
+    // запретить дефолтное событие на ссылку .slider_link
+    $(".slider_link").on("click", function(e) {
+        e.preventDefault();
+    });
     //  Активация слайдера
-    // $(".owl-carousel").owlCarousel({
-    //     loop: true,
-    //     items: 1,
-    //     dots: true
-    // });
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        items: 5,
+        dots: false,
+        responsiveClass: false,
+        responsive: {
+            // breakpoint from 0 up
+            0: {
+                items: 4
+            },
+            // breakpoint from 320 up
+            320: {
+                items: 4
 
+            },
+            // breakpoint from 768 up
+            768: {
+                items: 4
+            },
+            // breakpoint from 992 up
+            992: {
+                items: 4
+            },
+            // breakpoint from up
+            1100: {
+                items: 4
+            },
+            // breakpoint from up
+            1210: {
+                items: 5
+            }
+        }
+    });
+    // Кастомные кнопки управления слайдером
+    var owl = $('.owl-carousel');
+    owl.owlCarousel();
+    $('.customNextBtn').click(function() {
+        owl.trigger('next.owl.carousel', [400]);
+    });
+    // Go to the previous item
+    $('.customPrevBtn').click(function() {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        owl.trigger('prev.owl.carousel', [400]);
+    });
+    owl.on('mousewheel', '.owl-stage', function(e) {
+        if (e.deltaY > 0) {
+            owl.trigger('next.owl');
+        } else {
+            owl.trigger('prev.owl');
+        }
+        e.preventDefault();
+    });
     // Select в модальном окне
     $(document).click(function() {
         $('.slct').removeClass('active');

@@ -5,6 +5,7 @@
 // loads Libs SASS
 @import "app/libs/animate/animate.sass"
 @import "app/libs/owl.carousel/assets/owl.carousel.sass"
+@import "../app/libs/FontAwesome/font-awesome.min"
 
 *::-webkit-input-placeholder
 	color: #666
@@ -59,12 +60,12 @@ body textarea:required:valid
 		position: absolute
 		top: 200px
 		left: 14px
-		z-index: 1
+		z-index: 2
 	.what_else_do_cloud
 		position: absolute
 		bottom: -434px
 		left: 303px
-		z-index: 0
+		z-index: 1
 //	Секция our_portfolio
 .our_portfolio
 	min-height: 990px
@@ -76,7 +77,78 @@ body textarea:required:valid
 		text-transform: uppercase
 		margin-bottom: -3px
 		@include font($main_color, 36px, $font_Amazing_Grotesk_Demi_Bold)
-//	Секция 
+	p
+		font-size: 18px
+
+	.customPrevBtn
+		display: block
+		margin-top: 50px
+		@include sprite($slider_arrow_left)		
+		cursor: pointer
+		z-index: 100
+		display: inline-block
+		margin-right: 10px
+	.customNextBtn
+		display: block
+		@include sprite($slider_arrow_right)		
+		cursor: pointer
+		z-index: 100
+		display: inline-block
+		margin-left: 10px
+//	 slider
+.slider
+	margin-top: 38px
+	position: relative
+	.slider_item
+		position: relative
+		&:hover .slider_mask 
+			opacity: 1
+		
+	.slider_mask
+		width: 100%
+		height: 100%
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		transition: .5s
+		background-color: rgba(25,25,25, 0.69)
+		i
+			position: absolute
+			top: calc(50% - 35px)
+			left: 0
+			right: 0
+			font-size: 24px
+		a
+			width: 161px
+			height: 39px
+			display: inline-block
+			position: absolute
+			top: calc(50% - 5px)
+			left: calc(50% - 80.5px)
+			right: 0
+			border: 1px solid #FFF
+			background: transparent
+			transition: 0.5s
+			z-index: 2
+			text-decoration: none
+			@include font(#fff, 18px, $font_RobotoRegular, 35px)
+			&:hover
+				text-decoration: none
+				background: #fff
+				color: #000
+			&:focus
+				outline: 0
+		.fa
+			display: block
+	a.slider_link
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
 
 //	Секция
 //	Секция 
@@ -89,7 +161,7 @@ body textarea:required:valid
 .footer
 	background-color: #333
 	height: 200px
-	flex: 0 0 auto	
+
 
 
 //ALWAYS END

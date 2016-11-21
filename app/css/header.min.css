@@ -50,7 +50,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .header_phone a{text-transform:uppercase;color:#fff;-webkit-transition:.5s;transition:.5s;font:15px Amazing_Grotesk_Ultra,Arial,sans-serif;text-decoration:none}
 .header_phone a:hover{color:#eed350}
 .main_content{height:1275px;text-align:center;overflow:hidden;background:url(../img/main_clouds.png) center top 242px no-repeat,url(../img/main_rays.png) center bottom -50px no-repeat #03142e}
-.main_content h1{margin-top:160px;margin-bottom:-5px}
+.main_content h1{margin-top:128px;margin-bottom:-5px}
 .main_content p{font:24px Amazing_Grotesk_Demi_Bold,Arial,sans-serif}
 .main_content_item_wrap{margin:108px auto;text-align:center;display:inline-block}
 .main_content_item{float:left;margin-right:119px;position:relative}
@@ -59,4 +59,4 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .main_content_item:last-of-type{margin-right:0}
 .main_content_item_txt{width:180px;position:absolute;top:94px;left:28px;text-align:center}
 .main_content_item_txt span{display:block;color:#fff;font:30px Traktir,Arial,sans-serif;line-height:1.6}
-#top_city{position:relative;bottom:152px}
+#top_city{position:relative;bottom:136px}

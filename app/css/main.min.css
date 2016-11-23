@@ -1,5 +1,4 @@
 .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}
-.fa-fw,.fa-li,.fa-stack-1x,.fa-stack-2x,.our_portfolio,.what_else_do{text-align:center}
 .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
 .animated.hinge{-webkit-animation-duration:2s;animation-duration:2s}
@@ -675,11 +674,11 @@
 .fa-3x{font-size:3em}
 .fa-4x{font-size:4em}
 .fa-5x{font-size:5em}
-.fa-fw{width:1.28571429em}
+.fa-fw{width:1.28571429em;text-align:center}
 .fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}
 .fa.fa-pull-right,.fa.pull-right{margin-left:.3em}
 .fa-ul>li{position:relative}
-.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em}
+.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em;text-align:center}
 .fa-li.fa-lg{left:-1.85714286em}
 .fa-border{padding:.2em .25em .15em;border:.08em solid #eee;-webkit-border-radius:.1em;border-radius:.1em}
 .fa-pull-left{float:left}
@@ -702,7 +701,7 @@
 .fa-flip-vertical{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";-webkit-transform:scale(1,-1);-ms-transform:scale(1,-1);transform:scale(1,-1)}
 :root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}
 .fa-stack{position:relative;width:2em;height:2em;line-height:2em;vertical-align:middle}
-.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%}
+.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}
 .fa-stack-1x{line-height:inherit}
 .fa-stack-2x{font-size:2em}
 .fa-inverse{color:#fff}
@@ -1347,20 +1346,21 @@
 ::-moz-placeholder{color:#666;opacity:1}
 :-ms-input-placeholder{color:#666;opacity:1}
 body input:focus:required:invalid,body input:required:valid,body textarea:focus:required:invalid,body textarea:required:valid{color:#666}
-.what_else_do{min-height:768px;background-color:#0b2848}
+.what_else_do{min-height:768px;background-color:#0b2848;text-align:center}
 .what_else_do .container{position:relative}
 .what_else_do h2{text-transform:uppercase;margin-bottom:-3px;color:#eed350;font:36px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
 .what_else_do p{margin:auto;width:264px;color:#fff;font:18px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.2}
+.our_achievements h2,.our_portfolio h2{text-transform:uppercase;margin-bottom:-3px}
 .what_else_do .what_else_do_items{margin-top:70px;position:relative;z-index:2}
 .what_else_do .what_else_do_items .what_else_do_item{display:inline-block;margin-right:20px}
 .what_else_do .what_else_do_items .what_else_do_item p{width:190px;margin-top:3px;color:#fff;font:16px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.2}
 .what_else_do .what_else_do_line{position:absolute;top:200px;left:14px;z-index:2}
 .what_else_do .what_else_do_cloud{position:absolute;bottom:-434px;left:303px;z-index:1}
 .slider,.slider .slider_item{position:relative}
-.our_portfolio{min-height:990px;background:url(../img/our_portfolio_clouds.png) center top 100px no-repeat #031420}
+.our_portfolio{min-height:990px;background:url(../img/our_portfolio_clouds.png) center top 100px no-repeat #031420;text-align:center}
 .our_portfolio .customNextBtn,.our_portfolio .customPrevBtn{background-image:url(../img/sprite.png);width:57px;height:7px;cursor:pointer;z-index:100;display:inline-block}
 .our_portfolio .our_portfolio_img{margin-top:295px}
-.our_portfolio h2{text-transform:uppercase;margin-bottom:-3px;color:#eed350;font:36px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
+.our_portfolio h2{color:#eed350;font:36px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
 .our_portfolio p{font-size:18px}
 .our_portfolio .customPrevBtn{margin-top:50px;background-position:0 0;margin-right:10px}
 .our_portfolio .customNextBtn{background-position:0 -7px;margin-left:10px}
@@ -1375,6 +1375,13 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .slider a.slider_link{width:100%;height:100%;position:absolute;top:0;left:0;right:0}
 .our_achievements{min-height:760px;background:url(../img/our_achievements_clouds.png) center top 100px no-repeat #0b2848;position:relative}
 .our_achievements .our_achievements_top_decoration{position:absolute;top:-32px;left:27px;right:0;text-align:center}
+.our_achievements .our_achievements_txt{margin-top:384px;text-align:center}
+.our_achievements h2{color:#eed350;font:36px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
+.our_achievements .our_achievements_items{margin-top:50px;text-align:center}
+.our_achievements .our_achievements_item{display:inline-block;vertical-align:top;margin-right:20px;text-align:center}
+.our_achievements .our_achievements_item:last-of-type{margin-right:0}
+.our_achievements .our_achievements_item p{width:175px;margin-top:-1px;font-size:18px;line-height:1.2}
+.our_achievements .our_achievements_item p span{color:#eed350;font:30px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:.5}
 .footer{background-color:#333;height:200px}
 @media only screen and (max-width:1200px){body{width:1200px}
 }

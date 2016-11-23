@@ -30,19 +30,23 @@ $(window).scroll(function() {
         tl5.play();
     }
 });
-var tl = new TimelineMax({ useFrames: false });
-var tl2 = new TimelineMax();
-var tl3 = new TimelineMax();
-var tl4 = new TimelineMax();
-var tl5 = new TimelineMax();
+var tl = new TimelineMax({ useFrames: false }); // скалы и дома вверху
+var tl2 = new TimelineMax(); //  ковбой
+var tl3 = new TimelineMax(); // what_else_do_line
+var tl4 = new TimelineMax(); // Наше порфтолио
+var tl5 = new TimelineMax(); // our_achievements
+var tl6 = new TimelineMax({ repeat: -1 }); //анимация стрелок
+var tl7 = new TimelineMax();  // our_achievements_item 
 $(document).ready(function() {
     // Основные анимации
 
-    tl.pause();
-    tl2.pause();
-    tl3.pause();
-    tl4.pause();
-    tl5.pause();
+    tl.pause();  // скалы и дома вверху
+    tl2.pause(); //  ковбой
+    tl3.pause(); // what_else_do_line
+    tl4.pause(); // Наше порфтолио
+    tl5.pause(); // our_achievements
+    //tl7.pause(); // our_achievements_item 
+
     // цели
     TweenMax.from("#g4378", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
     TweenMax.from("#g4950", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
@@ -100,7 +104,7 @@ $(document).ready(function() {
     tl3.from((".what_else_do_item_p"), 0.7, { opacity: 0, transformOrigin: "50% 50%", scale: 0 }, 1);
     tl3.from("#g42911111", 0.8, { opacity: 0, transformOrigin: "50% 50%", scale: 0 }, 1.7);
 
-    // Наше порфтолио
+    // Наше портфолио
     tl4.from("#g4388", 0.8, { opacity: 0, x: 100, ease: Power2.easeInOut, }, 0.3);
     tl4.from("#g4474", 0.8, { opacity: 0, y: -100, ease: Power2.easeInOut, }, 0.4);
     tl4.from("#g4420", 0.8, { opacity: 0, y: -100, ease: Power2.easeInOut, }, 0.5);
@@ -109,38 +113,74 @@ $(document).ready(function() {
 
 
     // our_achievements
-    tl5.from("#path4202", 1.5, { drawSVG: "0%"}, 0.7);
-    tl5.from("#g4185235425235", 0.2, { opacity: 0, y: -50}, 1.8);   
-    tl5.from("#path5234234", 0.5, { opacity: 0, y: -50}, 1.4);
-    tl5.from("#path41782342423", 3.5, { drawSVG: "0%"}, 1.9);
-    tl5.from("#path723523253", 1.5, { drawSVG: "0%"}, 4.9);
-    tl5.from("#path_go", 1.5, { drawSVG: "100% 100%", ease: Power2.easeInOut}, 2.1);
-    tl5.from("#text4221", 0.5, {  opacity: 0, x: -50, ease: Power2.easeInOut}, 2.5);
+    tl5.from("#path4202", 1.5, { drawSVG: "0%" }, 0.7);
+    tl5.from("#g4185235425235", 0.2, { opacity: 0, y: -50 }, 1.8);
+    tl5.from("#path5234234", 0.5, { opacity: 0, y: -50 }, 1.4);
+    tl5.from("#path41782342423", 3.5, { drawSVG: "0%" }, 1.9);
+    tl5.from("#path723523253", 1.5, { drawSVG: "0%" }, 4.9);
+    tl5.from("#path_go", 1.5, { drawSVG: "100% 100%", ease: Power2.easeInOut }, 2.1);
+    tl5.from("#text4221", 0.5, { opacity: 0, x: -50, ease: Power2.easeInOut }, 2.5);
 
-    if ($(window).scrollTop() > 10) {
-        tl.play();
-        if (window.matchMedia("(max-width: 992px)").matches) {
+    // Анимация стрелок
+    tl6.to(".customPrevBtn", 0.7, { x: -10, ease: Power2.easeInOut }, 0);
+    tl6.to(".customPrevBtn", 0.7, { x: 0, ease: Power2.easeInOut }, 0.7);
+    tl6.to(".customNextBtn", 0.7, { x: 10, ease: Power2.easeInOut }, 0);
+    tl6.to(".customNextBtn", 0.7, { x: 0, ease: Power2.easeInOut }, 0.7);
+    // our_achievements_item 
+    tl7.from("#path4297_item1", 1.5, { drawSVG: "100% 100%" }, 0);
+    tl7.from("#path4297_item2", 1.5, { drawSVG: "100% 100%" }, 0.5);
+    tl7.from("#path4297_item3", 1.5, { drawSVG: "100% 100%" }, 1);
+    tl7.from("#path4297_item4", 1.5, { drawSVG: "100% 100%" }, 1.5);
+    tl7.from("#g5164_item1", 1.3, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: 50,  ease: Power2.easeInOut}, 0);
+    tl7.from("#g5164_item2", 1.3, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: 50,  ease: Power2.easeInOut}, 0.3);
+    tl7.from("#g5164_item3", 1.3, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: 50,  ease: Power2.easeInOut}, 0.6);
+    tl7.from("#g5164_item4", 1.3, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: 50,  ease: Power2.easeInOut}, 0.9);
 
+    tl7.from("#path4341", 1.3, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0);
+    tl7.from("#g4912", 1.3, { opacity: 0, x: 0, y: 0,  ease: Power2.easeInOut}, 0.5);
+
+    tl7.from("#path56754402", 1, { opacity: 0, ease: Power2.easeInOut}, 1);
+    tl7.from("#path447623423", 1, { opacity: 0, ease: Power2.easeInOut}, 1);
+    tl7.from("#path4562", 1, { opacity: 0, ease: Power2.easeInOut}, 1);
+    tl7.from("#path4669", 1, { opacity: 0, ease: Power2.easeInOut}, 1);
+
+
+
+
+    // для IE вызов по скроллу в ready (загруженном документе)
+    $(window).scroll(function() {
+
+         readyTimeLineGo();   
+
+    });
+    // активация тайм линий при загрузке с измерением скролла
+    function readyTimeLineGo() {
+        if ($(window).scrollTop() > 10) {
+            tl.play();
+            if (window.matchMedia("(max-width: 992px)").matches) {
+
+            }
+        }
+        // if ($(window).scrollTop() <= 300) {
+        //     tl.reverse();
+        // }
+        if ($(window).scrollTop() > 300) {
+            tl2.play();
+        }
+        if ($(window).scrollTop() <= 700) {
+            tl2.reverse();
+        }
+        if ($(window).scrollTop() >= 750) {
+            tl3.play();
+        }
+        if ($(window).scrollTop() >= 1300) {
+            tl4.play();
+        }
+        if ($(window).scrollTop() >= 2300) {
+            tl5.play();
         }
     }
-    // if ($(window).scrollTop() <= 300) {
-    //     tl.reverse();
-    // }
-    if ($(window).scrollTop() > 300) {
-        tl2.play();
-    }
-    if ($(window).scrollTop() <= 700) {
-        tl2.reverse();
-    }
-    if ($(window).scrollTop() >= 750) {
-        tl3.play();
-    }
-    if ($(window).scrollTop() >= 1300) {
-        tl4.play();
-    }
-    if ($(window).scrollTop() >= 2300) {
-        tl5.play();
-    }
+    readyTimeLineGo();
     // для инициализации tooltips
     // $( document ).tooltip({
     //   track: true

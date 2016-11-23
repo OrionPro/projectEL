@@ -26,11 +26,15 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 1400 && $(window).scrollTop() <= 1600) {
         tl4.play();
     }
+    if ($(window).scrollTop() >= 2300 && $(window).scrollTop() <= 2600) {
+        tl5.play();
+    }
 });
 var tl = new TimelineMax({ useFrames: false });
 var tl2 = new TimelineMax();
 var tl3 = new TimelineMax();
 var tl4 = new TimelineMax();
+var tl5 = new TimelineMax();
 $(document).ready(function() {
     // Основные анимации
 
@@ -38,6 +42,7 @@ $(document).ready(function() {
     tl2.pause();
     tl3.pause();
     tl4.pause();
+    tl5.pause();
     // цели
     TweenMax.from("#g4378", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
     TweenMax.from("#g4950", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
@@ -103,7 +108,14 @@ $(document).ready(function() {
     tl4.from("#rect4286", 0.8, { opacity: 0, x: -100, ease: Power2.easeInOut, }, 0.7);
 
 
-
+    // our_achievements
+    tl5.from("#path4202", 1.5, { drawSVG: "0%"}, 0.7);
+    tl5.from("#g4185235425235", 0.2, { opacity: 0, y: -50}, 1.8);   
+    tl5.from("#path5234234", 0.5, { opacity: 0, y: -50}, 1.4);
+    tl5.from("#path41782342423", 3.5, { drawSVG: "0%"}, 1.9);
+    tl5.from("#path723523253", 1.5, { drawSVG: "0%"}, 4.9);
+    tl5.from("#path_go", 1.5, { drawSVG: "100% 100%", ease: Power2.easeInOut}, 2.1);
+    tl5.from("#text4221", 0.5, {  opacity: 0, x: -50, ease: Power2.easeInOut}, 2.5);
 
     if ($(window).scrollTop() > 10) {
         tl.play();
@@ -125,6 +137,9 @@ $(document).ready(function() {
     }
     if ($(window).scrollTop() >= 1300) {
         tl4.play();
+    }
+    if ($(window).scrollTop() >= 2300) {
+        tl5.play();
     }
     // для инициализации tooltips
     // $( document ).tooltip({

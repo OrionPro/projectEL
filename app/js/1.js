@@ -1,16 +1,17 @@
-tl7.from("#g5164_item1", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100, ease: Power2.easeInOut}, 0);
-tl7.from("#g5164_item2", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100, ease: Power2.easeInOut}, 0.3);
-tl7.from("#g5164_item3", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100,  ease: Power2.easeInOut}, 0.6);
-tl7.from("#g5164_item4", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100,  ease: Power2.easeInOut}, 0.9);
-// внутренние иконки
-tl7.from("#path4341", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0);
-tl7.from("#g4912", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.3);
-tl7.from("#text4263-3", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.6);
-tl7.from("#text4263-223", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.9);
-
-tl7.from("#path4402", 1, { opacity: 0, ease: Power2.easeInOut}, 0.8); //
-tl7.from("#path4476", 1, { opacity: 0, ease: Power2.easeInOut}, 1.2);
-tl7.from("#path4562", 1, { opacity: 0, ease: Power2.easeInOut}, 1.7);
-tl7.from("#path4669", 1, { opacity: 0, ease: Power2.easeInOut}, 2);
+ // what_else_do
+    $(".what_else_do_item").hover(
+        function() {
+            TweenMax.to($(this).find(".path4213-item"), 0.7, { fill: "#d45b3e" });
+            TweenMax.to($(this).find(".path4278"), 0.7, { fill: "#c45237" });
+            TweenMax.to($(this).find(".path4393"), 0.7, { fill: "#a2361f" });
+            TweenMax.to($(this).find("p"), 0.7, { color: "#a2361f" });
+        },
+        function() {
+            TweenMax.to($(this).find(".path4213-item"), 0.7, { fill: "#177898" });
+            TweenMax.to($(this).find(".path4278"), 0.7, { fill: "#0f7289" });
+            TweenMax.to($(this).find(".path4393"), 0.7, { fill: "#0f4e5d" });
+            TweenMax.to($(this).find("p"), 0.7, { color: "#fff" });
+        }
+    );
 
 

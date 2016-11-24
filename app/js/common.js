@@ -132,6 +132,7 @@ $(document).ready(function() {
     tl7.from("#path4297_item3", 1.1, { drawSVG: "100% 100%" }, 1);
     tl7.from("#path4297_item4", 1.1, { drawSVG: "100% 100%" }, 1.5);
     // our_achievements_item inner circle
+
     tl7.from("#g5164_item1", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100, ease: Power2.easeInOut}, 0);
     tl7.from("#g5164_item2", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100, ease: Power2.easeInOut}, 0.3);
     tl7.from("#g5164_item3", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100,  ease: Power2.easeInOut}, 0.6);
@@ -146,6 +147,7 @@ $(document).ready(function() {
     tl7.from("#path4476", 1, { opacity: 0, ease: Power2.easeInOut}, 1.2);
     tl7.from("#path4562", 1, { opacity: 0, ease: Power2.easeInOut}, 1.7);
     tl7.from("#path4669", 1, { opacity: 0, ease: Power2.easeInOut}, 2);
+
 
 
 

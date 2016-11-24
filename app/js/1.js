@@ -24,6 +24,8 @@
     tl2.from("#rect4443", 0.5, { opacity: 0, y: 80, ease: Power2.easeInOut }, 0.4);
     tl2.from("#g4479", 0.5, { opacity: 0, y: 80, ease: Power2.easeInOut, }, 0.4);
 
+// aefasfasfsdf
+
 
 
 

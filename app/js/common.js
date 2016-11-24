@@ -32,14 +32,18 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 2900 && $(window).scrollTop() <= 3000) {
         tl7.play();
     }
+    if ($(window).scrollTop() >= 3200 && $(window).scrollTop() <= 3400) {
+        tl8.play();
+    }
 });
-var tl = new TimelineMax({ useFrames: false }); // скалы и дома вверху
+var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
 var tl3 = new TimelineMax(); // what_else_do_line
 var tl4 = new TimelineMax(); // Наше порфтолио
 var tl5 = new TimelineMax(); // our_achievements
 var tl6 = new TimelineMax({ repeat: -1 }); //анимация стрелок
 var tl7 = new TimelineMax();  // our_achievements_item 
+var tl8 = new TimelineMax();  // take_part_img 
 $(document).ready(function() {
     // Основные анимации
 
@@ -49,6 +53,7 @@ $(document).ready(function() {
     tl4.pause(); // Наше порфтолио
     tl5.pause(); // our_achievements
     tl7.pause(); // our_achievements_item 
+    tl8.pause(); // take_part_img 
 
     // цели
     TweenMax.from("#g4378", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
@@ -130,10 +135,10 @@ $(document).ready(function() {
     tl6.to(".customNextBtn", 0.7, { x: 10, ease: Power2.easeInOut }, 0);
     tl6.to(".customNextBtn", 0.7, { x: 0, ease: Power2.easeInOut }, 0.7);
     // our_achievements_item 
-    tl7.from("#path4297_item1", 1.1, { drawSVG: "100% 100%" }, 0);
-    tl7.from("#path4297_item2", 1.1, { drawSVG: "100% 100%" }, 0.5);
-    tl7.from("#path4297_item3", 1.1, { drawSVG: "100% 100%" }, 1);
-    tl7.from("#path4297_item4", 1.1, { drawSVG: "100% 100%" }, 1.5);
+    tl7.from("#path4297_item1", 1, { drawSVG: "100% 100%" }, 0);
+    tl7.from("#path4297_item2", 1, { drawSVG: "100% 100%" }, 0.4);
+    tl7.from("#path4297_item3", 1, { drawSVG: "100% 100%" }, 0.8);
+    tl7.from("#path4297_item4", 1, { drawSVG: "100% 100%" }, 1.1);
     // our_achievements_item inner circle
 
     tl7.from("#g5164_item1", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100, ease: Power2.easeInOut}, 0);
@@ -145,20 +150,49 @@ $(document).ready(function() {
     tl7.from("#g4912", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.3);
     tl7.from("#text4263-3", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.6);
     tl7.from("#text4263-223", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.9);
-
+    // тени
     tl7.from("#path4402", 1, { opacity: 0, ease: Power2.easeInOut}, 0.8); //
     tl7.from("#path4476", 1, { opacity: 0, ease: Power2.easeInOut}, 1.2);
     tl7.from("#path4562", 1, { opacity: 0, ease: Power2.easeInOut}, 1.7);
     tl7.from("#path4669", 1, { opacity: 0, ease: Power2.easeInOut}, 2);
 
+    // анимация в take_part
+    // circle
+    tl8.from("#path4138", 2, { drawSVG: "100% 100%" }, "+=0.4");
+    // нижняя линия
+    tl8.from("#path5539", 2, { drawSVG: "0%" }, 2);
+    // линии круглые
+    tl8.from("#circle4603", 1, { drawSVG: "100% 100%" }, 0.4);
+    tl8.from("#circle5186", 1, { drawSVG: "100% 100%" }, 0.7);
+    tl8.from("#circle6608", 1, { drawSVG: "100% 100%" }, 1);
+    tl8.from("#circle6496", 1, { drawSVG: "100% 100%" }, 1.3);
+    tl8.from("#circle5871", 1, { drawSVG: "100% 100%" }, 1.6);
+    //
+    tl8.from("#g4620", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 0.4);
+    tl8.from("#g5330", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 0.7);
+    tl8.from("#g5318", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 1);
+    tl8.from("#g5377", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 1.3);
+    tl8.from("#g5873", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 1.6);
 
 
-
+    tl8.from("#g6610", 1, { opacity: 0, x: 50, y: -50,  ease: Power2.easeInOut}, 0.9);
+    // инонки внутренние
+    tl8.from("#g4423", 1, { opacity: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 0.5);
+    tl8.from("#g4353", 1, { opacity: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 0.8);
+    tl8.from("#g5326", 1, { opacity: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 1.1);
+    tl8.from("#g4403000", 1, { opacity: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 1.4);
+    tl8.from("#g4432", 1, { opacity: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 1.7);
+    //  тени иконок
+    tl8.from("#path5488", 1, { opacity: 0, x: -20, ease: Power2.easeInOut}, 0.8); //
+    tl8.from("#path5421", 1, { opacity: 0, x: -20, ease: Power2.easeInOut}, 1.2);
+    tl8.from("#path5295", 1, { opacity: 0, x: -20, ease: Power2.easeInOut}, 1.7);
+    tl8.from("#path5371", 1, { opacity: 0, x: -20, ease: Power2.easeInOut}, 2);
+    tl8.from("#path5443", 1, { opacity: 0, x: -20, ease: Power2.easeInOut}, 2);
 
     // для IE вызов по скроллу в ready (загруженном документе)
     $(window).scroll(function() {
 
-         readyTimeLineGo();   
+         readyTimeLineGo();
 
     });
     // активация тайм линий при загрузке с измерением скролла
@@ -189,6 +223,9 @@ $(document).ready(function() {
         }
         if ($(window).scrollTop() >= 2900) {
             tl7.play();
+        }
+        if ($(window).scrollTop() >= 3200) {
+            tl8.play();
         }
     }
     readyTimeLineGo();

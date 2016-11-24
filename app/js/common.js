@@ -143,7 +143,7 @@ $(document).ready(function() {
     tl7.from("#text4263-3", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.6);
     tl7.from("#text4263-223", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.9);
 
-    tl7.from("#path4402", 1, { opacity: 0, ease: Power2.easeInOut}, 0.8);
+    tl7.from("#path4402", 1, { opacity: 0, ease: Power2.easeInOut}, 0.8); //
     tl7.from("#path4476", 1, { opacity: 0, ease: Power2.easeInOut}, 1.2);
     tl7.from("#path4562", 1, { opacity: 0, ease: Power2.easeInOut}, 1.7);
     tl7.from("#path4669", 1, { opacity: 0, ease: Power2.easeInOut}, 2);

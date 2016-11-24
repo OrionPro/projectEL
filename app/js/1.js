@@ -1,64 +1,39 @@
-$(window).scroll(function() {
-
-    readyTimeLineGo();
-
-});
-// активация тайм линий при загрузке с измерением скролла
-function readyTimeLineGo() {
-    if ($(window).scrollTop() > 10) {
-        tl.play();
-        if (window.matchMedia("(max-width: 992px)").matches) {
-            // if ($(window).scrollTop() <= 300) {
-            //     tl.reverse();
-        }
-        if ($(window).scrollTop() > 300) {
-            tl2.play();
-        }
-        if ($(window).scrollTop() <= 700) {
-            tl2.reverse();
-        }
-        if ($(window).scrollTop() >= 750) {
-            tl3.play();
-        }
-        if ($(window).scrollTop() >= 1300) {
-            tl4.play();
-        }
-        if ($(window).scrollTop() >= 2300) {
-            tl5.play();
-        }
-    }
-}
-//  Активация слайдера
-$(".owl-carousel").owlCarousel({
-    loop: true,
-    items: 5,
-    dots: false,
-    responsiveClass: false,
-    responsive: {
-        // breakpoint from 0 up
-        0: {
-            items: 4
-        },
-        // breakpoint from 320 up
-        320: {
-            items: 4
-
-        },
-        // breakpoint from 768 up
-        768: {
-            items: 4
-        },
-        // breakpoint from 992 up
-        992: {
-            items: 4
-        },
-        // breakpoint from up
-        1100: {
-            items: 4
-        },
-        // breakpoint from up
-        1210: {
-            items: 5
-        }
-    }
-});
+ <!-- Здесь пишем код -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="header_logo">
+                    <a href="index.html" title="Logo"><img src="img/header_logo.png" height="57" width="143" alt=""></a>
+                </div>
+                <nav class="header_nav">
+                    <ul>
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li>
+                            <a href="#">Рекомендации</a>
+                        </li>
+                        <li>
+                            <a href="#">Портфолио</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header_modal">
+                    <a data-modal="modal-1" data-info="Заказать звонок." class="modal" href="#">Заказать звонок</a>
+                </div>
+                <div class="header_phone">
+                    <div class="header_phone_country">
+                        <a href="#">Украина</a>
+                        <a href="#">Россия</a>
+                    </div>
+                    <a href="tel:+380671266556">+38 (067) 126-65-56</a>
+                </div>
+            </div>
+        </div>
+    </header>

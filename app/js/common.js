@@ -138,7 +138,7 @@ $(document).ready(function() {
     tl7.from("#g5164_item4", 1.3, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100,  ease: Power2.easeInOut}, 0.9);
 
     tl7.from("#path4341", 1.3, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0);
-    tl7.from("#g4912", 1.3, { opacity: 0, x: 0, y: 0,  ease: Power2.easeInOut}, 0.5);
+    tl7.from("#g4912", 1.3, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.5);
 
     tl7.from("#path56754402", 1, { opacity: 0, ease: Power2.easeInOut}, 1);
     tl7.from("#path447623423", 1, { opacity: 0, ease: Power2.easeInOut}, 1);

@@ -29,7 +29,7 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 2300 && $(window).scrollTop() <= 2600) {
         tl5.play();
     }
-    if ($(window).scrollTop() >= 2600 && $(window).scrollTop() <= 2800) {
+    if ($(window).scrollTop() >= 2900 && $(window).scrollTop() <= 3000) {
         tl7.play();
     }
 });
@@ -187,7 +187,7 @@ $(document).ready(function() {
         if ($(window).scrollTop() >= 2300) {
             tl5.play();
         }
-        if ($(window).scrollTop() >= 2700) {
+        if ($(window).scrollTop() >= 2900) {
             tl7.play();
         }
     }

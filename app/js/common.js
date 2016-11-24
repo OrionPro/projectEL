@@ -29,6 +29,9 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 2300 && $(window).scrollTop() <= 2600) {
         tl5.play();
     }
+    if ($(window).scrollTop() >= 2600 && $(window).scrollTop() <= 2800) {
+        tl7.play();
+    }
 });
 var tl = new TimelineMax({ useFrames: false }); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
@@ -45,7 +48,7 @@ $(document).ready(function() {
     tl3.pause(); // what_else_do_line
     tl4.pause(); // Наше порфтолио
     tl5.pause(); // our_achievements
-    //tl7.pause(); // our_achievements_item 
+    tl7.pause(); // our_achievements_item 
 
     // цели
     TweenMax.from("#g4378", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
@@ -183,6 +186,9 @@ $(document).ready(function() {
         }
         if ($(window).scrollTop() >= 2300) {
             tl5.play();
+        }
+        if ($(window).scrollTop() >= 2700) {
+            tl7.play();
         }
     }
     readyTimeLineGo();

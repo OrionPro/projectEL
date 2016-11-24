@@ -1,5 +1,4 @@
-// для IE вызов по скроллу в ready (загруженном документе)
-    $(window).scroll(function() {
+   $(window).scroll(function() {
 
          readyTimeLineGo();   
 

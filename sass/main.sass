@@ -190,9 +190,9 @@ body textarea:required:valid
 
 //	Секция take_part
 .take_part
-	min-height: 1200px
+	min-height: 1193px
 	text-align: center
-	background: #0b2848 url('../img/take_part_clouds.png') center top -2px no-repeat
+	background: #0b2848 url('../img/take_part_clouds.png') center top -4px no-repeat
 	.container
 		position: relative
 	h2
@@ -202,6 +202,8 @@ body textarea:required:valid
 		@include font($main_color, 36px, $font_Amazing_Grotesk_Demi_Bold, 1.2)
 	.take_part_img
 		margin-top: 39px
+		position: relative
+		z-index: 10
 	.take_part_txt_wrap
 		width: 100%
 		height: 100%
@@ -209,20 +211,59 @@ body textarea:required:valid
 		top: 0
 		z-index: 1
 	.take_part_txt_item
+		width: 180px
+		text-align: center
 		position: absolute
 		display: inline-block
+		p
+			@include font($main_txt_color, 18px, $font_Amazing_Grotesk_Demi_Bold, 1.2)
+			&.take_part_txt_title
+				@include font($main_txt_color, 24px, $font_Amazing_Grotesk_Ultra, 1.2)
 		&.item1
-			top: 375px
-			left: 490px
+			top: 378px
+			left: 493px
 		&.item2
-			top: 617px
-			left: 213px
+			top: 627px
+			left: 206px
 		&.item3
-			top: 617px
-			right: 253px
-		.take_part_txt_title
+			top: 899px
+			left: 300px
+		&.item4
+			top: 899px
+			right: 346px
+		&.item5
+			top: 627px
+			right: 226px
+		
+	.take_part_txt_item_links
+			width: 230px
+			top: 584px
+			right: 485px
+			position: absolute
+			z-index: 11
+			a
+				height: 61px
+				display: inline-block
+				padding: 0 9px
+				background-color: #EED350
+				@include font(#000, 18px, $font_Amazing_Grotesk_Demi_Bold, 61px)
+				transition: 0.5s
+				&:hover
+					text-decoration: none
+					background-color: $auxiliary_color
+				&:focus
+					text-decoration: none
+					background-color: $auxiliary_color
+				&:active
+					text-decoration: none
+					background-color: $auxiliary_color
 
-
+	.take_part_img_bot_decor
+		position: absolute
+		bottom: -90px
+		left: 19px
+		right: 0
+		text-align: center
 //	Секция 
 //	Секция
 //	Секция

@@ -1382,17 +1382,27 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .our_achievements .our_achievements_item:last-of-type{margin-right:0}
 .our_achievements .our_achievements_item p{width:175px;margin-top:-1px;font-size:18px;line-height:1.2}
 .our_achievements .our_achievements_item p span{color:#eed350;font:30px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:.5}
-.take_part{min-height:1200px;text-align:center;background:url(../img/take_part_clouds.png) center top -2px no-repeat #0b2848}
+.take_part{min-height:1193px;text-align:center;background:url(../img/take_part_clouds.png) center top -4px no-repeat #0b2848}
 .take_part .container{position:relative}
 .take_part h2{width:540px;margin:64px auto 0;text-transform:uppercase;color:#eed350;font:36px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.2}
-.take_part .take_part_img{margin-top:39px}
+.take_part .take_part_img{margin-top:39px;position:relative;z-index:10}
 .take_part .take_part_txt_wrap{width:100%;height:100%;position:absolute;top:0;z-index:1}
-.take_part .take_part_txt_item{position:absolute;display:inline-block}
-.take_part .take_part_txt_item.item1{top:375px;left:490px}
-.take_part .take_part_txt_item.item2{top:617px;left:213px}
-.take_part .take_part_txt_item.item3{top:617px;right:253px}
+.take_part .take_part_txt_item{width:180px;text-align:center;position:absolute;display:inline-block}
+.take_part .take_part_txt_item p{color:#fff;font:18px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.2}
+.take_part .take_part_txt_item p.take_part_txt_title{color:#fff;font:24px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.2}
+.take_part .take_part_txt_item.item1{top:378px;left:493px}
+.take_part .take_part_txt_item.item2{top:627px;left:206px}
+.take_part .take_part_txt_item.item3{top:899px;left:300px}
+.take_part .take_part_txt_item.item4{top:899px;right:346px}
+.take_part .take_part_txt_item.item5{top:627px;right:226px}
+.take_part .take_part_txt_item_links{width:230px;top:584px;right:485px;position:absolute;z-index:11}
+.take_part .take_part_txt_item_links a{height:61px;display:inline-block;padding:0 9px;background-color:#EED350;color:#000;font:18px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:61px;-webkit-transition:.5s;transition:.5s}
+.take_part .take_part_txt_item_links a:active,.take_part .take_part_txt_item_links a:focus,.take_part .take_part_txt_item_links a:hover{text-decoration:none;background-color:#d45b3e}
+.take_part .take_part_img_bot_decor{position:absolute;bottom:-90px;left:19px;right:0;text-align:center}
 .footer{background-color:#333;height:200px}
 @media only screen and (max-width:1200px){body{width:1200px}
+.container{padding-left:0;padding-right:0}
+.row{margin-left:0;margin-right:0}
 }
 @media only screen and (max-width:768px){.animated{-webkit-transition-property:none!important;transition-property:none!important;-ms-transform:none!important;-webkit-transform:none!important;transform:none!important;-webkit-animation:none!important;animation:none!important}
 }

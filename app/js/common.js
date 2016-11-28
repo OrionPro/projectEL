@@ -32,7 +32,7 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 2900 && $(window).scrollTop() <= 3000) {
         tl7.play();
     }
-    if ($(window).scrollTop() >= 3200 && $(window).scrollTop() <= 3400) {
+    if ($(window).scrollTop() >= 3300 && $(window).scrollTop() <= 3400) {
         tl8.play();
     }
 });
@@ -188,6 +188,27 @@ $(document).ready(function() {
     tl8.from("#path5295", 1, { opacity: 0, x: -20, ease: Power2.easeInOut}, 1.7);
     tl8.from("#path5371", 1, { opacity: 0, x: -20, ease: Power2.easeInOut}, 2);
     tl8.from("#path5443", 1, { opacity: 0, x: -20, ease: Power2.easeInOut}, 2);
+    // текст
+    tl8.from(".take_part_txt_item.item1", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 0.8);
+    tl8.from(".take_part_txt_item.item2", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 1.1);
+    tl8.from(".take_part_txt_item.item3", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 1.4);
+    tl8.from(".take_part_txt_item.item4", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 1.7);
+    tl8.from(".take_part_txt_item.item5", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 2);
+    tl8.from(".take_part_txt_item_links", 0.8, { autoAlpha: 0, scaleY: 0, skewX:"200deg", skewY:"50deg"}, 2.2);
+    // hover on item
+    $(".g5504").hover(
+        function() {
+            TweenMax.to($(this).find(".path4611"), 0.7, { fill: "#eed350" });
+            TweenMax.to($(this).find(".circle4613"), 0.7, { fill: "#e2c63b" });
+            TweenMax.to($(this).find(".path4393"), 0.7, { fill: "#a2361f" });
+        },
+        function() {
+            TweenMax.to($(this).find(".path4611"), 0.7, { fill: "#d45b3e" });
+            TweenMax.to($(this).find(".circle4613"), 0.7, { fill: "#c45237" });
+            TweenMax.to($(this).find(".path4393"), 0.7, { fill: "#a2361f" });
+        }
+    );
+
 
     // для IE вызов по скроллу в ready (загруженном документе)
     $(window).scroll(function() {
@@ -224,7 +245,7 @@ $(document).ready(function() {
         if ($(window).scrollTop() >= 2900) {
             tl7.play();
         }
-        if ($(window).scrollTop() >= 3200) {
+        if ($(window).scrollTop() >= 3300) {
             tl8.play();
         }
     }

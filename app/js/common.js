@@ -12,28 +12,31 @@ $(window).scroll(function() {
         // tl.reverse();
     }
     if ($(window).scrollTop() >= 200 && $(window).scrollTop() <= 450) {
-        tl.play();
+        tl.resume();
     }
     if ($(window).scrollTop() >= 350 && $(window).scrollTop() <= 550) {
         tl2.reverse();
     }
     if ($(window).scrollTop() >= 550 && $(window).scrollTop() <= 700) {
-        tl2.play();
+        tl2.resume();
     }
     if ($(window).scrollTop() >= 650 && $(window).scrollTop() <= 800) {
-        tl3.play();
+        tl3.resume();
     }
     if ($(window).scrollTop() >= 1400 && $(window).scrollTop() <= 1600) {
-        tl4.play();
+        tl4.resume();
     }
     if ($(window).scrollTop() >= 2300 && $(window).scrollTop() <= 2600) {
-        tl5.play();
+        tl5.resume();
     }
     if ($(window).scrollTop() >= 2900 && $(window).scrollTop() <= 3000) {
-        tl7.play();
+        tl7.resume();
     }
     if ($(window).scrollTop() >= 3300 && $(window).scrollTop() <= 3400) {
-        tl8.play();
+        tl8.resume();
+    }
+     if ($(window).scrollTop() >= 3800 && $(window).scrollTop() <= 3900) {
+        tl9.resume();
     }
 });
 var tl = new TimelineMax(); // скалы и дома вверху
@@ -44,6 +47,7 @@ var tl5 = new TimelineMax(); // our_achievements
 var tl6 = new TimelineMax({ repeat: -1 }); //анимация стрелок
 var tl7 = new TimelineMax();  // our_achievements_item 
 var tl8 = new TimelineMax();  // take_part_img 
+var tl9 = new TimelineMax();  // take_part_img_bot_decor 
 $(document).ready(function() {
     // Основные анимации
 
@@ -54,6 +58,7 @@ $(document).ready(function() {
     tl5.pause(); // our_achievements
     tl7.pause(); // our_achievements_item 
     tl8.pause(); // take_part_img 
+    tl9.pause(); // take_part_img_bot_decor
 
     // цели
     TweenMax.from("#g4378", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
@@ -121,7 +126,7 @@ $(document).ready(function() {
 
 
     // our_achievements
-    tl5.from("#path4202", 1.5, { drawSVG: "0%" }, 0.7);
+    tl5.from("#path4202", 1.5, { drawSVG: "0%" }, 0.2);
     tl5.from("#g4185235425235", 0.2, { opacity: 0, y: -50 }, 1.8);
     tl5.from("#path5234234", 0.5, { opacity: 0, y: -50 }, 1.4);
     tl5.from("#path41782342423", 3.5, { drawSVG: "0%" }, 1.9);
@@ -208,7 +213,12 @@ $(document).ready(function() {
             TweenMax.to($(this).find(".path4393"), 0.7, { fill: "#a2361f" });
         }
     );
+    // take_part_img_bot_decor
+    tl9.from("#take_part_img_bot_decor", 1.5, { drawSVG: "0%"}, 0.5);
+    tl9.from("#take_p", 1.5, { autoAlpha: 0 }, 2);
+    tl9.from("#g5500", 1, { autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut }, 2);
 
+   
 
     // для IE вызов по скроллу в ready (загруженном документе)
     $(window).scroll(function() {
@@ -219,7 +229,7 @@ $(document).ready(function() {
     // активация тайм линий при загрузке с измерением скролла
     function readyTimeLineGo() {
         if ($(window).scrollTop() > 10) {
-            tl.play();
+            tl.resume();
             if (window.matchMedia("(max-width: 992px)").matches) {
 
             }
@@ -234,19 +244,22 @@ $(document).ready(function() {
             tl2.reverse();
         }
         if ($(window).scrollTop() >= 750) {
-            tl3.play();
+            tl3.resume();
         }
         if ($(window).scrollTop() >= 1300) {
-            tl4.play();
+            tl4.resume();
         }
         if ($(window).scrollTop() >= 2300) {
-            tl5.play();
+            tl5.resume();
         }
         if ($(window).scrollTop() >= 2900) {
-            tl7.play();
+            tl7.resume();
         }
         if ($(window).scrollTop() >= 3300) {
-            tl8.play();
+            tl8.resume();
+        }
+        if ($(window).scrollTop() >= 4200) {
+            tl9.resume();
         }
     }
     readyTimeLineGo();
@@ -327,6 +340,60 @@ $(document).ready(function() {
             owl.trigger('next.owl');
         } else {
             owl.trigger('prev.owl');
+        }
+        e.preventDefault();
+    });
+    //  Активация слайдера
+    $(".owl-carousel2").owlCarousel({
+        loop: true,
+        items: 4,
+        dots: false,
+        responsiveClass: false,
+        responsive: {
+            // breakpoint from 0 up
+            0: {
+                items: 4
+            },
+            // breakpoint from 320 up
+            320: {
+                items: 4
+
+            },
+            // breakpoint from 768 up
+            768: {
+                items: 4
+            },
+            // breakpoint from 992 up
+            992: {
+                items: 4
+            },
+            // breakpoint from up
+            1100: {
+                items: 4
+            },
+            // breakpoint from up
+            1210: {
+                items: 4
+            }
+        }
+    });
+    // Кастомные кнопки управления слайдером
+    var owl2 = $('.owl-carousel2');
+    owl2.owlCarousel();
+    $('.customNextBtn.btn2').click(function() {
+        owl2.trigger('next.owl.carousel', [400]);
+    });
+    // Go to the previous item
+    $('.customPrevBtn.btn2').click(function() {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        owl2.trigger('prev.owl.carousel', [400]);
+    });
+     owl2.on('mousewheel', '.owl-stage', function(e) {
+        if (e.deltaY > 0) {
+            owl2.trigger('next.owl');
+        } else {
+            owl2.trigger('prev.owl');
         }
         e.preventDefault();
     });

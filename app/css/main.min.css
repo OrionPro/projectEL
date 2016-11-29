@@ -1397,8 +1397,13 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .take_part .take_part_txt_item.item5{top:627px;right:226px}
 .take_part .take_part_txt_item_links{width:230px;top:584px;right:485px;position:absolute;z-index:11}
 .take_part .take_part_txt_item_links a{height:61px;display:inline-block;padding:0 9px;background-color:#EED350;color:#000;font:18px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:61px;-webkit-transition:.5s;transition:.5s}
+.our_clients .owl-item div,.our_clients .owl-item div img{display:table-cell;vertical-align:middle}
 .take_part .take_part_txt_item_links a:active,.take_part .take_part_txt_item_links a:focus,.take_part .take_part_txt_item_links a:hover{text-decoration:none;background-color:#d45b3e}
 .take_part .take_part_img_bot_decor{position:absolute;bottom:-90px;left:19px;right:0;text-align:center}
+.our_clients{min-height:520px;background:#03142e}
+.our_clients .our_clients_title{margin-top:113px}
+.our_clients .our_clients_slider{margin-top:40px}
+.our_clients .owl-item div{height:160px;text-align:center;padding-left:10px}
 .footer{background-color:#333;height:200px}
 @media only screen and (max-width:1200px){body{width:1200px}
 .container{padding-left:0;padding-right:0}

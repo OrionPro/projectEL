@@ -3,11 +3,7 @@
 @import "fonts.sass"
 @import "sprite/sprite.sass"
 // @import "app/libs/jquery/jquery-ui.min"  //Если мы хотим подключить стили для  jquery-ui (например для рабочих tooltips)
-html, body
-	&.active
-		width: 100%
-		height: 100%
-		overflow: hidden
+
 
 body
 	font-size: 16px
@@ -25,7 +21,8 @@ h1
 p
 	padding: 0
 	margin: 0
-	
+section
+	margin-bottom: -2px	
 html .loader
 	background: none repeat scroll 0 0 #ffffff
 	bottom: 0
@@ -249,7 +246,7 @@ html .loader
 
 		padding: 10px 8px
 		color: $auxiliary_txt_color
-		background-color:  #ffb819
+		background-color:  $main_color
 		transition: 0.5s
 		text-decoration: none
 		&:hover
@@ -310,6 +307,7 @@ html .loader
 #top_city
 	position: relative
 	bottom: 136px
+	z-index: 1
 // Секция 
 // Секция 
 // Секция 

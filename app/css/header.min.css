@@ -6,10 +6,10 @@
 @font-face{font-family:Amazing_Grotesk_Regular;font-style:normal;font-weight:400;src:url(../fonts/Amazing_Grotesk_Regular/Amazing_Grotesk_Regular.eot?#iefix) format("embedded-opentype"),url(../fonts/Amazing_Grotesk_Regular/Amazing_Grotesk_Regular.woff) format("woff"),url(../fonts/Amazing_Grotesk_Regular/Amazing_Grotesk_Regular.ttf) format("truetype")}
 @font-face{font-family:Amazing_Grotesk_Ultra;font-style:normal;font-weight:400;src:url(../fonts/Amazing_Grotesk_Ultra/Amazing_Grotesk_Ultra.eot?#iefix) format("embedded-opentype"),url(../fonts/Amazing_Grotesk_Ultra/Amazing_Grotesk_Ultra.woff) format("woff"),url(../fonts/Amazing_Grotesk_Ultra/Amazing_Grotesk_Ultra.ttf) format("truetype")}
 @font-face{font-family:Traktir;font-style:normal;font-weight:400;src:url(../fonts/Traktir/Traktir.eot?#iefix) format("embedded-opentype"),url(../fonts/Traktir/Traktir.woff) format("woff"),url(../fonts/Traktir/Traktir.ttf) format("truetype")}
-body.active,html.active{width:100%;height:100%;overflow:hidden}
 body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-family:Amazing_Grotesk_Demi_Bold,Arial,sans-serif;overflow-x:auto;color:#fff}
 h1{color:#eed350;font:48px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;letter-spacing:.2px}
 p{padding:0;margin:0}
+section{margin-bottom:-2px}
 html .loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999}
 html .loader .loader_inner{background-image:url(../img/preloader.gif);background-size:cover;background-repeat:no-repeat;background-position:center center;background-color:#fff;height:60px;width:60px;margin-top:-30px;margin-left:-30px;left:50%;top:50%;position:absolute}
 .overlay,.popup,.popup2,.popup3{width:100%;height:100%;position:fixed;top:0;left:0}
@@ -44,7 +44,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .header_nav ul li{list-style:none;margin-right:24px}
 .header_nav ul li a{color:#fff;font:15px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:90px;transition:.5s}
 .header_nav ul li a:hover{color:#eed350;text-decoration:none}
-.header_modal a{padding:10px 8px;color:#000;background-color:#ffb819;transition:.5s;text-decoration:none}
+.header_modal a{padding:10px 8px;color:#000;background-color:#eed350;transition:.5s;text-decoration:none}
 .header_modal a:hover{background-color:#c45237}
 .header_phone{vertical-align:middle;margin-left:20px}
 .header_phone .header_phone_country a{font:15px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;margin-right:5px;margin-left:5px}
@@ -60,4 +60,4 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .main_content_item:last-of-type{margin-right:0}
 .main_content_item_txt{width:180px;position:absolute;top:94px;left:28px;text-align:center}
 .main_content_item_txt span{display:block;color:#fff;font:30px Traktir,Arial,sans-serif;line-height:1.6}
-#top_city{position:relative;bottom:136px}
+#top_city{position:relative;bottom:136px;z-index:1}

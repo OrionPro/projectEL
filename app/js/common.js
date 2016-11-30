@@ -188,11 +188,11 @@ $(document).ready(function() {
     tl8.from("#g4403000", 1, { autoAlpha: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 1.4);
     tl8.from("#g4432", 1, { autoAlpha: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 1.7);
     //  тени иконок
-    tl8.from("#path5488", 2, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 0.8); //
-    tl8.from("#path5421", 2, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 1.2);
-    tl8.from("#path5295", 2, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 1.7);
-    tl8.from("#path5371", 2, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 2);
-    tl8.from("#path5443", 2, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 2);
+    tl8.from("#path5488", 2, { opacity: 0, ease: Power2.easeInOut}, 0.8); //
+    tl8.from("#path5421", 2, { opacity: 0, ease: Power2.easeInOut}, 1.2);
+    tl8.from("#path5295", 2, { opacity: 0, ease: Power2.easeInOut}, 1.7);
+    tl8.from("#path5371", 2, { opacity: 0, ease: Power2.easeInOut}, 2);
+    tl8.from("#path5443", 2, { opacity: 0, ease: Power2.easeInOut}, 2);
     // текст
     tl8.from(".take_part_txt_item.item1", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 0.8);
     tl8.from(".take_part_txt_item.item2", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 1.1);
@@ -468,7 +468,38 @@ $(document).ready(function() {
         $(".popup").hide("fade", 500);
         // $("body").css({ "overflow": "inherit", "padding-right": "0" });
     });
-
+    // Карта
+    //  гугл карта
+    // The latitude and longitude of your business / place
+    var position = [58.5891483, 49.6592765];
+    var posMark = new google.maps.LatLng(58.5891483, 49.6592765);
+     
+    function showGoogleMaps() {
+     
+        var latLng =  new google.maps.LatLng(58.5887849, 49.6603119);
+         
+        var mapOptions = {
+            zoom: 14, // initialize zoom level - the max value is 21
+            streetViewControl: false, // hide the yellow Street View pegman
+            scaleControl: true, // allow users to zoom the Google Map
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: latLng
+        };
+         
+        map = new google.maps.Map(document.getElementById('googlemaps'),
+        mapOptions);
+         
+        // Show the default red marker at the location
+        marker = new google.maps.Marker({
+            position:posMark ,
+            map: map,
+            draggable: false,
+            animation: google.maps.Animation.DROP,
+            icon: "img/marker_img.png"
+        });
+    }   
+    
+    showGoogleMaps();
     //  Отправка форм
     $("form:not('#form3')").submit(function() { // перехватываем все при событии отправки
         var form = $(this); // запишем форму, чтобы потом не было проблем с this

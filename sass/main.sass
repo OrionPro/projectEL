@@ -327,11 +327,14 @@ body textarea:required:valid
 #googlemaps
 	position: static !important
 	background: #fff url() 0 0 no-repeat
-	
+	overflow: hidden
 //	Секция book_now
 .book_now
 	min-height: 770px
 	background: #03142e url('../img/book_now_clouds.png') center top 130px no-repeat
+	overflow: hidden
+	.container
+		position: relative
 	h2
 		text-transform: uppercase
 		@include font($main_color, 36px, $font_Amazing_Grotesk_Demi_Bold, 1.2)
@@ -339,6 +342,8 @@ body textarea:required:valid
 		width: 370px
 		margin-top: 100px
 		margin-left: 211px
+		position: relative
+		z-index: 1
 		input
 			width: 100%
 			height: 55px
@@ -403,6 +408,12 @@ body textarea:required:valid
 			transition: 0.5s
 			&:hover
 				background-color: #c45237
+	.book_now_city
+		position: absolute
+		bottom: -62px
+		right: -351px
+		z-index: 0
+
 .modal_form_input_wrap
 	position: relative
 	display: block
@@ -413,7 +424,7 @@ body textarea:required:valid
 		display: none
 		position: absolute
 		right: -25px
-		top: 24px
+		top: 43px
 		padding-left: 10px
 		color: #000
 		font: 12px/35px $font_Amazing_Grotesk_Regular
@@ -454,25 +465,76 @@ body textarea:required:valid
 	@include font(#fff, 22px, $font_Amazing_Grotesk_Ultra)
 	.copyright
 		display: inline-block
+		margin-top: 55px
+		margin-left: 10px
+		text-transform: uppercase
+		font-size: 20px
 		p + p
+			margin-top: -6px
 			font-size: 20px
 			color: #b0a79e
+			text-transform: none
 	.footer_nav
 		display: inline-block
+		vertical-align: middle
+		margin-left: 46px
+		margin-top: -65px
 		ul
 			padding: 0
+			margin: 0
+			li
+				margin-right: 24px
+				list-style: none
+				display: inline-block
+				&:last-of-type
+					margin-right: 0
+				a
+					text-transform: uppercase
+					font-size: 14.5px
+					color: #fff
+					transition: 0.5s
+					&:hover
+						text-decoration: none
+						color: $main_color
+	.footer_phone_mail
+		display: inline-block
+		vertical-align: top
+		margin-left: 31px
+		margin-top: 50px
+		a
+			display: inline-block
+			font-size: 22px
+			color: #fff
+			&:hover
+				text-decoration: none
+			&:focus
+				text-decoration: none
+			&:active
+				text-decoration: none
+			&.mail
+				font-size: 20px
+		.fa
+			color: $main_color
+			margin-right: 14px
+	.footer_social
+		margin-top: -35px
+		text-align: center
+		font-size: 24px
+		ul
+			padding: 0
+			margin: 0
 			li
 				list-style: none
 				display: inline-block
+				margin-right: 24px
+				&:last-of-type
+					margin-right: 0
+				.fa
+					color: $main_color
+					transition: 0.5s
 				a
-					text-transform: uppercase
-					font-size: 17px
-					color: #fff	
-	.footer_phone_mail
-		display: inline-block
-		a
-			display: block
-			font-size: 22px
-			color: #fff	
+					&:hover .fa
+						color: $auxiliary_color
+						
 @import "media"
 

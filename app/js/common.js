@@ -35,7 +35,7 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 3300 && $(window).scrollTop() <= 3600) {
         tl8.resume();
     }
-     if ($(window).scrollTop() >= 3800 && $(window).scrollTop() <= 3900) {
+    if ($(window).scrollTop() >= 3800 && $(window).scrollTop() <= 3900) {
         tl9.resume();
     }
 });
@@ -45,13 +45,13 @@ var tl3 = new TimelineMax(); // what_else_do_line
 var tl4 = new TimelineMax(); // Наше порфтолио
 var tl5 = new TimelineMax(); // our_achievements
 var tl6 = new TimelineMax({ repeat: -1 }); //анимация стрелок
-var tl7 = new TimelineMax();  // our_achievements_item 
-var tl8 = new TimelineMax();  // take_part_img 
-var tl9 = new TimelineMax();  // take_part_img_bot_decor 
+var tl7 = new TimelineMax(); // our_achievements_item 
+var tl8 = new TimelineMax(); // take_part_img 
+var tl9 = new TimelineMax(); // take_part_img_bot_decor 
 $(document).ready(function() {
     // Основные анимации
 
-    tl.pause();  // скалы и дома вверху
+    tl.pause(); // скалы и дома вверху
     tl2.pause(); //  ковбой
     tl3.pause(); // what_else_do_line
     tl4.pause(); // Наше порфтолио
@@ -146,20 +146,20 @@ $(document).ready(function() {
     tl7.from("#path4297_item4", 1, { drawSVG: "100% 100%" }, 1.1);
     // our_achievements_item inner circle
 
-    tl7.from("#g5164_item1", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100, ease: Power2.easeInOut}, 0);
-    tl7.from("#g5164_item2", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100, ease: Power2.easeInOut}, 0.3);
-    tl7.from("#g5164_item3", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100,  ease: Power2.easeInOut}, 0.6);
-    tl7.from("#g5164_item4", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100,  ease: Power2.easeInOut}, 0.9);
+    tl7.from("#g5164_item1", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100, ease: Power2.easeInOut }, 0);
+    tl7.from("#g5164_item2", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100, ease: Power2.easeInOut }, 0.3);
+    tl7.from("#g5164_item3", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100, ease: Power2.easeInOut }, 0.6);
+    tl7.from("#g5164_item4", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0, x: -100, y: -100, ease: Power2.easeInOut }, 0.9);
     // внутренние иконки
-    tl7.from("#path4341", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0);
-    tl7.from("#g4912", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.3);
-    tl7.from("#text4263-3", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.6);
-    tl7.from("#text4263-223", 1, { opacity: 0, x: -150, y: 0,  ease: Power2.easeInOut}, 0.9);
+    tl7.from("#path4341", 1, { opacity: 0, x: -150, y: 0, ease: Power2.easeInOut }, 0);
+    tl7.from("#g4912", 1, { opacity: 0, x: -150, y: 0, ease: Power2.easeInOut }, 0.3);
+    tl7.from("#text4263-3", 1, { opacity: 0, x: -150, y: 0, ease: Power2.easeInOut }, 0.6);
+    tl7.from("#text4263-223", 1, { opacity: 0, x: -150, y: 0, ease: Power2.easeInOut }, 0.9);
     // тени
-    tl7.from("#path4402", 1, { opacity: 0, ease: Power2.easeInOut}, 0.8); //
-    tl7.from("#path4476", 1, { opacity: 0, ease: Power2.easeInOut}, 1.2);
-    tl7.from("#path4562", 1, { opacity: 0, ease: Power2.easeInOut}, 1.7);
-    tl7.from("#path4669", 1, { opacity: 0, ease: Power2.easeInOut}, 2);
+    tl7.from("#path4402", 1, { opacity: 0, ease: Power2.easeInOut }, 0.8); //
+    tl7.from("#path4476", 1, { opacity: 0, ease: Power2.easeInOut }, 1.2);
+    tl7.from("#path4562", 1, { opacity: 0, ease: Power2.easeInOut }, 1.7);
+    tl7.from("#path4669", 1, { opacity: 0, ease: Power2.easeInOut }, 2);
 
     // анимация в take_part
     // circle
@@ -173,34 +173,34 @@ $(document).ready(function() {
     tl8.from("#circle6496", 1, { drawSVG: "100% 100%" }, 1.3);
     tl8.from("#circle5871", 1, { drawSVG: "100% 100%" }, 1.6);
     //
-    tl8.from("#g4620", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 0.4);
-    tl8.from("#g5330", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 0.7);
-    tl8.from("#g5318", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 1);
-    tl8.from("#g5377", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 1.3);
-    tl8.from("#g5873", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 1.6);
+    tl8.from("#g4620", 1, { transformOrigin: "50% 50%", scale: 0, ease: Power2.easeInOut }, 0.4);
+    tl8.from("#g5330", 1, { transformOrigin: "50% 50%", scale: 0, ease: Power2.easeInOut }, 0.7);
+    tl8.from("#g5318", 1, { transformOrigin: "50% 50%", scale: 0, ease: Power2.easeInOut }, 1);
+    tl8.from("#g5377", 1, { transformOrigin: "50% 50%", scale: 0, ease: Power2.easeInOut }, 1.3);
+    tl8.from("#g5873", 1, { transformOrigin: "50% 50%", scale: 0, ease: Power2.easeInOut }, 1.6);
 
 
-    tl8.from("#g6610", 1, { autoAlpha: 0, x: 50, y: -50,  ease: Power2.easeInOut}, 0.9);
+    tl8.from("#g6610", 1, { autoAlpha: 0, x: 50, y: -50, ease: Power2.easeInOut }, 0.9);
     // инонки внутренние
-    tl8.from("#g4423", 1, { autoAlpha: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 0.5);
-    tl8.from("#g4353", 1, { autoAlpha: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 0.8);
-    tl8.from("#g5326", 1, { autoAlpha: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 1.1);
-    tl8.from("#g4403000", 1, { autoAlpha: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 1.4);
-    tl8.from("#g4432", 1, { autoAlpha: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 1.7);
+    tl8.from("#g4423", 1, { autoAlpha: 0, x: -50, y: -50, ease: Power2.easeInOut }, 0.5);
+    tl8.from("#g4353", 1, { autoAlpha: 0, x: -50, y: -50, ease: Power2.easeInOut }, 0.8);
+    tl8.from("#g5326", 1, { autoAlpha: 0, x: -50, y: -50, ease: Power2.easeInOut }, 1.1);
+    tl8.from("#g4403000", 1, { autoAlpha: 0, x: -50, y: -50, ease: Power2.easeInOut }, 1.4);
+    tl8.from("#g4432", 1, { autoAlpha: 0, x: -50, y: -50, ease: Power2.easeInOut }, 1.7);
     //  тени иконок
-    tl8.from("#path5488", 2, { opacity: 0, ease: Power2.easeInOut}, 0.8); //
-    tl8.from("#path5421", 2, { opacity: 0, ease: Power2.easeInOut}, 1.2);
-    tl8.from("#path5295", 2, { opacity: 0, ease: Power2.easeInOut}, 1.7);
-    tl8.from("#path5371", 2, { opacity: 0, ease: Power2.easeInOut}, 2);
-    tl8.from("#path5443", 2, { opacity: 0, ease: Power2.easeInOut}, 2);
+    tl8.from("#path5488", 2, { opacity: 0, ease: Power2.easeInOut }, 0.8); //
+    tl8.from("#path5421", 2, { opacity: 0, ease: Power2.easeInOut }, 1.2);
+    tl8.from("#path5295", 2, { opacity: 0, ease: Power2.easeInOut }, 1.7);
+    tl8.from("#path5371", 2, { opacity: 0, ease: Power2.easeInOut }, 2);
+    tl8.from("#path5443", 2, { opacity: 0, ease: Power2.easeInOut }, 2);
     // текст
-    tl8.from(".take_part_txt_item.item1", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 0.8);
-    tl8.from(".take_part_txt_item.item2", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 1.1);
-    tl8.from(".take_part_txt_item.item3", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 1.4);
-    tl8.from(".take_part_txt_item.item4", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 1.7);
-    tl8.from(".take_part_txt_item.item5", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 2);
+    tl8.from(".take_part_txt_item.item1", 1, { autoAlpha: 0, scaleY: 0, skewX: "110deg" }, 0.8);
+    tl8.from(".take_part_txt_item.item2", 1, { autoAlpha: 0, scaleY: 0, skewX: "110deg" }, 1.1);
+    tl8.from(".take_part_txt_item.item3", 1, { autoAlpha: 0, scaleY: 0, skewX: "110deg" }, 1.4);
+    tl8.from(".take_part_txt_item.item4", 1, { autoAlpha: 0, scaleY: 0, skewX: "110deg" }, 1.7);
+    tl8.from(".take_part_txt_item.item5", 1, { autoAlpha: 0, scaleY: 0, skewX: "110deg" }, 2);
     // кнопка связаться с командой
-    tl8.from(".take_part_txt_item_links", 0.8, { autoAlpha: 0, scaleY: 0, skewX:"200deg", skewY:"50deg"}, 2.2);
+    tl8.from(".take_part_txt_item_links", 0.8, { autoAlpha: 0, scaleY: 0, skewX: "200deg", skewY: "50deg" }, 2.2);
     // hover on item
     $(".g5504").hover(
         function() {
@@ -215,16 +215,16 @@ $(document).ready(function() {
         }
     );
     // take_part_img_bot_decor
-    tl9.from("#take_part_img_bot_decor", 1.5, { drawSVG: "0%"}, 0.5);
+    tl9.from("#take_part_img_bot_decor", 1.5, { drawSVG: "0%" }, 0.5);
     tl9.from("#take_p", 1.5, { autoAlpha: 0 }, 2);
     tl9.from("#g5500", 1, { autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut }, 2);
 
-   
+
 
     // для IE вызов по скроллу в ready (загруженном документе)
     $(window).scroll(function() {
 
-         readyTimeLineGo();
+        readyTimeLineGo();
 
     });
     // активация тайм линий при загрузке с измерением скролла
@@ -264,6 +264,18 @@ $(document).ready(function() {
         }
     }
     readyTimeLineGo();
+
+    //header_phone переключение телефона
+    $(".header_phone .header_phone_country a").on('click', function(e) {            //ссылки которые будут переключать табы
+        e.preventDefault();
+        $(".header_phone .header_phone_country a").removeClass('active');       //убираем активные состояния у ссылок  
+        $(this).addClass('active');                         //Добавляем активное состояние у той что нажали
+        var data = $(this).data('tab');                   //создаём переменную с датой 
+        $(".header_phone a:not('.header_phone .header_phone_country a')").hide().removeClass('active');  //убираем активные состояния у табов
+        $('.header_phone a:not(".header_phone .header_phone_country a")[data-tab=' + data + ']').show('fade', 200).addClass("active");    //если таб соответствует тому, какой data
+                                                                                    //атрибут в ссылке то делаем его активным
+ });
+
     // для инициализации tooltips
     // $( document ).tooltip({
     //   track: true
@@ -390,7 +402,7 @@ $(document).ready(function() {
         // Parameters has to be in square bracket '[]'
         owl2.trigger('prev.owl.carousel', [400]);
     });
-     owl2.on('mousewheel', '.owl-stage', function(e) {
+    owl2.on('mousewheel', '.owl-stage', function(e) {
         if (e.deltaY > 0) {
             owl2.trigger('next.owl');
         } else {
@@ -473,32 +485,33 @@ $(document).ready(function() {
     // The latitude and longitude of your business / place
     var position = [58.5891483, 49.6592765];
     var posMark = new google.maps.LatLng(58.5891483, 49.6592765);
-     
+
     function showGoogleMaps() {
-     
-        var latLng =  new google.maps.LatLng(58.5887849, 49.6603119);
-         
+
+        var latLng = new google.maps.LatLng(58.5887849, 49.6603119);
+
         var mapOptions = {
             zoom: 14, // initialize zoom level - the max value is 21
             streetViewControl: false, // hide the yellow Street View pegman
             scaleControl: true, // allow users to zoom the Google Map
             mapTypeId: google.maps.MapTypeId.ROADMAP,
-            center: latLng
+            center: latLng,
+            scrollwheel: false
         };
-         
+
         map = new google.maps.Map(document.getElementById('googlemaps'),
-        mapOptions);
-         
+            mapOptions);
+
         // Show the default red marker at the location
         marker = new google.maps.Marker({
-            position:posMark ,
+            position: posMark,
             map: map,
             draggable: false,
-            animation: google.maps.Animation.DROP,
+            animation: google.maps.Animation.DROP,            
             icon: "img/marker_img.png"
         });
-    }   
-    
+    }
+
     showGoogleMaps();
     //  Отправка форм
     $("form:not('#form3')").submit(function() { // перехватываем все при событии отправки

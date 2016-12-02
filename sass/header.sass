@@ -256,11 +256,16 @@ html .loader
 	display: inline-block
 	vertical-align: middle
 	margin-left: 20px
+
 	.header_phone_country
 		a
 			font: 15px $font_Amazing_Grotesk_Demi_Bold
 			margin-right: 5px
 			margin-left: 5px
+			display: inline-block !important
+			&.active
+				color: $main_color
+				text-decoration: none	
 
 	a
 		text-transform: uppercase
@@ -268,8 +273,12 @@ html .loader
 		transition: 0.5s
 		font: 15px $font_Amazing_Grotesk_Ultra	
 		text-decoration: none
+		display: none
 		&:hover
 			color: $main_color
+		&.active
+			display: inline-block !important
+			
 .main_content
 	height: 1275px
 	text-align: center

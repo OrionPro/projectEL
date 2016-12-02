@@ -284,18 +284,195 @@ body textarea:required:valid
 			img
 				display: table-cell
 				vertical-align: middle
-//	Секция
-//	Секция
+//	Секция map
+.map
+	min-height: 545px
+	position: relative
+	overflow: hidden
+	.container
+		position: relative
+	.map_txt_block
+		width: 270px
+		height: 300px
+		position: absolute
+		top: 77px
+		left: 213px
+		.map_txt_top_title
+			height: 60px
+			background: #e84f4a url('../img/map_txt_top_title_shadow.png') 20px 21px no-repeat
+			text-align: center
+			h3
+				text-transform: uppercase
+				@include font(#fff, 24px, $font_Amazing_Grotesk_Ultra, 60px)	
+		.map_txt_main
+			min-height: 238px
+			max-height: 326px
+			overflow: hidden
+			background-color: rgba(54,64,76, 0.7)
+			padding-left: 20px
+			padding-top: 15px
+			@include font(#fff, 14px, $font_Amazing_Grotesk_Demi_Bold)
+			a
+				display: inline-block
+				margin-bottom: 6px
+				@include font(#fff, 18px, $font_Amazing_Grotesk_Demi_Bold)
+				transition: 0.5s
+				&:hover
+					text-decoration: none
+					color: $main_color
+			p
+				padding-top: 10px
+				&:last-of-type
+					padding-bottom: 10px
+#googlemaps
+	position: static !important
+	background: #fff url() 0 0 no-repeat
+	
+//	Секция book_now
+.book_now
+	min-height: 770px
+	background: #03142e url('../img/book_now_clouds.png') center top 130px no-repeat
+	h2
+		text-transform: uppercase
+		@include font($main_color, 36px, $font_Amazing_Grotesk_Demi_Bold, 1.2)
+	.book_now_form
+		width: 370px
+		margin-top: 100px
+		margin-left: 211px
+		input
+			width: 100%
+			height: 55px
+			border: 1px solid #FFF
+			padding-left: 25px
+			margin-bottom: 20px
+			background-color: transparent
+			@include font($main_txt_color, 18px, $font_Amazing_Grotesk_Demi_Bold)
+			&:active
+				outline: 0
+			&:focus
+				outline: 0
+			&::-webkit-input-placeholder
+				color: #fff
+				opacity: 1
+
+			&:-moz-placeholder
+				color:  #fff
+				opacity: 1
+
+			&::-moz-placeholder
+				color:  #fff
+				opacity: 1
+
+			&:-ms-input-placeholder
+				color:  #fff
+				opacity: 1
+		textarea
+			width: 100%
+			height: 200px
+			padding-top: 20px
+			padding-left: 25px
+			background-color: transparent
+			margin-bottom: 20px
+			@include font($main_txt_color, 18px, $font_Amazing_Grotesk_Demi_Bold)
+			&:active
+				outline: 0
+			&:focus
+				outline: 0
+			&::-webkit-input-placeholder
+				color:  #fff
+				opacity: 1
+
+			&:-moz-placeholder
+				color:  #fff
+				opacity: 1
+
+			&::-moz-placeholder
+				color:  #fff
+				opacity: 1
+
+			&:-ms-input-placeholder
+				color:  #fff
+				opacity: 1
+		input[type=submit]
+			width: 270px
+			height: 68px
+			background-color: #FFB819
+			text-transform: uppercase
+			border: none
+			@include font($auxiliary_txt_color, 24px, $font_Amazing_Grotesk_Demi_Bold)
+			transition: 0.5s
+			&:hover
+				background-color: #c45237
+.modal_form_input_wrap
+	position: relative
+	display: block
+	text-align: center
+	.modal_input_error
+		width: 141px
+		height: 35px
+		display: none
+		position: absolute
+		right: -25px
+		top: 24px
+		padding-left: 10px
+		color: #000
+		font: 12px/35px $font_Amazing_Grotesk_Regular
+		background-color: #fff
+		border: 1px solid #C8C8C8
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.3)
+		box-shadow: 0 0 10px rgba(0,0,0,.3)
+		z-index: 100
+		&.input_error_email
+			width: 215px
+		&.input_error_phone
+			width: 235px
+		&.form_error
+			display: block
+	.modal_error_chest_img
+		width: 9px
+		position: relative
+		background-image: url('../img/modal_error_chest_img.png')
+	.modal_error_triangle
+		width: 9px
+		position: relative
+		background-image: url('../img/modal_error_triangle.png')
+	.modal_error_chest_img
+		top: -31px
+		left: 0				
+		height: 9px
+	.modal_error_triangle
+		top: -43px
+		left: 10px				
+		height: 8px
 //	Секция
 
 
 // Секия footer 
 .footer
-	background-color: #333
-	height: 200px
-
-
-
-//ALWAYS END
+	min-height: 170px
+	background-color: #142131
+	@include font(#fff, 22px, $font_Amazing_Grotesk_Ultra)
+	.copyright
+		display: inline-block
+		p + p
+			font-size: 20px
+			color: #b0a79e
+	.footer_nav
+		display: inline-block
+		ul
+			padding: 0
+			li
+				list-style: none
+				display: inline-block
+				a
+					text-transform: uppercase
+					font-size: 17px
+					color: #fff	
+	.footer_phone_mail
+		display: inline-block
+		a
+			display: block
+			font-size: 22px
+			color: #fff	
 @import "media"
 

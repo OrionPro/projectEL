@@ -12804,7 +12804,7 @@
                     .st0 {
                         fill-rule: evenodd;
                         clip-rule: evenodd;
-                        fill: #197999;
+                        `` fill: #197999;
                     }
                     
                     .st1 {
@@ -18537,9 +18537,99 @@
     </section>
     <!-- Секция map -->
     <section class="map">
-        <div id="map"></div>
+        <div id="googlemaps"></div>
+        <div class="container">
+            <div class="map_txt_block">
+                <div class="map_txt_top_title">
+                    <h3>Наши контакты</h3>
+                </div>
+                <div class="map_txt_main">
+                    <a href="tel:380671266556">+38 (067) 126-65-56</a>
+                    <a href="mailto:elitestudio@gmail.ru">EliteStudio@gmail.ru</a>
+                    <p>г.Харьков ул. Космонавтов 55 офис №6</p>
+                    <p>Пн.-Пт. с 10.00-20.00</p>
+                    <p>Дополнительная информация которая может тут быть.</p>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- Секция book_now -->
+    <section class="book_now">
+        <div class="container">
+            <div class="row">
+                <div class="book_now_form">
+                    <h2>Закажи сейчас</h2>
+                    <form id="bottom">
+                            <div>                            
+                                <div class="modal_form_input_wrap">
+                                    <div class="modal_input_error">Заполните поле
+                                        <div class="modal_error_triangle"></div>
+                                        <div class="modal_error_chest_img"></div>
+                                    </div>
+                                    <input name="name" class="modal_form_input" type="text" placeholder="Имя">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="modal_form_input_wrap">
+                                    <div class="modal_input_error">Заполните поле
+                                        <div class="modal_error_triangle"></div>
+                                        <div class="modal_error_chest_img"></div>
+                                    </div>
+                                    <input name="email" class="modal_form_phone" type="text" placeholder="EliteStudio@gmail.ru">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="modal_form_input_wrap">
+                                    <div class="modal_input_error">Заполните поле
+                                        <div class="modal_error_triangle"></div>
+                                        <div class="modal_error_chest_img"></div>
+                                    </div>
+                                    <input name="name" class="modal_form_email" type="text" placeholder="Я хочу заказать">
+                                </div>
+                            </div>
+                           <div>
+                                <textarea type="text" placeholder="Подробности и уточнения"></textarea>
+                           </div>
+                            <input type="hidden" name="form_name" value="Закажи сейчас">
+                            <input type="submit" value="Отправить">
+                        </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer --> 
     <footer class="footer">
+         <div class="container">
+            <div class="row">
+                <div class="copyright">
+                    <p>© 2015 EliteStudio.pro</p>
+                    <p>Попадаем точно в цель!</p>
+                </div>
+                <nav class="footer_nav">
+                    <ul>
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li>
+                            <a href="#">Рекомендации</a>
+                        </li>
+                        <li>
+                            <a href="#">Портфолио</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer_phone_mail">
+                    <a href="tel:380671266556">+38 (067) 126-65-56</a>
+                    <a href="mailto:elitestudio@gmail.ru">EliteStudio@gmail.ru</a>   
+                </div>
+            </div>
+        </div>
     </footer>
     <div class="hidden"></div>
     <!--[if lt IE 9]>
@@ -18579,6 +18669,7 @@
         }
     }(window, document, scr);
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuICGgjLLJcFkERGXsXb3FWMMKZSYTwOs" async defer></script>
     <!-- Load Scripts End -->
 </body>
 

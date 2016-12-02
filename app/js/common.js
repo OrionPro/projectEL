@@ -179,7 +179,6 @@ $(document).ready(function() {
     tl8.from("#g5377", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 1.3);
     tl8.from("#g5873", 1, {  transformOrigin: "50% 50%", scale: 0,  ease: Power2.easeInOut }, 1.6);
 
-
     tl8.from("#g6610", 1, { autoAlpha: 0, x: 50, y: -50,  ease: Power2.easeInOut}, 0.9);
     // инонки внутренние
     tl8.from("#g4423", 1, { autoAlpha: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 0.5);
@@ -188,11 +187,11 @@ $(document).ready(function() {
     tl8.from("#g4403000", 1, { autoAlpha: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 1.4);
     tl8.from("#g4432", 1, { autoAlpha: 0, x: -50, y: -50,  ease: Power2.easeInOut}, 1.7);
     //  тени иконок
-    tl8.from("#path5488", 2, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 0.8); //
-    tl8.from("#path5421", 2, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 1.2);
-    tl8.from("#path5295", 2, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 1.7);
-    tl8.from("#path5371", 2, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 2);
-    tl8.from("#path5443", 2, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 2);
+    tl8.from("#path5488", 1, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 0.8); //
+    tl8.from("#path5421", 1, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 1.2);
+    tl8.from("#path5295", 1, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 1.7);
+    tl8.from("#path5371", 1, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 2);
+    tl8.from("#path5443", 1, { autoAlpha: 0, x: -20, ease: Power2.easeInOut}, 2);
     // текст
     tl8.from(".take_part_txt_item.item1", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 0.8);
     tl8.from(".take_part_txt_item.item2", 1, { autoAlpha: 0, scaleY: 0, skewX:"110deg"}, 1.1);

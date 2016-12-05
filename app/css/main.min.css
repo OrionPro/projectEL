@@ -1343,10 +1343,10 @@
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
 #googlemaps,.book_now,.map{overflow:hidden}
-::-webkit-input-placeholder{color:#666;opacity:1}
-:-moz-placeholder{color:#666;opacity:1}
-::-moz-placeholder{color:#666;opacity:1}
-:-ms-input-placeholder{color:#666;opacity:1}
+::-webkit-input-placeholder{color:#fff;opacity:1}
+:-moz-placeholder{color:#fff;opacity:1}
+::-moz-placeholder{color:#fff;opacity:1}
+:-ms-input-placeholder{color:#fff;opacity:1}
 body input:focus:required:invalid,body input:required:valid,body textarea:focus:required:invalid,body textarea:required:valid{color:#666}
 .what_else_do{min-height:768px;background-color:#0b2848;text-align:center}
 .what_else_do .container{position:relative}
@@ -1441,6 +1441,11 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .modal_form_input_wrap .modal_input_error.form_error{display:block}
 .modal_form_input_wrap .modal_error_chest_img{width:9px;position:relative;background-image:url(../img/modal_error_chest_img.png);top:-31px;left:0;height:9px}
 .modal_form_input_wrap .modal_error_triangle{width:9px;position:relative;background-image:url(../img/modal_error_triangle.png);top:-43px;left:10px;height:8px}
+.website_promotion{min-height:1560px;background:url(../img/main_clouds.png) center top 400px no-repeat #03142e}
+.website_promotion h1{margin-top:130px;text-align:center;color:#eed350;font:48px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.2}
+.website_promotion .main_content_txt_wrap{width:755px;margin:-13px auto 0;text-align:center}
+.website_promotion .main_content_txt_wrap p{margin-bottom:30px;color:#fff;font:24px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.2}
+.website_promotion .main_content_txt_wrap p span{color:#fff;font:24px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.2}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}
 .footer .copyright p+p{margin-top:-6px;font-size:20px;color:#b0a79e;text-transform:none}

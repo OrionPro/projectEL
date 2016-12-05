@@ -96,16 +96,22 @@ html .loader
 
 .dm-modal
 	display: inline-block
-	padding: 50px 46px 50px 46px
+	padding: 30px 30px 30px 30px
 	max-width: 50em
-	width: 470px		
-	border: 3px solid $main_color	
+	width: 634px
+	margin-top: 50px
 	text-align: center
 	position: relative	
 	animation: fade .8s
-	background-color: #fff
-	border-radius: 20px
+	background-color: #0b2848
 	z-index: 1002
+	.popup_clouds
+		position: absolute
+		top: -156px
+		left: -20px
+		z-index: -1
+	h2
+		@include font($main_color, 30px, $font_Amazing_Grotesk_Demi_Bold)
 	.modal_form_input_wrap
 		position: relative
 		display: block
@@ -114,10 +120,10 @@ html .loader
 			height: 35px
 			display: none
 			position: absolute
-			right: -25px
+			right: 0px
 			top: 40px
 			padding-left: 10px
-			font: 15px/35px $font_Amazing_Grotesk_Regular
+			font: 14px/35px $font_Amazing_Grotesk_Regular
 			background-color: #F4F4F4
 			border: 1px solid #C8C8C8
 			-webkit-border-radius: 5px
@@ -140,8 +146,8 @@ html .loader
 			position: relative
 			background-image: url('../img/modal_error_triangle.png')
 		.modal_error_chest_img
-			top: -33px
-			left: 0				
+			top: -31px
+			left: -7px				
 			height: 9px
 		.modal_error_triangle
 			top: -43px
@@ -160,27 +166,26 @@ html .loader
 			color: $main_color
 	input
 		width: 100%
-		height: 40px
-		margin-bottom: 10px
-		padding-left: 20px
+		height: 50px
+		margin-bottom: 15px
+		padding-left: 25px
 		border: none		
-		background-color: #F4F4F4		
-		border-radius: 5px		
-		box-shadow: 0 1px 0 rgba(0,0,2,.28)		
+		background-color: transparent
 		transition: 1s
-		&:focus		
+		border: 1px solid #FFF
+		&:focus
 			outline: 0
-			box-shadow: 0 1px 0 rgba(255,81,46,.88)
+			box-shadow: 0 1px 0 $main_color
 	
 	.sucess_mail
 		display: none
 		color: $main_color
-		font: 24px $font_Amazing_Grotesk_Regular
+		font: 28px $font_Amazing_Grotesk_Demi_Bold
 		&.active
 			display: block
 	input[type=submit]
 		margin-bottom: 0
-		margin-top: 20px
+		margin-top: 15px
 		padding-left: 0
 		padding-right: 0
 		@extend %main_btn
@@ -191,15 +196,90 @@ html .loader
 		&:focus
 			@extend %main_btn_focus
 			outline: 0
-
+	textarea
+		width: 100%
+		height: 160px
+		padding-left: 25px
+		padding-top: 20px
+		background-color: transparent
+		border: 1px solid #FFF
+		&:focus
+			outline: 0
+			box-shadow: 0 1px 0 $main_color
+	.select
+		position: relative
+		text-align: left
+		.drop
+			width: 100%	
+			max-height: 200px
+			overflow: auto
+			margin: 0 auto
+			padding: 0
+			border-top: none
+			display: none
+			position: absolute
+			background-color: #fff
+			top: 50px
+			left: 0
+			right: 0
+			z-index: 10
+			li
+				list-style: none
+				border-bottom: none
+				border-top: none
+				cursor: pointer
+				display: block
+				@include font($auxiliary_txt_color, 18px,  $font_Amazing_Grotesk_Demi_Bold, 1.2)
+				padding: 7px 15px 7px 25px
+				&:hover
+					background-color: rgba(0,0,0,0.2)							
+					outline: 0
+				a
+					text-decoration: none
+		.slct
+			width: 100%
+			height: 50px
+			padding-left: 25px
+			margin-bottom: 30px
+			display: block
+			@include font(#fff, 18px,  $font_Amazing_Grotesk_Demi_Bold, 1.2)
+			background: transparent
+			border: 1px solid #FFF	
+			line-height: 50px
+			overflow: hidden
+			white-space: nowrap
+			text-overflow: ellipsis
+			-o-text-overflow: ellipsis
+			text-decoration: none
+			position: relative
+			transition: color 1s
+			&.active
+				color: #000
+				background: #fff
+				
+		.slct_arrow
+			position: absolute
+			top: 9px
+			right: 10px
+			font-size: 24px
+			.fa
+				transition: 0.3s		
+			&.active .fa
+				color: #000
+				transform: rotate(180deg)
+				z-index: 10
+				position: relative
+				
 .close
 	position: absolute
-	right: 25px
-	top: 25px
-	width: 35px
-	height: 36px
+	right: 30px
+	top: 70px
+	width: 20px
+	height: 20px
 	display: block
-	background: url('../img/modal_close.png') 0 0 no-repeat
+	.fa
+		font-size: 18px
+		color: $auxiliary_color
 // конец модального
 .main_content_item_img
 

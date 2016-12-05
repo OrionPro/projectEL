@@ -38,6 +38,9 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 3800 && $(window).scrollTop() <= 3900) {
         tl9.resume();
     }
+    if ($(window).scrollTop() >= 5700 && $(window).scrollTop() <= 5900) {
+        tl10.resume();
+    }
 });
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
@@ -48,6 +51,7 @@ var tl6 = new TimelineMax({ repeat: -1 }); //анимация стрелок
 var tl7 = new TimelineMax(); // our_achievements_item 
 var tl8 = new TimelineMax(); // take_part_img 
 var tl9 = new TimelineMax(); // take_part_img_bot_decor 
+var tl10 = new TimelineMax(); // book_now_city 
 $(document).ready(function() {
     // Основные анимации
 
@@ -59,6 +63,7 @@ $(document).ready(function() {
     tl7.pause(); // our_achievements_item 
     tl8.pause(); // take_part_img 
     tl9.pause(); // take_part_img_bot_decor
+    tl10.pause(); // book_now_city
 
     // цели
     TweenMax.from("#g4378", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
@@ -218,7 +223,14 @@ $(document).ready(function() {
     tl9.from("#take_part_img_bot_decor", 1.5, { drawSVG: "0%" }, 0.5);
     tl9.from("#take_p", 1.5, { autoAlpha: 0 }, 2);
     tl9.from("#g5500", 1, { autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut }, 2);
-
+    // book_now_city
+    tl10.from("#g4445097807", 0.6, { opacity: 0, y: -250, ease: Back.easeInOut }, 0.1);
+    tl10.from("#g5593", 0.6, { opacity: 0, y: -250, ease: Back.easeInOut }, '-=0.5');
+    tl10.from("#g445278078034", 0.6, { opacity: 0, y: -250, ease: Back.easeInOut }, '-=0.5');
+    tl10.from("#g43851241241241", 0.6, { opacity: 0, y: -250, ease: Back.easeInOut }, '-=0.5');
+    tl10.from("#g5005", 0.6, { opacity: 0, y: -250, ease: Back.easeOut }, '-=0.4');
+    tl10.from("#g4934124124", 0.6, { opacity: 0, y: -250, ease: Back.easeOut }, '-=0.4');
+    tl10.from("#g5004", 0.6, { opacity: 0, y: 300, ease: Power2.easeInOut }, '-=0.4');
 
 
     // для IE вызов по скроллу в ready (загруженном документе)
@@ -262,19 +274,29 @@ $(document).ready(function() {
         if ($(window).scrollTop() >= 4200) {
             tl9.resume();
         }
+        if (window.matchMedia("(max-width: 1200px)").matches) {
+            if ($(window).scrollTop() >= 4800) {
+                tl10.resume();
+            }
+        } else {
+            if ($(window).scrollTop() >= 5900) {
+                tl10.resume();
+            }
+        }
+
     }
     readyTimeLineGo();
-
+    console.log($(window).scrollTop());
     //header_phone переключение телефона
-    $(".header_phone .header_phone_country a").on('click', function(e) {            //ссылки которые будут переключать табы
+    $(".header_phone .header_phone_country a").on('click', function(e) { //ссылки которые будут переключать табы
         e.preventDefault();
-        $(".header_phone .header_phone_country a").removeClass('active');       //убираем активные состояния у ссылок  
-        $(this).addClass('active');                         //Добавляем активное состояние у той что нажали
-        var data = $(this).data('tab');                   //создаём переменную с датой 
-        $(".header_phone a:not('.header_phone .header_phone_country a')").hide().removeClass('active');  //убираем активные состояния у табов
-        $('.header_phone a:not(".header_phone .header_phone_country a")[data-tab=' + data + ']').show('fade', 200).addClass("active");    //если таб соответствует тому, какой data
-                                                                                    //атрибут в ссылке то делаем его активным
- });
+        $(".header_phone .header_phone_country a").removeClass('active'); //убираем активные состояния у ссылок  
+        $(this).addClass('active'); //Добавляем активное состояние у той что нажали
+        var data = $(this).data('tab'); //создаём переменную с датой 
+        $(".header_phone a:not('.header_phone .header_phone_country a')").hide().removeClass('active'); //убираем активные состояния у табов
+        $('.header_phone a:not(".header_phone .header_phone_country a")[data-tab=' + data + ']').show('fade', 200).addClass("active"); //если таб соответствует тому, какой data
+        //атрибут в ссылке то делаем его активным
+    });
 
     // для инициализации tooltips
     // $( document ).tooltip({
@@ -413,7 +435,9 @@ $(document).ready(function() {
     // Select в модальном окне
     $(document).click(function() {
         $('.slct').removeClass('active');
+        $('.slct_arrow').removeClass('active');
         $('.slct').parent().find('.drop').slideUp("fast");
+
     });
     $('.slct').click(function() {
         /* Заносим выпадающий список в переменную */
@@ -480,39 +504,41 @@ $(document).ready(function() {
         $(".popup").hide("fade", 500);
         // $("body").css({ "overflow": "inherit", "padding-right": "0" });
     });
-    // Карта
-    //  гугл карта
-    // The latitude and longitude of your business / place
-    var position = [58.5891483, 49.6592765];
-    var posMark = new google.maps.LatLng(58.5891483, 49.6592765);
+    if ($('section').hasClass("map")) {
+        // Карта
+        //  гугл карта
+        // The latitude and longitude of your business / place
+        var position = [58.5891483, 49.6592765];
+        var posMark = new google.maps.LatLng(58.5891483, 49.6592765);
 
-    function showGoogleMaps() {
+        function showGoogleMaps() {
 
-        var latLng = new google.maps.LatLng(58.5887849, 49.6603119);
+            var latLng = new google.maps.LatLng(58.5887849, 49.6603119);
 
-        var mapOptions = {
-            zoom: 14, // initialize zoom level - the max value is 21
-            streetViewControl: false, // hide the yellow Street View pegman
-            scaleControl: true, // allow users to zoom the Google Map
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            center: latLng,
-            scrollwheel: false
-        };
+            var mapOptions = {
+                zoom: 14, // initialize zoom level - the max value is 21
+                streetViewControl: false, // hide the yellow Street View pegman
+                scaleControl: true, // allow users to zoom the Google Map
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: latLng,
+                scrollwheel: false
+            };
 
-        map = new google.maps.Map(document.getElementById('googlemaps'),
-            mapOptions);
+            map = new google.maps.Map(document.getElementById('googlemaps'),
+                mapOptions);
 
-        // Show the default red marker at the location
-        marker = new google.maps.Marker({
-            position: posMark,
-            map: map,
-            draggable: false,
-            animation: google.maps.Animation.DROP,            
-            icon: "img/marker_img.png"
-        });
+            // Show the default red marker at the location
+            marker = new google.maps.Marker({
+                position: posMark,
+                map: map,
+                draggable: false,
+                animation: google.maps.Animation.DROP,
+                icon: "img/marker_img.png"
+            });
+        }
+
+        showGoogleMaps();
     }
-
-    showGoogleMaps();
     //  Отправка форм
     $("form:not('#form3')").submit(function() { // перехватываем все при событии отправки
         var form = $(this); // запишем форму, чтобы потом не было проблем с this
@@ -523,11 +549,11 @@ $(document).ready(function() {
                 $(this).siblings().show("fade", 500);
                 error.push(true); // ошибка
             } else if ($(this).val() !== '') { // если находим не пустое
-                $(this).siblings().hide("fade", 500)
+                $(this).siblings().hide("fade", 500);
                 error.push(false); // нет ошибки
             }
             $(this).focus(function() {
-                $(this).siblings().hide("fade", 500)
+                $(this).siblings().hide("fade", 500);
             });
 
         });
@@ -611,7 +637,7 @@ $(document).ready(function() {
                                 $('.popup .close').show();
                             }
                         );
-                        if (data['form'] == "form_2") { //Проверяем какая форма, если в форме есть <input type="hidden" name="id_form" value="form_2"> то выполняем код что ниже
+                        if (data['form'] == "form") { //Проверяем какая форма, если в форме есть <input type="hidden" name="id_form" value="form_2"> то выполняем код что ниже
                             $('.dm-modal .sucess_mail').show('fade', 500);
                             $('.popup2 .close').hide();
                             $('.popup2').show().delay(2000).fadeOut(

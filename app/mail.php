@@ -10,6 +10,7 @@ if ($_POST) {
     $email = $_POST["email"];
     $textarea = $_POST["textarea"];
     $form_name = $_POST["form_name"];
+    $services = ($_POST["services"]);
 
     $images = array();
     $json = array(); // подготовим массив ответа
@@ -18,6 +19,13 @@ if ($_POST) {
         $id_form = $_POST['id_form'];
         $json['form'] = $id_form;
     }
+
+    if(isset($_POST["services"])) {
+        $services = $_POST["services"];
+    } else { 
+        $services = "Отсутствует";   
+    }
+    
 
      if (isset($_POST['form_name']) and $_POST['form_name'] != "") {
         $form_name = $_POST['form_name'];

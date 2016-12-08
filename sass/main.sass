@@ -51,6 +51,7 @@ body textarea:required:valid
 		z-index: 2
 		.what_else_do_item
 			display: inline-block
+			vertical-align: top
 			margin-right: 20px
 			p
 				width: 190px
@@ -459,6 +460,8 @@ body textarea:required:valid
 .website_promotion
 	min-height: 1560px
 	background: #03142e  url('../img/main_clouds.png') center top 400px no-repeat
+	.container
+		position: relative
 	h1
 		margin-top: 130px
 		text-align: center	
@@ -472,9 +475,121 @@ body textarea:required:valid
 			@include font(#fff, 24px, $font_Amazing_Grotesk_Demi_Bold, 1.2)
 			span
 				@include font(#fff, 24px, $font_Amazing_Grotesk_Ultra, 1.2)
-//	Секция
-//	Секция
-//	Секция
+	.website_promotion_img_slider
+		text-align: center
+		margin-top: 50px
+		position: relative
+	.owl-carousel3
+		width: 707px
+		position: absolute
+		top: 31px
+		left: 246px
+		.owl-controls
+			margin-top: 53px
+			.owl-dots
+				text-align: center	
+				.owl-dot
+					width: 23px
+					height: 23px
+					display: inline-block
+					margin-right: 8px
+					background-color: transparent
+					border-radius: 50%
+					border: 1px solid #fff
+					transition: 0.5s
+					&:last-of-type
+						margin-right: 0
+					&.active
+						background-color: #fff	
+
+	.website_promotion_clouds
+		margin: auto
+		position: absolute
+		bottom: -437px
+		left: 80px
+//	Секция why SEO
+.what_else_do
+	&.why_seo
+		min-height: 630px
+		.what_else_do_items
+			margin-top: 74px
+			.what_else_do_item
+				margin-right: 5px
+		.what_else_do_line
+			margin-top: -115px
+		h2
+			margin-top: 57px
+			line-height: 1.2
+		.what_else_do_cloud
+			bottom: -410px
+
+//	Секция free_audit
+.free_audit
+	min-height: 905px
+	background-color: #03142e
+	text-align: center		
+	h2
+		margin-top: 273px
+		margin-bottom: 20px
+		text-transform: capitalize
+		@include font($main_color, 36px, $font_Amazing_Grotesk_Demi_Bold, 1.2)
+	p
+		font-size: 24px
+		line-height: 1.2
+	form
+		width: 370px
+		margin: 15px auto 0
+		input
+			width: 100%
+			height: 55px
+			border: 1px solid #FFF
+			padding-left: 25px
+			margin-bottom: 20px
+			background-color: transparent
+			@include font($main_txt_color, 18px, $font_Amazing_Grotesk_Demi_Bold)
+			&:active
+				outline: 0
+			&:focus
+				outline: 0
+			&::-webkit-input-placeholder
+				color: #fff
+				opacity: 1
+
+			&:-moz-placeholder
+				color:  #fff
+				opacity: 1
+
+			&::-moz-placeholder
+				color:  #fff
+				opacity: 1
+
+			&:-ms-input-placeholder
+				color:  #fff
+				opacity: 1
+		input[type=submit]
+			height: 68px
+			margin-top: 10px
+			padding-left: 0
+			background-color: #FFB819
+			text-transform: uppercase
+			border: none
+			@include font($auxiliary_txt_color, 24px, $font_Amazing_Grotesk_Demi_Bold)
+			transition: 0.5s
+			&:hover
+				background-color: #c45237
+//	Секция myths_and_reality
+.our_achievements
+	&.myths_and_reality
+		text-align: center
+		h2
+			margin-top: 400px
+			text-transform: capitalize
+			@include font($main_color, 48px, $font_Amazing_Grotesk_Demi_Bold, 1.2)
+		p
+			width: 930px
+			margin: 25px auto 30px
+			font-size: 24px
+			line-height: 1.2
 //	Секция
 //	Секция
 //	Секция

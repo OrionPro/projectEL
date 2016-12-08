@@ -8,6 +8,7 @@ $(function() {
     // };
 });
 $(window).scroll(function() {
+   
     if ($(window).scrollTop() >= 10 && $(window).scrollTop() <= 199) {
         // tl.reverse();
     }
@@ -41,18 +42,28 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 5700 && $(window).scrollTop() <= 5900) {
         tl10.resume();
     }
+    if ($(window).scrollTop() >= 100 && $(window).scrollTop() <= 300) {
+        tl12.resume();
+    }
+    if ($(window).scrollTop() >= 1000 && $(window).scrollTop() <= 1200) {
+        tl13.resume();
+    }
 });
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
 var tl3 = new TimelineMax(); // what_else_do_line
 var tl4 = new TimelineMax(); // Наше порфтолио
 var tl5 = new TimelineMax(); // our_achievements
-var tl6 = new TimelineMax({ repeat: -1 }); //анимация стрелок
+var tl6 = new TimelineMax({ repeat: -1, yoyo: true }); //анимация стрелок
 var tl7 = new TimelineMax(); // our_achievements_item 
 var tl8 = new TimelineMax(); // take_part_img 
 var tl9 = new TimelineMax(); // take_part_img_bot_decor 
 var tl10 = new TimelineMax(); // book_now_city 
+var tl11 = new TimelineMax({repeat: -1}); // monitor blink 
+var tl12 = new TimelineMax(); // monitor 
+var tl13 = new TimelineMax(); // why_seo item
 $(document).ready(function() {
+    // console.log($(window).scrollTop());
     // Основные анимации
 
     tl.pause(); // скалы и дома вверху
@@ -64,6 +75,10 @@ $(document).ready(function() {
     tl8.pause(); // take_part_img 
     tl9.pause(); // take_part_img_bot_decor
     tl10.pause(); // book_now_city
+    tl12.pause(); // monitor
+    tl13.pause(); // why_seo item
+  
+ 
 
     // цели
     TweenMax.from("#g4378", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
@@ -97,7 +112,7 @@ $(document).ready(function() {
     tl2.from("#g4479", 0.5, { opacity: 0, y: 80, ease: Power2.easeInOut, }, 0.4);
 
     // what_else_do
-    $(".what_else_do_item").hover(
+    $(".what_else_do_item:not('.what_else_do.why_seo .what_else_do_item')").hover(
         function() {
             TweenMax.to($(this).find(".path4213-item"), 0.7, { fill: "#d45b3e" });
             TweenMax.to($(this).find(".path4278"), 0.7, { fill: "#c45237" });
@@ -224,13 +239,26 @@ $(document).ready(function() {
     tl9.from("#take_p", 1.5, { autoAlpha: 0 }, 2);
     tl9.from("#g5500", 1, { autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut }, 2);
     // book_now_city
-    tl10.from("#g4445097807", 0.6, { opacity: 0, y: -250, ease: Back.easeInOut }, 0.1);
-    tl10.from("#g5593", 0.6, { opacity: 0, y: -250, ease: Back.easeInOut }, '-=0.5');
-    tl10.from("#g445278078034", 0.6, { opacity: 0, y: -250, ease: Back.easeInOut }, '-=0.5');
-    tl10.from("#g43851241241241", 0.6, { opacity: 0, y: -250, ease: Back.easeInOut }, '-=0.5');
-    tl10.from("#g5005", 0.6, { opacity: 0, y: -250, ease: Back.easeOut }, '-=0.4');
-    tl10.from("#g4934124124", 0.6, { opacity: 0, y: -250, ease: Back.easeOut }, '-=0.4');
-    tl10.from("#g5004", 0.6, { opacity: 0, y: 300, ease: Power2.easeInOut }, '-=0.4');
+    tl10.from("#g4445097807", 0.6, { autoAlpha: 0, y: -250, ease: Back.easeInOut }, 0.1);
+    tl10.from("#g5593", 0.6, { autoAlpha: 0, y: -250, ease: Back.easeInOut }, '-=0.5');
+    tl10.from("#g445278078034", 0.6, { autoAlpha: 0, y: -250, ease: Back.easeInOut }, '-=0.5');
+    tl10.from("#g43851241241241", 0.6, { autoAlpha: 0, y: -250, ease: Back.easeInOut }, '-=0.5');
+    tl10.from("#g5005", 0.6, { autoAlpha: 0, y: -250, ease: Back.easeOut }, '-=0.4');
+    tl10.from("#g4934124124", 0.6, { autoAlpha: 0, y: -250, ease: Back.easeOut }, '-=0.4');
+    tl10.from("#g5004", 0.4, { autoAlpha: 0, y: 10, ease: Power2.easeInOut }, '-=0');
+    // monitor blink
+    tl11.to("#path4156", 0.7, { fill: "#fff", ease: Power2.easeInOut }, 0.7);
+    // monitor border
+    tl12.from("#path4156", 1.3, { autoAlpha: 0 }, 0.5).
+        from("#monitor_border", 1.3, { drawSVG: "0%" }, 0.5).
+        from("#monitor_border2", 1.3, { drawSVG: "0%" }, 0.5).
+        from("#rect4146", 1.3, { drawSVG: "50% 50%" }, 0.5).
+        from("#monitor_border3", 1.3, { drawSVG: "50% 50%" }, 0.5).
+        from("#monitor_border4", 1.3, { drawSVG: "50% 50%" }, 0.5).
+        from(".owl-carousel3", 0.5, { autoAlpha: 0,  transformOrigin: "50% 50%", scaleY: 0, ease: Power2.easeInOut  }, 1);
+    // why_seo_img
+    tl13.staggerFrom(".why_seo_img", 1, { autoAlpha: 0, transformOrigin: "50% 50%", scale: 0  }, 0.4);
+
 
 
     // для IE вызов по скроллу в ready (загруженном документе)
@@ -283,10 +311,15 @@ $(document).ready(function() {
                 tl10.resume();
             }
         }
-
+        if ($(window).scrollTop() >= 200) {
+            tl12.resume();
+        }
+        if ($(window).scrollTop() >= 1000) {
+            tl13.resume();
+        }
     }
     readyTimeLineGo();
-    console.log($(window).scrollTop());
+    
     //header_phone переключение телефона
     $(".header_phone .header_phone_country a").on('click', function(e) { //ссылки которые будут переключать табы
         e.preventDefault();
@@ -432,6 +465,13 @@ $(document).ready(function() {
         }
         e.preventDefault();
     });
+    //  Активация слайдера
+    $(".owl-carousel3").owlCarousel({
+        loop: true,
+        items: 1,
+        dots: true
+    });
+   
     // Select в модальном окне
     $(document).click(function() {
         $('.slct').removeClass('active');

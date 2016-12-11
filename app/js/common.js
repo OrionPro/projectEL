@@ -8,7 +8,7 @@ $(function() {
     // };
 });
 $(window).scroll(function() {
-   
+   console.log($(window).scrollTop());
     if ($(window).scrollTop() >= 10 && $(window).scrollTop() <= 199) {
         // tl.reverse();
     }
@@ -48,6 +48,15 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 1000 && $(window).scrollTop() <= 1200) {
         tl13.resume();
     }
+    if ($(window).scrollTop() >= 3600 && $(window).scrollTop() <= 3800) {
+        tl14.resume();
+    }
+    if ($(window).scrollTop() >= 4800 && $(window).scrollTop() <= 5000) {
+        tl15.resume();
+    }
+    if ($(window).scrollTop() >= 6200 && $(window).scrollTop() <= 6400) {
+        tl16.resume();
+    }
 });
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
@@ -62,6 +71,9 @@ var tl10 = new TimelineMax(); // book_now_city
 var tl11 = new TimelineMax({repeat: -1}); // monitor blink 
 var tl12 = new TimelineMax(); // monitor 
 var tl13 = new TimelineMax(); // why_seo item
+var tl14 = new TimelineMax(); //  from_what_is_seo item
+var tl15 = new TimelineMax(); //  stages_of_advancement item
+var tl16 = new TimelineMax(); //  cost_optimization item
 $(document).ready(function() {
     // console.log($(window).scrollTop());
     // Основные анимации
@@ -77,6 +89,9 @@ $(document).ready(function() {
     tl10.pause(); // book_now_city
     tl12.pause(); // monitor
     tl13.pause(); // why_seo item
+    tl14.pause(); // from_what_is_seo item
+    tl15.pause(); // stages_of_advancement item
+    tl16.pause(); // cost_optimization item
   
  
 
@@ -258,9 +273,17 @@ $(document).ready(function() {
         from(".owl-carousel3", 0.5, { autoAlpha: 0,  transformOrigin: "50% 50%", scaleY: 0, ease: Power2.easeInOut  }, 1);
     // why_seo_img
     tl13.staggerFrom(".why_seo_img", 1, { autoAlpha: 0, transformOrigin: "50% 50%", scale: 0  }, 0.4);
-
-
-
+    // from_what_is_seo item
+    tl14.staggerFrom(".from_what_is_seo_items1", 1.2, { autoAlpha: 0, y: 10, ease: Power2.easeInOut }, 0.5, 'from_what_is_seo_items1').
+        staggerFrom(".from_what_is_seo_items", 1.4, { drawSVG: "50% 50%" }, 0.6, 'from_what_is_seo_items1');
+    // stages_of_advancement item
+    tl15.staggerFrom(".stages_of_advancement .stages_of_advancement_item_img:not('.cost_optimization.stages_of_advancement .stages_of_advancement_item_img')", 1, { autoAlpha: 0, x: -40, ease: Power2.easeInOut }, 0.5, 'stages_of_advancement_item').add('stages_of_advancement_item_h3', '-=2.9').
+        staggerFrom(".stages_of_advancement .stages_of_advancement_item h3:not('.cost_optimization.stages_of_advancement .stages_of_advancement_item h3')", 1, { autoAlpha: 0, y: 40, ease: Power2.easeInOut }, 0.5, 'stages_of_advancement_item_h3').
+        staggerFrom(".stages_of_advancement .stages_of_advancement_item p:not('.cost_optimization.stages_of_advancement .stages_of_advancement_item p')", 1, { autoAlpha: 0, x: 40, ease: Power2.easeInOut }, 0.7, 'stages_of_advancement_item_h3');
+    // .cost_optimization  item
+    tl16.staggerFrom(".cost_optimization .stages_of_advancement_item_img", 1, { autoAlpha: 0, x: -40, ease: Power2.easeInOut }, 0.5, 'stages_of_advancement_item').add('cost_optimization_h3', '-=1.5').
+        staggerFrom(".cost_optimization .stages_of_advancement_item h3", 1, { autoAlpha: 0, x: -40, ease: Power2.easeInOut }, 0.5, 'cost_optimization_h3').
+        staggerFrom(".cost_optimization .stages_of_advancement_item p", 1, { autoAlpha: 0, x: 40, ease: Power2.easeInOut }, 0.7, 'cost_optimization_h3');    
     // для IE вызов по скроллу в ready (загруженном документе)
     $(window).scroll(function() {
 
@@ -316,6 +339,15 @@ $(document).ready(function() {
         }
         if ($(window).scrollTop() >= 1000) {
             tl13.resume();
+        }
+        if ($(window).scrollTop() >= 3600) {
+            tl14.resume();
+        }
+        if ($(window).scrollTop() >= 4800) {
+            tl15.resume();
+        }
+        if ($(window).scrollTop() >= 6200) {
+            tl16.resume();
         }
     }
     readyTimeLineGo();

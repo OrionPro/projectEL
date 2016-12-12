@@ -703,6 +703,7 @@ body textarea:required:valid
 //	Секция with_expert_advice
 .book_now
 	&.with_expert_advice
+		min-height: 675px
 		text-align: center
 		.book_now_form
 			width: 800px
@@ -723,7 +724,44 @@ body textarea:required:valid
 				font-size: 18px
 				margin-top: -15px
 
-//	Секция
+//	Секция our_work
+.our_work
+	min-height: 740px
+	background: #0b2848  url('../img/from_what_is_seo_clouds.png') center top 0 no-repeat
+	h2
+		margin-top: 34px
+		margin-bottom: 30px
+		text-align: center
+		font-size: 48px
+		color: $main_color
+		text-transform: capitalize
+	.our_work_item
+		float: left
+		margin-right: 30px
+		text-align: center
+		&:first-of-type
+			margin-left: 114px
+		&:last-of-type
+			margin-right: 0
+		a
+			height: 52px
+			display: inline-block
+			margin-top: 25px
+			padding-left: 73px
+			padding-right: 73px
+			background-color: $main_color
+			color: #000
+			font-size: 20px
+			line-height: 52px
+			text-transform: uppercase
+			transition: 0.5s
+			&:hover
+				text-decoration: none
+				background-color: $auxiliary_color	
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
 //	Секция
 //	Секция
 //	Секция

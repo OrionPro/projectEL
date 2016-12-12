@@ -57,6 +57,9 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 6200 && $(window).scrollTop() <= 6400) {
         tl16.resume();
     }
+    if ($(window).scrollTop() >= 7600 && $(window).scrollTop() <= 7800) {
+        tl17.resume();
+    }
 });
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
@@ -74,6 +77,7 @@ var tl13 = new TimelineMax(); // why_seo item
 var tl14 = new TimelineMax(); //  from_what_is_seo item
 var tl15 = new TimelineMax(); //  stages_of_advancement item
 var tl16 = new TimelineMax(); //  cost_optimization item
+var tl17 = new TimelineMax(); //  our_work_item
 $(document).ready(function() {
     // console.log($(window).scrollTop());
     // Основные анимации
@@ -92,6 +96,7 @@ $(document).ready(function() {
     tl14.pause(); // from_what_is_seo item
     tl15.pause(); // stages_of_advancement item
     tl16.pause(); // cost_optimization item
+    tl17.pause(); // our_work_item
   
  
 
@@ -283,7 +288,10 @@ $(document).ready(function() {
     // .cost_optimization  item
     tl16.staggerFrom(".cost_optimization .stages_of_advancement_item_img", 1, { autoAlpha: 0, x: -40, ease: Power2.easeInOut }, 0.5, 'stages_of_advancement_item').add('cost_optimization_h3', '-=1.5').
         staggerFrom(".cost_optimization .stages_of_advancement_item h3", 1, { autoAlpha: 0, x: -40, ease: Power2.easeInOut }, 0.5, 'cost_optimization_h3').
-        staggerFrom(".cost_optimization .stages_of_advancement_item p", 1, { autoAlpha: 0, x: 40, ease: Power2.easeInOut }, 0.7, 'cost_optimization_h3');    
+        staggerFrom(".cost_optimization .stages_of_advancement_item p", 1, { autoAlpha: 0, x: 40, ease: Power2.easeInOut }, 0.7, 'cost_optimization_h3');
+       
+    // .cost_optimization  item
+    tl17.staggerFrom(".our_work_item ", 1, { autoAlpha: 0, scaleX: 0, skewX: 10, ease: Power2.easeInOut }, 0.5, 'stages_of_advancement_item').add('cost_optimization_h3', '-=1.5');
     // для IE вызов по скроллу в ready (загруженном документе)
     $(window).scroll(function() {
 
@@ -348,6 +356,9 @@ $(document).ready(function() {
         }
         if ($(window).scrollTop() >= 6200) {
             tl16.resume();
+        }
+        if ($(window).scrollTop() >= 7600) {
+            tl17.resume();
         }
     }
     readyTimeLineGo();

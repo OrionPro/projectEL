@@ -7,6 +7,7 @@ var 	gulp         = require('gulp'),
 		concat       = require('gulp-concat'),
 		uglify       = require('gulp-uglify');
 		imagemin 	 = require('gulp-imagemin');
+		imageminSvgo = require('imagemin-svgo');
 		spritesmith  = require('gulp.spritesmith');
 		livereload  = require('gulp-livereload');
 
@@ -37,6 +38,12 @@ gulp.task('compress-img', function () {
 	return gulp.src('app/img/*')
         .pipe(imagemin({ proressive: true }))
         .pipe(gulp.dest('app/img'));
+});
+
+gulp.task('default', function () {
+    return gulp.src('app/img/*.svg')
+        .pipe(imageminSvgo()())
+        .pipe(gulp.dest('app/img/'));
 });
 
 gulp.task('sprite', function() {

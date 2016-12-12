@@ -1490,27 +1490,37 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .from_what_is_seo .row+.row h3{margin-top:-7px;margin-bottom:41px;font-size:30px;line-height:1.2;color:#eed350;text-transform:capitalize;text-align:center}
 .from_what_is_seo .row+.row h3+p{width:800px;line-height:1.2}
 .stages_of_advancement{min-height:1270px;background-color:#03142e}
+.cost_optimization,.our_work{background:url(../img/from_what_is_seo_clouds.png) center top 0 no-repeat #0b2848}
 .stages_of_advancement h2{margin-top:80px;text-align:center;font-size:48px;color:#eed350;text-transform:capitalize}
 .stages_of_advancement .stages_of_advancement_item{overflow:hidden;margin-bottom:45px;margin-left:20px}
 .stages_of_advancement .stages_of_advancement_item h3{margin-top:0;margin-bottom:-3px;font-size:30px;color:#eed350;text-transform:capitalize}
 .stages_of_advancement .stages_of_advancement_item p{font-size:24px;line-height:1.2}
 .stages_of_advancement .stages_of_advancement_item span{color:#eed350;font:36px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .stages_of_advancement .stages_of_advancement_item_img{float:left;margin-right:25px}
-.cost_optimization{min-height:880px;background:url(../img/from_what_is_seo_clouds.png) center top 0 no-repeat #0b2848}
+.cost_optimization{min-height:880px}
 .cost_optimization h2{margin-top:28px;margin-bottom:0}
 .cost_optimization h2+p{margin-bottom:40px}
 .cost_optimization p{font-size:24px;text-align:center;line-height:1.2}
 .cost_optimization .stages_of_advancement_item{margin-left:0}
 .cost_optimization .stages_of_advancement_item p{text-align:left}
-.book_now.with_expert_advice{text-align:center}
+.book_now.with_expert_advice{min-height:675px;text-align:center}
 .book_now.with_expert_advice .book_now_form{width:800px;margin:40px auto 0}
 .book_now.with_expert_advice h2{text-transform:none}
 .book_now.with_expert_advice h2 span{color:#eed350;font:36px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.2}
 .book_now.with_expert_advice form{width:370px;margin:48px auto 0}
 .book_now.with_expert_advice form input[type=submit]{width:100%;margin-top:10px;padding-left:0;font-size:20px}
 .book_now.with_expert_advice form p{font-size:18px;margin-top:-15px}
+.our_work{min-height:740px}
+.our_work h2{margin-top:34px;margin-bottom:30px;text-align:center;font-size:48px;color:#eed350;text-transform:capitalize}
+.footer .copyright,.our_work .our_work_item a{text-transform:uppercase;display:inline-block}
+.our_work .our_work_item{float:left;margin-right:30px;text-align:center}
+.our_work .our_work_item:first-of-type{margin-left:114px}
+.our_work .our_work_item:last-of-type{margin-right:0}
+.our_work .our_work_item a{height:52px;margin-top:25px;padding-left:73px;padding-right:73px;background-color:#eed350;color:#000;font-size:20px;line-height:52px;-webkit-transition:.5s;transition:.5s}
+.our_work .our_work_item a:hover{text-decoration:none;background-color:#d45b3e}
+.our_work .our_work_item a:active,.our_work .our_work_item a:focus{text-decoration:none}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
-.footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}
+.footer .copyright{margin-top:55px;margin-left:10px;font-size:20px}
 .footer .copyright p+p{margin-top:-6px;font-size:20px;color:#b0a79e;text-transform:none}
 .footer .footer_nav{display:inline-block;vertical-align:middle;margin-left:46px;margin-top:-65px}
 .footer .footer_nav ul{padding:0;margin:0}

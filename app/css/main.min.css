@@ -1454,6 +1454,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .website_promotion .owl-carousel3 .owl-controls .owl-dots .owl-dot:last-of-type{margin-right:0}
 .website_promotion .owl-carousel3 .owl-controls .owl-dots .owl-dot.active{background-color:#fff}
 .website_promotion .website_promotion_clouds{margin:auto;position:absolute;bottom:-437px;left:80px}
+.from_what_is_seo,.from_what_is_seo .from_what_is_seo_bot_decor{position:relative}
 .what_else_do.why_seo{min-height:630px}
 .what_else_do.why_seo .what_else_do_items{margin-top:74px}
 .what_else_do.why_seo .what_else_do_items .what_else_do_item{margin-right:5px}
@@ -1489,10 +1490,11 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .from_what_is_seo .row+.row p+p{width:761px}
 .from_what_is_seo .row+.row h3{margin-top:-7px;margin-bottom:41px;font-size:30px;line-height:1.2;color:#eed350;text-transform:capitalize;text-align:center}
 .from_what_is_seo .row+.row h3+p{width:800px;line-height:1.2}
-.stages_of_advancement{min-height:1270px;background-color:#03142e}
+.from_what_is_seo .from_what_is_seo_bot_decor svg{position:absolute;bottom:-226px;left:469px}
+.stages_of_advancement{min-height:1317px;background-color:#03142e}
 .cost_optimization,.our_work{background:url(../img/from_what_is_seo_clouds.png) center top 0 no-repeat #0b2848}
 .stages_of_advancement h2{margin-top:80px;text-align:center;font-size:48px;color:#eed350;text-transform:capitalize}
-.stages_of_advancement .stages_of_advancement_item{overflow:hidden;margin-bottom:45px;margin-left:20px}
+.stages_of_advancement .stages_of_advancement_item{overflow:hidden;margin-bottom:40px;margin-left:20px}
 .stages_of_advancement .stages_of_advancement_item h3{margin-top:0;margin-bottom:-3px;font-size:30px;color:#eed350;text-transform:capitalize}
 .stages_of_advancement .stages_of_advancement_item p{font-size:24px;line-height:1.2}
 .stages_of_advancement .stages_of_advancement_item span{color:#eed350;font:36px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
@@ -1501,7 +1503,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .cost_optimization h2{margin-top:28px;margin-bottom:0}
 .cost_optimization h2+p{margin-bottom:40px}
 .cost_optimization p{font-size:24px;text-align:center;line-height:1.2}
-.cost_optimization .stages_of_advancement_item{margin-left:0}
+.cost_optimization .stages_of_advancement_item{margin-left:0;margin-bottom:45px}
 .cost_optimization .stages_of_advancement_item p{text-align:left}
 .book_now.with_expert_advice{min-height:675px;text-align:center}
 .book_now.with_expert_advice .book_now_form{width:800px;margin:40px auto 0}

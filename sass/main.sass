@@ -694,7 +694,7 @@ body textarea:required:valid
 	min-height: 880px
 	background: #0b2848  url('../img/from_what_is_seo_clouds.png') center top 0 no-repeat
 	h2
-		margin-top: 28px
+		margin-top: 80px
 		margin-bottom: 0
 		& + p
 			margin-bottom: 40px
@@ -710,13 +710,14 @@ body textarea:required:valid
 //	Секция with_expert_advice
 .book_now
 	&.with_expert_advice
-		min-height: 675px
+		min-height: 770px
 		text-align: center
 		.book_now_form
 			width: 800px
 			margin: 40px auto 0
 		h2
 			text-transform: none
+			margin-top: 90px
 			span
 				@include font($main_color, 36px, $font_Amazing_Grotesk_Ultra, 1.2)	
 		form
@@ -736,7 +737,7 @@ body textarea:required:valid
 	min-height: 740px
 	background: #0b2848  url('../img/from_what_is_seo_clouds.png') center top 0 no-repeat
 	h2
-		margin-top: 34px
+		margin-top: 75px
 		margin-bottom: 30px
 		text-align: center
 		font-size: 48px
@@ -746,6 +747,8 @@ body textarea:required:valid
 		float: left
 		margin-right: 30px
 		text-align: center
+		&:last-of-type
+			margin-bottom: 100px
 		&:first-of-type
 			margin-left: 114px
 		&:last-of-type
@@ -769,7 +772,83 @@ body textarea:required:valid
 				text-decoration: none
 			&:focus
 				text-decoration: none
-//	Секция
+//	Секция contacts
+.contacts
+	min-height: 747px
+	background: #03142e  url('../img/our_achievements_clouds.png') center top 200px no-repeat
+	h2
+		margin-top: 117px
+		margin-left: 215px
+		margin-bottom: 5px
+		font-size: 48px
+		color: $main_color
+	h3
+		margin-top: -13px
+		margin-bottom: 19px
+		font-size: 24px
+		color: $main_color
+	.contacts_item_wrap
+		float: left
+		p
+			font-size: 24px
+			line-height: 1.2
+			& + p
+				margin-top: 20px
+			a
+				color: #fff
+				&:hover
+					text-decoration: none
+	.contacts_item
+		width: 614px
+		overflow: hidden
+		margin-bottom: 20px
+	.contacts_item_img
+		margin-left: 45px
+		display: inline-block
+	.contacts_item_txt
+		margin-left: 55px
+		display: inline-block
+		vertical-align: middle
+	.contacts_form_wrap
+		width: 570px
+		float: left
+	input
+		width: 100%
+		height: 30px
+		margin-bottom: 25px
+		background: transparent
+		border: none
+		border-bottom: 1px solid $main_color
+		font-size: 18px
+		&:focus
+			outline: 0
+		&:active
+			outline: 0
+	input[type=submit]
+		width: 270px
+		height: 61px
+		margin-top: 10px
+		font-size: 24px
+		background-color: #FFB819
+		color: $auxiliary_txt_color
+		transition: 0.5s
+		border: none
+		&:hover
+			background-color: $auxiliary_color
+	textarea
+		width: 100%
+		height: 255px
+		margin-bottom: 10px
+		background: transparent
+		border: none
+		border-bottom: 1px solid $main_color
+		&:focus
+			outline: 0
+		&:active
+			outline: 0
+	.modal_form_input_wrap
+		.modal_input_error
+			top: 30px
 //	Секция
 //	Секция
 //	Секция
@@ -781,6 +860,9 @@ body textarea:required:valid
 	min-height: 170px
 	background-color: #142131
 	@include font(#fff, 22px, $font_Amazing_Grotesk_Ultra)
+	&.seo
+		.footer_nav
+			margin-top: -30px	
 	.copyright
 		display: inline-block
 		margin-top: 55px

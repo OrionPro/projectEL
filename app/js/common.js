@@ -60,6 +60,9 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 7600 && $(window).scrollTop() <= 7800) {
         tl17.resume();
     }
+    if ($(window).scrollTop() >= 4500 && $(window).scrollTop() <= 4800) {
+        tl18.resume();
+    }
 });
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
@@ -78,6 +81,7 @@ var tl14 = new TimelineMax(); //  from_what_is_seo item
 var tl15 = new TimelineMax(); //  stages_of_advancement item
 var tl16 = new TimelineMax(); //  cost_optimization item
 var tl17 = new TimelineMax(); //  our_work_item
+var tl18 = new TimelineMax(); //  from_what_is_seo_bot_decor
 $(document).ready(function() {
     // console.log($(window).scrollTop());
     // Основные анимации
@@ -97,7 +101,7 @@ $(document).ready(function() {
     tl15.pause(); // stages_of_advancement item
     tl16.pause(); // cost_optimization item
     tl17.pause(); // our_work_item
-  
+    tl18.pause(); // our_work_itemfrom_what_is_seo_bot_decor
  
 
     // цели
@@ -241,7 +245,7 @@ $(document).ready(function() {
     tl8.from(".take_part_txt_item.item5", 1, { autoAlpha: 0, scaleY: 0, skewX: "110deg" }, 2);
     // кнопка связаться с командой
     tl8.from(".take_part_txt_item_links", 0.8, { autoAlpha: 0, scaleY: 0, skewX: "200deg", skewY: "50deg" }, 2.2);
-    // hover on item
+    // hover on item  class="path4611"  class="circle4613" 
     $(".g5504").hover(
         function() {
             TweenMax.to($(this).find(".path4611"), 0.7, { fill: "#eed350" });
@@ -255,9 +259,9 @@ $(document).ready(function() {
         }
     );
     // take_part_img_bot_decor
-    tl9.from("#take_part_img_bot_decor", 1.5, { drawSVG: "0%" }, 0.5);
-    tl9.from("#take_p", 1.5, { autoAlpha: 0 }, 2);
-    tl9.from("#g5500", 1, { autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut }, 2);
+    tl9.from("#take_part_img_bot_decor", 1.5, { drawSVG: "0%" }, 3.5);
+    tl9.from("#take_p", 1.5, { autoAlpha: 0 }, 4);
+    tl9.from("#g5500", 1, { autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut }, 4);
     // book_now_city
     tl10.from("#g4445097807", 0.6, { autoAlpha: 0, y: -250, ease: Back.easeInOut }, 0.1);
     tl10.from("#g5593", 0.6, { autoAlpha: 0, y: -250, ease: Back.easeInOut }, '-=0.5');
@@ -292,6 +296,13 @@ $(document).ready(function() {
        
     // .cost_optimization  item
     tl17.staggerFrom(".our_work_item ", 1, { autoAlpha: 0, scaleX: 0, skewX: 10, ease: Power2.easeInOut }, 0.5, 'stages_of_advancement_item').add('cost_optimization_h3', '-=1.5');
+    // from_what_is_seo_bot_decor
+    tl18.from("#path5361", 1, { drawSVG: "0%" }, 0.2);
+    tl18.from("#path5539124", 1.3, { drawSVG: "0%" }, 1);   
+    tl18.from("#path45231", 1.3, { drawSVG: "0%" }, 2.7);   
+    tl18.from("#path452", 1, { autoAlpha: 0, ease: Power2.easeInOut }, 2.5);
+    tl18.from("#g55000", 1, { autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut }, 2);
+
     // для IE вызов по скроллу в ready (загруженном документе)
     $(window).scroll(function() {
 
@@ -359,6 +370,9 @@ $(document).ready(function() {
         }
         if ($(window).scrollTop() >= 7600) {
             tl17.resume();
+        }
+        if ($(window).scrollTop() >= 4500) {
+            tl18.resume();
         }
     }
     readyTimeLineGo();

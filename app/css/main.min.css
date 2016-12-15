@@ -1,5 +1,5 @@
 .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}
-.book_now .book_now_form input:active,.book_now .book_now_form input:focus,.book_now .book_now_form textarea:active,.book_now .book_now_form textarea:focus,.free_audit form input:active,.free_audit form input:focus,.slider .slider_mask a:focus{outline:0}
+.book_now .book_now_form input:active,.book_now .book_now_form input:focus,.book_now .book_now_form textarea:active,.book_now .book_now_form textarea:focus,.contacts input:active,.contacts input:focus,.contacts textarea:active,.contacts textarea:focus,.free_audit form input:active,.free_audit form input:focus,.slider .slider_mask a:focus{outline:0}
 .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
 .animated.hinge{-webkit-animation-duration:2s;animation-duration:2s}
@@ -1500,28 +1500,46 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .stages_of_advancement .stages_of_advancement_item span{color:#eed350;font:36px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .stages_of_advancement .stages_of_advancement_item_img{float:left;margin-right:25px}
 .cost_optimization{min-height:880px}
-.cost_optimization h2{margin-top:28px;margin-bottom:0}
+.cost_optimization h2{margin-top:80px;margin-bottom:0}
 .cost_optimization h2+p{margin-bottom:40px}
 .cost_optimization p{font-size:24px;text-align:center;line-height:1.2}
 .cost_optimization .stages_of_advancement_item{margin-left:0;margin-bottom:45px}
 .cost_optimization .stages_of_advancement_item p{text-align:left}
-.book_now.with_expert_advice{min-height:675px;text-align:center}
+.book_now.with_expert_advice{min-height:770px;text-align:center}
 .book_now.with_expert_advice .book_now_form{width:800px;margin:40px auto 0}
-.book_now.with_expert_advice h2{text-transform:none}
+.book_now.with_expert_advice h2{text-transform:none;margin-top:90px}
 .book_now.with_expert_advice h2 span{color:#eed350;font:36px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.2}
 .book_now.with_expert_advice form{width:370px;margin:48px auto 0}
 .book_now.with_expert_advice form input[type=submit]{width:100%;margin-top:10px;padding-left:0;font-size:20px}
 .book_now.with_expert_advice form p{font-size:18px;margin-top:-15px}
 .our_work{min-height:740px}
-.our_work h2{margin-top:34px;margin-bottom:30px;text-align:center;font-size:48px;color:#eed350;text-transform:capitalize}
+.our_work h2{margin-top:75px;margin-bottom:30px;text-align:center;font-size:48px;color:#eed350;text-transform:capitalize}
 .footer .copyright,.our_work .our_work_item a{text-transform:uppercase;display:inline-block}
 .our_work .our_work_item{float:left;margin-right:30px;text-align:center}
+.our_work .our_work_item:last-of-type{margin-bottom:100px;margin-right:0}
 .our_work .our_work_item:first-of-type{margin-left:114px}
-.our_work .our_work_item:last-of-type{margin-right:0}
 .our_work .our_work_item a{height:52px;margin-top:25px;padding-left:73px;padding-right:73px;background-color:#eed350;color:#000;font-size:20px;line-height:52px;-webkit-transition:.5s;transition:.5s}
 .our_work .our_work_item a:hover{text-decoration:none;background-color:#d45b3e}
 .our_work .our_work_item a:active,.our_work .our_work_item a:focus{text-decoration:none}
+.contacts{min-height:747px;background:url(../img/our_achievements_clouds.png) center top 200px no-repeat #03142e}
+.contacts h2{margin-top:117px;margin-left:215px;margin-bottom:5px;font-size:48px;color:#eed350}
+.contacts h3{margin-top:-13px;margin-bottom:19px;font-size:24px;color:#eed350}
+.contacts .contacts_item_wrap{float:left}
+.contacts .contacts_item_wrap p{font-size:24px;line-height:1.2}
+.contacts .contacts_item_wrap p+p{margin-top:20px}
+.contacts .contacts_item_wrap p a{color:#fff}
+.contacts .contacts_item_wrap p a:hover{text-decoration:none}
+.contacts .contacts_item{width:614px;overflow:hidden;margin-bottom:20px}
+.contacts .contacts_item_img{margin-left:45px;display:inline-block}
+.contacts .contacts_item_txt{margin-left:55px;display:inline-block;vertical-align:middle}
+.contacts .contacts_form_wrap{width:570px;float:left}
+.contacts input{width:100%;height:30px;margin-bottom:25px;background:0 0;border:none;border-bottom:1px solid #eed350;font-size:18px}
+.contacts input[type=submit]{width:270px;height:61px;margin-top:10px;font-size:24px;background-color:#FFB819;color:#000;-webkit-transition:.5s;transition:.5s;border:none}
+.contacts input[type=submit]:hover{background-color:#d45b3e}
+.contacts textarea{width:100%;height:255px;margin-bottom:10px;background:0 0;border:none;border-bottom:1px solid #eed350}
+.contacts .modal_form_input_wrap .modal_input_error{top:30px}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
+.footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{margin-top:55px;margin-left:10px;font-size:20px}
 .footer .copyright p+p{margin-top:-6px;font-size:20px;color:#b0a79e;text-transform:none}
 .footer .footer_nav{display:inline-block;vertical-align:middle;margin-left:46px;margin-top:-65px}

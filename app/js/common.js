@@ -82,6 +82,7 @@ var tl15 = new TimelineMax(); //  stages_of_advancement item
 var tl16 = new TimelineMax(); //  cost_optimization item
 var tl17 = new TimelineMax(); //  our_work_item
 var tl18 = new TimelineMax(); //  from_what_is_seo_bot_decor
+var tl19 = new TimelineMax(); //  contact
 $(document).ready(function() {
     // console.log($(window).scrollTop());
     // Основные анимации
@@ -302,7 +303,10 @@ $(document).ready(function() {
     tl18.from("#path45231", 1.3, { drawSVG: "0%" }, 2.7);   
     tl18.from("#path452", 1, { autoAlpha: 0, ease: Power2.easeInOut }, 2.5);
     tl18.from("#g55000", 1, { autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut }, 2);
-
+    // contacts
+    tl19.staggerFrom(".contacts_item_img ", 1, { autoAlpha: 0, scaleX: 0, skewX: 10, ease: Power2.easeInOut }, 0.5).
+        staggerFrom(".contacts_item_txt ", 1, { autoAlpha: 0, x: -20, ease: Power2.easeInOut }, 0.5, '-=2').
+        from("#bottom ", 2.5, { autoAlpha: 0, width: 100, ease: Power2.easeInOut }, '-=2.5');
     // для IE вызов по скроллу в ready (загруженном документе)
     $(window).scroll(function() {
 

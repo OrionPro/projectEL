@@ -1538,6 +1538,8 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .contacts input[type=submit]:hover{background-color:#d45b3e}
 .contacts textarea{width:100%;height:255px;margin-bottom:10px;background:0 0;border:none;border-bottom:1px solid #eed350}
 .contacts .modal_form_input_wrap .modal_input_error{top:30px}
+.website_promotion.selling_site{background:url(../img/main_clouds.png) center top 250px no-repeat #03142e}
+.website_promotion.selling_site .main_content_txt_wrap{width:920px}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{margin-top:55px;margin-left:10px;font-size:20px}

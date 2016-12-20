@@ -1514,11 +1514,10 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .book_now.with_expert_advice form p{font-size:18px;margin-top:-15px}
 .our_work{min-height:740px}
 .our_work h2{margin-top:75px;margin-bottom:30px;text-align:center;font-size:48px;color:#eed350;text-transform:capitalize}
-.footer .copyright,.our_work .our_work_item a{text-transform:uppercase;display:inline-block}
 .our_work .our_work_item{float:left;margin-right:30px;text-align:center}
 .our_work .our_work_item:last-of-type{margin-bottom:100px;margin-right:0}
 .our_work .our_work_item:first-of-type{margin-left:114px}
-.our_work .our_work_item a{height:52px;margin-top:25px;padding-left:73px;padding-right:73px;background-color:#eed350;color:#000;font-size:20px;line-height:52px;-webkit-transition:.5s;transition:.5s}
+.our_work .our_work_item a{height:52px;display:inline-block;margin-top:25px;padding-left:73px;padding-right:73px;background-color:#eed350;color:#000;font-size:20px;line-height:52px;text-transform:uppercase;-webkit-transition:.5s;transition:.5s}
 .our_work .our_work_item a:hover{text-decoration:none;background-color:#d45b3e}
 .our_work .our_work_item a:active,.our_work .our_work_item a:focus{text-decoration:none}
 .contacts{min-height:747px;background:url(../img/our_achievements_clouds.png) center top 200px no-repeat #03142e}
@@ -1533,10 +1532,12 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .contacts .contacts_item_img{margin-left:45px;display:inline-block}
 .contacts .contacts_item_txt{margin-left:55px;display:inline-block;vertical-align:middle}
 .contacts .contacts_form_wrap{width:570px;float:left}
-.contacts input{width:100%;height:30px;margin-bottom:25px;background:0 0;border:none;border-bottom:1px solid #eed350;font-size:18px}
+.contacts input{width:100%;height:30px;margin-bottom:25px;background:0 0;border:none;border-bottom:1px solid #eed350;font-size:18px;z-index:1;position:relative}
+.contacts label{position:absolute;z-index:0;font-size:18px;-webkit-transition:.2s ease-out;transition:.2s ease-out}
+.contacts label.is_focused{font-size:13px;-webkit-transform:translateY(-120%);-ms-transform:translateY(-120%);transform:translateY(-120%)}
 .contacts input[type=submit]{width:270px;height:61px;margin-top:10px;font-size:24px;background-color:#FFB819;color:#000;-webkit-transition:.5s;transition:.5s;border:none}
 .contacts input[type=submit]:hover{background-color:#d45b3e}
-.contacts textarea{width:100%;height:255px;margin-bottom:10px;background:0 0;border:none;border-bottom:1px solid #eed350}
+.contacts textarea{width:100%;height:255px;margin-bottom:10px;background:0 0;border:none;border-bottom:1px solid #eed350;z-index:1;position:relative}
 .contacts .modal_form_input_wrap .modal_input_error{top:30px}
 .website_promotion.selling_site{min-height:1790px;background:url(../img/main_clouds.png) center top 250px no-repeat,url(../img/selling_site_clouds.png) center bottom 8px no-repeat #03142e}
 .website_promotion.selling_site .container{position:relative;z-index:0}
@@ -1548,7 +1549,9 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .website_promotion.selling_site .selling_site_item_txt h3{font-size:30px;line-height:1.2}
 .website_promotion.selling_site .selling_site_item_txt2{width:380px;font-size:24px;line-height:1.2;text-align:left;display:inline-block;vertical-align:middle}
 .website_promotion.selling_site .selling_site_item_img{margin-left:27px;margin-right:20px;display:inline-block;vertical-align:middle}
+.website_promotion .website_promotion_decor{position:absolute;bottom:-182px;right:0;left:0;text-align:center}
 .from_idea_to_results{min-height:1870px;background:url(../img/main_clouds.png) center top 100px no-repeat,url(../img/selling_site_clouds.png) center bottom 8px no-repeat #0b2848;text-align:center}
+.from_idea_to_results .container{position:relative}
 .from_idea_to_results .from_idea_to_results_top_txt{margin-top:177px}
 .from_idea_to_results .from_idea_to_results_top_txt p{width:1137px;margin:0 auto 33px;font-size:24px;line-height:1.2}
 .from_idea_to_results .from_idea_to_results_top_txt p+p{width:1000px}
@@ -1559,9 +1562,27 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .from_idea_to_results .from_idea_to_results_img{float:left;margin-left:10px;margin-right:33px}
 .from_idea_to_results .from_idea_to_results_txt{width:962px;text-align:left;float:left}
 .from_idea_to_results .from_idea_to_results_txt p{text-align:left;font-size:18px;line-height:1.2;margin-bottom:23px}
+.from_idea_to_results .from_idea_to_results_decor{position:absolute;bottom:-169px;left:0;right:0;text-align:center}
+.website_promotion.online_store{min-height:755px;background:url(../img/main_clouds.png) center top 100px no-repeat #03142e}
+.website_promotion.online_store .online_store_wrap{overflow:hidden;margin-top:131px}
+.website_promotion.online_store .online_store_img{float:left;margin-left:180px;margin-top:30px}
+.website_promotion.online_store h1{margin-top:19px;margin-left:25px;margin-bottom:17px;float:left}
+.website_promotion.online_store p{width:620px;float:left;margin-left:30px;font-size:24px;line-height:1.2}
+.website_promotion.online_store span{color:#fff;font:24px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.2}
+.website_promotion.online_store .website_promotion_clouds{bottom:-439px}
+.what_else_do.does_the_sale{min-height:760px;position:relative}
+.what_else_do.does_the_sale h2{margin-top:52px;font-size:36px;color:#eed350;text-transform:capitalize;line-height:1.2}
+.what_else_do.does_the_sale .what_else_do_cloud{bottom:-215px;right:0;left:0;text-align:center}
+.what_else_do.does_the_sale .does_the_sale_item{width:430px}
+.what_else_do.does_the_sale .does_the_sale_item_img{display:inline-block;vertical-align:middle}
+.what_else_do.does_the_sale .does_the_sale_item__txt{width:350px;display:inline-block}
+.what_else_do.does_the_sale .does_the_sale_item__txt p{margin:0;text-align:left}
+.our_work.examples_of_online_stores{min-height:975px;background:url(../img/main_clouds.png) center top no-repeat #03142e}
+.our_work.examples_of_online_stores h2{margin-top:200px}
+.our_work.examples_of_online_stores .our_work_item a{padding-left:20px;padding-right:20px}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
-.footer .copyright{margin-top:55px;margin-left:10px;font-size:20px}
+.footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}
 .footer .copyright p+p{margin-top:-6px;font-size:20px;color:#b0a79e;text-transform:none}
 .footer .footer_nav{display:inline-block;vertical-align:middle;margin-left:46px;margin-top:-65px}
 .footer .footer_nav ul{padding:0;margin:0}

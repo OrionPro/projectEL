@@ -820,10 +820,24 @@ body textarea:required:valid
 		border: none
 		border-bottom: 1px solid $main_color
 		font-size: 18px
+		z-index: 1
+		position: relative
 		&:focus
 			outline: 0
 		&:active
 			outline: 0
+	label
+		position: absolute
+		z-index: 0
+		font-size: 18px
+		transition: .2s ease-out
+		&.is_focused
+			font-size: 13px
+			-webkit-transform: translateY(-120%)
+			-moz-transform: translateY(-120%)
+			-ms-transform: translateY(-120%)
+			-o-transform: translateY(-120%)
+			transform: translateY(-120%)
 	input[type=submit]
 		width: 270px
 		height: 61px
@@ -842,6 +856,8 @@ body textarea:required:valid
 		background: transparent
 		border: none
 		border-bottom: 1px solid $main_color
+		z-index: 1
+		position: relative
 		&:focus
 			outline: 0
 		&:active
@@ -895,12 +911,20 @@ body textarea:required:valid
 			margin-right: 20px
 			display: inline-block
 			vertical-align: middle
+	.website_promotion_decor
+		position: absolute
+		bottom: -182px
+		right: 0
+		left: 0
+		text-align: center
 //	Секция from_idea_to_results
 .from_idea_to_results
 	min-height: 1870px
 	background: url(../img/main_clouds.png) center top 100px no-repeat,
 	#0b2848 url('../img/selling_site_clouds.png') center bottom 8px no-repeat 
 	text-align: center
+	.container
+		position: relative
 	.from_idea_to_results_top_txt
 		margin-top: 177px
 		p
@@ -937,10 +961,79 @@ body textarea:required:valid
 			font-size: 18px
 			line-height: 1.2
 			margin-bottom: 23px
+	.from_idea_to_results_decor
+		position: absolute
+		bottom: -169px
+		left: 0
+		right: 0
+		text-align: center
 
-//	Секция
-//	Секция
-//	Секция
+//	Секция online_store
+.website_promotion
+	&.online_store
+		min-height: 755px
+		background: url('../img/main_clouds.png') center top 100px no-repeat #03142e
+		.online_store_wrap
+			overflow: hidden
+			margin-top: 131px	
+		.online_store_img
+			float: left
+			margin-left: 180px
+			margin-top: 30px
+		h1
+			margin-top: 19px
+			margin-left: 25px
+			margin-bottom: 17px
+			float: left
+		p
+			width: 620px
+			float: left
+			margin-left: 30px
+			font-size: 24px
+			line-height: 1.2
+		span
+			@include font(#fff, 24px, $font_Amazing_Grotesk_Ultra, 1.2)
+		.website_promotion_clouds
+			bottom: -439px
+//	Секция does_the_sale
+.what_else_do
+	&.does_the_sale
+		min-height: 760px
+		position: relative
+		h2
+			margin-top: 52px
+			font-size: 36px
+			color: $main_color
+			text-transform: capitalize
+			line-height: 1.2
+		.what_else_do_cloud
+			bottom: -215px
+			right: 0
+			left: 0
+			text-align: center
+		.does_the_sale_item
+			width: 430px	
+		.does_the_sale_item_img
+			display: inline-block
+			vertical-align: middle
+		.does_the_sale_item__txt
+			width: 350px
+			display: inline-block
+			p
+				margin: 0
+				text-align: left
+
+//	Секция examples_of_online_stores
+.our_work
+	&.examples_of_online_stores
+		min-height: 975px
+		background: #03142e url('../img/main_clouds.png') center top no-repeat
+		h2
+			margin-top: 200px
+		.our_work_item
+			a
+				padding-left: 20px
+				padding-right: 20px
 //	Секция
 //	Секция
 //	Секция

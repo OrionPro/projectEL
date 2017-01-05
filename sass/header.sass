@@ -14,6 +14,16 @@ body
 	overflow-x: auto
 	color: $main_txt_color
 	//background: url('../EliteStudio Главная.jpg') center top no-repeat
+	scrollbar-base-color: $main_color
+	scrollbar-arrow-color: $main_color
+	&::-webkit-scrollbar
+		width: 12px
+	&::-webkit-scrollbar-thumb
+		background-color: $main_color
+		&:hover
+			background-color: darken($main_color, 10%)
+	&::-webkit-scrollbar-track-piece
+		background-color: transparent
 h1
 	color: $main_color
 	font: 48px $font_Amazing_Grotesk_Demi_Bold

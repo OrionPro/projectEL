@@ -72,6 +72,9 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 2800 && $(window).scrollTop() <= 3000) {
         tl23.resume();
     }
+    if ($(window).scrollTop() >= 400 && $(window).scrollTop() <= 500) {
+        tl25.resume();
+    }
 });
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
@@ -97,6 +100,7 @@ var tl21 = new TimelineMax(); //  from_idea_to_results_item
 var tl22 = new TimelineMax(); //  website_promotion_decor 
 var tl23 = new TimelineMax(); //  from_idea_to_results_decor
 var tl24 = new TimelineMax(); //  online_store_img
+var tl25 = new TimelineMax(); //  does_the_sale_item_img_circle
 $(document).ready(function() {
     // console.log($(window).scrollTop());
     // Основные анимации
@@ -120,6 +124,7 @@ $(document).ready(function() {
     tl21.pause(); // from_idea_to_results_item
     tl22.pause(); // website_promotion_decor
     tl23.pause(); // from_idea_to_results_decor
+    tl25.pause(); // does_the_sale_item_img_circle
 
 
 
@@ -202,6 +207,9 @@ $(document).ready(function() {
             if ($(window).scrollTop() >= 2800) {
                 tl23.resume();
             }
+        }
+        if ($(window).scrollTop() >= 40) {
+            tl25.resume();
         }
     }
     readyTimeLineGo();
@@ -408,7 +416,7 @@ $(document).ready(function() {
     tl19.staggerFrom(".contacts_item_img ", 1, { autoAlpha: 0, scaleX: 0, skewX: 10, ease: Power2.easeInOut }, 0.5).
     staggerFrom(".contacts_item_txt ", 1, { autoAlpha: 0, x: -20, ease: Power2.easeInOut }, 0.5, '-=2').
     from("#bottom ", 2.5, { autoAlpha: 0, width: 100, ease: Power2.easeInOut }, '-=2.5');
-    // selling_site_item_img circle   path4136
+    // selling_site_item_img circle  
     tl20.staggerFrom(".selling_site_item_img_svg", 1, { autoAlpha: 0, y: 50, ease: Power2.easeInOut }, 0.7, 'selling_site_item_img').staggerFrom(".selling_site_item h3", 1, { autoAlpha: 0, x: 50, ease: Power2.easeInOut }, 0.7, 'selling_site_item_img').staggerFrom(".selling_site_item p", 1, { autoAlpha: 0, x: -50, ease: Power2.easeInOut }, 0.7, 'selling_site_item_img').staggerFrom(".path4271", 2, { drawSVG: "50% 50%" }, 0.5, 'selling_site_item_img').
     from("#path413612414", 3, { drawSVG: "0%" }, 0.5, 'selling_site_item_img').
     from("#path4186124124", 3, { drawSVG: "100% 100%" }, 3, 'selling_site_item_img');
@@ -425,7 +433,9 @@ $(document).ready(function() {
     //online_store_img
     tl24.from("#rect4136", 1, { drawSVG: "50% 50%" }, 0.5, 'online_store_img').
     from("#g4231", 1, { autoAlpha: 0, y: 50, ease: Power2.easeInOut }, 0.5, 'online_store_img');
-
+    // does_the_sale_item_img_circle
+    tl25.from(".does_the_sale_item_img_circle", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0 }, 0.5).
+        from(".what_else_do.does_the_sale .does_the_sale_item__txt p", 1, { opacity: 0, x: 30 }, 1);
     // для IE вызов по скроллу в ready (загруженном документе)
     $(window).scroll(function() {
 
@@ -658,7 +668,7 @@ $(document).ready(function() {
         var id = $(this).data('modal');
         var txt = $(this).data('info');
         $(".popup[data-modal=" + id + "]").toggle("fade", 500).find("form").css('display', 'block');
-        $(".popup[data-modal=" + id + "] input[name=form_name").val(txt);
+        $(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
         // $("body").css({ "overflow": "hidden", "padding-right": "17px" });
 
     });

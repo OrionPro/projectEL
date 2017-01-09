@@ -1579,9 +1579,15 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .what_else_do.does_the_sale .does_the_sale_item_img{display:inline-block;vertical-align:middle}
 .what_else_do.does_the_sale .does_the_sale_item__txt{width:365px;display:inline-block;vertical-align:middle;margin-left:25px}
 .what_else_do.does_the_sale .does_the_sale_item__txt p{width:100%;font-size:24px;margin:0;text-align:left}
-.our_work.examples_of_online_stores{min-height:975px;background:url(../img/main_clouds.png) center top no-repeat #03142e}
-.our_work.examples_of_online_stores h2{margin-top:200px}
+.our_work.examples_of_online_stores{min-height:975px;background:url(../img/main_clouds.png) center top no-repeat #03142e;position:relative}
+.our_work.examples_of_online_stores h2{margin-top:253px;font-size:36px}
 .our_work.examples_of_online_stores .our_work_item a{padding-left:20px;padding-right:20px}
+.our_work.examples_of_online_stores .examples_of_online_stores_decor{position:absolute;bottom:-65px;right:0;left:0;text-align:center}
+.cost_of_online_store{background:#0b2848;text-align:center}
+.cost_of_online_store h2{margin-top:50px}
+.cost_of_online_store .cost_of_online_store_item_wrap{overflow:hidden}
+.cost_of_online_store .cost_of_online_store_item{width:380px;float:left}
+.cost_of_online_store .cost_of_online_store_item ul{padding:0;list-style:none}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

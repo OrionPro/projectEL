@@ -847,7 +847,7 @@ $(document).ready(function() {
         files = this.files;
         //alert(files);
     });
-
+    
     //  Отправка форм с файлом
     $("#form3").on('submit', function(e) { // перехватываем все при событии отправки
         e.preventDefault();
@@ -978,9 +978,6 @@ $(document).ready(function() {
                             $('.file-load-block input[type=text]').css('border', '1px solid #fff');
                         }
                     );
-
-
-
                 }
             });
         }

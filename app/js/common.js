@@ -75,6 +75,15 @@ $(window).scroll(function() {
     if ($(window).scrollTop() >= 400 && $(window).scrollTop() <= 500) {
         tl25.resume();
     }
+    if ($(window).scrollTop() >= 3000 && $(window).scrollTop() <= 3300) {
+        tl26.resume();
+    }
+    if ($(window).scrollTop() >= 1100 && $(window).scrollTop() <= 1200) {
+        tl27.resume();
+    }
+    if ($(window).scrollTop() >= 2000 && $(window).scrollTop() <= 2200) {
+        tl27.resume();
+    }
 });
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
@@ -86,7 +95,7 @@ var tl7 = new TimelineMax(); // our_achievements_item
 var tl8 = new TimelineMax(); // take_part_img 
 var tl9 = new TimelineMax(); // take_part_img_bot_decor 
 var tl10 = new TimelineMax(); // book_now_city 
-var tl11 = new TimelineMax({ repeat: -1 }); // monitor blink 
+var tl11 = new TimelineMax({ repeat: -1 }); // monitor blink
 var tl12 = new TimelineMax(); // monitor 
 var tl13 = new TimelineMax(); // why_seo item
 var tl14 = new TimelineMax(); //  from_what_is_seo item
@@ -101,6 +110,12 @@ var tl22 = new TimelineMax(); //  website_promotion_decor
 var tl23 = new TimelineMax(); //  from_idea_to_results_decor
 var tl24 = new TimelineMax(); //  online_store_img
 var tl25 = new TimelineMax(); //  does_the_sale_item_img_circle
+var tl26 = new TimelineMax(); //  cost_of_online_store_bot_decor
+var tl27 = new TimelineMax(); //  examples_of_online_stores
+var tl28 = new TimelineMax(); //  cost_of_online_store_item
+var tl29 = new TimelineMax(); //  what_tasks_are_performed_img
+
+
 $(document).ready(function() {
     // console.log($(window).scrollTop());
     // Основные анимации
@@ -125,6 +140,9 @@ $(document).ready(function() {
     tl22.pause(); // website_promotion_decor
     tl23.pause(); // from_idea_to_results_decor
     tl25.pause(); // does_the_sale_item_img_circle
+    tl26.pause(); // cost_of_online_store_bot_decor
+    tl27.pause(); // examples_of_online_stores
+    tl28.pause(); // cost_of_online_store_item
 
 
 
@@ -211,8 +229,18 @@ $(document).ready(function() {
         if ($(window).scrollTop() >= 40) {
             tl25.resume();
         }
+        if ($(window).scrollTop() >= 3000) {
+            tl26.resume();
+        }
+        if ($(window).scrollTop() >= 1100) {
+            tl27.resume();
+        }
+        if ($(window).scrollTop() >= 2000) {
+            tl28.resume();
+        }
     }
     readyTimeLineGo();
+
 
     // цели
     TweenMax.from("#g4378", 1.5, { rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut });
@@ -383,13 +411,13 @@ $(document).ready(function() {
     // monitor blink
     tl11.to("#path4156", 0.7, { fill: "#fff", ease: Power2.easeInOut }, 0.7);
     // monitor border
-    tl12.from("#path4156", 1.3, { autoAlpha: 0 }, 0.5).
-    from("#monitor_border", 1.3, { drawSVG: "0%" }, 0.5).
-    from("#monitor_border2", 1.3, { drawSVG: "0%" }, 0.5).
-    from("#rect4146", 1.3, { drawSVG: "50% 50%" }, 0.5).
-    from("#monitor_border3", 1.3, { drawSVG: "50% 50%" }, 0.5).
-    from("#monitor_border4", 1.3, { drawSVG: "50% 50%" }, 0.5).
-    from(".owl-carousel3", 0.5, { autoAlpha: 0, transformOrigin: "50% 50%", scaleY: 0, ease: Power2.easeInOut }, 1);
+    tl12.from("#path4156", 1.3, { autoAlpha: 0 }, 0.5)
+        .from("#monitor_border", 1.3, { drawSVG: "0%" }, 0.5)
+        .from("#monitor_border2", 1.3, { drawSVG: "0%" }, 0.5)
+        .from("#rect4146", 1.3, { drawSVG: "50% 50%" }, 0.5)
+        .from("#monitor_border3", 1.3, { drawSVG: "50% 50%" }, 0.5)
+        .from("#monitor_border4", 1.3, { drawSVG: "50% 50%" }, 0.5)
+        .from(".owl-carousel3", 0.5, { autoAlpha: 0, transformOrigin: "50% 50%", scaleY: 0, ease: Power2.easeInOut }, 1);
     // why_seo_img
     tl13.staggerFrom(".why_seo_img", 1, { autoAlpha: 0, transformOrigin: "50% 50%", scale: 0 }, 0.4);
     // from_what_is_seo item
@@ -436,6 +464,36 @@ $(document).ready(function() {
     // does_the_sale_item_img_circle
     tl25.from(".does_the_sale_item_img_circle", 1, { rotation: 360, transformOrigin: "50% 50%", opacity: 0 }, 0.5).
         from(".what_else_do.does_the_sale .does_the_sale_item__txt p", 1, { opacity: 0, x: 30 }, 1);
+    // cost_of_online_store_bot_decor
+    tl26.from("#cost_of_online_store_bot_decor_circle", 1, { drawSVG: "0%" }, 0.2);
+    tl26.from("#cost_of_online_store_bot_decor_line", 1.3, { drawSVG: "0%" }, 1);
+    tl26.from("#cost_of_online_store_bot_decor_all_line", 1.3, { drawSVG: "0%" }, 2.7);
+    tl26.from("#cost_of_online_store_bot_decor_all_bg", 1, { autoAlpha: 0, ease: Power2.easeInOut }, 2.5);
+    tl26.from("#cost_of_online_store_bot_decor_all_line_body", 1, { autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut }, 2);
+    // examples_of_online_stores
+    tl27.staggerFrom(".our_work.our_work.examples_of_online_stores .our_work_item", 1, { autoAlpha: 0, scaleX: 0, skewX: 10, ease: Power2.easeInOut }, 0.5, 'stages_of_advancement_item').add('cost_optimization_h3', '-=1.5');
+    // cost_of_online_store_item
+    tl28.staggerFrom(".cost_of_online_store_item", 1, { autoAlpha: 0, y: 50, ease: Power2.easeInOut }, 0.5);
+    // from_what_is_seo item
+    tl29.staggerFrom(".what_tasks_are_performed_img", 1.2, { autoAlpha: 0, y: 10, ease: Power2.easeInOut }, 1, 'what_tasks_are_performed_img')
+        .staggerFrom(".what_tasks_are_performed h3", 1.2, { autoAlpha: 0, x: 10, ease: Power2.easeInOut }, 1, 'what_tasks_are_performed_img')
+        .staggerFrom(".what_tasks_are_performed_img_circle", 1.4, { drawSVG: "50% 50%" }, 1.1, 'what_tasks_are_performed_img');
+    // hover on item  class="path4611"  class="circle4613"
+    $(".what_tasks_are_performed a").hover(
+        function() {
+            TweenMax.to($(this).find(".what_tasks_are_performed_c1"), 0.7, { fill: "#d45b3e" });
+            TweenMax.to($(this).find(".what_tasks_are_performed_c2"), 0.7, { fill: "#c45237" });
+            TweenMax.to($(this).find(".what_tasks_are_performed_c3"), 0.7, { fill: "#a2361f" });
+            TweenMax.to($(this).find("h3"), 0.7, { color: "#eed350" });
+        },
+        function() {
+            TweenMax.to($(this).find(".what_tasks_are_performed_c1"), 0.7, { fill: "#177898" });
+            TweenMax.to($(this).find(".what_tasks_are_performed_c2"), 0.7, { fill: "#0f7289" });
+            TweenMax.to($(this).find(".what_tasks_are_performed_c3"), 0.7, { fill: "#0f6378" });
+            TweenMax.to($(this).find("h3"), 0.7, { color: "#ffffff" });
+        }
+    );
+
     // для IE вызов по скроллу в ready (загруженном документе)
     $(window).scroll(function() {
 
@@ -478,18 +536,18 @@ $(document).ready(function() {
     //     return false;
     // });
     // активация label на странице contacts
-    $('.contacts_form_wrap input, .contacts_form_wrap textarea').on('focus', function  () {    
-       $(this).siblings('label').addClass("is_focused"); 
+    $('.contacts_form_wrap input, .contacts_form_wrap textarea').on('focus', function  () {
+       $(this).siblings('label').addClass("is_focused");
     });
     $(".contacts_form_wrap input, .contacts_form_wrap textarea").on('blur', function() {
         if($(this).val() === "") {
-            $(this).siblings("label").removeClass("is_focused");  
+            $(this).siblings("label").removeClass("is_focused");
         }
         else if ($(this).val() !== "")
         {
              $(this).siblings("label").addClass("is_focused");
         }
-       
+
     });
     // запретить дефолтное событие на ссылку .slider_link
     $(".slider_link").on("click", function(e) {
@@ -847,7 +905,7 @@ $(document).ready(function() {
         files = this.files;
         //alert(files);
     });
-    
+
     //  Отправка форм с файлом
     $("#form3").on('submit', function(e) { // перехватываем все при событии отправки
         e.preventDefault();

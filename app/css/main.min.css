@@ -1514,9 +1514,10 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .book_now.with_expert_advice form p{font-size:18px;margin-top:-15px}
 .our_work{min-height:740px}
 .our_work h2{margin-top:75px;margin-bottom:30px;text-align:center;font-size:48px;color:#eed350;text-transform:capitalize}
-.our_work .our_work_item{float:left;margin-right:30px;text-align:center}
+.our_work .our_work_item_wrap{overflow:hidden}
+.our_work .our_work_item{float:left;margin-right:30px;text-align:center;margin-bottom:50px}
 .our_work .our_work_item:last-of-type{margin-bottom:100px;margin-right:0}
-.our_work .our_work_item:first-of-type{margin-left:114px}
+.our_work .our_work_item:nth-of-type(odd){margin-left:114px}
 .our_work .our_work_item a{height:52px;display:inline-block;margin-top:25px;padding-left:73px;padding-right:73px;background-color:#eed350;color:#000;font-size:20px;line-height:52px;text-transform:uppercase;-webkit-transition:.5s;transition:.5s}
 .our_work .our_work_item a:hover{text-decoration:none;background-color:#d45b3e}
 .our_work .our_work_item a:active,.our_work .our_work_item a:focus{text-decoration:none}
@@ -1567,11 +1568,11 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .website_promotion.online_store .online_store_wrap{overflow:hidden;margin-top:131px}
 .website_promotion.online_store .online_store_img{float:left;margin-left:180px;margin-top:30px}
 .website_promotion.online_store h1{margin-top:19px;margin-left:25px;margin-bottom:17px;float:left}
-.website_promotion.online_store p{width:620px;float:left;margin-left:30px;font-size:24px;line-height:1.2}
+.website_promotion.online_store p{width:620px;float:left;margin-left:30px;margin-bottom:30px;font-size:24px;line-height:1.2}
 .website_promotion.online_store span{color:#fff;font:24px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.2}
-.website_promotion.online_store .website_promotion_clouds{bottom:-439px}
+.website_promotion.online_store .website_promotion_clouds{bottom:-439px;z-index:1}
 .what_else_do.does_the_sale{min-height:630px;position:relative}
-.what_else_do.does_the_sale h2{margin-top:52px;font-size:36px;color:#eed350;text-transform:capitalize;line-height:1.2}
+.what_else_do.does_the_sale h2{margin-top:52px;font-size:36px;color:#eed350;text-transform:capitalize;line-height:1.2;z-index:2;position:relative}
 .what_else_do.does_the_sale p{width:470px;margin:20px auto 0;position:relative;z-index:2}
 .what_else_do.does_the_sale .what_else_do_cloud{bottom:-215px;right:0;left:0;text-align:center}
 .what_else_do.does_the_sale .does_the_sale_item_wrap{margin-top:47px;margin-left:0}
@@ -1584,7 +1585,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .our_work.examples_of_online_stores .our_work_item a{padding-left:20px;padding-right:20px}
 .our_work.examples_of_online_stores .examples_of_online_stores_decor{position:absolute;bottom:-65px;right:0;left:0;text-align:center}
 .cost_of_online_store{background:#0b2848;text-align:center}
-.cost_of_online_store h2{margin-top:100px;margin-bottom:40px;font-size:36px;color:#eed350}
+.cost_of_online_store h2{margin-top:100px;margin-bottom:40px;font-size:36px;color:#eed350;text-transform:capitalize}
 .cost_of_online_store .cost_of_online_store_item_wrap{overflow:hidden;margin-bottom:215px;padding-top:30px;padding-bottom:30px}
 .cost_of_online_store .cost_of_online_store_item{width:370px;margin-right:28px;float:left;background-color:#fff;color:#000}
 .cost_of_online_store .cost_of_online_store_item:first-of-type{margin-left:15px}
@@ -1606,7 +1607,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .cost_of_online_store .cost_of_online_store_bot_decor{position:relative}
 .cost_of_online_store .cost_of_online_store_bot_decor svg{position:absolute;bottom:-32px;left:469px}
 .what_tasks_are_performed{min-height:400px;background:url(../img/what_tasks_are_performed_clouds.png) center top 60px no-repeat #03142e;text-align:center}
-.what_tasks_are_performed h2{margin-top:80px;margin-bottom:37px;font-size:36px;color:#eed350}
+.what_tasks_are_performed h2{margin-top:80px;margin-bottom:37px;font-size:36px;color:#eed350;text-transform:capitalize}
 .what_tasks_are_performed h3{font-size:30px;color:#fff}
 .what_tasks_are_performed a:hover{color:transparent}
 .what_tasks_are_performed .what_tasks_are_performed_wrap{overflow:hidden}
@@ -1615,6 +1616,15 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .what_tasks_are_performed .what_tasks_are_performed_img{vertical-align:middle;display:inline-block}
 .what_tasks_are_performed .what_tasks_are_performed_right{width:570px;float:left;text-align:left}
 .what_tasks_are_performed .what_tasks_are_performed_right_title{display:inline-block;margin-left:25px}
+.website_promotion.landing_page{min-height:795px}
+.website_promotion.landing_page .online_store_img{margin-left:118px;margin-top:18px}
+.website_promotion.landing_page h1{margin-top:42px}
+.website_promotion.landing_page .website_promotion_clouds{bottom:-446px}
+.what_else_do.functions_landing h2{margin-top:40px;text-transform:uppercase}
+.what_else_do.functions_landing .what_else_do_line{margin-top:-123px;left:7px}
+.what_else_do.functions_landing .what_else_do_items{margin-top:81px}
+.what_else_do.functions_landing .what_else_do_items .what_else_do_item{margin-right:110px}
+.what_else_do.functions_landing .what_else_do_items .what_else_do_item:last-of-type{margin-right:0}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

@@ -743,13 +743,16 @@ body textarea:required:valid
 		font-size: 48px
 		color: $main_color
 		text-transform: capitalize
+	.our_work_item_wrap
+		overflow: hidden
 	.our_work_item
 		float: left
 		margin-right: 30px
 		text-align: center
+		margin-bottom: 50px
 		&:last-of-type
 			margin-bottom: 100px
-		&:first-of-type
+		&:nth-of-type(odd)
 			margin-left: 114px
 		&:last-of-type
 			margin-right: 0
@@ -989,12 +992,14 @@ body textarea:required:valid
 			width: 620px
 			float: left
 			margin-left: 30px
+			margin-bottom: 30px
 			font-size: 24px
 			line-height: 1.2
 		span
 			@include font(#fff, 24px, $font_Amazing_Grotesk_Ultra, 1.2)
 		.website_promotion_clouds
 			bottom: -439px
+			z-index: 1
 //	Секция does_the_sale
 .what_else_do
 	&.does_the_sale
@@ -1006,6 +1011,8 @@ body textarea:required:valid
 			color: $main_color
 			text-transform: capitalize
 			line-height: 1.2
+			z-index: 2
+			position: relative
 		p
 			width: 470px
 			margin: 20px auto 0
@@ -1067,6 +1074,7 @@ body textarea:required:valid
 		margin-bottom: 40px
 		font-size: 36px
 		color: $main_color
+		text-transform: capitalize
 	.cost_of_online_store_item_wrap
 		overflow: hidden
 		margin-bottom: 215px
@@ -1164,6 +1172,7 @@ body textarea:required:valid
 		margin-bottom: 37px
 		font-size: 36px
 		color: $main_color
+		text-transform: capitalize
 	h3
 		font-size: 30px
 		color: #ffffff
@@ -1192,8 +1201,32 @@ body textarea:required:valid
 		display: inline-block
 		margin-left: 25px
 
-//	Секция
-//	Секция
+//	Секция landing_page
+.website_promotion
+	&.landing_page
+		min-height: 795px
+		.online_store_img
+			margin-left: 118px
+			margin-top: 18px
+		h1
+			margin-top: 42px
+		.website_promotion_clouds
+			bottom: -446px
+.what_else_do
+	&.functions_landing
+		h2
+			margin-top: 40px
+			text-transform: uppercase
+		.what_else_do_line
+			margin-top: -123px
+			left: 7px
+		.what_else_do_items
+			margin-top: 81px
+			.what_else_do_item
+				margin-right: 110px
+				&:last-of-type
+					margin-right: 0
+//	секция
 //	Секция
 //	Секция
 //	Секция

@@ -87,6 +87,9 @@ $(window).scroll(function () {
     if ($(window).scrollTop() >= 3300 && $(window).scrollTop() <= 3400) {
         tl29.resume();
     }
+    if ($(window).scrollTop() >= 400 && $(window).scrollTop() <= 500) {
+        tl30.resume();
+    }
 });
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
@@ -117,6 +120,7 @@ var tl26 = new TimelineMax(); //  cost_of_online_store_bot_decor
 var tl27 = new TimelineMax(); //  examples_of_online_stores
 var tl28 = new TimelineMax(); //  cost_of_online_store_item
 var tl29 = new TimelineMax(); //  what_tasks_are_performed_img
+var tl30 = new TimelineMax(); //  functions_landing img
 
 
 $(document).ready(function () {
@@ -150,6 +154,7 @@ $(document).ready(function () {
         tl27.pause(); // examples_of_online_stores
         tl28.pause(); // cost_of_online_store_item
         tl29.pause(); // what_tasks_are_performed_img img
+        tl30.pause(); // functions_landing img
 
 
         // активация тайм линий при загрузке с измерением скролла
@@ -263,6 +268,9 @@ $(document).ready(function () {
                     tl29.resume();
                 }
             }
+            if ($(window).scrollTop() >= 400) {
+                tl30.resume();
+            }
         }
 
         readyTimeLineGo();
@@ -321,17 +329,18 @@ $(document).ready(function () {
         tl3.from("#g6391", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.1);
         tl3.from("#g6814", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.3);
         tl3.from("#g4995", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.5);
-        tl3.from((".what_else_do_item_p"), 0.7, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1);
+        tl3.from((".what_else_do_item_p:not('.functions_landing')"), 0.7, {
+            opacity: 0,
+            transformOrigin: "50% 50%",
+            scale: 0
+        }, 1);
         tl3.from("#g42911111", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.7);
-
         // Наше портфолио
         tl4.from("#g4388", 0.8, {opacity: 0, x: 100, ease: Power2.easeInOut,}, 0.3);
         tl4.from("#g4474", 0.8, {opacity: 0, y: -100, ease: Power2.easeInOut,}, 0.4);
         tl4.from("#g4420", 0.8, {opacity: 0, y: -100, ease: Power2.easeInOut,}, 0.5);
         tl4.from("#g4504", 0.8, {opacity: 0, x: -100, ease: Power2.easeInOut,}, 0.6);
         tl4.from("#rect4286", 0.8, {opacity: 0, x: -100, ease: Power2.easeInOut,}, 0.7);
-
-
         // our_achievements
         tl5.from("#path4202", 1.5, {drawSVG: "0%"}, 0.2);
         tl5.from("#g4185235425235", 0.2, {opacity: 0, y: -50}, 1.8);
@@ -655,6 +664,20 @@ $(document).ready(function () {
                 TweenMax.to($(this).find("h3"), 0.7, {color: "#ffffff"});
             }
         );
+        // why_seo_img
+        tl30.staggerFrom(".why_seo_img.functions_landing", 1, {
+            autoAlpha: 0,
+            transformOrigin: "50% 50%",
+            scale: 0
+        }, 0.4, 'functions_landing')
+            .staggerFrom((".what_else_do_item_p.functions_landing"), 1, {
+                opacity: 0,
+                transformOrigin: "50% 50%",
+                scale: 0
+            }, 0.4, 'functions_landing')
+            .from("#functions_landing1", 0.5, {drawSVG: "0%"}, 0.4,'functions_landing')
+            .from("#functions_landing2", 5.5, {drawSVG: "0%"}, 0.4, 'functions_landing')
+            .from("#functions_landing3", 2, {fill: "#031420", drawSVG: "0%"}, 5,  'functions_landing');
 
         // для IE вызов по скроллу в ready (загруженном документе)
         $(window).scroll(function () {
@@ -1062,7 +1085,7 @@ $(document).ready(function () {
         }
         return false; // вырубаем стандартную отправку формы
     });
-    
+
 });
 
 $(".loader_inner").fadeOut();

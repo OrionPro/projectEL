@@ -1605,7 +1605,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a{display:block;height:100%;line-height:65px;font-size:30px;color:#000;background-color:#fff;-webkit-transition:background-color .5s;transition:background-color .5s}
 .cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a:active,.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a:focus,.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a:hover{background-color:#b48309;text-decoration:none}
 .cost_of_online_store .cost_of_online_store_bot_decor{position:relative}
-.cost_of_online_store .cost_of_online_store_bot_decor svg{position:absolute;bottom:-32px;left:469px}
+.cost_of_online_store .cost_of_online_store_bot_decor svg{position:absolute;bottom:-33px;left:469px}
 .what_tasks_are_performed{min-height:400px;background:url(../img/what_tasks_are_performed_clouds.png) center top 60px no-repeat #03142e;text-align:center}
 .what_tasks_are_performed h2{margin-top:80px;margin-bottom:37px;font-size:36px;color:#eed350;text-transform:capitalize}
 .what_tasks_are_performed h3{font-size:30px;color:#fff}
@@ -1635,6 +1635,18 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .suitable_for_landing .suitable_for_landing_item:nth-of-type(3n){margin-right:0}
 .suitable_for_landing .suitable_for_landing_item_img{border:15px solid #eed350}
 .suitable_for_landing .suitable_for_landing_item_txt p{margin-top:14px;font-size:24px;color:#fff;line-height:1.2}
+.our_achievements.why_our_landing_sell h2{margin-top:390px;margin-bottom:0;font-size:36px}
+.our_achievements.why_our_landing_sell p{width:550px;font-size:24px}
+.our_achievements.cost_of_online_store .cost_of_online_store_bot_decor svg{z-index:1;bottom:-33px}
+.our_achievements.cost_of_online_store .row+.row{text-align:center}
+.our_achievements.cost_of_online_store .row+.row h2{width:550px;margin:47px auto 0;position:relative}
+.our_achievements.cost_of_online_store .row+.row h2:after{content:"";background:url(../img/why_our_landing_sell_h2_decor.png);display:block;width:68px;height:74px;position:absolute;left:-20px;top:-31px}
+.our_achievements.cost_of_online_store .row+.row .why_our_landing_sell_item{margin-bottom:40px;margin-left:109px;text-align:left}
+.our_achievements.cost_of_online_store .row+.row .why_our_landing_sell_item:last-of-type{margin-bottom:225px}
+.our_achievements.cost_of_online_store .row+.row .why_our_landing_sell_item_img{display:inline-block;vertical-align:middle;margin-right:25px}
+.our_achievements.cost_of_online_store .row+.row .why_our_landing_sell_item_txt{display:inline-block;text-align:left;vertical-align:middle}
+.our_achievements.cost_of_online_store .row+.row .why_our_landing_sell_item_txt h3{margin-top:0;margin-bottom:0;font-size:30px;color:#eed350}
+.our_achievements.cost_of_online_store .row+.row .why_our_landing_sell_item_txt p{width:775px;font-size:24px;margin:0}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

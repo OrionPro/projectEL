@@ -1160,7 +1160,7 @@ body textarea:required:valid
 		position: relative
 		svg
 			position: absolute
-			bottom: -32px
+			bottom: -33px
 			left: 469px
 //	Секция what_tasks_are_performed
 .what_tasks_are_performed
@@ -1259,8 +1259,63 @@ body textarea:required:valid
 			font-size: 24px
 			color: #ffffff
 			line-height: 1.2
+
+//	Секция our_achievements
+.our_achievements
+	&.why_our_landing_sell
+		h2
+			margin-top: 390px
+			margin-bottom: 0
+			font-size: 36px
+		p
+			width: 550px
+			font-size: 24px
+	&.cost_of_online_store
+		.cost_of_online_store_bot_decor
+			svg
+				z-index: 1
+				bottom: -33px
+		.row + .row
+			text-align: center
+			h2
+				width: 550px
+				margin: 47px auto 0
+				position: relative
+				&:after
+					content: ""
+					background: url("../img/why_our_landing_sell_h2_decor.png")
+					display: block
+					width: 68px
+					height: 74px
+					position: absolute
+					left: -20px
+					top: -31px
+			.why_our_landing_sell_item
+				margin-bottom: 40px
+				margin-left: 109px
+				text-align: left
+				&:last-of-type
+					margin-bottom: 225px
+			.why_our_landing_sell_item_img
+				display: inline-block
+				vertical-align: middle
+				margin-right: 25px
+			.why_our_landing_sell_item_txt
+				display: inline-block
+				text-align: left
+				vertical-align: middle
+				h3
+					margin-top: 0
+					margin-bottom: 0
+					font-size: 30px
+					color: $main_color
+				p
+					width: 775px
+					font-size: 24px
+					margin: 0
+
 //	Секция
-//	Секция
+
 //	Секция
 //	Секция
 //	Секция

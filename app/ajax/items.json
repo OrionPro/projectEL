@@ -1,0 +1,53 @@
+{
+    "items": {
+        "lp": [{
+                "img": "img/portfolio_img1.jpg",
+                "url": "https://habrahabr.ru/post/319674/"
+            }, {
+                "img": "img/portfolio_img1.jpg",
+                "url": "http://"
+            }, {
+                "img": "img/portfolio_img1.jpg",
+                "url": "http://"
+            }, {
+                "img": "img/portfolio_img1.jpg",
+                "url": "http://"
+            }
+
+        ],
+
+        "viz": [{
+            "img": "img/portfolio_img2.jpg",
+            "url": "http://"
+        }, {
+            "img": "img/portfolio_img2.jpg",
+            "url": "http://"
+        }, {
+            "img": "img/portfolio_img2.jpg",
+            "url": "http://"
+        }],
+        "im": [{
+            "img": "img/portfolio_img3.jpg",
+            "url": "http://"
+        }, {
+            "img": "img/portfolio_img3.jpg",
+            "url": "http://"
+        }, {
+            "img": "img/portfolio_img3.jpg",
+            "url": "http://"
+        },{
+            "img": "img/portfolio_img3.jpg",
+            "url": "http://"
+        }, {
+            "img": "img/portfolio_img3.jpg",
+            "url": "http://"
+        }, {
+            "img": "img/portfolio_img3.jpg",
+            "url": "http://"
+        },{
+            "img": "img/portfolio_img3.jpg",
+            "url": "http://"
+        }]
+    }
+
+}

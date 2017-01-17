@@ -26,6 +26,7 @@
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: #666
+
 body input:required:valid,
 body textarea:required:valid
 	color: #666
@@ -71,7 +72,7 @@ body textarea:required:valid
 .our_portfolio
 	min-height: 990px
 	background: #031420 url('../img/our_portfolio_clouds.png') center top 100px no-repeat
-	text-align: center	
+	text-align: center
 	.our_portfolio_img
 		margin-top: 295px
 	h2
@@ -100,9 +101,9 @@ body textarea:required:valid
 	position: relative
 	.slider_item
 		position: relative
-		&:hover .slider_mask 
+		&:hover .slider_mask
 			opacity: 1
-		
+
 	.slider_mask
 		width: 100%
 		height: 100%
@@ -112,7 +113,7 @@ body textarea:required:valid
 		left: 0
 		right: 0
 		transition: .5s
-		background-color: rgba(25,25,25, 0.69)
+		background-color: rgba(25, 25, 25, 0.69)
 		i
 			position: absolute
 			top: calc(50% - 35px)
@@ -184,8 +185,6 @@ body textarea:required:valid
 			line-height: 1.2
 			span
 				@include font($main_color, 30px, $font_Amazing_Grotesk_Ultra, 0.5)
-				
-
 
 //	Секция take_part
 .take_part
@@ -233,29 +232,29 @@ body textarea:required:valid
 		&.item5
 			top: 627px
 			right: 226px
-		
+
 	.take_part_txt_item_links
-			width: 230px
-			top: 584px
-			right: 485px
-			position: absolute
-			z-index: 11
-			a
-				height: 61px
-				display: inline-block
-				padding: 0 9px
-				background-color: #EED350
-				@include font(#000, 18px, $font_Amazing_Grotesk_Demi_Bold, 61px)
-				transition: 0.5s
-				&:hover
-					text-decoration: none
-					background-color: $auxiliary_color
-				&:focus
-					text-decoration: none
-					background-color: $auxiliary_color
-				&:active
-					text-decoration: none
-					background-color: $auxiliary_color
+		width: 230px
+		top: 584px
+		right: 485px
+		position: absolute
+		z-index: 11
+		a
+			height: 61px
+			display: inline-block
+			padding: 0 9px
+			background-color: #EED350
+			@include font(#000, 18px, $font_Amazing_Grotesk_Demi_Bold, 61px)
+			transition: 0.5s
+			&:hover
+				text-decoration: none
+				background-color: $auxiliary_color
+			&:focus
+				text-decoration: none
+				background-color: $auxiliary_color
+			&:active
+				text-decoration: none
+				background-color: $auxiliary_color
 
 	.take_part_img_bot_decor
 		position: absolute
@@ -302,12 +301,12 @@ body textarea:required:valid
 			text-align: center
 			h3
 				text-transform: uppercase
-				@include font(#fff, 24px, $font_Amazing_Grotesk_Ultra, 60px)	
+				@include font(#fff, 24px, $font_Amazing_Grotesk_Ultra, 60px)
 		.map_txt_main
 			min-height: 238px
 			max-height: 326px
 			overflow: hidden
-			background-color: rgba(54,64,76, 0.7)
+			background-color: rgba(54, 64, 76, 0.7)
 			padding-left: 20px
 			padding-top: 15px
 			@include font(#fff, 14px, $font_Amazing_Grotesk_Demi_Bold)
@@ -323,6 +322,7 @@ body textarea:required:valid
 				padding-top: 10px
 				&:last-of-type
 					padding-bottom: 10px
+
 #googlemaps
 	position: static !important
 	background: #fff url() 0 0 no-repeat
@@ -360,15 +360,15 @@ body textarea:required:valid
 				opacity: 1
 
 			&:-moz-placeholder
-				color:  #fff
+				color: #fff
 				opacity: 1
 
 			&::-moz-placeholder
-				color:  #fff
+				color: #fff
 				opacity: 1
 
 			&:-ms-input-placeholder
-				color:  #fff
+				color: #fff
 				opacity: 1
 		textarea
 			width: 100%
@@ -383,19 +383,19 @@ body textarea:required:valid
 			&:focus
 				outline: 0
 			&::-webkit-input-placeholder
-				color:  #fff
+				color: #fff
 				opacity: 1
 
 			&:-moz-placeholder
-				color:  #fff
+				color: #fff
 				opacity: 1
 
 			&::-moz-placeholder
-				color:  #fff
+				color: #fff
 				opacity: 1
 
 			&:-ms-input-placeholder
-				color:  #fff
+				color: #fff
 				opacity: 1
 		input[type=submit]
 			width: 270px
@@ -430,8 +430,8 @@ body textarea:required:valid
 		font: 12px/35px $font_Amazing_Grotesk_Regular
 		background-color: #fff
 		border: 1px solid #C8C8C8
-		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.3)
-		box-shadow: 0 0 10px rgba(0,0,0,.3)
+		-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+		box-shadow: 0 0 10px rgba(0, 0, 0, .3)
 		z-index: 100
 		&.input_error_email
 			width: 215px
@@ -449,21 +449,21 @@ body textarea:required:valid
 		background-image: url('../img/modal_error_triangle.png')
 	.modal_error_chest_img
 		top: -31px
-		left: 0				
+		left: 0
 		height: 9px
 	.modal_error_triangle
 		top: -43px
-		left: 10px				
+		left: 10px
 		height: 8px
 //	Секция website_promotion
 .website_promotion
 	min-height: 1560px
-	background: #03142e  url('../img/main_clouds.png') center top 400px no-repeat
+	background: #03142e url('../img/main_clouds.png') center top 400px no-repeat
 	.container
 		position: relative
 	h1
 		margin-top: 130px
-		text-align: center	
+		text-align: center
 		@include font($main_color, 48px, $font_Amazing_Grotesk_Demi_Bold, 1.2)
 	.main_content_txt_wrap
 		width: 755px
@@ -486,7 +486,7 @@ body textarea:required:valid
 		.owl-controls
 			margin-top: 53px
 			.owl-dots
-				text-align: center	
+				text-align: center
 				.owl-dot
 					width: 23px
 					height: 23px
@@ -499,7 +499,7 @@ body textarea:required:valid
 					&:last-of-type
 						margin-right: 0
 					&.active
-						background-color: #fff	
+						background-color: #fff
 
 	.website_promotion_clouds
 		margin: auto
@@ -528,7 +528,7 @@ body textarea:required:valid
 .free_audit
 	min-height: 905px
 	background-color: #03142e
-	text-align: center		
+	text-align: center
 	h2
 		margin-top: 273px
 		margin-bottom: 20px
@@ -557,15 +557,15 @@ body textarea:required:valid
 				opacity: 1
 
 			&:-moz-placeholder
-				color:  #fff
+				color: #fff
 				opacity: 1
 
 			&::-moz-placeholder
-				color:  #fff
+				color: #fff
 				opacity: 1
 
 			&:-ms-input-placeholder
-				color:  #fff
+				color: #fff
 				opacity: 1
 		input[type=submit]
 			height: 68px
@@ -595,7 +595,7 @@ body textarea:required:valid
 .from_what_is_seo
 	min-height: 1372px
 	position: relative
-	background: #0b2848  url('../img/from_what_is_seo_clouds.png') center top 0 no-repeat
+	background: #0b2848 url('../img/from_what_is_seo_clouds.png') center top 0 no-repeat
 	h2
 		margin-top: 40px
 		text-align: center
@@ -643,7 +643,7 @@ body textarea:required:valid
 			line-height: 1.3
 
 			& + p
-				width:  761px
+				width: 761px
 		h3
 			margin-top: -7px
 			margin-bottom: 41px
@@ -688,11 +688,11 @@ body textarea:required:valid
 			@include font($main_color, 36px, $font_Amazing_Grotesk_Ultra)
 	.stages_of_advancement_item_img
 		float: left
-		margin-right: 25px	
+		margin-right: 25px
 //	Секция cost_optimization
 .cost_optimization
 	min-height: 880px
-	background: #0b2848  url('../img/from_what_is_seo_clouds.png') center top 0 no-repeat
+	background: #0b2848 url('../img/from_what_is_seo_clouds.png') center top 0 no-repeat
 	h2
 		margin-top: 80px
 		margin-bottom: 0
@@ -719,7 +719,7 @@ body textarea:required:valid
 			text-transform: none
 			margin-top: 90px
 			span
-				@include font($main_color, 36px, $font_Amazing_Grotesk_Ultra, 1.2)	
+				@include font($main_color, 36px, $font_Amazing_Grotesk_Ultra, 1.2)
 		form
 			width: 370px
 			margin: 48px auto 0
@@ -735,7 +735,7 @@ body textarea:required:valid
 //	Секция our_work
 .our_work
 	min-height: 740px
-	background: #0b2848  url('../img/from_what_is_seo_clouds.png') center top 0 no-repeat
+	background: #0b2848 url('../img/from_what_is_seo_clouds.png') center top 0 no-repeat
 	h2
 		margin-top: 75px
 		margin-bottom: 30px
@@ -770,7 +770,7 @@ body textarea:required:valid
 			transition: 0.5s
 			&:hover
 				text-decoration: none
-				background-color: $auxiliary_color	
+				background-color: $auxiliary_color
 			&:active
 				text-decoration: none
 			&:focus
@@ -778,7 +778,7 @@ body textarea:required:valid
 //	Секция contacts
 .contacts
 	min-height: 747px
-	background: #03142e  url('../img/our_achievements_clouds.png') center top 200px no-repeat
+	background: #03142e url('../img/our_achievements_clouds.png') center top 200px no-repeat
 	h2
 		margin-top: 117px
 		margin-left: 215px
@@ -873,7 +873,7 @@ body textarea:required:valid
 	&.selling_site
 		min-height: 1790px
 		background: url(../img/main_clouds.png) center top 250px no-repeat,
-		#03142e url('../img/selling_site_clouds.png') center bottom 8px no-repeat 
+		#03142e url('../img/selling_site_clouds.png') center bottom 8 px no-repeat
 		.container
 			position: relative
 			z-index: 0
@@ -894,7 +894,7 @@ body textarea:required:valid
 			margin-top: 68px
 		.selling_site_item_txt
 			width: 337px
-			margin-left: 31px			
+			margin-left: 31px
 			color: $main_color
 			display: inline-block
 			vertical-align: middle
@@ -924,7 +924,7 @@ body textarea:required:valid
 .from_idea_to_results
 	min-height: 1870px
 	background: url(../img/main_clouds.png) center top 100px no-repeat,
-	#0b2848 url('../img/selling_site_clouds.png') center bottom 8px no-repeat 
+	#0b2848 url('../img/selling_site_clouds.png') center bottom 8 px no-repeat
 	text-align: center
 	.container
 		position: relative
@@ -978,7 +978,7 @@ body textarea:required:valid
 		background: url('../img/main_clouds.png') center top 100px no-repeat #03142e
 		.online_store_wrap
 			overflow: hidden
-			margin-top: 131px	
+			margin-top: 131px
 		.online_store_img
 			float: left
 			margin-left: 180px
@@ -1165,7 +1165,7 @@ body textarea:required:valid
 //	Секция what_tasks_are_performed
 .what_tasks_are_performed
 	min-height: 400px
-	background: #03142e  url(../img/what_tasks_are_performed_clouds.png) center top 60px no-repeat
+	background: #03142e url(../img/what_tasks_are_performed_clouds.png) center top 60px no-repeat
 	text-align: center
 	h2
 		margin-top: 80px
@@ -1212,6 +1212,7 @@ body textarea:required:valid
 			margin-top: 42px
 		.website_promotion_clouds
 			bottom: -446px
+
 .what_else_do
 	&.functions_landing
 		h2
@@ -1314,12 +1315,107 @@ body textarea:required:valid
 					font-size: 24px
 					margin: 0
 
+//	Секция portfolio
+.portfolio
+	text-align: center
+	min-height: 400px
+	background: #03142e url(../img/what_tasks_are_performed_clouds.png) center top 60px no-repeat
+	h2
+		margin-top: 120px
+		margin-bottom: 30px
+		font-size: 48px
+		color: $main_color
+	.portfolio_tabs
+		margin-bottom: 20px
+		a
+			font-size: 24px
+			color: #ffffff
+			display: inline-block
+			margin-right: 16px
+			&:last-of-type
+				margin-left: -5px
+			&:hover
+				color: $main_color
+			&.active
+				color: $main_color
+				text-decoration: underline
+	.portfolio_item_wrap
+		min-height: 700px
+
+	.portfolio_item
+		width: 370px
+		float: left
+		margin-right: 30px
+		margin-bottom: 30px
+		border: 15px solid $main_color
+		position: relative
+		overflow: hidden
+		&:nth-of-type(3n+1)
+			margin-left: 15px
+		&:nth-of-type(3n)
+			margin-right: 0
+		&:hover .portfolio_item_mask
+			opacity: 1
+		&:hover .portfolio_item_img img
+			transform: scale(1.2)
+		a
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			right: 0
+			left: 0
+			z-index: 2
+			&:hover
+				background: transparent
+			&:active
+				background: transparent
+			&:focus
+				background: transparent
+	.portfolio_item_img
+		img
+			transition: 2s
+	.portfolio_item_mask
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		left: 0
+		@extend %flex
+		opacity: 0
+		background: rgba(3, 20, 46, 0.70)
+		transition: 0.5s
+		z-index: 1
+		i
+			position: absolute
+			display: block
+			font-size: 48px
+			color: #ffffff
+	#portfolio_item_btn
+		width: 370px
+		height: 60px
+		background-color: #eed350
+		display: none
+		margin: 0 auto 50px
+		transition: 0.5s
+		font-size: 24px
+		color: #000000
+		border: none
+		&:hover
+			background-color: $auxiliary_color
+		&:active
+			background-color: $auxiliary_color
+		&:focus
+			background-color: $auxiliary_color
+			outline: 0
+		
+//	Секция
+//	Секция
+//	Секция
+//	Секция
 //	Секция
 
-//	Секция
-//	Секция
-//	Секция
-//	Секция
 
 
 // Секия footer 
@@ -1329,7 +1425,7 @@ body textarea:required:valid
 	@include font(#fff, 22px, $font_Amazing_Grotesk_Ultra)
 	&.seo
 		.footer_nav
-			margin-top: -30px	
+			margin-top: -30px
 	.copyright
 		display: inline-block
 		margin-top: 55px
@@ -1402,6 +1498,6 @@ body textarea:required:valid
 				a
 					&:hover .fa
 						color: $auxiliary_color
-						
+
 @import "media"
 

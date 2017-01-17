@@ -900,7 +900,7 @@ function filterBtn(arrImg, arrUrl) {
 
 		var index = $(this).attr('id');
 		if (index != undefined) {
-			TweenMax.from("#" + index, 2, {y: 30, autoAlpha: 0}, 0.2);
+			TweenMax.staggerFrom("#" + index, 2, {y: 30, autoAlpha: 0}, 0.5);
 		}
 
 

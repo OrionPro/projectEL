@@ -1669,6 +1669,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .portfolio #portfolio_item_btn{width:370px;height:60px;background-color:#eed350;display:none;margin:0 auto 50px;-webkit-transition:.5s;transition:.5s;font-size:24px;color:#000;border:none}
 .portfolio #portfolio_item_btn:active,.portfolio #portfolio_item_btn:hover{background-color:#d45b3e}
 .portfolio #portfolio_item_btn:focus{background-color:#d45b3e;outline:0}
+.website_promotion.site_card .website_promotion_clouds{bottom:-480px}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

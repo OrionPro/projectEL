@@ -114,6 +114,9 @@ $(window).scroll(function () {
 	if ($(window).scrollTop() >= 6800 && $(window).scrollTop() <= 6900) {
 		tl38.resume();
 	}
+	if ($(window).scrollTop() >= 1500 && $(window).scrollTop() <= 1600) {
+		tl39.resume();
+	}
 });
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
@@ -153,6 +156,7 @@ var tl35 = new TimelineMax(); //  landing_page our_work examples_of_online_store
 var tl36 = new TimelineMax(); //  landing_page cost_of_online_store_item
 var tl37 = new TimelineMax(); //  why_our_landing_sell2
 var tl38 = new TimelineMax(); //  what_tasks_are_performed_img landing_page
+var tl39 = new TimelineMax(); //  our_achievements site_card
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -191,6 +195,7 @@ function allAnim() {
 	tl36.pause(); // landing_page cost_of_online_store_item
 	tl37.pause(); // why_our_landing_sell2
 	tl38.pause(); // what_tasks_are_performed_img landing_page
+	tl39.pause(); // our_achievements site_card
 
 
 	// активация тайм линий при загрузке с измерением скролла
@@ -344,6 +349,9 @@ function allAnim() {
 			if ($(window).scrollTop() >= 6800) {
 				tl38.resume();
 			}
+		}
+		if ($(window).scrollTop() >= 1500) {
+			tl39.resume();
 		}
 	}
 
@@ -855,6 +863,18 @@ function allAnim() {
 			}, 1, 'what_tasks_are_performed_img')
 			.staggerFrom(".what_tasks_are_performed_img_circle", 1.4, {drawSVG: "50% 50%"}, 1.1, 'what_tasks_are_performed_img');
 	}
+	// our_achievements site_card
+	if ($('body').hasClass('site_card')) {
+		tl39.from("#path4202", 1.5, {drawSVG: "0%"}, 0.2);
+		tl39.from("#g4185235425235", 0.2, {opacity: 0, y: -50}, 1.8);
+		tl39.from("#path5234234", 0.5, {opacity: 0, y: -50}, 1.4);
+		tl39.from("#path41782342423", 3.5, {drawSVG: "0%"}, 1.9);
+		tl39.from("#path723523253", 1.5, {drawSVG: "0%"}, 4.9);
+		tl39.from("#path_go", 1.5, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 2.1);
+		tl39.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 2.5);
+	}
+
+
 
 	// для IE вызов по скроллу в ready (загруженном документе)
 	$(window).scroll(function () {
@@ -862,6 +882,7 @@ function allAnim() {
 	});
 
 }
+
 //	Начало вывода табов с помощью ajax
 //	Шаблон для portfolio_item
 function elemTpl(imgSrc, link, idValue) {
@@ -926,7 +947,6 @@ function readyPortfolioJSON() {
 
 			for (var i = 0; i < src.length; i++) {
 				j++;
-				console.log(src[i]);
 				if (j > 9) {
 					imgSource.push(src[i].img);
 					urlSource.push(src[i].url);

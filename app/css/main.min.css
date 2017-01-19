@@ -1646,9 +1646,10 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .our_achievements.cost_of_online_store .row+.row .why_our_landing_sell_item:last-of-type{margin-bottom:225px}
 .our_achievements.cost_of_online_store .row+.row .why_our_landing_sell_item_img{display:inline-block;vertical-align:middle;margin-right:25px}
 .our_achievements.cost_of_online_store .row+.row .why_our_landing_sell_item_txt{display:inline-block;text-align:left;vertical-align:middle}
+.portfolio,.why_site_card_items{text-align:center}
 .our_achievements.cost_of_online_store .row+.row .why_our_landing_sell_item_txt h3{margin-top:0;margin-bottom:0;font-size:30px;color:#eed350}
 .our_achievements.cost_of_online_store .row+.row .why_our_landing_sell_item_txt p{width:775px;font-size:24px;margin:0}
-.portfolio{text-align:center;min-height:400px;background:url(../img/what_tasks_are_performed_clouds.png) center top 60px no-repeat #03142e}
+.portfolio{min-height:400px;background:url(../img/what_tasks_are_performed_clouds.png) center top 60px no-repeat #03142e}
 .portfolio h2{margin-top:120px;margin-bottom:30px;font-size:48px;color:#eed350}
 .portfolio .portfolio_tabs{margin-bottom:20px}
 .portfolio .portfolio_tabs a{font-size:24px;color:#fff;display:inline-block;margin-right:16px}
@@ -1670,6 +1671,13 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .portfolio #portfolio_item_btn:active,.portfolio #portfolio_item_btn:hover{background-color:#d45b3e}
 .portfolio #portfolio_item_btn:focus{background-color:#d45b3e;outline:0}
 .website_promotion.site_card .website_promotion_clouds{bottom:-480px}
+.what_else_do.site_card .what_else_do_items .what_else_do_item{margin-right:4px}
+.suitable_for_landing.note p{width:604px;margin:0 auto 30px;line-height:1.2;font-size:24px}
+.suitable_for_landing.note p:last-of-type{margin-bottom:130px}
+.suitable_for_landing.note p+p{width:685px}
+.suitable_for_landing.note p span{color:#eed350}
+.why_site_card_items .why_site_card_item{display:inline-block;vertical-align:top}
+.why_site_card_items .why_site_card_item p{font-size:16px}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

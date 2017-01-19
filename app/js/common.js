@@ -171,17 +171,17 @@ function allAnim() {
 				tl12.resume();
 			}
 		} else {
-			if ($(window).scrollTop() > 200) {
+			if ($(window).scrollTop() > 200 && $(window).scrollTop() <= 1000) {
 				tl12.resume();
 			}
 		}
-		if ($(window).scrollTop() >= 1000) {
+		if ($(window).scrollTop() >= 1000 && $(window).scrollTop() <= 1700) {
 			tl13.resume();
 		}
-		if ($(window).scrollTop() >= 3600) {
+		if ($(window).scrollTop() >= 3600 && $(window).scrollTop() <= 4200) {
 			tl14.resume();
 		}
-		if ($(window).scrollTop() >= 4800) {
+		if ($(window).scrollTop() >= 4800 && $(window).scrollTop() <= 6000 ) {
 			tl15.resume();
 		}
 		if ($(window).scrollTop() >= 6200) {
@@ -204,7 +204,7 @@ function allAnim() {
 		if ($(window).scrollTop() >= 1800) {
 			tl21.resume();
 		}
-		if ($(window).scrollTop() >= 1300) {
+		if ($(window).scrollTop() >= 1300 && $(window).scrollTop() <= 2100) {
 			tl22.resume();
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
@@ -216,16 +216,16 @@ function allAnim() {
 				tl23.resume();
 			}
 		}
-		if ($(window).scrollTop() >= 40) {
+		if ($(window).scrollTop() >= 40 && $(window).scrollTop() <= 1000) {
 			tl25.resume();
 		}
-		if ($(window).scrollTop() >= 3000) {
+		if ($(window).scrollTop() >= 3000 && $(window).scrollTop() <= 3500) {
 			tl26.resume();
 		}
-		if ($(window).scrollTop() >= 1100) {
+		if ($(window).scrollTop() >= 1100 && $(window).scrollTop() <= 1800) {
 			tl27.resume();
 		}
-		if ($(window).scrollTop() >= 2000) {
+		if ($(window).scrollTop() >= 2000 && $(window).scrollTop() <= 2900) {
 			tl28.resume();
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
@@ -237,22 +237,22 @@ function allAnim() {
 				tl29.resume();
 			}
 		}
-		if ($(window).scrollTop() >= 400) {
+		if ($(window).scrollTop() >= 400 && $(window).scrollTop() <= 900) {
 			tl30.resume();
 		}
-		if ($(window).scrollTop() >= 1200) {
+		if ($(window).scrollTop() >= 1200 && $(window).scrollTop() <= 1700) {
 			tl31.resume();
 		}
-		if ($(window).scrollTop() >= 2000) {
+		if ($(window).scrollTop() >= 2000 && $(window).scrollTop() <= 2500) {
 			tl32.resume();
 		}
-		if ($(window).scrollTop() >= 2800) {
+		if ($(window).scrollTop() >= 2800 && $(window).scrollTop() <= 3500) {
 			tl33.resume();
 		}
-		if ($(window).scrollTop() >= 4400) {
+		if ($(window).scrollTop() >= 4400 && $(window).scrollTop() <= 4900) {
 			tl34.resume();
 		}
-		if ($(window).scrollTop() >= 4800) {
+		if ($(window).scrollTop() >= 4800 && $(window).scrollTop() <= 5300) {
 			tl35.resume();
 		}
 		if ($(window).scrollTop() >= 5700) {
@@ -270,30 +270,30 @@ function allAnim() {
 				tl38.resume();
 			}
 		}
-		if ($(window).scrollTop() >= 1500) {
+		if ($(window).scrollTop() >= 1500 && $(window).scrollTop() <= 2100) {
 			tl39.resume();
 		}
-		if ($(window).scrollTop() >= 2100) {
+		if ($(window).scrollTop() >= 2100 && $(window).scrollTop() <= 2500) {
 			tl40.resume();
 		}
-		if ($(window).scrollTop() >= 1900) {
+		if ($(window).scrollTop() >= 1900 && $(window).scrollTop() <= 2500 ) {
 			tl41.resume();
 		}
-		if ($(window).scrollTop() >= 2900) {
+		if ($(window).scrollTop() >= 2900 && $(window).scrollTop() <= 3500) {
 			tl42.resume();
 		}
-		if ($(window).scrollTop() >= 3400) {
+		if ($(window).scrollTop() >= 3400 && $(window).scrollTop() <= 4100) {
 			tl43.resume();
 		}
-		if ($(window).scrollTop() >= 3700) {
+		if ($(window).scrollTop() >= 3700 && $(window).scrollTop() <= 4700) {
 			tl44.resume();
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
-			if ($(window).scrollTop() >= 4300) {
+			if ($(window).scrollTop() >= 4300 && $(window).scrollTop() <= 4700) {
 				tl45.resume();
 			}
 		} else {
-			if ($(window).scrollTop() >= 4800) {
+			if ($(window).scrollTop() >= 4800 && $(window).scrollTop() <= 5500) {
 				tl45.resume();
 			}
 		}

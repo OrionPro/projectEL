@@ -21,102 +21,8 @@ $(window).scroll(function () {
 	if ($(window).scrollTop() >= 350 && $(window).scrollTop() <= 550) {
 		tl2.reverse();
 	}
-	if ($(window).scrollTop() >= 550 && $(window).scrollTop() <= 700) {
-		tl2.resume();
-	}
-	if ($(window).scrollTop() >= 650 && $(window).scrollTop() <= 800) {
-		tl3.resume();
-	}
-	if ($(window).scrollTop() >= 1400 && $(window).scrollTop() <= 1600) {
-		tl4.resume();
-	}
-	if ($(window).scrollTop() >= 2300 && $(window).scrollTop() <= 2600) {
-		tl5.resume();
-	}
-	if ($(window).scrollTop() >= 2900 && $(window).scrollTop() <= 3000) {
-		tl7.resume();
-	}
-	if ($(window).scrollTop() >= 3300 && $(window).scrollTop() <= 3600) {
-		tl8.resume();
-	}
-	if ($(window).scrollTop() >= 3800 && $(window).scrollTop() <= 3900) {
-		tl9.resume();
-	}
-	if ($(window).scrollTop() >= 5700 && $(window).scrollTop() <= 5900) {
-		tl10.resume();
-	}
-	if ($(window).scrollTop() >= 100 && $(window).scrollTop() <= 300) {
-		tl12.resume();
-	}
-	if ($(window).scrollTop() >= 1000 && $(window).scrollTop() <= 1200) {
-		tl13.resume();
-	}
-	if ($(window).scrollTop() >= 3600 && $(window).scrollTop() <= 3800) {
-		tl14.resume();
-	}
-	if ($(window).scrollTop() >= 4800 && $(window).scrollTop() <= 5000) {
-		tl15.resume();
-	}
-	if ($(window).scrollTop() >= 6200 && $(window).scrollTop() <= 6400) {
-		tl16.resume();
-	}
-	if ($(window).scrollTop() >= 7600 && $(window).scrollTop() <= 7800) {
-		tl17.resume();
-	}
-	if ($(window).scrollTop() >= 4500 && $(window).scrollTop() <= 4800) {
-		tl18.resume();
-	}
-	if ($(window).scrollTop() >= 1800 && $(window).scrollTop() <= 2100) {
-		tl21.resume();
-	}
-	if ($(window).scrollTop() >= 1200 && $(window).scrollTop() <= 1400) {
-		tl22.resume();
-	}
-	if ($(window).scrollTop() >= 2800 && $(window).scrollTop() <= 3000) {
-		tl23.resume();
-	}
-	if ($(window).scrollTop() >= 400 && $(window).scrollTop() <= 500) {
-		tl25.resume();
-	}
-	if ($(window).scrollTop() >= 3000 && $(window).scrollTop() <= 3300) {
-		tl26.resume();
-	}
-	if ($(window).scrollTop() >= 1100 && $(window).scrollTop() <= 1200) {
-		tl27.resume();
-	}
-	if ($(window).scrollTop() >= 2000 && $(window).scrollTop() <= 2200) {
-		tl27.resume();
-	}
-	if ($(window).scrollTop() >= 3300 && $(window).scrollTop() <= 3400) {
-		tl29.resume();
-	}
-	if ($(window).scrollTop() >= 400 && $(window).scrollTop() <= 500) {
-		tl30.resume();
-	}
-	if ($(window).scrollTop() >= 1200 && $(window).scrollTop() <= 1300) {
-		tl31.resume();
-	}
-	if ($(window).scrollTop() >= 1900 && $(window).scrollTop() <= 2100) {
-		tl33.resume();
-	}
-	if ($(window).scrollTop() >= 4400 && $(window).scrollTop() <= 4450) {
-		tl34.resume();
-	}
-	if ($(window).scrollTop() >= 4800 && $(window).scrollTop() <= 4900) {
-		tl35.resume();
-	}
-	if ($(window).scrollTop() >= 5700 && $(window).scrollTop() <= 5900) {
-		tl36.resume();
-	}
-	if ($(window).scrollTop() >= 5700 && $(window).scrollTop() <= 6700) {
-		tl37.resume();
-	}
-	if ($(window).scrollTop() >= 6800 && $(window).scrollTop() <= 6900) {
-		tl38.resume();
-	}
-	if ($(window).scrollTop() >= 1500 && $(window).scrollTop() <= 1600) {
-		tl39.resume();
-	}
+
+
 });
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
@@ -157,6 +63,13 @@ var tl36 = new TimelineMax(); //  landing_page cost_of_online_store_item
 var tl37 = new TimelineMax(); //  why_our_landing_sell2
 var tl38 = new TimelineMax(); //  what_tasks_are_performed_img landing_page
 var tl39 = new TimelineMax(); //  our_achievements site_card
+var tl40 = new TimelineMax(); //  cost_of_online_store_bot_decor site_card
+var tl41 = new TimelineMax(); //  why_site_card_items
+var tl42 = new TimelineMax(); //  examples_of_online_stores site_card
+var tl43 = new TimelineMax(); //  website_promotion_decor site_card
+var tl44 = new TimelineMax(); //  cost_of_online_store_item site_card
+var tl45 = new TimelineMax(); //  cost_of_online_store_bot_decor site_card2
+var tl46 = new TimelineMax(); //  from_what_is_seo item site_card
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -196,6 +109,13 @@ function allAnim() {
 	tl37.pause(); // why_our_landing_sell2
 	tl38.pause(); // what_tasks_are_performed_img landing_page
 	tl39.pause(); // our_achievements site_card
+	tl40.pause(); // cost_of_online_store_bot_decor site_card
+	tl41.pause(); // why_site_card_items
+	tl42.pause(); // examples_of_online_stores site_card
+	tl43.pause(); // website_promotion_decor site_card
+	tl44.pause(); // cost_of_online_store_item site_card
+	tl45.pause(); // cost_of_online_store_bot_decor site_card2
+	tl46.pause(); // from_what_is_seo item site_card
 
 
 	// активация тайм линий при загрузке с измерением скролла
@@ -353,11 +273,47 @@ function allAnim() {
 		if ($(window).scrollTop() >= 1500) {
 			tl39.resume();
 		}
+		if ($(window).scrollTop() >= 2100) {
+			tl40.resume();
+		}
+		if ($(window).scrollTop() >= 1900) {
+			tl41.resume();
+		}
+		if ($(window).scrollTop() >= 2900) {
+			tl42.resume();
+		}
+		if ($(window).scrollTop() >= 3400) {
+			tl43.resume();
+		}
+		if ($(window).scrollTop() >= 3700) {
+			tl44.resume();
+		}
+		if (window.matchMedia("(max-width: 1200px)").matches) {
+			if ($(window).scrollTop() >= 4300) {
+				tl45.resume();
+			}
+		} else {
+			if ($(window).scrollTop() >= 4800) {
+				tl45.resume();
+			}
+		}
+		if (window.matchMedia("(max-width: 1200px)").matches) {
+			if ($(window).scrollTop() >= 4300) {
+				tl46.resume();
+			}
+		} else {
+			if ($(window).scrollTop() >= 5000) {
+				tl46.resume();
+			}
+		}
 	}
 
 
 	readyTimeLineGo();
-
+	// для IE вызов по скроллу в ready (загруженном документе)
+	$(window).scroll(function () {
+		readyTimeLineGo();
+	});
 
 	// цели
 	TweenMax.from("#g4378", 1.5, {rotation: 360, transformOrigin: "50% 50%", delay: 0.5, ease: Power1.easeInOut});
@@ -433,7 +389,6 @@ function allAnim() {
 		tl5.from("#path_go", 1.5, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 2.1);
 		tl5.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 2.5);
 	}
-
 	// Анимация стрелок
 	tl6.to(".customPrevBtn", 0.7, {x: -10, ease: Power2.easeInOut}, 0);
 	tl6.to(".customPrevBtn", 0.7, {x: 0, ease: Power2.easeInOut}, 0.7);
@@ -663,16 +618,18 @@ function allAnim() {
 		ease: Power2.easeInOut
 	}, 0.4, 'from_idea').staggerFrom(".from_idea_circle", 2, {drawSVG: "50% 50%"}, 1, 'from_idea');
 	// website_promotion_decor
-	tl22.from("#path42022323", 1, {drawSVG: "50% 50%"}, 0.5, 'website_promotion_decor').from("#g41853453", 1, {
-		autoAlpha: 0,
-		scaleY: 100,
-		ease: Power2.easeInOut
-	}, 0.9, 'website_promotion_decor')
-		.from("#path5235252253", 1, {
+	if ($('body').hasClass('services')) {
+		tl22.from("#path42022323", 1, {drawSVG: "50% 50%"}, 0.5, 'website_promotion_decor').from("#g41853453", 1, {
 			autoAlpha: 0,
-			y: -50,
+			scaleY: 100,
 			ease: Power2.easeInOut
-		}, 0.5, 'website_promotion_decor');
+		}, 0.9, 'website_promotion_decor')
+			.from("#path5235252253", 1, {
+				autoAlpha: 0,
+				y: -50,
+				ease: Power2.easeInOut
+			}, 0.5, 'website_promotion_decor');
+	}
 	// from_idea_to_results_decor
 	tl23.from("#path5417235235", 1, {drawSVG: "50% 50%"}, 0.5, 'from_idea_to_results_decor')
 		.from("#g550012341414", 1, {
@@ -873,13 +830,83 @@ function allAnim() {
 		tl39.from("#path_go", 1.5, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 2.1);
 		tl39.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 2.5);
 	}
+	// cost_of_online_store_bot_decor site_card
+	if ($('body').hasClass('site_card')) {
+		tl40.from("#site_card1 #cost_of_online_store_bot_decor_circle", 1, {drawSVG: "0%"}, 0.2);
+		tl40.from("#site_card1 #cost_of_online_store_bot_decor_line", 1.3, {drawSVG: "0%"}, 1);
+		tl40.from("#site_card1 #cost_of_online_store_bot_decor_all_line", 1.3, {drawSVG: "0%"}, 2.7);
+		tl40.from("#site_card1 #cost_of_online_store_bot_decor_all_bg", 1, {autoAlpha: 0, ease: Power2.easeInOut}, 2.5);
+		tl40.from("#site_card1 #cost_of_online_store_bot_decor_all_line_body", 1, {
+			autoAlpha: 0,
+			scaleY: 100,
+			ease: Power2.easeInOut
+		}, 2);
+	}
+	//Why_site_card_items
+	tl41.staggerFrom(".why_site_card_items .why_site_card_item", 1, {
+		autoAlpha: 0,
+		x: 50,
+		ease: Power2.easeInOut
+	}, 0.3, "why_site_card_item")
+		.add("why_site_card_item", '-=1.4')
+		.staggerFrom(".why_site_card_items .why_site_card_item p", 1, {
+			autoAlpha: 0,
+			x: 50,
+			ease: Power2.easeInOut
+		}, 0.3, "why_site_card_item");
+	// examples_of_online_stores site_card
+	if ($('body').hasClass('site_card')) {
+		tl42.staggerFrom(".our_work.examples_of_online_stores .our_work_item", 1, {
+			autoAlpha: 0,
+			scaleX: 0,
+			skewX: 10,
+			ease: Power2.easeInOut
+		}, 0.5, 'stages_of_advancement_item').add('cost_optimization_h3', '-=1.5');
+	}
+	// website_promotion_decor site_card
+	if ($('body').hasClass('site_card')) {
+		tl43.from("#path42022323", 1, {drawSVG: "50% 50%"}, 0.5, 'website_promotion_decor').from("#g41853453", 1, {
+			autoAlpha: 0,
+			scaleY: 100,
+			ease: Power2.easeInOut
+		}, 0.9, 'website_promotion_decor')
+			.from("#path5235252253", 1, {
+				autoAlpha: 0,
+				y: -50,
+				ease: Power2.easeInOut
+			}, 0.5, 'website_promotion_decor');
+	}
+	// cost_of_online_store_item site_card
+	if ($('body').hasClass('site_card')) {
+		tl44.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
+	}
+	// cost_of_online_store_bot_decor site_card2
+	if ($('body').hasClass('site_card')) {
+		tl45.from("#site_card2 #cost_of_online_store_bot_decor_circle", 1, {drawSVG: "0%"}, 0.2);
+		tl45.from("#site_card2 #cost_of_online_store_bot_decor_line", 1.3, {drawSVG: "0%"}, 1);
+		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_line", 1.3, {drawSVG: "0%"}, 2.7);
+		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_bg", 1, {autoAlpha: 0, ease: Power2.easeInOut}, 2.5);
+		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_line_body", 1, {
+			autoAlpha: 0,
+			scaleY: 100,
+			ease: Power2.easeInOut
+		}, 2);
+	}
+	// from_what_is_seo item site_card
+	if ($('body').hasClass('site_card')) {
+		tl46.staggerFrom(".what_tasks_are_performed_img", 1.2, {
+			autoAlpha: 0,
+			y: 10,
+			ease: Power2.easeInOut
+		}, 1, 'what_tasks_are_performed_img')
+			.staggerFrom(".what_tasks_are_performed h3", 1.2, {
+				autoAlpha: 0,
+				x: 10,
+				ease: Power2.easeInOut
+			}, 1, 'what_tasks_are_performed_img')
+			.staggerFrom(".what_tasks_are_performed_img_circle", 1.4, {drawSVG: "50% 50%"}, 1.1, 'what_tasks_are_performed_img');
+	}
 
-
-
-	// для IE вызов по скроллу в ready (загруженном документе)
-	$(window).scroll(function () {
-		readyTimeLineGo();
-	});
 
 }
 
@@ -898,7 +925,7 @@ function filterBtn(arrImg, arrUrl) {
 	//обнуляем id при клике если они есть
 	$(".portfolio_item_wrap .portfolio_item").each(function () {
 		var index = $(this).attr('id');
-		if (index != undefined) {
+		if (index != "not-add") {
 			$(this).attr('id', '')
 		}
 	});
@@ -953,7 +980,7 @@ function readyPortfolioJSON() {
 					$('#portfolio_item_btn').css('display', "block");
 				} else {
 					$('#portfolio_item_btn').css('display', "none");
-					$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url));
+					$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
 				}
 			}
 		}
@@ -1008,7 +1035,7 @@ $(document).ready(function () {
 							$('#portfolio_item_btn').css('display', "block");
 						} else {
 							$('#portfolio_item_btn').css('display', "none");
-							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url));
+							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
 
 						}
 
@@ -1023,7 +1050,7 @@ $(document).ready(function () {
 							$('#portfolio_item_btn').css('display', "block");
 						} else {
 							$('#portfolio_item_btn').css('display', "none");
-							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url));
+							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
 						}
 					}
 				}

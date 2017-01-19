@@ -672,7 +672,6 @@ body textarea:required:valid
 		color: $main_color
 		text-transform: capitalize
 	.stages_of_advancement_item
-		overflow: hidden
 		margin-bottom: 40px
 		margin-left: 20px
 		h3
@@ -924,7 +923,7 @@ body textarea:required:valid
 .from_idea_to_results
 	min-height: 1870px
 	background: url(../img/main_clouds.png) center top 100px no-repeat,
-	#0b2848 url('../img/selling_site_clouds.png') center bottom 8 px no-repeat
+	#0b2848 url('../img/selling_site_clouds.png') center bottom 8px no-repeat
 	text-align: center
 	.container
 		position: relative
@@ -1437,12 +1436,22 @@ body textarea:required:valid
 //	Секция why_site_card_items
 .why_site_card_items
 	text-align: center
+	margin-top: 40px
+	margin-bottom: 200px
 	.why_site_card_item
 		display: inline-block
 		vertical-align: top
+		margin-right: 105Px
+		&:last-of-type
+			margin-right: 0
 		p
+			width: 182px
 			font-size: 16px
 	.why_site_card_item_img
+.cost_of_online_store
+	&.why_site_card_item_sections
+		svg
+			left: 483px;
 //	Секция
 //	Секция
 //	Секция

@@ -8,7 +8,7 @@ $(function () {
 	// };
 });
 $(window).resize(function () {
-
+	//Ваш код
 });
 $(window).scroll(function () {
 	console.log($(window).scrollTop());

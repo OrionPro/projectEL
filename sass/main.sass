@@ -672,7 +672,6 @@ body textarea:required:valid
 		color: $main_color
 		text-transform: capitalize
 	.stages_of_advancement_item
-		overflow: hidden
 		margin-bottom: 40px
 		margin-left: 20px
 		h3
@@ -924,7 +923,7 @@ body textarea:required:valid
 .from_idea_to_results
 	min-height: 1870px
 	background: url(../img/main_clouds.png) center top 100px no-repeat,
-	#0b2848 url('../img/selling_site_clouds.png') center bottom 8 px no-repeat
+	#0b2848 url('../img/selling_site_clouds.png') center bottom 8px no-repeat
 	text-align: center
 	.container
 		position: relative
@@ -1415,7 +1414,69 @@ body textarea:required:valid
 	&.site_card
 		.website_promotion_clouds
 			bottom: -480px
+.what_else_do
+	&.site_card
+		.what_else_do_items
+			.what_else_do_item
+				margin-right: 4px
+//	Секция suitable_for_landing
+.suitable_for_landing
+	&.note
+		p
+			width: 604px
+			margin: 0 auto 30px
+			line-height: 1.2
+			font-size: 24px
+			&:last-of-type
+				margin-bottom: 130px
+			& + p
+				width: 685px
+			span
+				color: $main_color
+//	Секция why_site_card_items
+.why_site_card_items
+	text-align: center
+	margin-top: 40px
+	margin-bottom: 200px
+	.why_site_card_item
+		display: inline-block
+		vertical-align: top
+		margin-right: 105Px
+		&:last-of-type
+			margin-right: 0
+		p
+			width: 182px
+			font-size: 16px
 
+.cost_of_online_store
+	&.why_site_card_item_sections
+		svg
+			left: 483px
+//	Секция website_creating_a_corporate_identity
+.website_promotion
+	&.creating_a_corporate_identity
+		min-height: 1061px
+		.creating_a_corporate_identity_wrap
+			h1
+				margin-bottom: 65px
+			p
+				width: 670px
+				margin-bottom: 25px
+				display: inline-block
+				vertical-align: top
+				font-size: 24px
+				line-height: 1.2
+				span
+					@include font(#fff, 24px, $font_Amazing_Grotesk_Ultra, 1.2)
+		.creating_a_corporate_identity_img
+			float: left
+			display: inline-block
+		.creating_a_corporate_identity_txt
+			display: inline-block
+			width: 670px
+
+//	Секция
+//	Секция
 //	Секция
 //	Секция
 //	Секция

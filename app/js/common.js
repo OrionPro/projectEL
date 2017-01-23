@@ -72,6 +72,7 @@ var tl45 = new TimelineMax(); //  cost_of_online_store_bot_decor site_card2
 var tl46 = new TimelineMax(); //  from_what_is_seo item site_card
 var tl47 = new TimelineMax(); //  website_promotion_decor landing_page
 var tl48 = new TimelineMax(); //  website_promotion_decor online_store
+var tl49 = new TimelineMax(); //  creating_a_corporate_identity_img
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -120,6 +121,7 @@ function allAnim() {
 	tl46.pause(); // from_what_is_seo item site_card
 	tl47.pause(); // website_promotion_decor landing_page
 	tl48.pause(); // website_promotion_decor online_store
+	tl49.pause(); // creating_a_corporate_identity_img
 
 
 	// активация тайм линий при загрузке с измерением скролла
@@ -315,6 +317,9 @@ function allAnim() {
 		}
 		if ($(window).scrollTop() >= 1500 && $(window).scrollTop() <= 2200) {
 			tl48.resume();
+		}
+		if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= 900) {
+			tl49.resume();
 		}
 	}
 
@@ -922,6 +927,12 @@ function allAnim() {
 			}, 1, 'what_tasks_are_performed_img')
 			.staggerFrom(".what_tasks_are_performed_img_circle", 1.4, {drawSVG: "50% 50%"}, 1.1, 'what_tasks_are_performed_img');
 	}
+	// creating_a_corporate_identity_img
+	tl49.staggerFrom(".creating_a_corporate_identity_img_g1", 1, {
+		autoAlpha: 0,
+		x: 50,
+		ease: Power2.easeInOut
+	}, 0.1);
 
 
 }

@@ -8,7 +8,7 @@ $(function () {
 	// };
 });
 $(window).resize(function () {
-
+	//Ваш код
 });
 $(window).scroll(function () {
 	console.log($(window).scrollTop());
@@ -1018,7 +1018,7 @@ $(document).ready(function () {
 	if (window.matchMedia("(min-width: 992px)").matches) {
 		allAnim(); //вся наша анимация greensock
 	}
-
+	
 	//Filter при нажатии на табы
 	$('.portfolio_tabs a').click(function () {
 		//убираем событие на клик у кнопки

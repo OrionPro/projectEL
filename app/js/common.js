@@ -318,7 +318,7 @@ function allAnim() {
 		if ($(window).scrollTop() >= 1500 && $(window).scrollTop() <= 2200) {
 			tl48.resume();
 		}
-		if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= 900) {
+		if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= 700) {
 			tl49.resume();
 		}
 	}

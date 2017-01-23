@@ -1680,12 +1680,21 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .why_site_card_items .why_site_card_item:last-of-type{margin-right:0}
 .why_site_card_items .why_site_card_item p{width:182px;font-size:16px}
 .cost_of_online_store.why_site_card_item_sections svg{left:483px}
-.website_promotion.creating_a_corporate_identity{min-height:1061px}
-.website_promotion.creating_a_corporate_identity .creating_a_corporate_identity_wrap h1{margin-bottom:65px}
+.website_promotion.creating_a_corporate_identity{min-height:1218px}
+.website_promotion.creating_a_corporate_identity .creating_a_corporate_identity_wrap h1{margin:131px auto 65px;display:block;float:none}
 .website_promotion.creating_a_corporate_identity .creating_a_corporate_identity_wrap p{width:670px;margin-bottom:25px;display:inline-block;vertical-align:top;font-size:24px;line-height:1.2}
 .website_promotion.creating_a_corporate_identity .creating_a_corporate_identity_wrap p span{color:#fff;font:24px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.2}
 .website_promotion.creating_a_corporate_identity .creating_a_corporate_identity_img{float:left;display:inline-block}
 .website_promotion.creating_a_corporate_identity .creating_a_corporate_identity_txt{display:inline-block;width:670px}
+.website_promotion.creating_a_corporate_identity .website_promotion_clouds{bottom:-485px}
+.what_else_do.already_created_a_corporate_identity{background-color:#0b2848;position:relative;min-height:595px}
+.what_else_do.already_created_a_corporate_identity h2{margin-top:40px;text-align:center;z-index:2;position:relative;text-transform:none}
+.what_else_do.already_created_a_corporate_identity .already_created_a_corporate_identity_ul{width:370px;float:left;margin-right:30px}
+.what_else_do.already_created_a_corporate_identity ul{padding:0;margin:0}
+.what_else_do.already_created_a_corporate_identity ul li{list-style:none}
+.what_else_do.already_created_a_corporate_identity ul svg.svg_li{width:20px;height:20px}
+.what_else_do.already_created_a_corporate_identity .what_else_do_cloud{bottom:-224px;left:0;right:0;text-align:center}
+.what_else_do.form_style{background-color:#03142e}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

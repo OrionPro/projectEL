@@ -948,7 +948,7 @@ function elemTpl(imgSrc, link, idValue) {
 function filterBtn(arrImg, arrUrl) {
 	var limit = 0,
 		arr = [],
-		i = 0; // для итерации id в шаблдон
+		i = 0; // для итерации id в шаблон
 	//обнуляем id при клике если они есть
 	$(".portfolio_item_wrap .portfolio_item").each(function () {
 		var index = $(this).attr('id');

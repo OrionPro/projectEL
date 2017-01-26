@@ -1688,11 +1688,13 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .website_promotion.creating_a_corporate_identity .creating_a_corporate_identity_txt{display:inline-block;width:670px}
 .website_promotion.creating_a_corporate_identity .website_promotion_clouds{bottom:-485px}
 .what_else_do.already_created_a_corporate_identity{background-color:#0b2848;position:relative;min-height:595px}
-.what_else_do.already_created_a_corporate_identity h2{margin-top:40px;text-align:center;z-index:2;position:relative;text-transform:none}
-.what_else_do.already_created_a_corporate_identity .already_created_a_corporate_identity_ul{width:370px;float:left;margin-right:30px}
+.what_else_do.already_created_a_corporate_identity h2{margin-top:40px;margin-bottom:40px;text-align:center;z-index:2;position:relative;text-transform:none;line-height:1.2}
+.what_else_do.already_created_a_corporate_identity .already_created_a_corporate_identity_ul{width:370px;text-align:left;float:left;margin-right:30px}
 .what_else_do.already_created_a_corporate_identity ul{padding:0;margin:0}
 .what_else_do.already_created_a_corporate_identity ul li{list-style:none}
+.what_else_do.already_created_a_corporate_identity ul i{vertical-align:middle;display:inline-block;margin-right:5px}
 .what_else_do.already_created_a_corporate_identity ul svg.svg_li{width:20px;height:20px}
+.what_else_do.already_created_a_corporate_identity ul span{font-size:30px;display:inline-block}
 .what_else_do.already_created_a_corporate_identity .what_else_do_cloud{bottom:-224px;left:0;right:0;text-align:center}
 .what_else_do.form_style{background-color:#03142e}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}

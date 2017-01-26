@@ -73,6 +73,9 @@ var tl46 = new TimelineMax(); //  from_what_is_seo item site_card
 var tl47 = new TimelineMax(); //  website_promotion_decor landing_page
 var tl48 = new TimelineMax(); //  website_promotion_decor online_store
 var tl49 = new TimelineMax(); //  creating_a_corporate_identity_img
+var tl50 = new TimelineMax(); //  already_created_a_corporate_identity_ul check img
+var tl51 = new TimelineMax(); //  what_else_do_line form_style
+var tl52 = new TimelineMax(); //  website_promotion_decor
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -122,6 +125,9 @@ function allAnim() {
 	tl47.pause(); // website_promotion_decor landing_page
 	tl48.pause(); // website_promotion_decor online_store
 	tl49.pause(); // creating_a_corporate_identity_img
+	tl50.pause(); // already_created_a_corporate_identity_ul check img
+	tl51.pause(); // what_else_do_line form_style
+	tl52.pause(); // website_promotion_decor
 
 
 	// активация тайм линий при загрузке с измерением скролла
@@ -320,6 +326,15 @@ function allAnim() {
 		}
 		if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= 700) {
 			tl49.resume();
+		}
+		if ($(window).scrollTop() >= 700 && $(window).scrollTop() <= 1500) {
+			tl50.resume();
+		}
+		if ($(window).scrollTop() >= 1400 && $(window).scrollTop() <= 2200) {
+			tl51.resume();
+		}
+		if ($(window).scrollTop() >= 2300 && $(window).scrollTop() <= 2700) {
+			tl52.resume();
 		}
 	}
 
@@ -742,20 +757,26 @@ function allAnim() {
 			TweenMax.to($(this).find("h3"), 0.7, {color: "#ffffff"});
 		}
 	);
-	// why_seo_img
-	tl30.staggerFrom(".why_seo_img.functions_landing", 1, {
-		autoAlpha: 0,
-		transformOrigin: "50% 50%",
-		scale: 0
-	}, 0.4, 'functions_landing')
-		.staggerFrom((".what_else_do_item_p.functions_landing"), 1, {
-			opacity: 0,
+	// why_seo_img what_else_do_line
+	if ($('body').hasClass('landing_page')) {
+		what_else_do_line(tl30);
+	}
+	function what_else_do_line(tl) {
+		tl.staggerFrom(".why_seo_img.functions_landing", 1, {
+			autoAlpha: 0,
 			transformOrigin: "50% 50%",
 			scale: 0
 		}, 0.4, 'functions_landing')
-		.from("#functions_landing1", 0.5, {drawSVG: "0%"}, 0.4, 'functions_landing')
-		.from("#functions_landing2", 5.5, {drawSVG: "0%"}, 0.4, 'functions_landing')
-		.from("#functions_landing3", 2, {fill: "#031420", drawSVG: "0%"}, 5, 'functions_landing');
+			.staggerFrom((".what_else_do_item_p.functions_landing"), 1, {
+				opacity: 0,
+				transformOrigin: "50% 50%",
+				scale: 0
+			}, 0.4, 'functions_landing')
+			.from("#functions_landing1", 0.5, {drawSVG: "0%"}, 0.4, 'functions_landing')
+			.from("#functions_landing2", 5.5, {drawSVG: "0%"}, 0.4, 'functions_landing')
+			.from("#functions_landing3", 2, {fill: "#031420", drawSVG: "0%"}, 5, 'functions_landing');
+	}
+
 	// cost_of_online_store_item
 	tl31.staggerFrom(".suitable_for_landing_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
 	// our_achievements why_our_landing_sell
@@ -933,8 +954,24 @@ function allAnim() {
 		x: 50,
 		ease: Power2.easeInOut
 	}, 0.1);
-
-
+	// already_created_a_corporate_identity_ul check img
+	tl50.from(".already_created_a_corporate_identity_ul", 1.5, {
+		drawSVG: "0%",
+		ease: Power2.easeInOut
+	}, 0.4, "already_created")
+		.from(".what_else_do.already_created_a_corporate_identity ul span", 1.5, {
+			autoAlpha: 0,
+			x: 50,
+			ease: Power2.easeInOut
+		}, 0.4, "already_created");
+	// why_seo_img what_else_do_line
+	if ($('body').hasClass('form_style')) {
+		what_else_do_line(tl51);
+	}
+	// website_promotion_decor
+	if ($('body').hasClass('form_style')) {
+		website_promotion_decor(tl52);
+	}
 }
 
 //	Начало вывода табов с помощью ajax
@@ -974,8 +1011,8 @@ function filterBtn(arrImg, arrUrl) {
 	$(".portfolio_item_wrap .portfolio_item").each(function () {
 
 		var index = $(this).attr('id');
-		if (index != undefined) {
-			TweenMax.staggerFrom("#" + index, 2, {y: 30, autoAlpha: 0}, 0.5);
+		if (index != 'not-add') {
+			TweenMax.staggerFrom("#" + index, 2, {y: 40, autoAlpha: 0}, 0.5);
 		}
 
 
@@ -1029,7 +1066,7 @@ $(document).ready(function () {
 	if (window.matchMedia("(min-width: 992px)").matches) {
 		allAnim(); //вся наша анимация greensock
 	}
-	
+
 	//Filter при нажатии на табы
 	$('.portfolio_tabs a').click(function () {
 		//убираем событие на клик у кнопки
@@ -1045,7 +1082,6 @@ $(document).ready(function () {
 		$.getJSON("../ajax/items.json", function (data) {
 			var category = data.items;
 			var j = 0;
-
 
 			$('.portfolio_item_wrap .portfolio_item').each(function () {
 				$(this).remove();
@@ -1347,7 +1383,7 @@ $(document).ready(function () {
 				streetViewControl: false, // hide the yellow Street View pegman
 				scaleControl: true, // allow users to zoom the Google Map
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
-				center: latLng,
+				center: posMark,
 				scrollwheel: false
 			};
 

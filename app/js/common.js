@@ -78,7 +78,8 @@ var tl51 = new TimelineMax(); //  what_else_do_line form_style
 var tl52 = new TimelineMax(); //  website_promotion_decor
 var tl53 = new TimelineMax(); //  style_remains_img & style_remains
 var tl54 = new TimelineMax(); //  form style_remains_item
-var tl55 = new TimelineMax(); //   cost_of_online_store_bot_decor form_style
+var tl55 = new TimelineMax(); //  cost_of_online_store_bot_decor form_style
+var tl56 = new TimelineMax(); //  portfolio portfolio_item
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -134,6 +135,7 @@ function allAnim() {
 	tl53.pause(); // style_remains_img & style_remains
 	tl54.pause(); // form style_remains_item
 	tl55.pause(); //  cost_of_online_store_bot_decor form_style
+	tl56.pause(); //  portfolio portfolio_item
 
 
 	// активация тайм линий при загрузке с измерением скролла
@@ -350,6 +352,9 @@ function allAnim() {
 		}
 		if ($(window).scrollTop() >= 3100 && $(window).scrollTop() <= 3800) {
 			tl55.resume();
+		}
+		if ($(window).scrollTop() >= 3600 && $(window).scrollTop() <= 4400) {
+			tl56.resume();
 		}
 	}
 

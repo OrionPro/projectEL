@@ -1,5 +1,4 @@
 .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}
-.book_now .book_now_form input:active,.book_now .book_now_form input:focus,.book_now .book_now_form textarea:active,.book_now .book_now_form textarea:focus,.contacts input:active,.contacts input:focus,.contacts textarea:active,.contacts textarea:focus,.free_audit form input:active,.free_audit form input:focus,.slider .slider_mask a:focus{outline:0}
 .portfolio .portfolio_item_mask{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
@@ -1372,6 +1371,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .slider .slider_mask i{position:absolute;top:-webkit-calc(50% - 35px);top:calc(50% - 35px);left:0;right:0;font-size:24px}
 .slider .slider_mask a{width:161px;height:39px;display:inline-block;position:absolute;top:-webkit-calc(50% - 5px);top:calc(50% - 5px);left:-webkit-calc(50% - 80.5px);left:calc(50% - 80.5px);right:0;border:1px solid #FFF;background:0 0;-webkit-transition:.5s;transition:.5s;z-index:2;text-decoration:none;color:#fff;font:18px RobotoRegular,Arial,sans-serif;line-height:35px}
 .slider .slider_mask a:hover{text-decoration:none;background:#fff;color:#000}
+.slider .slider_mask a:focus{outline:0}
 .slider .slider_mask .fa{display:block}
 .slider a.slider_link{width:100%;height:100%;position:absolute;top:0;left:0;right:0}
 .our_achievements{min-height:760px;background:url(../img/our_achievements_clouds.png) center top 88px no-repeat #0b2848;position:relative}
@@ -1422,11 +1422,13 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .book_now .book_now_form{width:370px;margin-top:100px;margin-left:211px;position:relative;z-index:1}
 .book_now .book_now_form input,.book_now .book_now_form textarea{width:100%;padding-left:25px;background-color:transparent;margin-bottom:20px;color:#fff}
 .book_now .book_now_form input{height:55px;border:1px solid #FFF;font:18px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
+.book_now .book_now_form input:active,.book_now .book_now_form input:focus{outline:0}
 .book_now .book_now_form input::-webkit-input-placeholder{color:#fff;opacity:1}
 .book_now .book_now_form input:-moz-placeholder{color:#fff;opacity:1}
 .book_now .book_now_form input::-moz-placeholder{color:#fff;opacity:1}
 .book_now .book_now_form input:-ms-input-placeholder{color:#fff;opacity:1}
 .book_now .book_now_form textarea{height:200px;padding-top:20px;font:18px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
+.book_now .book_now_form textarea:active,.book_now .book_now_form textarea:focus{outline:0}
 .book_now .book_now_form textarea::-webkit-input-placeholder{color:#fff;opacity:1}
 .book_now .book_now_form textarea:-moz-placeholder{color:#fff;opacity:1}
 .book_now .book_now_form textarea::-moz-placeholder{color:#fff;opacity:1}
@@ -1468,6 +1470,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .free_audit p{font-size:24px;line-height:1.2}
 .free_audit form{width:370px;margin:15px auto 0}
 .free_audit form input{width:100%;height:55px;border:1px solid #FFF;padding-left:25px;margin-bottom:20px;background-color:transparent;color:#fff;font:18px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
+.free_audit form input:active,.free_audit form input:focus{outline:0}
 .free_audit form input::-webkit-input-placeholder{color:#fff;opacity:1}
 .free_audit form input:-moz-placeholder{color:#fff;opacity:1}
 .free_audit form input::-moz-placeholder{color:#fff;opacity:1}
@@ -1535,11 +1538,13 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .contacts .contacts_item_txt{margin-left:55px;display:inline-block;vertical-align:middle}
 .contacts .contacts_form_wrap{width:570px;float:left}
 .contacts input{width:100%;height:30px;margin-bottom:25px;background:0 0;border:none;border-bottom:1px solid #eed350;font-size:18px;z-index:1;position:relative}
+.contacts input:active,.contacts input:focus{outline:0}
 .contacts label{position:absolute;z-index:0;font-size:18px;-webkit-transition:.2s ease-out;transition:.2s ease-out}
 .contacts label.is_focused{font-size:13px;-webkit-transform:translateY(-120%);-ms-transform:translateY(-120%);transform:translateY(-120%)}
 .contacts input[type=submit]{width:270px;height:61px;margin-top:10px;font-size:24px;background-color:#FFB819;color:#000;-webkit-transition:.5s;transition:.5s;border:none}
 .contacts input[type=submit]:hover{background-color:#d45b3e}
 .contacts textarea{width:100%;height:255px;margin-bottom:10px;background:0 0;border:none;border-bottom:1px solid #eed350;z-index:1;position:relative}
+.contacts textarea:active,.contacts textarea:focus{outline:0}
 .contacts .modal_form_input_wrap .modal_input_error{top:30px}
 .website_promotion.selling_site{min-height:1790px;background:url(../img/main_clouds.png) center top 250px no-repeat,url(../img/selling_site_clouds.png) center bottom 8 no-repeat px}
 .website_promotion.selling_site .container{position:relative;z-index:0}
@@ -1702,14 +1707,24 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .what_else_do.form_style h2{margin-top:287px}
 .what_else_do.form_style .what_else_do_line{margin-top:111px}
 .what_else_do.form_style .what_else_do_items{margin-top:69px}
-.what_else_do.form_style .examples_of_online_stores_decor{position:absolute;bottom:-514px;right:0;left:0;text-align:center;z-index:1}
+.what_else_do.form_style .examples_of_online_stores_decor{position:absolute;bottom:-526px;right:0;left:0;text-align:center;z-index:1}
 .style_remains h2{margin-bottom:5px}
 .style_remains p{font-size:36px}
-.style_remains i{margin-right:5px}
+.style_remains i{margin-right:10px}
 .style_remains .style_remains_img_wrap{margin-top:40px;margin-bottom:50px}
-.style_remains .style_remains_img{float:left;margin-right:20px}
-.style_remains .style_remains_txt{text-align:left}
-.style_remains .style_remains_txt p{font-size:20px;margin-bottom:20px}
+.style_remains .style_remains_img{float:left;margin-right:30px}
+.style_remains .style_remains_txt{width:657px;text-align:left;float:left}
+.style_remains .style_remains_txt p{font-size:24px;margin-bottom:30px;line-height:1.2}
+.style_remains .style_remains_txt span{color:#fff;font:24px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.2}
+.style_remains form{margin-bottom:210px}
+.style_remains form .style_remains_item{display:inline-block;margin-right:30px}
+.style_remains form .style_remains_item input{width:270px;height:55px;padding-left:25px;display:inline-block;background-color:transparent;border:1px solid #fff;font-size:18px}
+.style_remains form .style_remains_item input:active,.style_remains form .style_remains_item input:focus,.style_remains form .style_remains_item input:hover{outline:0}
+.style_remains form input[type=submit]{width:274px;height:57px;font-size:18px;color:#000;text-transform:uppercase;border:none;background-color:#eed350;-webkit-transition:.5s;transition:.5s}
+.style_remains form input[type=submit]:hover{outline:0;background-color:#d45b3e}
+.style_remains form input[type=submit]:active,.style_remains form input[type=submit]:focus{outline:0}
+.our_work.form_style_portfolio h2{margin-top:100px}
+.our_work.form_style_portfolio .portfolio_item:last-of-type{margin-bottom:100px}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

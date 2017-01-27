@@ -76,6 +76,9 @@ var tl49 = new TimelineMax(); //  creating_a_corporate_identity_img
 var tl50 = new TimelineMax(); //  already_created_a_corporate_identity_ul check img
 var tl51 = new TimelineMax(); //  what_else_do_line form_style
 var tl52 = new TimelineMax(); //  website_promotion_decor
+var tl53 = new TimelineMax(); //  style_remains_img & style_remains
+var tl54 = new TimelineMax(); //  form style_remains_item
+var tl55 = new TimelineMax(); //   cost_of_online_store_bot_decor form_style
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -128,6 +131,9 @@ function allAnim() {
 	tl50.pause(); // already_created_a_corporate_identity_ul check img
 	tl51.pause(); // what_else_do_line form_style
 	tl52.pause(); // website_promotion_decor
+	tl53.pause(); // style_remains_img & style_remains
+	tl54.pause(); // form style_remains_item
+	tl55.pause(); //  cost_of_online_store_bot_decor form_style
 
 
 	// активация тайм линий при загрузке с измерением скролла
@@ -335,6 +341,15 @@ function allAnim() {
 		}
 		if ($(window).scrollTop() >= 2300 && $(window).scrollTop() <= 2700) {
 			tl52.resume();
+		}
+		if ($(window).scrollTop() >= 2600 && $(window).scrollTop() <= 3400) {
+			tl53.resume();
+		}
+		if ($(window).scrollTop() >= 2900 && $(window).scrollTop() <= 3600) {
+			tl54.resume();
+		}
+		if ($(window).scrollTop() >= 3100 && $(window).scrollTop() <= 3800) {
+			tl55.resume();
 		}
 	}
 
@@ -874,11 +889,14 @@ function allAnim() {
 	}
 	// cost_of_online_store_bot_decor site_card
 	if ($('body').hasClass('site_card')) {
-		tl40.from("#site_card1 site_card1 #cost_of_online_store_bot_decor_circle", 1, {drawSVG: "0%"}, 0.2);
-		tl40.from("#site_card1 #cost_of_online_store_bot_decor_line", 1.3, {drawSVG: "0%"}, 1);
-		tl40.from("#site_card1 #cost_of_online_store_bot_decor_all_line", 1.3, {drawSVG: "0%"}, 2.7);
-		tl40.from("#site_card1 #cost_of_online_store_bot_decor_all_bg", 1, {autoAlpha: 0, ease: Power2.easeInOut}, 2.5);
-		tl40.from("#site_card1 #cost_of_online_store_bot_decor_all_line_body", 1, {
+		cost_of_online_store_bot_decor(tl40);
+	}
+	function cost_of_online_store_bot_decor(tl) {
+		tl.from("#site_card1 #cost_of_online_store_bot_decor_circle", 1, {drawSVG: "0%"}, 0.2);
+		tl.from("#site_card1 #cost_of_online_store_bot_decor_line", 1.3, {drawSVG: "0%"}, 1);
+		tl.from("#site_card1 #cost_of_online_store_bot_decor_all_line", 1.3, {drawSVG: "0%"}, 2.7);
+		tl.from("#site_card1 #cost_of_online_store_bot_decor_all_bg", 1, {autoAlpha: 0, ease: Power2.easeInOut}, 2.5);
+		tl.from("#site_card1 #cost_of_online_store_bot_decor_all_line_body", 1, {
 			autoAlpha: 0,
 			scaleY: 100,
 			ease: Power2.easeInOut
@@ -972,6 +990,36 @@ function allAnim() {
 	if ($('body').hasClass('form_style')) {
 		website_promotion_decor(tl52);
 	}
+	//	style_remains_img & style_remains
+	tl53.from(".style_remains_img", 1, {
+		autoAlpha: 0,
+		x: 50,
+		ease: Power2.easeInOut
+	}, 0.4, "already_created")
+		.add("already_created", '-=0.5')
+		.staggerFrom(".style_remains .style_remains_txt p", 0.7, {
+			autoAlpha: 0,
+			x: -50,
+			ease: Power2.easeInOut
+		}, 0.2, "already_created");
+	//	form style_remains_item
+	tl54.add("style_remains_item", '0.5')
+		.from("form input[type='submit']", 0.7, {
+		autoAlpha: 0,
+		x: 50,
+		ease: Power2.easeInOut
+	}, 0.9, "style_remains_item")
+		.staggerFrom(".style_remains_item", 0.7, {
+			autoAlpha: 0,
+			x: 50,
+			ease: Power2.easeInOut
+		}, 0.3, "style_remains_item");
+	// cost_of_online_store_bot_decor form_style
+	if ($('body').hasClass('form_style')) {
+		cost_of_online_store_bot_decor(tl55);
+	}
+	// portfolio portfolio_item
+	tl56.staggerFrom(".portfolio .portfolio_item", 2, {y: 30, autoAlpha: 0}, 0.2);
 }
 
 //	Начало вывода табов с помощью ajax
@@ -1060,7 +1108,9 @@ function readyPortfolioJSON() {
 
 $(document).ready(function () {
 	//вызов функции для появления .portfolio_item при загрузке страницы
-	readyPortfolioJSON();
+	if ($('body').hasClass('portfolio')) {
+		readyPortfolioJSON();
+	}
 
 
 	if (window.matchMedia("(min-width: 992px)").matches) {

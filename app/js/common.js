@@ -792,6 +792,9 @@ function allAnim() {
 	if ($('body').hasClass('landing_page')) {
 		what_else_do_line(tl30);
 	}
+	if ($('body').hasClass('site_card')) {
+		what_else_do_line(tl30);
+	}
 	function what_else_do_line(tl) {
 		tl.staggerFrom(".why_seo_img.functions_landing", 1, {
 			autoAlpha: 0,

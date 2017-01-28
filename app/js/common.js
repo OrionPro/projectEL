@@ -80,6 +80,8 @@ var tl53 = new TimelineMax(); //  style_remains_img & style_remains
 var tl54 = new TimelineMax(); //  form style_remains_item
 var tl55 = new TimelineMax(); //  cost_of_online_store_bot_decor form_style
 var tl56 = new TimelineMax(); //  portfolio portfolio_item
+var tl57 = new TimelineMax(); //  why_seo_img you_end_up
+var tl58 = new TimelineMax(); //  run_contextual_advertising
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -136,6 +138,8 @@ function allAnim() {
 	tl54.pause(); // form style_remains_item
 	tl55.pause(); //  cost_of_online_store_bot_decor form_style
 	tl56.pause(); //  portfolio portfolio_item
+	tl57.pause(); //  why_seo_img you_end_up
+	tl58.pause(); //  run_contextual_advertising
 
 
 	// активация тайм линий при загрузке с измерением скролла
@@ -178,11 +182,11 @@ function allAnim() {
 			tl9.resume();
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
-			if ($(window).scrollTop() >= 4800) {
+			if ($(window).scrollTop() >= 4600) {
 				tl10.resume();
 			}
 		} else {
-			if ($(window).scrollTop() >= 5900) {
+			if ($(window).scrollTop() >= 5600) {
 				tl10.resume();
 			}
 		}
@@ -353,10 +357,17 @@ function allAnim() {
 		if ($(window).scrollTop() >= 3100 && $(window).scrollTop() <= 3800) {
 			tl55.resume();
 		}
-		if ($(window).scrollTop() >= 3600 && $(window).scrollTop() <= 4400) {
+		if ($(window).scrollTop() >= 3600 && $(window).scrollTop() <= 4600) {
 			tl56.resume();
 		}
+		if ($(window).scrollTop() >= 4700 && $(window).scrollTop() <= 5500) {
+			tl57.resume();
+		}
+		if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= 500) {
+			tl58.resume();
+		}
 	}
+
 
 
 	readyTimeLineGo();
@@ -395,7 +406,7 @@ function allAnim() {
 	tl2.from("#g4479", 0.5, {opacity: 0, y: 80, ease: Power2.easeInOut,}, 0.4);
 
 	// what_else_do
-	$(".what_else_do_item:not('.what_else_do.why_seo .what_else_do_item, .what_else_do.functions_landing .what_else_do_item')").hover(
+	$(".what_else_do_item:not('.what_else_do.why_seo .what_else_do_item, .what_else_do.functions_landing .what_else_do_item, .what_else_do.you_end_up .what_else_do_item, .what_else_do.run_contextual_advertising .what_else_do_item')").hover(
 		function () {
 			TweenMax.to($(this).find(".path4213-item"), 0.7, {fill: "#d45b3e"});
 			TweenMax.to($(this).find(".path4278"), 0.7, {fill: "#c45237"});
@@ -417,7 +428,7 @@ function allAnim() {
 	tl3.from("#g6391", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.1);
 	tl3.from("#g6814", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.3);
 	tl3.from("#g4995", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.5);
-	tl3.from((".what_else_do_item_p:not('.functions_landing')"), 0.7, {
+	tl3.from((".what_else_do_item_p:not('.functions_landing, .you_end_up, .run_contextual_advertising')"), 0.7, {
 		opacity: 0,
 		transformOrigin: "50% 50%",
 		scale: 0
@@ -558,7 +569,7 @@ function allAnim() {
 	tl10.from("#g43851241241241", 0.6, {autoAlpha: 0, y: -250, ease: Back.easeInOut}, '-=0.5');
 	tl10.from("#g5005", 0.6, {autoAlpha: 0, y: -250, ease: Back.easeOut}, '-=0.4');
 	tl10.from("#g4934124124", 0.6, {autoAlpha: 0, y: -250, ease: Back.easeOut}, '-=0.4');
-	tl10.from("#g5004", 0.4, {autoAlpha: 0, y: 10, ease: Power2.easeInOut}, '-=0');
+	tl10.from("#g5004", 0.5, {opacity: 0}, '+=0.3');
 	// monitor blink
 	tl11.to("#path4156", 0.7, {fill: "#fff", ease: Power2.easeInOut}, 0.7);
 	// monitor border
@@ -575,7 +586,7 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 1);
 	// why_seo_img
-	tl13.staggerFrom(".why_seo_img:not('.functions_landing')", 1, {
+	tl13.staggerFrom(".why_seo_img:not('.functions_landing, .you_end_up, .run_contextual_advertising')", 1, {
 		autoAlpha: 0,
 		transformOrigin: "50% 50%",
 		scale: 0
@@ -1009,7 +1020,7 @@ function allAnim() {
 		}, 0.2, "already_created");
 	//	form style_remains_item
 	tl54.add("style_remains_item", '0.5')
-		.from("form input[type='submit']", 0.7, {
+		.from(".style_remains form input[type='submit']", 0.7, {
 		autoAlpha: 0,
 		x: 50,
 		ease: Power2.easeInOut
@@ -1024,10 +1035,27 @@ function allAnim() {
 		cost_of_online_store_bot_decor(tl55);
 	}
 	// portfolio portfolio_item
-	tl56.staggerFrom(".portfolio .portfolio_item", 2, {y: 30, autoAlpha: 0}, 0.2);
+	tl56.staggerFrom(".portfolio .portfolio_item", 2, {y: 30, autoAlpha: 0,
+		ease: Power2.easeInOut}, 0.2);
+	// why_seo_img you_end_up
+	tl57.add("you_end_up", "+=0.7")
+		.staggerFrom(".why_seo_img.you_end_up", 0.8, {y: 50, autoAlpha: 0,
+		ease: Power2.easeInOut}, 0.3, "you_end_up")
+		.add("you_end_up", "-=2.2")
+		.staggerFrom(".what_else_do.you_end_up .what_else_do_item p", 0.8, {y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut}, 0.3, "you_end_up");
+	// run_contextual_advertising
+	tl58.add("run_contextual", "+=0.3")
+		.staggerFrom(".why_seo_img.run_contextual_advertising", 0.8, {y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut}, 0.3, "run_contextual")
+		.add("run_contextual", "-=1.2")
+		.staggerFrom(".what_else_do.run_contextual_advertising .what_else_do_item p", 0.8, {y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut}, 0.3, "run_contextual");
 }
 
+
 //	Начало вывода табов с помощью ajax
+
 //	Шаблон для portfolio_item
 function elemTpl(imgSrc, link, idValue) {
 

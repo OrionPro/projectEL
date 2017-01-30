@@ -1611,7 +1611,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a{display:block;height:100%;line-height:65px;font-size:30px;color:#000;background-color:#fff;-webkit-transition:background-color .5s;transition:background-color .5s}
 .cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a:active,.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a:focus,.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a:hover{text-decoration:none;background-color:#b48309}
 .cost_of_online_store .cost_of_online_store_bot_decor{position:relative}
-.cost_of_online_store .cost_of_online_store_bot_decor svg{position:absolute;bottom:-33px;left:469px}
+.cost_of_online_store .cost_of_online_store_bot_decor svg{position:absolute;bottom:-33px;left:469px;z-index:10}
 .what_tasks_are_performed{min-height:400px;background:url(../img/what_tasks_are_performed_clouds.png) center top 60px no-repeat #03142e;text-align:center}
 .what_tasks_are_performed h2{margin-top:80px;margin-bottom:37px;font-size:36px;color:#eed350;text-transform:capitalize}
 .what_tasks_are_performed h3{font-size:30px;color:#fff}
@@ -1712,6 +1712,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .style_remains p{font-size:36px}
 .style_remains i{margin-right:10px}
 .style_remains .style_remains_img_wrap{margin-top:40px;margin-bottom:50px}
+.our_work.form_style_portfolio h2,.what_else_do.you_end_up h2{margin-top:100px}
 .style_remains .style_remains_img{float:left;margin-right:30px}
 .style_remains .style_remains_txt{width:657px;text-align:left;float:left}
 .style_remains .style_remains_txt p{font-size:24px;margin-bottom:30px;line-height:1.2}
@@ -1723,11 +1724,10 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .style_remains form input[type=submit]{width:274px;height:57px;font-size:18px;color:#000;text-transform:uppercase;border:none;background-color:#eed350;-webkit-transition:.5s;transition:.5s}
 .style_remains form input[type=submit]:hover{outline:0;background-color:#d45b3e}
 .style_remains form input[type=submit]:active,.style_remains form input[type=submit]:focus{outline:0}
-.our_work.form_style_portfolio h2{margin-top:100px}
 .our_work.form_style_portfolio .portfolio_item:last-of-type{margin-bottom:100px}
 .what_else_do.you_end_up{background-color:#0b2848;text-align:center}
-.what_else_do.you_end_up h2{margin-top:60px}
 .what_else_do.you_end_up .what_else_do_item{width:370px;margin-bottom:50px}
+.what_else_do.you_end_up .what_else_do_item:last-of-type{margin-bottom:80px}
 .what_else_do.you_end_up .what_else_do_item p{width:100%;font-size:24px;margin-top:8px}
 .what_else_do.run_contextual_advertising{min-height:993px}
 .what_else_do.run_contextual_advertising p{width:280px;font-size:24px}
@@ -1744,6 +1744,17 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .what_else_do.get_everything .get_everything_item_txt h3{margin:0;font-size:30px;color:#eed350}
 .what_else_do.get_everything .get_everything_item_txt p{width:77%;margin:inherit}
 .what_else_do.get_everything .what_else_do_cloud{bottom:-225px}
+.what_else_do.running_PPC_advertising{position:relative;background:url(../img/what_tasks_are_performed_clouds.png) center top 100px no-repeat #03142e}
+.what_else_do.running_PPC_advertising h2{margin-top:220px}
+.what_else_do.running_PPC_advertising .examples_of_online_stores_decor{position:absolute;bottom:-63px;right:0;left:0;text-align:center;z-index:10}
+.what_else_do.seven_main_tasks{background-color:#03142e}
+.what_else_do.seven_main_tasks h2{text-transform:capitalize;margin-bottom:40px}
+.what_else_do.seven_main_tasks .what_else_do_items{width:830px;margin:auto}
+.what_else_do.seven_main_tasks .what_else_do_item{width:245px}
+.what_else_do.seven_main_tasks .what_else_do_item p{font-size:17.7px}
+.that_you_get_in_the_end{background:url(../img/what_tasks_are_performed_clouds.png) center top 100px no-repeat #03142e;min-height:400px}
+.that_you_get_in_the_end h2{width:550px;margin:47px auto 0;font-size:36px;color:#eed350;position:relative}
+.that_you_get_in_the_end h2:after{content:"";background:url(../img/why_our_landing_sell_h2_decor.png);display:block;width:68px;height:74px;position:absolute;left:-46px;top:-38px}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

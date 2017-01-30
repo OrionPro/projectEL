@@ -82,6 +82,12 @@ var tl55 = new TimelineMax(); //  cost_of_online_store_bot_decor form_style
 var tl56 = new TimelineMax(); //  portfolio portfolio_item
 var tl57 = new TimelineMax(); //  why_seo_img you_end_up
 var tl58 = new TimelineMax(); //  run_contextual_advertising
+var tl59 = new TimelineMax(); //  get_everything_item run_contextual_advertising
+var tl60 = new TimelineMax(); //  get_everything_item running_PPC_advertising
+var tl61 = new TimelineMax(); //  website_promotion_decor run_contextual_advertising
+var tl62 = new TimelineMax(); //  website_promotion_decor2
+var tl63 = new TimelineMax(); //  cost_of_online_store_item run_contextual_advertising
+var tl64 = new TimelineMax(); //  cost_of_online_store_bot_decor run_contextual_advertising
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -140,6 +146,12 @@ function allAnim() {
 	tl56.pause(); //  portfolio portfolio_item
 	tl57.pause(); //  why_seo_img you_end_up
 	tl58.pause(); //  run_contextual_advertising
+	tl59.pause(); //  get_everything_item run_contextual_advertising
+	tl60.pause(); //  get_everything_item running_PPC_advertising
+	tl61.pause(); //  website_promotion_decor run_contextual_advertising
+	tl62.pause(); //  website_promotion_decor2
+	tl63.pause(); //  cost_of_online_store_item run_contextual_advertising
+	tl64.pause(); //  cost_of_online_store_bot_decor run_contextual_advertising
 
 
 	// активация тайм линий при загрузке с измерением скролла
@@ -366,8 +378,25 @@ function allAnim() {
 		if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= 500) {
 			tl58.resume();
 		}
+		if ($(window).scrollTop() >= 600 && $(window).scrollTop() <= 1200) {
+			tl59.resume();
+		}
+		if ($(window).scrollTop() >= 1500 && $(window).scrollTop() <= 2500) {
+			tl60.resume();
+		}
+		if ($(window).scrollTop() >= 2400 && $(window).scrollTop() <= 2800) {
+			tl61.resume();
+		}
+		if ($(window).scrollTop() >= 4300 && $(window).scrollTop() <= 4800) {
+			tl62.resume();
+		}
+		if ($(window).scrollTop() >= 2600 && $(window).scrollTop() <= 3400) {
+			tl63.resume();
+		}
+		if ($(window).scrollTop() >= 3650 && $(window).scrollTop() <= 4200) {
+			tl64.resume();
+		}
 	}
-
 
 
 	readyTimeLineGo();
@@ -692,6 +721,19 @@ function allAnim() {
 			}, 0.5, 'website_promotion_decor');
 	}
 
+	function website_promotion_decor2(tl) {
+		tl.from("#website_promotion_decor2 #path42022323", 1, {drawSVG: "50% 50%"}, 0.5, 'website_promotion_decor').from("#website_promotion_decor2 #g41853453", 1, {
+			autoAlpha: 0,
+			scaleY: 100,
+			ease: Power2.easeInOut
+		}, 0.9, 'website_promotion_decor')
+			.from("#website_promotion_decor2 #path5235252253", 1, {
+				autoAlpha: 0,
+				y: -50,
+				ease: Power2.easeInOut
+			}, 0.5, 'website_promotion_decor');
+	}
+
 	if ($('body').hasClass('services')) {
 		website_promotion_decor(tl22);
 	}
@@ -701,6 +743,16 @@ function allAnim() {
 	if ($('body').hasClass('online_store')) {
 		website_promotion_decor(tl48);
 	}
+	if ($('body').hasClass('form_style')) {
+		website_promotion_decor(tl48);
+	}
+	if ($('body').hasClass('form_style')) {
+		website_promotion_decor2(tl62);
+	}
+	if ($('body').hasClass('run_contextual_advertising')) {
+		website_promotion_decor(tl61);
+	}
+
 	// from_idea_to_results_decor
 	tl23.from("#path5417235235", 1, {drawSVG: "50% 50%"}, 0.5, 'from_idea_to_results_decor')
 		.from("#g550012341414", 1, {
@@ -908,9 +960,9 @@ function allAnim() {
 	}
 	// cost_of_online_store_bot_decor site_card
 	if ($('body').hasClass('site_card')) {
-		cost_of_online_store_bot_decor(tl40);
+		cost_of_online_store_bot_decor1(tl40);
 	}
-	function cost_of_online_store_bot_decor(tl) {
+	function cost_of_online_store_bot_decor1(tl) {
 		tl.from("#site_card1 #cost_of_online_store_bot_decor_circle", 1, {drawSVG: "0%"}, 0.2);
 		tl.from("#site_card1 #cost_of_online_store_bot_decor_line", 1.3, {drawSVG: "0%"}, 1);
 		tl.from("#site_card1 #cost_of_online_store_bot_decor_all_line", 1.3, {drawSVG: "0%"}, 2.7);
@@ -921,6 +973,7 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 2);
 	}
+
 	//Why_site_card_items
 	tl41.staggerFrom(".why_site_card_items .why_site_card_item", 1, {
 		autoAlpha: 0,
@@ -1024,10 +1077,10 @@ function allAnim() {
 	//	form style_remains_item
 	tl54.add("style_remains_item", '0.5')
 		.from(".style_remains form input[type='submit']", 0.7, {
-		autoAlpha: 0,
-		x: 50,
-		ease: Power2.easeInOut
-	}, 0.9, "style_remains_item")
+			autoAlpha: 0,
+			x: 50,
+			ease: Power2.easeInOut
+		}, 0.9, "style_remains_item")
 		.staggerFrom(".style_remains_item", 0.7, {
 			autoAlpha: 0,
 			x: 50,
@@ -1038,22 +1091,62 @@ function allAnim() {
 		cost_of_online_store_bot_decor(tl55);
 	}
 	// portfolio portfolio_item
-	tl56.staggerFrom(".portfolio .portfolio_item", 2, {y: 30, autoAlpha: 0,
-		ease: Power2.easeInOut}, 0.2);
+	tl56.staggerFrom(".portfolio .portfolio_item", 2, {
+		y: 30, autoAlpha: 0,
+		ease: Power2.easeInOut
+	}, 0.2);
 	// why_seo_img you_end_up
 	tl57.add("you_end_up", "+=0.7")
-		.staggerFrom(".why_seo_img.you_end_up", 0.8, {y: 50, autoAlpha: 0,
-		ease: Power2.easeInOut}, 0.3, "you_end_up")
+		.staggerFrom(".why_seo_img.you_end_up", 0.8, {
+			y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.3, "you_end_up")
 		.add("you_end_up", "-=2.2")
-		.staggerFrom(".what_else_do.you_end_up .what_else_do_item p", 0.8, {y: 50, autoAlpha: 0,
-			ease: Power2.easeInOut}, 0.3, "you_end_up");
-	// run_contextual_advertising
+		.staggerFrom(".what_else_do.you_end_up .what_else_do_item p", 0.8, {
+			y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.3, "you_end_up");
+	// why_seo_img run_contextual_advertising
 	tl58.add("run_contextual", "+=0.3")
-		.staggerFrom(".why_seo_img.run_contextual_advertising", 0.8, {y: 50, autoAlpha: 0,
-			ease: Power2.easeInOut}, 0.3, "run_contextual")
+		.staggerFrom(".why_seo_img.run_contextual_advertising", 0.8, {
+			y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.3, "run_contextual")
 		.add("run_contextual", "-=1.2")
-		.staggerFrom(".what_else_do.run_contextual_advertising .what_else_do_item p", 0.8, {y: 50, autoAlpha: 0,
-			ease: Power2.easeInOut}, 0.3, "run_contextual");
+		.staggerFrom(".what_else_do.run_contextual_advertising .what_else_do_item p", 0.8, {
+			y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.3, "run_contextual");
+	// get_everything_item run_contextual_advertising
+	tl59.add("get_everything_item", "+=0.3")
+		.staggerFrom(".what_else_do.get_everything .get_everything_item_img:not('.what_else_do.running_PPC_advertising .get_everything_item_img')", 0.8, {
+			y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.3, "get_everything_item")
+		.add("get_everything_item", "-=2.2")
+		.staggerFrom(".what_else_do.get_everything .get_everything_item_txt:not('.what_else_do.running_PPC_advertising .get_everything_item_txt')", 0.8, {
+			y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.3, "get_everything_item");
+	// get_everything_item running_PPC_advertising
+	tl60.add("running_PPC", "+=0.3")
+		.staggerFrom(".what_else_do.running_PPC_advertising .get_everything_item_img", 0.8, {
+			y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.3, "running_PPC")
+		.add("running_PPC", "-=2.7")
+		.staggerFrom(".what_else_do.running_PPC_advertising .get_everything_item_txt", 0.8, {
+			y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.3, "running_PPC");
+	// cost_of_online_store_item run_contextual_advertising
+	if ($('body').hasClass('run_contextual_advertising')) {
+		tl63.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
+	}
+	// cost_of_online_store_bot_decor run_contextual_advertising
+	if ($('body').hasClass('run_contextual_advertising')) {
+		cost_of_online_store_bot_decor(tl64);
+	}
 }
 
 

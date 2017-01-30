@@ -1161,6 +1161,7 @@ body textarea:required:valid
 			position: absolute
 			bottom: -33px
 			left: 469px
+			z-index: 10
 //	Секция what_tasks_are_performed
 .what_tasks_are_performed
 	min-height: 400px
@@ -1620,10 +1621,12 @@ body textarea:required:valid
 		background-color: #0b2848
 		text-align: center
 		h2
-			margin-top: 60px
+			margin-top: 100px
 		.what_else_do_item
 			width: 370px
 			margin-bottom: 50px
+			&:last-of-type
+				margin-bottom: 80px
 			p
 				width: 100%
 				font-size: 24px
@@ -1680,9 +1683,54 @@ body textarea:required:valid
 				margin: inherit
 		.what_else_do_cloud
 			bottom: -225px
-//	Секция
-//	Секция
-//	Секция
+//	Секция running_PPC_advertising
+.what_else_do
+	&.running_PPC_advertising
+		position: relative
+		background: url(../img/what_tasks_are_performed_clouds.png) center top 100px no-repeat #03142e
+		h2
+			margin-top: 220px
+		.examples_of_online_stores_decor
+			position: absolute
+			bottom: -63px
+			right: 0
+			left: 0
+			text-align: center
+			z-index: 10
+//	Секция  seven_main_tasks
+.what_else_do
+	&.seven_main_tasks
+		background-color: #03142e
+		h2
+			text-transform: capitalize
+			margin-bottom: 40px
+			margin-bottom: 40px
+		.what_else_do_items
+			width: 830px
+			margin: auto
+		.what_else_do_item
+			width: 245px
+			p
+				font-size: 17.7px
+//	Секция that_you_get_in_the_end
+.that_you_get_in_the_end
+	background: url(../img/what_tasks_are_performed_clouds.png) center top 100px no-repeat #03142e
+	min-height: 400px
+	h2
+		width: 550px
+		margin: 47px auto 0
+		font-size: 36px
+		color: $main_color
+		position: relative
+		&:after
+			content: ""
+			background: url(../img/why_our_landing_sell_h2_decor.png)
+			display: block
+			width: 68px
+			height: 74px
+			position: absolute
+			left: -46px
+			top: -38px
 //	Секция
 //	Секция
 

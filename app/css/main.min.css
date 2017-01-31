@@ -1753,12 +1753,23 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .what_else_do.seven_main_tasks .what_else_do_item{width:245px}
 .what_else_do.seven_main_tasks .what_else_do_item p{font-size:17.7px}
 .that_you_get_in_the_end{background:url(../img/what_tasks_are_performed_clouds.png) center top 100px no-repeat #03142e}
+.that_you_get_in_the_end h2:after,.website_promotion.creating_a_website h2:after{content:"";background:url(../img/why_our_landing_sell_h2_decor.png);height:74px;left:-46px;top:-38px}
 .that_you_get_in_the_end h2{width:550px;margin:47px auto 30px;font-size:36px;color:#eed350;position:relative}
-.that_you_get_in_the_end h2:after{content:"";background:url(../img/why_our_landing_sell_h2_decor.png);display:block;width:68px;height:74px;position:absolute;left:-46px;top:-38px}
+.that_you_get_in_the_end h2:after{display:block;width:68px;position:absolute}
 .that_you_get_in_the_end .that_you_get_in_the_end_items{font-size:0}
 .that_you_get_in_the_end .that_you_get_in_the_end_item{width:270px;display:inline-block;vertical-align:top;margin-right:30px}
 .that_you_get_in_the_end .that_you_get_in_the_end_item:first-of-type{margin-left:15px}
 .that_you_get_in_the_end .that_you_get_in_the_end_item:last-of-type{margin-right:0}
+.website_promotion.creating_a_website{text-align:center}
+.website_promotion.creating_a_website h1{margin-bottom:15px}
+.website_promotion.creating_a_website p{text-align:center;font-size:24px;line-height:1.2;margin-bottom:20px}
+.website_promotion.creating_a_website h2{display:inline-block;margin-top:60px;margin-bottom:60px;position:relative;font-size:36px;color:#eed350;line-height:1.2;text-transform:uppercase}
+.website_promotion.creating_a_website h2:after{display:block;width:68px;position:absolute}
+.website_promotion.creating_a_website .creating_a_website_item:nth-of-type(2) .creating_a_website_item_img{margin-right:30px}
+.website_promotion.creating_a_website .creating_a_website_item_txt{width:682px;display:inline-block;vertical-align:middle;margin-right:20px}
+.website_promotion.creating_a_website .creating_a_website_item_txt p{text-align:left}
+.website_promotion.creating_a_website .creating_a_website_item_txt span{font-family:Amazing_Grotesk_Ultra,Arial,sans-serif}
+.website_promotion.creating_a_website .creating_a_website_item_img{display:inline-block;vertical-align:middle}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

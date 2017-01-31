@@ -88,6 +88,8 @@ var tl61 = new TimelineMax(); //  website_promotion_decor run_contextual_adverti
 var tl62 = new TimelineMax(); //  website_promotion_decor2
 var tl63 = new TimelineMax(); //  cost_of_online_store_item run_contextual_advertising
 var tl64 = new TimelineMax(); //  cost_of_online_store_bot_decor run_contextual_advertising
+var tl65 = new TimelineMax(); //  seven_main_tasks what_else_do_item
+var tl66 = new TimelineMax(); //  that_you_get_in_the_end
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -152,6 +154,8 @@ function allAnim() {
 	tl62.pause(); //  website_promotion_decor2
 	tl63.pause(); //  cost_of_online_store_item run_contextual_advertising
 	tl64.pause(); //  cost_of_online_store_bot_decor run_contextual_advertising
+	tl65.pause(); //  seven_main_tasks what_else_do_item
+	tl66.pause(); //  that_you_get_in_the_end
 
 
 	// активация тайм линий при загрузке с измерением скролла
@@ -396,6 +400,12 @@ function allAnim() {
 		if ($(window).scrollTop() >= 3650 && $(window).scrollTop() <= 4200) {
 			tl64.resume();
 		}
+		if ($(window).scrollTop() >= 4200 && $(window).scrollTop() <= 4800) {
+			tl65.resume();
+		}
+		if ($(window).scrollTop() >= 5100 && $(window).scrollTop() <= 5700) {
+			tl66.resume();
+		}
 	}
 
 
@@ -457,8 +467,8 @@ function allAnim() {
 	tl3.from("#g6391", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.1);
 	tl3.from("#g6814", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.3);
 	tl3.from("#g4995", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.5);
-	tl3.from((".what_else_do_item_p:not('.functions_landing, .you_end_up, .run_contextual_advertising')"), 0.7, {
-		opacity: 0,
+	tl3.from((".what_else_do_item_p:not('.functions_landing, .you_end_up, .run_contextual_advertising, .seven_main_tasks')"), 0.7, {
+		autoAlpha: 0,
 		transformOrigin: "50% 50%",
 		scale: 0
 	}, 1);
@@ -490,7 +500,6 @@ function allAnim() {
 	tl7.from("#path4297_item3", 1, {drawSVG: "100% 100%"}, 0.8);
 	tl7.from("#path4297_item4", 1, {drawSVG: "100% 100%"}, 1.1);
 	// our_achievements_item inner circle
-
 	tl7.from("#g5164_item1", 1, {
 		rotation: 360,
 		transformOrigin: "50% 50%",
@@ -615,7 +624,7 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 1);
 	// why_seo_img
-	tl13.staggerFrom(".why_seo_img:not('.functions_landing, .you_end_up, .run_contextual_advertising')", 1, {
+	tl13.staggerFrom(".why_seo_img:not('.functions_landing, .you_end_up, .run_contextual_advertising, .seven_main_tasks')", 1, {
 		autoAlpha: 0,
 		transformOrigin: "50% 50%",
 		scale: 0
@@ -743,9 +752,7 @@ function allAnim() {
 	if ($('body').hasClass('online_store')) {
 		website_promotion_decor(tl48);
 	}
-	if ($('body').hasClass('form_style')) {
-		website_promotion_decor(tl48);
-	}
+
 	if ($('body').hasClass('form_style')) {
 		website_promotion_decor2(tl62);
 	}
@@ -862,7 +869,6 @@ function allAnim() {
 			.from("#functions_landing2", 5.5, {drawSVG: "0%"}, 0.4, 'functions_landing')
 			.from("#functions_landing3", 2, {fill: "#031420", drawSVG: "0%"}, 5, 'functions_landing');
 	}
-
 	// cost_of_online_store_item
 	tl31.staggerFrom(".suitable_for_landing_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
 	// our_achievements why_our_landing_sell
@@ -1102,13 +1108,13 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 0.3, "you_end_up")
 		.add("you_end_up", "-=2.2")
-		.staggerFrom(".what_else_do.you_end_up .what_else_do_item p", 0.8, {
+		.staggerFrom(".what_else_do.you_end_up .what_else_do_item p:not('.what_else_do.seven_main_tasks .what_else_do_item p')", 0.8, {
 			y: 50, autoAlpha: 0,
 			ease: Power2.easeInOut
 		}, 0.3, "you_end_up");
 	// why_seo_img run_contextual_advertising
 	tl58.add("run_contextual", "+=0.3")
-		.staggerFrom(".why_seo_img.run_contextual_advertising", 0.8, {
+		.staggerFrom(".why_seo_img.run_contextual_advertising:not('.why_seo_img.seven_main_tasks')", 0.8, {
 			y: 50, autoAlpha: 0,
 			ease: Power2.easeInOut
 		}, 0.3, "run_contextual")
@@ -1147,6 +1153,28 @@ function allAnim() {
 	if ($('body').hasClass('run_contextual_advertising')) {
 		cost_of_online_store_bot_decor(tl64);
 	}
+	// seven_main_tasks what_else_do_item
+	tl65.add("seven_main_tasks", "+=0.3")
+		.staggerFrom(".what_else_do.seven_main_tasks .what_else_do_item_img", 0.8, {
+			y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.3, "seven_main_tasks")
+		.add("seven_main_tasks", "-=2.2")
+		.staggerFrom(".what_else_do.seven_main_tasks .what_else_do_item_p", 0.8, {
+			y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.3, "seven_main_tasks");
+	//	that_you_get_in_the_end
+	tl66.add("that_you_get_in_the_end", "+=0.3")
+		.staggerFrom(".that_you_get_in_the_end_item svg", 0.8, {
+			y: 50, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.3, "that_you_get_in_the_end")
+		.add("that_you_get_in_the_end", "-=1.2")
+		.staggerFrom(".that_you_get_in_the_end_item .wanted_g", 1, {
+			y: 50, autoAlpha: 0,
+			ease: Bounce.easeOut
+		}, 0.3, "that_you_get_in_the_end");
 }
 
 

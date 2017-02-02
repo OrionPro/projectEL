@@ -1793,19 +1793,30 @@ body textarea:required:valid
 //	Секция three_types_sell_website
 .what_else_do
 	&.three_types_sell_website
+		min-height: 600px
 		h2
 			text-transform: capitalize
 			line-height: 1.2
+		.three_types_sell_website_items
+			margin-top: 40px
+			text-align: center
+		.three_types_sell_website_item
+			display: inline-block
+			margin-right: 65px
+			&:last-of-type
+				margin-right: 0
 		.three_types_sell_website_txt
 			h3
 				font-size: 18px
+				margin-bottom: 25px
 			span
 				font-family: $font_Amazing_Grotesk_Ultra
 		a
+			display: block
 			padding: 20px 28px
 			color: #000
 			background-color: #eed350
-			transition: .5s
+			transition: background-color .5s
 			&:hover
 				background-color: $auxiliary_color
 				text-decoration: none
@@ -1815,11 +1826,119 @@ body textarea:required:valid
 			&:focus
 				background-color: $auxiliary_color
 				text-decoration: none
+		.what_else_do_cloud
+			bottom: -330px
 			
+//	Секция secret_of_creating_the_site
+.our_achievements
+	&.secret_of_creating_the_site
+		background: url(../img/main_clouds.png) center top 50px no-repeat #03142e
+		h2
+			margin-top: 270px
+		p
+			width: 820px
+			span
+				font-family: $font_Amazing_Grotesk_Ultra
+
+		.why_our_landing_sell_items
+			margin-top: 20px
+		.row
+			& + .row
+				.why_our_landing_sell_item
+					margin-left: 215px
+					&:last-of-type
+						margin-bottom: 40px
+		.row
+			& + .row
+				.why_our_landing_sell_item_txt
+					p
+						width: 580px
+				a
+					display: inline-block
+					margin-bottom: 115px
+					background-color: #eed350
+					padding: 13.5px 46.5px
+					color: #000
+					font-size: 24px
+					text-transform: uppercase
+					transition: background-color .5s
+					&:hover
+						background-color: $auxiliary_color
+						text-decoration: none
+					&:active
+						background-color: $auxiliary_color
+						text-decoration: none
+					&:focus
+						background-color: $auxiliary_color
+						text-decoration: none
+
+
+//	Секция whats_next
+.our_achievements
+	&.whats_next
+		h2
+			margin-bottom: 20px
+		.whats_next_item
+			text-align: left
+			margin-bottom: 230px
+		.whats_next_item_img
+			display: inline-block
+			vertical-align: top
+			margin-right: 20px
+		.whats_next_item_txt
+			display: inline-block
+			vertical-align: top
+			text-align: left
+			p
+				width: 670px
+				margin-top: 0
+				margin-bottom: 19px
+		.cost_of_online_store_bot_decor
+			svg
+				bottom: -35px
+//	Секция who_is_behind_all_this
+.what_else_do
+	&.who_is_behind_all_this
+		min-height: 520px
+		h2
+			margin-bottom: 10px
+		p
+			width: 100%
+			margin-bottom: 50px
+			font-size: 24px
+		.what_else_do_items
+			width: 100%
+		.what_else_do_item
+			width: 170px
+			p
+				font-size: 18px
+			span
+				font-family: $font_Amazing_Grotesk_Ultra
+
+//	Секция we_are_constantly_developing
+.portfolio
+	&.we_are_constantly_developing
+		h2
+			margin-top: 0
+			margin-bottom: 10px
+		p
+			font-size: 24px
+			line-height: 1.2
+			margin-bottom: 50px
+		.portfolio_item_wrap
+			min-height: 350px
+
+//	Секция
+.what_else_do
+	&.seven_factor
+		h2
+			margin-top: 50px
 //	Секция
 //	Секция
 //	Секция
-//	Секция
+
+
+
 
 
 

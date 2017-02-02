@@ -1717,7 +1717,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .style_remains .style_remains_txt{width:657px;text-align:left;float:left}
 .style_remains .style_remains_txt p{font-size:24px;margin-bottom:30px;line-height:1.2}
 .style_remains .style_remains_txt span{color:#fff;font:24px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.2}
-.website_promotion.creating_a_website .creating_a_website_item_txt span,.what_else_do.three_types_sell_website .three_types_sell_website_txt span{font-family:Amazing_Grotesk_Ultra,Arial,sans-serif}
+.our_achievements.secret_of_creating_the_site p span,.website_promotion.creating_a_website .creating_a_website_item_txt span,.what_else_do.three_types_sell_website .three_types_sell_website_txt span,.what_else_do.who_is_behind_all_this .what_else_do_item span{font-family:Amazing_Grotesk_Ultra,Arial,sans-serif}
 .style_remains form{margin-bottom:210px}
 .style_remains form .style_remains_item{display:inline-block;margin-right:30px}
 .style_remains form .style_remains_item input{width:270px;height:55px;padding-left:25px;display:inline-block;background-color:transparent;border:1px solid #fff;font-size:18px}
@@ -1772,10 +1772,40 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .website_promotion.creating_a_website .creating_a_website_item_txt p{text-align:left}
 .website_promotion.creating_a_website .creating_a_website_item_img{display:inline-block;vertical-align:middle}
 .website_promotion.creating_a_website .website_promotion_clouds{bottom:-132px}
+.what_else_do.three_types_sell_website{min-height:600px}
 .what_else_do.three_types_sell_website h2{text-transform:capitalize;line-height:1.2}
-.what_else_do.three_types_sell_website .three_types_sell_website_txt h3{font-size:18px}
-.what_else_do.three_types_sell_website a{padding:20px 28px;color:#000;background-color:#eed350;-webkit-transition:.5s;transition:.5s}
+.what_else_do.three_types_sell_website .three_types_sell_website_items{margin-top:40px;text-align:center}
+.what_else_do.three_types_sell_website .three_types_sell_website_item{display:inline-block;margin-right:65px}
+.what_else_do.three_types_sell_website .three_types_sell_website_item:last-of-type{margin-right:0}
+.what_else_do.three_types_sell_website .three_types_sell_website_txt h3{font-size:18px;margin-bottom:25px}
+.what_else_do.three_types_sell_website a{display:block;padding:20px 28px;color:#000;background-color:#eed350;-webkit-transition:background-color .5s;transition:background-color .5s}
 .what_else_do.three_types_sell_website a:active,.what_else_do.three_types_sell_website a:focus,.what_else_do.three_types_sell_website a:hover{background-color:#d45b3e;text-decoration:none}
+.what_else_do.three_types_sell_website .what_else_do_cloud{bottom:-330px}
+.our_achievements.secret_of_creating_the_site{background:url(../img/main_clouds.png) center top 50px no-repeat #03142e}
+.our_achievements.secret_of_creating_the_site h2{margin-top:270px}
+.our_achievements.secret_of_creating_the_site p{width:820px}
+.our_achievements.secret_of_creating_the_site .why_our_landing_sell_items{margin-top:20px}
+.our_achievements.secret_of_creating_the_site .row+.row .why_our_landing_sell_item{margin-left:215px}
+.our_achievements.secret_of_creating_the_site .row+.row .why_our_landing_sell_item:last-of-type{margin-bottom:40px}
+.our_achievements.secret_of_creating_the_site .row+.row .why_our_landing_sell_item_txt p{width:580px}
+.our_achievements.secret_of_creating_the_site .row+.row a{display:inline-block;margin-bottom:115px;background-color:#eed350;padding:13.5px 46.5px;color:#000;font-size:24px;text-transform:uppercase;-webkit-transition:background-color .5s;transition:background-color .5s}
+.our_achievements.secret_of_creating_the_site .row+.row a:active,.our_achievements.secret_of_creating_the_site .row+.row a:focus,.our_achievements.secret_of_creating_the_site .row+.row a:hover{background-color:#d45b3e;text-decoration:none}
+.our_achievements.whats_next h2{margin-bottom:20px}
+.our_achievements.whats_next .whats_next_item{text-align:left;margin-bottom:230px}
+.our_achievements.whats_next .whats_next_item_img{display:inline-block;vertical-align:top;margin-right:20px}
+.our_achievements.whats_next .whats_next_item_txt{display:inline-block;vertical-align:top;text-align:left}
+.our_achievements.whats_next .whats_next_item_txt p{width:670px;margin-top:0;margin-bottom:19px}
+.our_achievements.whats_next .cost_of_online_store_bot_decor svg{bottom:-35px}
+.what_else_do.who_is_behind_all_this{min-height:520px}
+.what_else_do.who_is_behind_all_this h2{margin-bottom:10px}
+.what_else_do.who_is_behind_all_this p{width:100%;margin-bottom:50px;font-size:24px}
+.what_else_do.who_is_behind_all_this .what_else_do_items{width:100%}
+.what_else_do.who_is_behind_all_this .what_else_do_item{width:170px}
+.what_else_do.who_is_behind_all_this .what_else_do_item p{font-size:18px}
+.portfolio.we_are_constantly_developing h2{margin-top:0;margin-bottom:10px}
+.portfolio.we_are_constantly_developing p{font-size:24px;line-height:1.2;margin-bottom:50px}
+.portfolio.we_are_constantly_developing .portfolio_item_wrap{min-height:350px}
+.what_else_do.seven_factor h2{margin-top:50px}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

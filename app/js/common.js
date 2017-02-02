@@ -94,6 +94,13 @@ var tl67 = new TimelineMax(); //  book_now_city run_contextual_advertising
 var tl68 = new TimelineMax(); //  creating_a_website img1
 var tl69 = new TimelineMax(); //  creating_a_website img2
 var tl70 = new TimelineMax(); //  creating_a_website img3
+var tl71 = new TimelineMax(); //  three_types_sell_website_item
+var tl72 = new TimelineMax(); //  our_achievements_top_decoration websites
+var tl73 = new TimelineMax(); //  whats_next_item_img
+var tl74 = new TimelineMax(); //  cost_of_online_store_bot_decor websites
+var tl75 = new TimelineMax(); //  who_is_behind_all_this what_else_do_item
+var tl76 = new TimelineMax(); //  portfolio we_are_constantly_developing
+var tl77 = new TimelineMax(); //  websites get_everything_item run_contextual_advertisin
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -164,6 +171,14 @@ function allAnim() {
 	tl68.pause(); //  creating_a_website img1
 	tl69.pause(); //  creating_a_website img2
 	tl70.pause(); //  creating_a_website img3
+	tl71.pause(); //  three_types_sell_website_item
+	tl72.pause(); //  three_types_sell_website_item
+	tl73.pause(); //  our_achievements_top_decoration websites
+	tl74.pause(); //  cost_of_online_store_bot_decor websites
+	tl75.pause(); //  who_is_behind_all_this what_else_do_item
+	tl76.pause(); //  portfolio we_are_constantly_developing
+	tl77.pause(); //  websites get_everything_item run_contextual_advertisin
+
 
 
 	// активация тайм линий при загрузке с измерением скролла
@@ -294,8 +309,14 @@ function allAnim() {
 		if ($(window).scrollTop() >= 2000 && $(window).scrollTop() <= 2500) {
 			tl32.resume();
 		}
-		if ($(window).scrollTop() >= 2800 && $(window).scrollTop() <= 4500) {
-			tl33.resume();
+		if ($('body').hasClass('websites')) {
+			if ($(window).scrollTop() >= 2600 && $(window).scrollTop() <= 3800) {
+				tl33.resume();
+			}
+		} else {
+			if ($(window).scrollTop() >= 2800 && $(window).scrollTop() <= 4500) {
+				tl33.resume();
+			}
 		}
 		if ($(window).scrollTop() >= 4400 && $(window).scrollTop() <= 4900) {
 			tl34.resume();
@@ -425,6 +446,27 @@ function allAnim() {
 		}
 		if ($(window).scrollTop() >= 900 && $(window).scrollTop() <= 1500) {
 			tl70.resume();
+		}
+		if ($(window).scrollTop() >= 1300 && $(window).scrollTop() <= 2100) {
+			tl71.resume();
+		}
+		if ($(window).scrollTop() >= 3400 && $(window).scrollTop() <= 4000) {
+			tl72.resume();
+		}
+		if ($(window).scrollTop() >= 4200 && $(window).scrollTop() <= 4600) {
+			tl73.resume();
+		}
+		if ($(window).scrollTop() >= 4500 && $(window).scrollTop() <= 5100) {
+			tl74.resume();
+		}
+		if ($(window).scrollTop() >= 4800 && $(window).scrollTop() <= 5300) {
+			tl75.resume();
+		}
+		if ($(window).scrollTop() >= 5400 && $(window).scrollTop() <= 5900) {
+			tl76.resume();
+		}
+		if ($(window).scrollTop() >= 5900 && $(window).scrollTop() <= 6500) {
+			tl77.resume();
 		}
 	}
 
@@ -633,6 +675,7 @@ function allAnim() {
 		tl.from("#g4934124124", 0.6, {autoAlpha: 0, y: -250, ease: Back.easeOut}, '-=0.4');
 		tl.from("#g5004", 0.5, {opacity: 0}, '+=0.3');
 	}
+
 	// monitor blink
 	tl11.to("#path4156", 0.7, {fill: "#fff", ease: Power2.easeInOut}, 0.7);
 	// monitor border
@@ -894,6 +937,7 @@ function allAnim() {
 			.from("#functions_landing2", 5.5, {drawSVG: "0%"}, 0.4, 'functions_landing')
 			.from("#functions_landing3", 2, {fill: "#031420", drawSVG: "0%"}, 5, 'functions_landing');
 	}
+
 	// cost_of_online_store_item
 	tl31.staggerFrom(".suitable_for_landing_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
 	// our_achievements why_our_landing_sell
@@ -907,35 +951,43 @@ function allAnim() {
 		tl32.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 2.5);
 	}
 	// why_our_landing_sell_item_img
-	tl33.staggerFrom(".why_our_landing_sell_item_img_circle", 1, {
-		drawSVG: "0%",
-		ease: Power2.easeInOut
-	}, 0.5, 'why_our_landing_sell_item_img')
-		.staggerFrom(".why_our_landing_sell_item_img_inner", 1, {
-			opacity: 0,
-			y: 20,
+	if ($('body').hasClass('landing_page')) {
+		why_our_landing_sell_item_img(tl33, '-=4.6');
+	}
+	if ($('body').hasClass('websites')) {
+		why_our_landing_sell_item_img(tl33, '-=3.2');
+	}
+	function why_our_landing_sell_item_img(tl, time) {
+		tl.staggerFrom(".why_our_landing_sell_item_img_circle", 1, {
+			drawSVG: "0%",
 			ease: Power2.easeInOut
 		}, 0.5, 'why_our_landing_sell_item_img')
-		.staggerFrom(".why_our_landing_sell_item_img_shadow", 2, {
-			opacity: 0,
-			ease: Power2.easeInOut
-		}, 0.5, 'why_our_landing_sell_item_img')
-		.staggerFrom(".why_our_landing_sell_item_img_center", 1, {
-			opacity: 0,
-			y: 20,
-			ease: Power2.easeInOut
-		}, 0.5, 'why_our_landing_sell_item_img')
-		.staggerFrom(".our_achievements.why_our_landing_sell .row+.row .why_our_landing_sell_item_txt h3", 1, {
-			opacity: 0,
-			y: 20,
-			ease: Power2.easeInOut
-		}, 0.5, 'why_our_landing_sell_item_img')
-		.add('why_our_landing_sell_item_img', '-=4.6')
-		.staggerFrom(".our_achievements.why_our_landing_sell .row+.row .why_our_landing_sell_item_txt p", 1, {
-			opacity: 0,
-			y: 20,
-			ease: Power2.easeInOut
-		}, 0.5, 'why_our_landing_sell_item_img');
+			.staggerFrom(".why_our_landing_sell_item_img_inner", 1, {
+				opacity: 0,
+				y: 20,
+				ease: Power2.easeInOut
+			}, 0.5, 'why_our_landing_sell_item_img')
+			.staggerFrom(".why_our_landing_sell_item_img_shadow", 2, {
+				opacity: 0,
+				ease: Power2.easeInOut
+			}, 0.5, 'why_our_landing_sell_item_img')
+			.staggerFrom(".why_our_landing_sell_item_img_center", 1, {
+				opacity: 0,
+				y: 20,
+				ease: Power2.easeInOut
+			}, 0.5, 'why_our_landing_sell_item_img')
+			.staggerFrom(".our_achievements.why_our_landing_sell .row+.row .why_our_landing_sell_item_txt h3", 1, {
+				opacity: 0,
+				y: 20,
+				ease: Power2.easeInOut
+			}, 0.5, 'why_our_landing_sell_item_img')
+			.add('why_our_landing_sell_item_img', time)
+			.staggerFrom(".our_achievements.why_our_landing_sell .row+.row .why_our_landing_sell_item_txt p", 1, {
+				opacity: 0,
+				y: 20,
+				ease: Power2.easeInOut
+			}, 0.5, 'why_our_landing_sell_item_img');
+	}
 	// why_our_landing_sell
 	if ($('body').hasClass('landing_page')) {
 		cost_of_online_store_bot_decor(tl34);
@@ -1122,10 +1174,16 @@ function allAnim() {
 		cost_of_online_store_bot_decor(tl55);
 	}
 	// portfolio portfolio_item
-	tl56.staggerFrom(".portfolio .portfolio_item", 2, {
-		y: 30, autoAlpha: 0,
-		ease: Power2.easeInOut
-	}, 0.2);
+	if ($('body').hasClass('form_style')) {
+		portfolio_item(tl56);
+	}
+
+	function portfolio_item(tl) {
+		tl.staggerFrom(".portfolio .portfolio_item", 2, {
+			y: 30, autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 0.2);
+	}
 	// why_seo_img you_end_up
 	tl57.add("you_end_up", "+=0.7")
 		.staggerFrom(".why_seo_img.you_end_up", 0.8, {
@@ -1160,16 +1218,21 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 0.3, "get_everything_item");
 	// get_everything_item running_PPC_advertising
-	tl60.add("running_PPC", "+=0.3")
-		.staggerFrom(".what_else_do.running_PPC_advertising .get_everything_item_img", 0.8, {
-			y: 50, autoAlpha: 0,
-			ease: Power2.easeInOut
-		}, 0.3, "running_PPC")
-		.add("running_PPC", "-=2.7")
-		.staggerFrom(".what_else_do.running_PPC_advertising .get_everything_item_txt", 0.8, {
-			y: 50, autoAlpha: 0,
-			ease: Power2.easeInOut
-		}, 0.3, "running_PPC");
+	if ($('body').hasClass('run_contextual_advertising')) {
+		get_everything_item(tl60);
+	}
+	function get_everything_item(tl) {
+		tl.add("running_PPC", "+=0.3")
+			.staggerFrom(".what_else_do.running_PPC_advertising .get_everything_item_img", 0.8, {
+				y: 50, autoAlpha: 0,
+				ease: Power2.easeInOut
+			}, 0.3, "running_PPC")
+			.add("running_PPC", "-=2.7")
+			.staggerFrom(".what_else_do.running_PPC_advertising .get_everything_item_txt", 0.8, {
+				y: 50, autoAlpha: 0,
+				ease: Power2.easeInOut
+			}, 0.3, "running_PPC");
+	}
 	// cost_of_online_store_item run_contextual_advertising
 	if ($('body').hasClass('run_contextual_advertising')) {
 		tl63.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
@@ -1179,16 +1242,21 @@ function allAnim() {
 		cost_of_online_store_bot_decor(tl64);
 	}
 	// seven_main_tasks what_else_do_item
-	tl65.add("seven_main_tasks", "+=0.3")
-		.staggerFrom(".what_else_do.seven_main_tasks .what_else_do_item_img", 0.8, {
-			y: 50, autoAlpha: 0,
-			ease: Power2.easeInOut
-		}, 0.3, "seven_main_tasks")
-		.add("seven_main_tasks", "-=2.2")
-		.staggerFrom(".what_else_do.seven_main_tasks .what_else_do_item_p", 0.8, {
-			y: 50, autoAlpha: 0,
-			ease: Power2.easeInOut
-		}, 0.3, "seven_main_tasks");
+	if ($('body').hasClass('run_contextual_advertising')) {
+		seven_main_tasks(tl65);
+	}
+	function seven_main_tasks(tl) {
+		tl.add("seven_main_tasks", "+=0.3")
+			.staggerFrom(".what_else_do.seven_main_tasks .what_else_do_item_img", 0.7, {
+				y: 50, autoAlpha: 0,
+				ease: Power2.easeInOut
+			}, 0.3, "seven_main_tasks")
+			.add("seven_main_tasks", "-=2.2")
+			.staggerFrom(".what_else_do.seven_main_tasks .what_else_do_item_p", 0.7, {
+				y: 50, autoAlpha: 0,
+				ease: Power2.easeInOut
+			}, 0.3, "seven_main_tasks");
+	}
 	//	that_you_get_in_the_end
 	tl66.add("that_you_get_in_the_end", "+=0.3")
 		.staggerFrom(".that_you_get_in_the_end_item svg", 0.8, {
@@ -1208,9 +1276,9 @@ function allAnim() {
 	tl68.add("creating_a_website", "+=0.5")
 		.staggerFrom(".creating_a_website_item_circle", 1, {drawSVG: "50% 50%"}, 0.3, 'creating_a_website')
 		.staggerFrom(".creating_a_website_item_line", 1, {
-		drawSVG: "100% 100%",
-		ease: Power2.easeInOut
-	}, 0.3, 'creating_a_website')
+			drawSVG: "100% 100%",
+			ease: Power2.easeInOut
+		}, 0.3, 'creating_a_website')
 		.add("creating_a_website", "-=0.5")
 		.staggerFrom(".creating_a_website_item_img_web", 1, {
 			autoAlpha: 0,
@@ -1231,7 +1299,7 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 0.2, 'creating_a_website_img2');
 	//	creating_a_website img3
-	tl70.add("creating_a_website_img3", "+=0.7")
+	tl70.add("creating_a_website_img3", "+=0.5")
 		.from(".creating_a_website_img3", 1, {
 			autoAlpha: 0,
 			x: 20,
@@ -1242,7 +1310,66 @@ function allAnim() {
 			autoAlpha: 0,
 			x: 20,
 			ease: Power2.easeInOut
-		}, 0.2, 'creating_a_website_img2');// class="creating_a_website_item_img_online3"
+		}, 0.2, 'creating_a_website_img3');
+	//	three_types_sell_website_item
+	tl71.add("three_types_sell_website_item", "+=0.5")
+		.staggerFrom(".three_types_sell_website_img", 1, {
+			autoAlpha: 0,
+			x: 20,
+			ease: Power2.easeInOut
+		}, 0.3, 'three_types_sell_website_item')
+		.add("three_types_sell_website_item", "-=1.2")
+		.staggerFrom(".three_types_sell_website_txt", 1, {
+			autoAlpha: 0,
+			x: 20,
+			ease: Power2.easeInOut
+		}, 0.2, 'three_types_sell_website_item')
+		.add("three_types_sell_website_item", "-=1")
+		.staggerFrom(".three_types_sell_website_item a", 0.8, {
+			autoAlpha: 0,
+			x: 20,
+			ease: Power2.easeInOut
+		}, 0.2, 'three_types_sell_website_item');
+	// our_achievements_top_decoration websites
+	if ($('body').hasClass('websites')) {
+		tl72.from("#path4202", 1.5, {drawSVG: "0%"}, 0.2);
+		tl72.from("#g4185235425235", 0.2, {opacity: 0, y: -50}, 1.8);
+		tl72.from("#path5234234", 0.5, {opacity: 0, y: -50}, 1.4);
+		tl72.from("#path41782342423", 3.5, {drawSVG: "0%"}, 1.9);
+		tl72.from("#path723523253", 1.5, {drawSVG: "0%"}, 4.9);
+		tl72.from("#path_go", 1.5, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 2.1);
+		tl72.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 2.5);
+	}
+	// whats_next_item_img
+	tl73.from("#g5004234234234", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5,"whats_next_item_img" )
+		.add("whats_next_item_img", "-=0.7")
+		.staggerFrom(".whats_next_item_img_houses", 0.7, {
+			opacity: 0,
+			y: 50,
+			ease: Power2.easeInOut
+		}, 0.3, "whats_next_item_img")
+		.add("whats_next_item_img", "-=0.4")
+		.staggerFrom(".whats_next_item_img_houses_txt", 0.7, {
+			opacity: 0,
+			x: 50,
+			ease: Power2.easeInOut
+		}, 0.2, "whats_next_item_img");
+	// cost_of_online_store_bot_decor websites
+	if ($('body').hasClass('websites')) {
+		cost_of_online_store_bot_decor(tl74);
+	}
+	// who_is_behind_all_this what_else_do_item
+	if ($('body').hasClass('websites')) {
+		seven_main_tasks(tl75);
+	}
+	// portfolio we_are_constantly_developing
+	if ($('body').hasClass('websites')) {
+		portfolio_item(tl76);
+	}
+	// websites get_everything_item run_contextual_advertisin
+	if ($('body').hasClass('websites')) {
+		get_everything_item(tl77);
+	}
 }
 
 

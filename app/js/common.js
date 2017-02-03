@@ -101,6 +101,7 @@ var tl74 = new TimelineMax(); //  cost_of_online_store_bot_decor websites
 var tl75 = new TimelineMax(); //  who_is_behind_all_this what_else_do_item
 var tl76 = new TimelineMax(); //  portfolio we_are_constantly_developing
 var tl77 = new TimelineMax(); //  websites get_everything_item run_contextual_advertisin
+var tl78 = new TimelineMax(); //  book_now_city websites
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -178,6 +179,7 @@ function allAnim() {
 	tl75.pause(); //  who_is_behind_all_this what_else_do_item
 	tl76.pause(); //  portfolio we_are_constantly_developing
 	tl77.pause(); //  websites get_everything_item run_contextual_advertisin
+	tl78.pause(); //  book_now_city websites
 
 
 
@@ -465,8 +467,11 @@ function allAnim() {
 		if ($(window).scrollTop() >= 5400 && $(window).scrollTop() <= 5900) {
 			tl76.resume();
 		}
-		if ($(window).scrollTop() >= 5900 && $(window).scrollTop() <= 6500) {
+		if ($(window).scrollTop() >= 5900 && $(window).scrollTop() <= 7000) {
 			tl77.resume();
+		}
+		if ($(window).scrollTop() >= 7100 && $(window).scrollTop() <= 7800) {
+			tl78.resume();
 		}
 	}
 
@@ -1369,6 +1374,10 @@ function allAnim() {
 	// websites get_everything_item run_contextual_advertisin
 	if ($('body').hasClass('websites')) {
 		get_everything_item(tl77);
+	}
+	// book_now_city websites
+	if ($('body').hasClass('websites')) {
+		book_now_city(tl78);
 	}
 }
 

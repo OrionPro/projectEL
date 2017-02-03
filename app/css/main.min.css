@@ -1717,7 +1717,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .style_remains .style_remains_txt{width:657px;text-align:left;float:left}
 .style_remains .style_remains_txt p{font-size:24px;margin-bottom:30px;line-height:1.2}
 .style_remains .style_remains_txt span{color:#fff;font:24px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.2}
-.our_achievements.secret_of_creating_the_site p span,.website_promotion.creating_a_website .creating_a_website_item_txt span,.what_else_do.three_types_sell_website .three_types_sell_website_txt span,.what_else_do.who_is_behind_all_this .what_else_do_item span{font-family:Amazing_Grotesk_Ultra,Arial,sans-serif}
+.our_achievements.secret_of_creating_the_site p span,.website_promotion.creating_a_website .creating_a_website_item_txt span,.website_promotion.site_content .creating_a_website_item_txt h3,.what_else_do.three_types_sell_website .three_types_sell_website_txt span,.what_else_do.who_is_behind_all_this .what_else_do_item span{font-family:Amazing_Grotesk_Ultra,Arial,sans-serif}
 .style_remains form{margin-bottom:210px}
 .style_remains form .style_remains_item{display:inline-block;margin-right:30px}
 .style_remains form .style_remains_item input{width:270px;height:55px;padding-left:25px;display:inline-block;background-color:transparent;border:1px solid #fff;font-size:18px}
@@ -1805,7 +1805,15 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .portfolio.we_are_constantly_developing h2{margin-top:0;margin-bottom:10px}
 .portfolio.we_are_constantly_developing p{font-size:24px;line-height:1.2;margin-bottom:50px}
 .portfolio.we_are_constantly_developing .portfolio_item_wrap{min-height:350px}
+.what_else_do.seven_factor{background-color:#0b2848}
 .what_else_do.seven_factor h2{margin-top:50px}
+.what_else_do.seven_factor .get_everything_item_txt h3{line-height:1.2}
+.what_else_do.seven_factor .get_everything_item_txt p{width:100%;font-size:24px}
+.website_promotion.site_content h1{margin-bottom:40px}
+.website_promotion.site_content .creating_a_website_item{margin-bottom:60px}
+.website_promotion.site_content .creating_a_website_item_txt{width:635px;margin-right:10px;text-align:left}
+.website_promotion.site_content .creating_a_website_item_txt h3{font-size:24px;text-transform:capitalize}
+.website_promotion.site_content .creating_a_website_item_txt p{font-size:18px}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

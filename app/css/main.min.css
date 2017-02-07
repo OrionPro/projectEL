@@ -1662,15 +1662,16 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .portfolio .portfolio_tabs a.active{color:#eed350;text-decoration:underline}
 .portfolio .portfolio_item_wrap{min-height:700px}
 .portfolio .portfolio_item{width:370px;float:left;margin-right:30px;margin-bottom:30px;border:15px solid #eed350;position:relative;overflow:hidden}
+.portfolio .portfolio_item a,.portfolio .portfolio_item_mask{position:absolute;width:100%;height:100%;top:0;left:0;right:0}
 .portfolio .portfolio_item:nth-of-type(3n+1){margin-left:15px}
 .portfolio .portfolio_item:nth-of-type(3n){margin-right:0}
 .portfolio .portfolio_item:hover .portfolio_item_mask{opacity:1}
 .portfolio .portfolio_item:hover .portfolio_item_img img{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
-.portfolio .portfolio_item a{position:absolute;width:100%;height:100%;top:0;right:0;left:0;z-index:2}
+.portfolio .portfolio_item a{z-index:2}
 .portfolio .portfolio_item a:active,.portfolio .portfolio_item a:focus,.portfolio .portfolio_item a:hover{background:0 0}
 .portfolio .portfolio_item_img img{-webkit-transition:2s;transition:2s}
-.portfolio .portfolio_item_mask{position:absolute;width:100%;height:100%;top:0;right:0;left:0;opacity:0;background:rgba(3,20,46,.7);-webkit-transition:.5s;transition:.5s;z-index:1}
-.portfolio .portfolio_item_mask i{position:absolute;display:block;font-size:48px;color:#fff}
+.portfolio .portfolio_item_mask{opacity:0;background:rgba(3,20,46,.7);-webkit-transition:.5s;transition:.5s;z-index:1}
+.portfolio .portfolio_item_mask i{font-size:48px;color:#fff}
 .portfolio #portfolio_item_btn{width:370px;height:60px;background-color:#eed350;display:none;margin:0 auto 50px;-webkit-transition:.5s;transition:.5s;font-size:24px;color:#000;border:none}
 .portfolio #portfolio_item_btn:active,.portfolio #portfolio_item_btn:hover{background-color:#d45b3e}
 .portfolio #portfolio_item_btn:focus{background-color:#d45b3e;outline:0}
@@ -1717,7 +1718,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .style_remains .style_remains_txt{width:657px;text-align:left;float:left}
 .style_remains .style_remains_txt p{font-size:24px;margin-bottom:30px;line-height:1.2}
 .style_remains .style_remains_txt span{color:#fff;font:24px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.2}
-.our_achievements.secret_of_creating_the_site p span,.website_promotion.creating_a_website .creating_a_website_item_txt span,.website_promotion.site_content .creating_a_website_item_txt h3,.what_else_do.three_types_sell_website .three_types_sell_website_txt span,.what_else_do.who_is_behind_all_this .what_else_do_item span{font-family:Amazing_Grotesk_Ultra,Arial,sans-serif}
+.cost_of_online_store.price_for_content .table,.our_achievements.secret_of_creating_the_site p span,.website_promotion.creating_a_website .creating_a_website_item_txt span,.website_promotion.site_content .creating_a_website_item_txt h3,.what_else_do.more_than_good_content .get_everything_item_txt h3,.what_else_do.three_types_sell_website .three_types_sell_website_txt span,.what_else_do.who_is_behind_all_this .what_else_do_item span{font-family:Amazing_Grotesk_Ultra,Arial,sans-serif}
 .style_remains form{margin-bottom:210px}
 .style_remains form .style_remains_item{display:inline-block;margin-right:30px}
 .style_remains form .style_remains_item input{width:270px;height:55px;padding-left:25px;display:inline-block;background-color:transparent;border:1px solid #fff;font-size:18px}
@@ -1818,7 +1819,28 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .what_else_do.what_content_we_are_creating .three_types_sell_website_items{margin-top:77px;position:relative;z-index:3}
 .what_else_do.what_content_we_are_creating .three_types_sell_website_item{width:170px;margin-right:24px}
 .what_else_do.what_content_we_are_creating .three_types_sell_website_txt p{width:100%;font-size:16px;margin-top:5px}
-.what_else_do.what_content_we_are_creating a{width:370px;margin:200px auto 100px;position:relative;z-index:5;text-transform:uppercase}
+.what_else_do.what_content_we_are_creating a{width:370px;margin:285px auto 100px;padding:12px 28px;position:relative;background-color:#0b2848;border:1px solid #fff;font-size:24px;color:#fff;text-transform:uppercase;z-index:5}
+.what_else_do.what_content_we_are_creating .what_else_do_cloud{bottom:-195px}
+.portfolio.pleasure_to_read{overflow:visible}
+.portfolio.pleasure_to_read p{margin-bottom:45px}
+.portfolio.pleasure_to_read .portfolio_item_wrap{min-height:100%}
+.portfolio.pleasure_to_read .book_now_form{margin:0 auto 80px}
+.portfolio.pleasure_to_read .book_now_form input[type=submit]{width:100%;padding:0}
+.portfolio.pleasure_to_read .examples_of_online_stores_decor{position:absolute;bottom:-65px;right:0;left:0;text-align:center;z-index:1}
+.cost_of_online_store.price_for_content .table{width:770px;margin:0 auto 220px;color:#000;background-color:#fff}
+.cost_of_online_store.price_for_content .table tbody tr:last-of-type td{border:none}
+.cost_of_online_store.price_for_content .table th{width:370px;height:135px;font-size:36px;border-bottom:1px solid #ffb819}
+.cost_of_online_store.price_for_content .table th.table_th_r{width:400px}
+.cost_of_online_store.price_for_content .table th:first-of-type{background-color:#ffb819;border-bottom:1px solid #fff}
+.cost_of_online_store.price_for_content .table td{height:75px;font-size:24px;border-bottom:1px solid #ffb819}
+.cost_of_online_store.price_for_content .table td:first-of-type{background-color:#ffb819;border-bottom:1px solid #fff}
+.what_else_do.more_than_good_content{min-height:590px;background-color:#03142e}
+.what_else_do.more_than_good_content h2{text-transform:capitalize;margin-top:100px}
+.what_else_do.more_than_good_content h2~h2{margin-top:30px}
+.what_else_do.more_than_good_content p{width:700px;font-size:24px}
+.what_else_do.more_than_good_content .get_everything_item:last-of-type{margin-bottom:0}
+.what_else_do.more_than_good_content .get_everything_item_txt h3{margin-bottom:5px;font-size:18px}
+.what_else_do.more_than_good_content .get_everything_item_txt p{font-size:18px}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

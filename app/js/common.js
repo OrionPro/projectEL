@@ -106,6 +106,7 @@ var tl79 = new TimelineMax(); //  creating_a_website_item_img 1
 var tl80 = new TimelineMax(); //  creating_a_website_item_img 2
 var tl81 = new TimelineMax(); //  creating_a_website_item_img 3
 var tl82 = new TimelineMax(); //  what_else_do_line texts
+var tl83 = new TimelineMax(); //  .what_else_do.what_content_we_are_creating a
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -188,6 +189,7 @@ function allAnim() {
 	tl80.pause(); //  creating_a_website_item_img 2
 	tl81.pause(); //  creating_a_website_item_img 3
 	tl82.pause(); //  what_else_do_line texts
+	tl83.pause(); //  .what_else_do.what_content_we_are_creating a
 
 
 
@@ -492,6 +494,9 @@ function allAnim() {
 		}
 		if ($(window).scrollTop() >= 1300 && $(window).scrollTop() <= 2100) {
 			tl82.resume();
+		}
+		if ($(window).scrollTop() >= 1750 && $(window).scrollTop() <= 2300) {
+			tl83.resume();
 		}
 	}
 
@@ -1457,8 +1462,9 @@ function allAnim() {
 			x: 50,
 			ease: Power2.easeInOut
 		}, 1.6, "creating_a_website_item_img_3");
+	//	.what_else_do.what_content_we_are_creating a
+	tl83.from(".what_else_do.what_content_we_are_creating a", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5 );
 }
-
 
 //	Начало вывода табов с помощью ajax
 
@@ -1626,7 +1632,7 @@ $(document).ready(function () {
 		$(this).addClass('active'); //Добавляем активное состояние у той что нажали
 		var data = $(this).data('tab'); //создаём переменную с датой
 		$(".header_phone a:not('.header_phone .header_phone_country a')").hide().removeClass('active'); //убираем активные состояния у табов
-		$('.header_phone a:not(".header_phone .header_phone_country a")[data-tab=' + data + ']').show('fade', 200).addClass("active"); //если таб соответствует тому, какой data
+		$(".header_phone a:not('.header_phone .header_phone_country a')[data-tab=" + data + "]").show('fade', 200).addClass("active"); //если таб соответствует тому, какой data
 		//атрибут в ссылке то делаем его активным
 	});
 
@@ -1643,6 +1649,15 @@ $(document).ready(function () {
 	//     }, 500);
 	//     return false;
 	// });
+	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
+	$(".scroll_to").on("click", function(e) {
+	    e.preventDefault();
+	    var anchor = $(this);
+	    $('html, body').stop().animate({
+	        scrollTop: $("#" + anchor.data('scroll')).offset().top
+	    }, 500);
+	    return false;
+	});
 	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
 	// $(".scroll_to").on("click", function(e) {
 	//     e.preventDefault();

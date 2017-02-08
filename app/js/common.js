@@ -107,6 +107,12 @@ var tl80 = new TimelineMax(); //  creating_a_website_item_img 2
 var tl81 = new TimelineMax(); //  creating_a_website_item_img 3
 var tl82 = new TimelineMax(); //  what_else_do_line texts
 var tl83 = new TimelineMax(); //  .what_else_do.what_content_we_are_creating a
+var tl84 = new TimelineMax(); //  portfolio portfolio_item texts
+var tl85 = new TimelineMax(); //  .price_for_content .table
+var tl86 = new TimelineMax(); //  website_promotion_decor texts
+var tl87 = new TimelineMax(); //  cost_of_online_store_bot_decor texts
+var tl88 = new TimelineMax(); //   get_everything_item running_PPC_advertising texts
+var tl89 = new TimelineMax(); //   book_now_city texts
 
 function allAnim() {
 	// console.log($(window).scrollTop());
@@ -190,6 +196,12 @@ function allAnim() {
 	tl81.pause(); //  creating_a_website_item_img 3
 	tl82.pause(); //  what_else_do_line texts
 	tl83.pause(); //  .what_else_do.what_content_we_are_creating a
+	tl84.pause(); //  portfolio portfolio_item texts
+	tl85.pause(); //  .price_for_content .table
+	tl86.pause(); //  website_promotion_decor texts
+	tl87.pause(); //  cost_of_online_store_bot_decor texts
+	tl88.pause(); //   get_everything_item running_PPC_advertising texts
+	tl89.pause(); //   book_now_city texts
 
 
 
@@ -217,7 +229,7 @@ function allAnim() {
 		if ($(window).scrollTop() >= 750 && $(window).scrollTop() <= 1600) {
 			tl3.resume();
 		}
-		if ($(window).scrollTop() >= 1300 && $(window).scrollTop() <= 2100) {
+		if ($(window).scrollTop() >= 1700 && $(window).scrollTop() <= 2200) {
 			tl4.resume();
 		}
 		if ($(window).scrollTop() >= 2300 && $(window).scrollTop() <= 2900) {
@@ -447,8 +459,14 @@ function allAnim() {
 		if ($(window).scrollTop() >= 5100 && $(window).scrollTop() <= 5700) {
 			tl66.resume();
 		}
-		if ($(window).scrollTop() >= 5900 && $(window).scrollTop() <= 6500) {
-			tl67.resume();
+		if (window.matchMedia("(max-width: 1200px)").matches) {
+			if ($(window).scrollTop() >= 5500) {
+				tl67.resume();
+			}
+		} else {
+			if ($(window).scrollTop() >= 5900) {
+				tl67.resume();
+			}
 		}
 		if ($(window).scrollTop() >= 100 && $(window).scrollTop() <= 600) {
 			tl68.resume();
@@ -480,8 +498,14 @@ function allAnim() {
 		if ($(window).scrollTop() >= 5900 && $(window).scrollTop() <= 7000) {
 			tl77.resume();
 		}
-		if ($(window).scrollTop() >= 7100 && $(window).scrollTop() <= 7800) {
-			tl78.resume();
+		if (window.matchMedia("(max-width: 1200px)").matches) {
+			if ($(window).scrollTop() >= 6500) {
+				tl78.resume();
+			}
+		} else {
+			if ($(window).scrollTop() >= 7100) {
+				tl78.resume();
+			}
 		}
 		if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= 400) {
 			tl79.resume();
@@ -497,6 +521,30 @@ function allAnim() {
 		}
 		if ($(window).scrollTop() >= 1750 && $(window).scrollTop() <= 2300) {
 			tl83.resume();
+		}
+		if ($(window).scrollTop() >= 2450 && $(window).scrollTop() <= 3200) {
+			tl84.resume();
+		}
+		if ($(window).scrollTop() >= 3450 && $(window).scrollTop() <= 4500) {
+			tl85.resume();
+		}
+		if ($(window).scrollTop() >= 3200 && $(window).scrollTop() <= 3700) {
+			tl86.resume();
+		}
+		if ($(window).scrollTop() >= 4200 && $(window).scrollTop() <= 4700) {
+			tl87.resume();
+		}
+		if ($(window).scrollTop() >= 4500 && $(window).scrollTop() <= 5300) {
+			tl88.resume();
+		}
+		if (window.matchMedia("(max-width: 1200px)").matches) {
+			if ($(window).scrollTop() >= 4300) {
+				tl89.resume();
+			}
+		} else {
+			if ($(window).scrollTop() >= 5300) {
+				tl89.resume();
+			}
 		}
 	}
 
@@ -1250,15 +1298,15 @@ function allAnim() {
 		}, 0.3, "get_everything_item");
 	// get_everything_item running_PPC_advertising
 	if ($('body').hasClass('run_contextual_advertising')) {
-		get_everything_item(tl60);
+		get_everything_item(tl60, "-=2.7");
 	}
-	function get_everything_item(tl) {
+	function get_everything_item(tl, time) {
 		tl.add("running_PPC", "+=0.3")
 			.staggerFrom(".what_else_do.running_PPC_advertising .get_everything_item_img", 0.8, {
 				y: 50, autoAlpha: 0,
 				ease: Power2.easeInOut
 			}, 0.3, "running_PPC")
-			.add("running_PPC", "-=2.7")
+			.add("running_PPC", time)
 			.staggerFrom(".what_else_do.running_PPC_advertising .get_everything_item_txt", 0.8, {
 				y: 50, autoAlpha: 0,
 				ease: Power2.easeInOut
@@ -1399,7 +1447,7 @@ function allAnim() {
 	}
 	// websites get_everything_item run_contextual_advertisin
 	if ($('body').hasClass('websites')) {
-		get_everything_item(tl77);
+		get_everything_item(tl77, "-=2.3");
 	}
 	// book_now_city websites
 	if ($('body').hasClass('websites')) {
@@ -1464,6 +1512,28 @@ function allAnim() {
 		}, 1.6, "creating_a_website_item_img_3");
 	//	.what_else_do.what_content_we_are_creating a
 	tl83.from(".what_else_do.what_content_we_are_creating a", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5 );
+	// portfolio portfolio_item texts
+	if ($('body').hasClass('texts')) {
+		portfolio_item(tl84);
+	}
+	// .price_for_content .table
+	tl85.staggerFrom(".cost_of_online_store.price_for_content .table tr, .cost_of_online_store.price_for_content .table", 0.7, {autoAlpha: 0, y: 30, ease: Power2.easeInOut}, 0.2 );
+	// website_promotion_decor texts
+	if ($('body').hasClass('texts')) {
+		website_promotion_decor(tl86);
+	}
+	//cost_of_online_store_bot_decor  texts
+	if ($('body').hasClass('texts')) {
+		cost_of_online_store_bot_decor(tl87);
+	}
+	// get_everything_item running_PPC_advertising texts
+	if ($('body').hasClass('texts')) {
+		get_everything_item(tl88, "-=0.8");
+	}
+	// book_now_city texts
+	if ($('body').hasClass('texts')) {
+		book_now_city(tl89);
+	}
 }
 
 //	Начало вывода табов с помощью ajax

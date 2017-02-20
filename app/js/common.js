@@ -232,7 +232,7 @@ function allAnim() {
 		if ($(window).scrollTop() >= 1700 && $(window).scrollTop() <= 2200) {
 			tl4.resume();
 		}
-		if ($(window).scrollTop() >= 2300 && $(window).scrollTop() <= 2900) {
+		if ($(window).scrollTop() >= 2300 && $(window).scrollTop() <= 3200) {
 			tl5.resume();
 		}
 		if ($(window).scrollTop() >= 2900 && $(window).scrollTop() <= 3500) {
@@ -258,14 +258,14 @@ function allAnim() {
 				tl12.resume();
 			}
 		} else {
-			if ($(window).scrollTop() > 200 && $(window).scrollTop() <= 1000) {
+			if ($(window).scrollTop() > 10 && $(window).scrollTop() <= 1000) {
 				tl12.resume();
 			}
 		}
 		if ($(window).scrollTop() >= 1000 && $(window).scrollTop() <= 1700) {
 			tl13.resume();
 		}
-		if ($(window).scrollTop() >= 3600 && $(window).scrollTop() <= 4200) {
+		if ($(window).scrollTop() >= 3400 && $(window).scrollTop() <= 4200) {
 			tl14.resume();
 		}
 		if ($(window).scrollTop() >= 4800 && $(window).scrollTop() <= 6000) {
@@ -330,7 +330,7 @@ function allAnim() {
 		if ($(window).scrollTop() >= 1200 && $(window).scrollTop() <= 1700) {
 			tl31.resume();
 		}
-		if ($(window).scrollTop() >= 2000 && $(window).scrollTop() <= 2500) {
+		if ($(window).scrollTop() >= 1900 && $(window).scrollTop() <= 2900) {
 			tl32.resume();
 		}
 		if ($('body').hasClass('websites')) {
@@ -345,7 +345,7 @@ function allAnim() {
 		if ($(window).scrollTop() >= 4400 && $(window).scrollTop() <= 4900) {
 			tl34.resume();
 		}
-		if ($(window).scrollTop() >= 4800 && $(window).scrollTop() <= 5300) {
+		if ($(window).scrollTop() >= 4800 && $(window).scrollTop() <= 5500) {
 			tl35.resume();
 		}
 		if ($(window).scrollTop() >= 5700) {
@@ -363,10 +363,10 @@ function allAnim() {
 				tl38.resume();
 			}
 		}
-		if ($(window).scrollTop() >= 1500 && $(window).scrollTop() <= 2100) {
+		if ($(window).scrollTop() >= 1500 && $(window).scrollTop() <= 2400) {
 			tl39.resume();
 		}
-		if ($(window).scrollTop() >= 2100 && $(window).scrollTop() <= 2500) {
+		if ($(window).scrollTop() >= 2100 && $(window).scrollTop() <= 2900) {
 			tl40.resume();
 		}
 		if ($(window).scrollTop() >= 1900 && $(window).scrollTop() <= 2500) {
@@ -480,7 +480,7 @@ function allAnim() {
 		if ($(window).scrollTop() >= 1300 && $(window).scrollTop() <= 2100) {
 			tl71.resume();
 		}
-		if ($(window).scrollTop() >= 3400 && $(window).scrollTop() <= 4000) {
+		if ($(window).scrollTop() >= 3400 && $(window).scrollTop() <= 4300) {
 			tl72.resume();
 		}
 		if ($(window).scrollTop() >= 4200 && $(window).scrollTop() <= 4600) {
@@ -600,8 +600,8 @@ function allAnim() {
 	);
 	// what_else_do_line
 	tl3.from("#path4159", 0.5, {drawSVG: "0%"}, 0.4);
-	tl3.from("#path4157", 5.5, {drawSVG: "0%"}, 0.4);
-	tl3.from("#path4164", 2, {fill: "#031420", drawSVG: "0%"}, 5);
+	tl3.from("#path4157", 3, {drawSVG: "0%"}, 0.4);
+	tl3.from("#path4164", 2, {fill: "#031420", drawSVG: "0%"}, 3);
 	tl3.from("#g4409", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 0.9);
 	tl3.from("#g6391", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.1);
 	tl3.from("#g6814", 0.8, {opacity: 0, transformOrigin: "50% 50%", scale: 0}, 1.3);
@@ -620,13 +620,13 @@ function allAnim() {
 	tl4.from("#rect4286", 0.8, {opacity: 0, x: -100, ease: Power2.easeInOut,}, 0.7);
 	// our_achievements
 	if ($('body').hasClass('index')) {
-		tl5.from("#path4202", 1.5, {drawSVG: "0%"}, 0.2);
-		tl5.from("#g4185235425235", 0.2, {opacity: 0, y: -50}, 1.8);
+		tl5.from("#path4202", 1, {drawSVG: "0%"}, 0.2);
+		tl5.from("#g4185235425235", 0.2, {opacity: 0, y: -50}, 1.5);
 		tl5.from("#path5234234", 0.5, {opacity: 0, y: -50}, 1.4);
-		tl5.from("#path41782342423", 3.5, {drawSVG: "0%"}, 1.9);
-		tl5.from("#path723523253", 1.5, {drawSVG: "0%"}, 4.9);
-		tl5.from("#path_go", 1.5, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 2.1);
-		tl5.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 2.5);
+		tl5.from("#path41782342423", 1.3, {drawSVG: "0%"}, 1.5);
+		tl5.from("#path723523253", 1, {drawSVG: "0%"}, 2.8);
+		tl5.from("#path_go", 0.8, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 1.6);
+		tl5.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 1.7);
 	}
 	// Анимация стрелок
 	tl6.to(".customPrevBtn", 0.7, {x: -10, ease: Power2.easeInOut}, 0);
@@ -686,7 +686,7 @@ function allAnim() {
 	// circle
 	tl8.from("#path4138", 2, {drawSVG: "100% 100%"}, "+=0.4");
 	// нижняя линия
-	tl8.from("#path5539", 2, {drawSVG: "0%"}, 2);
+	tl8.from("#path5539", 1.5, {drawSVG: "0%"}, 1.8);
 	// линии круглые
 	tl8.from("#circle4603", 1, {drawSVG: "100% 100%"}, 0.4);
 	tl8.from("#circle5186", 1, {drawSVG: "100% 100%"}, 0.7);
@@ -736,9 +736,9 @@ function allAnim() {
 		}
 	);
 	// take_part_img_bot_decor
-	tl9.from("#take_part_img_bot_decor", 1.5, {drawSVG: "0%"}, 3.5);
-	tl9.from("#take_p", 1.5, {autoAlpha: 0}, 4);
-	tl9.from("#g5500", 1, {autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut}, 4);
+	tl9.from("#take_part_img_bot_decor", 1.2, {drawSVG: "0%"}, 1);
+	tl9.from("#take_p", 1.2, {autoAlpha: 0}, 2.4);
+	tl9.from("#g5500", 0.8, {autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut}, 2.4);
 	// book_now_city
 	if ($('body').hasClass('index') || $('body').hasClass('form_style')) {
 		book_now_city(tl10);
@@ -817,11 +817,11 @@ function allAnim() {
 		ease: Power2.easeInOut
 	}, 0.5, 'stages_of_advancement_item').add('cost_optimization_h3', '-=1.5');
 	// from_what_is_seo_bot_decor
-	tl18.from("#path5361", 1, {drawSVG: "0%"}, 0.2);
-	tl18.from("#path5539124", 1.3, {drawSVG: "0%"}, 1);
-	tl18.from("#path45231", 1.3, {drawSVG: "0%"}, 2.7);
-	tl18.from("#path452", 1, {autoAlpha: 0, ease: Power2.easeInOut}, 2.5);
-	tl18.from("#g55000", 1, {autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut}, 2);
+	tl18.from("#path5361", 0.5, {drawSVG: "0%"}, 0.2);
+	tl18.from("#path5539124", 0.7, {drawSVG: "0%"}, 0.6);
+	tl18.from("#path45231", 0.8, {drawSVG: "0%"}, 1.5);
+	tl18.from("#path452", 0.8, {autoAlpha: 0, ease: Power2.easeInOut}, 1.5);
+	tl18.from("#g55000", 0.8, {autoAlpha: 0, scaleY: 100, ease: Power2.easeInOut}, 1.5);
 	// contacts
 	tl19.staggerFrom(".contacts_item_img ", 1, {
 		autoAlpha: 0,
@@ -936,15 +936,15 @@ function allAnim() {
 	}, 0.5).from(".what_else_do.does_the_sale .does_the_sale_item__txt p", 1, {opacity: 0, x: 30}, 1);
 	// cost_of_online_store_bot_decor
 	function cost_of_online_store_bot_decor(tl) {
-		tl.from("#cost_of_online_store_bot_decor_circle", 1, {drawSVG: "0%"}, 0.2);
-		tl.from("#cost_of_online_store_bot_decor_line", 1.3, {drawSVG: "0%"}, 1);
-		tl.from("#cost_of_online_store_bot_decor_all_line", 1.3, {drawSVG: "0%"}, 2.7);
-		tl.from("#cost_of_online_store_bot_decor_all_bg", 1, {autoAlpha: 0, ease: Power2.easeInOut}, 2.5);
-		tl.from("#cost_of_online_store_bot_decor_all_line_body", 1, {
+		tl.from("#cost_of_online_store_bot_decor_circle", 0.5, {drawSVG: "0%"}, 0.2);
+		tl.from("#cost_of_online_store_bot_decor_line", 0.6, {drawSVG: "0%"}, 0.5);
+		tl.from("#cost_of_online_store_bot_decor_all_line", 0.8, {drawSVG: "0%"}, 0.9);
+		tl.from("#cost_of_online_store_bot_decor_all_bg", 0.8, {autoAlpha: 0, ease: Power2.easeInOut}, 1.5);
+		tl.from("#cost_of_online_store_bot_decor_all_line_body", 0.8, {
 			autoAlpha: 0,
 			scaleY: 100,
 			ease: Power2.easeInOut
-		}, 2);
+		}, 1.5);
 	}
 
 	if ($('body').hasClass('online_store')) {
@@ -1014,20 +1014,20 @@ function allAnim() {
 				scale: 0
 			}, 0.4, 'functions_landing')
 			.from("#functions_landing1", 0.5, {drawSVG: "0%"}, 0.4, 'functions_landing')
-			.from("#functions_landing2", 5.5, {drawSVG: "0%"}, 0.4, 'functions_landing')
+			.from("#functions_landing2", 3, {drawSVG: "0%"}, 0.4, 'functions_landing')
 			.from("#functions_landing3", 2, {fill: "#031420", drawSVG: "0%"}, 5, 'functions_landing');
 	}
 	// cost_of_online_store_item
 	tl31.staggerFrom(".suitable_for_landing_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
 	// our_achievements why_our_landing_sell
 	if ($('body').hasClass('landing_page')) {
-		tl32.from("#path4202", 1.5, {drawSVG: "0%"}, 0.2);
-		tl32.from("#g4185235425235", 0.2, {opacity: 0, y: -50}, 1.8);
+		tl32.from("#path4202", 1, {drawSVG: "0%"}, 0.2);
+		tl32.from("#g4185235425235", 0.2, {opacity: 0, y: -50}, 1.5);
 		tl32.from("#path5234234", 0.5, {opacity: 0, y: -50}, 1.4);
-		tl32.from("#path41782342423", 3.5, {drawSVG: "0%"}, 1.9);
-		tl32.from("#path723523253", 1.5, {drawSVG: "0%"}, 4.9);
-		tl32.from("#path_go", 1.5, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 2.1);
-		tl32.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 2.5);
+		tl32.from("#path41782342423", 1.3, {drawSVG: "0%"}, 1.5);
+		tl32.from("#path723523253", 1, {drawSVG: "0%"}, 2.8);
+		tl32.from("#path_go", 0.8, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 1.6);
+		tl32.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 1.7);
 	}
 	// why_our_landing_sell_item_img
 	if ($('body').hasClass('landing_page')) {
@@ -1037,10 +1037,12 @@ function allAnim() {
 		why_our_landing_sell_item_img(tl33, '-=3.2');
 	}
 	function why_our_landing_sell_item_img(tl, time) {
-		tl.staggerFrom(".why_our_landing_sell_item_img_circle", 1, {
+		tl.add('why_our_landing_sell_item_img', '+=1')
+			.staggerFrom(".why_our_landing_sell_item_img_circle", 1, {
 			drawSVG: "0%",
 			ease: Power2.easeInOut
 		}, 0.5, 'why_our_landing_sell_item_img')
+			.add('why_our_landing_sell_item_img', '-=3.5')
 			.staggerFrom(".why_our_landing_sell_item_img_inner", 1, {
 				opacity: 0,
 				y: 20,
@@ -1086,15 +1088,15 @@ function allAnim() {
 	}
 	// why_our_landing_sell2
 	if ($('body').hasClass('landing_page')) {
-		tl37.from("#cost_of_online_store_bot_decor_circle2", 1, {drawSVG: "0%"}, 0.2);
-		tl37.from("#cost_of_online_store_bot_decor_line2", 1.3, {drawSVG: "0%"}, 1);
-		tl37.from("#cost_of_online_store_bot_decor_all_line2", 1.3, {drawSVG: "0%"}, 2.7);
-		tl37.from("#cost_of_online_store_bot_decor_all_bg2", 1, {autoAlpha: 0, ease: Power2.easeInOut}, 2.5);
-		tl37.from("#cost_of_online_store_bot_decor_all_line_body2", 1, {
+		tl37.from("#cost_of_online_store_bot_decor_circle2", 0.5, {drawSVG: "0%"}, 0.2);
+		tl37.from("#cost_of_online_store_bot_decor_line2", 0.6, {drawSVG: "0%"}, 0.5);
+		tl37.from("#cost_of_online_store_bot_decor_all_line2", 0.8, {drawSVG: "0%"}, 0.9);
+		tl37.from("#cost_of_online_store_bot_decor_all_bg2", 0.8, {autoAlpha: 0, ease: Power2.easeInOut}, 1.5);
+		tl37.from("#cost_of_online_store_bot_decor_all_line_body2", 0.8, {
 			autoAlpha: 0,
 			scaleY: 100,
 			ease: Power2.easeInOut
-		}, 2);
+		}, 1.5);
 	}
 	// from_what_is_seo item landingpage
 	if ($('body').hasClass('landing_page')) {
@@ -1112,28 +1114,28 @@ function allAnim() {
 	}
 	// our_achievements site_card
 	if ($('body').hasClass('site_card')) {
-		tl39.from("#path4202", 1.5, {drawSVG: "0%"}, 0.2);
-		tl39.from("#g4185235425235", 0.2, {opacity: 0, y: -50}, 1.8);
+		tl39.from("#path4202", 1, {drawSVG: "0%"}, 0.2);
+		tl39.from("#g4185235425235", 0.2, {opacity: 0, y: -50}, 1.5);
 		tl39.from("#path5234234", 0.5, {opacity: 0, y: -50}, 1.4);
-		tl39.from("#path41782342423", 3.5, {drawSVG: "0%"}, 1.9);
-		tl39.from("#path723523253", 1.5, {drawSVG: "0%"}, 4.9);
-		tl39.from("#path_go", 1.5, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 2.1);
-		tl39.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 2.5);
+		tl39.from("#path41782342423", 1.3, {drawSVG: "0%"}, 1.5);
+		tl39.from("#path723523253", 1, {drawSVG: "0%"}, 2.8);
+		tl39.from("#path_go", 0.8, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 1.6);
+		tl39.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 1.7);
 	}
 	// cost_of_online_store_bot_decor site_card
 	if ($('body').hasClass('site_card')) {
 		cost_of_online_store_bot_decor1(tl40);
 	}
 	function cost_of_online_store_bot_decor1(tl) {
-		tl.from("#site_card1 #cost_of_online_store_bot_decor_circle", 1, {drawSVG: "0%"}, 0.2);
-		tl.from("#site_card1 #cost_of_online_store_bot_decor_line", 1.3, {drawSVG: "0%"}, 1);
-		tl.from("#site_card1 #cost_of_online_store_bot_decor_all_line", 1.3, {drawSVG: "0%"}, 2.7);
-		tl.from("#site_card1 #cost_of_online_store_bot_decor_all_bg", 1, {autoAlpha: 0, ease: Power2.easeInOut}, 2.5);
-		tl.from("#site_card1 #cost_of_online_store_bot_decor_all_line_body", 1, {
+		tl.from("#site_card1 #cost_of_online_store_bot_decor_circle", 0.5, {drawSVG: "0%"}, 0.2);
+		tl.from("#site_card1 #cost_of_online_store_bot_decor_line", 0.6, {drawSVG: "0%"}, 0.5);
+		tl.from("#site_card1 #cost_of_online_store_bot_decor_all_line", 0.8, {drawSVG: "0%"}, 1.3);
+		tl.from("#site_card1 #cost_of_online_store_bot_decor_all_bg", 0.8, {autoAlpha: 0, ease: Power2.easeInOut}, 1.5);
+		tl.from("#site_card1 #cost_of_online_store_bot_decor_all_line_body", 0.8, {
 			autoAlpha: 0,
 			scaleY: 100,
 			ease: Power2.easeInOut
-		}, 2);
+		}, 1.5);
 	}
 
 	//Why_site_card_items
@@ -1176,15 +1178,24 @@ function allAnim() {
 	}
 	// cost_of_online_store_bot_decor site_card2
 	if ($('body').hasClass('site_card')) {
-		tl45.from("#site_card2 #cost_of_online_store_bot_decor_circle", 1, {drawSVG: "0%"}, 0.2);
-		tl45.from("#site_card2 #cost_of_online_store_bot_decor_line", 1.3, {drawSVG: "0%"}, 1);
-		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_line", 1.3, {drawSVG: "0%"}, 2.7);
-		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_bg", 1, {autoAlpha: 0, ease: Power2.easeInOut}, 2.5);
+		tl45.from("#site_card2 #cost_of_online_store_bot_decor_circle", 0.5, {drawSVG: "0%"}, 0.2);
+		tl45.from("#site_card2 #cost_of_online_store_bot_decor_line", 0.6, {drawSVG: "0%"}, 0.5);
+		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_line", 0.8, {drawSVG: "0%"}, 1.3);
+		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_bg", 0.8, {autoAlpha: 0, ease: Power2.easeInOut}, 1.8);
 		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_line_body", 1, {
 			autoAlpha: 0,
 			scaleY: 100,
 			ease: Power2.easeInOut
-		}, 2);
+		}, 1.8);
+		tl.from("#cost_of_online_store_bot_decor_circle", 0.5, {drawSVG: "0%"}, 0.2);
+		tl.from("#cost_of_online_store_bot_decor_line", 0.6, {drawSVG: "0%"}, 0.5);
+		tl.from("#cost_of_online_store_bot_decor_all_line", 0.8, {drawSVG: "0%"}, 0.9);
+		tl.from("#cost_of_online_store_bot_decor_all_bg", 0.8, {autoAlpha: 0, ease: Power2.easeInOut}, 1.5);
+		tl.from("#cost_of_online_store_bot_decor_all_line_body", 0.8, {
+			autoAlpha: 0,
+			scaleY: 100,
+			ease: Power2.easeInOut
+		}, 1.5);
 	}
 	// from_what_is_seo item site_card
 	if ($('body').hasClass('site_card')) {
@@ -1411,13 +1422,13 @@ function allAnim() {
 		}, 0.2, 'three_types_sell_website_item');
 	// our_achievements_top_decoration websites
 	if ($('body').hasClass('websites')) {
-		tl72.from("#path4202", 1.5, {drawSVG: "0%"}, 0.2);
-		tl72.from("#g4185235425235", 0.2, {opacity: 0, y: -50}, 1.8);
+		tl72.from("#path4202", 1, {drawSVG: "0%"}, 0.2);
+		tl72.from("#g4185235425235", 0.2, {opacity: 0, y: -50}, 1.5);
 		tl72.from("#path5234234", 0.5, {opacity: 0, y: -50}, 1.4);
-		tl72.from("#path41782342423", 3.5, {drawSVG: "0%"}, 1.9);
-		tl72.from("#path723523253", 1.5, {drawSVG: "0%"}, 4.9);
-		tl72.from("#path_go", 1.5, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 2.1);
-		tl72.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 2.5);
+		tl72.from("#path41782342423", 1.3, {drawSVG: "0%"}, 1.5);
+		tl72.from("#path723523253", 1, {drawSVG: "0%"}, 2.8);
+		tl72.from("#path_go", 0.8, {drawSVG: "100% 100%", ease: Power2.easeInOut}, 1.6);
+		tl72.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 1.7);
 	}
 	// whats_next_item_img
 	tl73.from("#g5004234234234", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5,"whats_next_item_img" )
@@ -1800,14 +1811,14 @@ $(document).ready(function () {
 		// Parameters has to be in square bracket '[]'
 		owl.trigger('prev.owl.carousel', [400]);
 	});
-	owl.on('mousewheel', '.owl-stage', function (e) {
-		if (e.deltaY > 0) {
-			owl.trigger('next.owl');
-		} else {
-			owl.trigger('prev.owl');
-		}
-		e.preventDefault();
-	});
+	// owl.on('mousewheel', '.owl-stage', function (e) {
+	// 	if (e.deltaY > 0) {
+	// 		owl.trigger('next.owl');
+	// 	} else {
+	// 		owl.trigger('prev.owl');
+	// 	}
+	// 	e.preventDefault();
+	// });
 	//  Активация слайдера
 	$(".owl-carousel2").owlCarousel({
 		loop: true,
@@ -1854,14 +1865,14 @@ $(document).ready(function () {
 		// Parameters has to be in square bracket '[]'
 		owl2.trigger('prev.owl.carousel', [400]);
 	});
-	owl2.on('mousewheel', '.owl-stage', function (e) {
-		if (e.deltaY > 0) {
-			owl2.trigger('next.owl');
-		} else {
-			owl2.trigger('prev.owl');
-		}
-		e.preventDefault();
-	});
+	// owl2.on('mousewheel', '.owl-stage', function (e) {
+	// 	if (e.deltaY > 0) {
+	// 		owl2.trigger('next.owl');
+	// 	} else {
+	// 		owl2.trigger('prev.owl');
+	// 	}
+	// 	e.preventDefault();
+	// });
 	//  Активация слайдера
 	$(".owl-carousel3").owlCarousel({
 		loop: true,
@@ -2106,4 +2117,4 @@ $(document).ready(function () {
 });
 
 $(".loader_inner").fadeOut();
-$(".loader").delay(400).fadeOut("slow");
+$(".loader").fadeOut("slow");

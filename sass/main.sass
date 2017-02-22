@@ -58,6 +58,14 @@ body textarea:required:valid
 				width: 190px
 				margin-top: 3px
 				@include font(#fff, 16px, $font_Amazing_Grotesk_Demi_Bold, 1.2)
+			a
+				&:hover
+					text-decoration: none
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+				
 	.what_else_do_line
 		position: absolute
 		top: 200px
@@ -112,7 +120,7 @@ body textarea:required:valid
 		top: 0
 		left: 0
 		right: 0
-		transition: .5s
+		transition: opacity, background-color, .5s
 		background-color: rgba(25, 25, 25, 0.69)
 		i
 			position: absolute
@@ -131,7 +139,7 @@ body textarea:required:valid
 			border: 1px solid #FFF
 			background: transparent
 			transition: 0.5s
-			z-index: 2
+			z-index: 3
 			text-decoration: none
 			@include font(#fff, 18px, $font_RobotoRegular, 35px)
 			&:hover
@@ -149,6 +157,7 @@ body textarea:required:valid
 		top: 0
 		left: 0
 		right: 0
+		z-index: 1
 
 //	Секция our_achievements
 .our_achievements

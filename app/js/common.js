@@ -204,7 +204,6 @@ function allAnim() {
 	tl89.pause(); //   book_now_city texts
 
 
-
 	// активация тайм линий при загрузке с измерением скролла
 	function readyTimeLineGo() {
 
@@ -1017,6 +1016,7 @@ function allAnim() {
 			.from("#functions_landing2", 3, {drawSVG: "0%"}, 0.4, 'functions_landing')
 			.from("#functions_landing3", 2, {fill: "#031420", drawSVG: "0%"}, 5, 'functions_landing');
 	}
+
 	// cost_of_online_store_item
 	tl31.staggerFrom(".suitable_for_landing_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
 	// our_achievements why_our_landing_sell
@@ -1039,9 +1039,9 @@ function allAnim() {
 	function why_our_landing_sell_item_img(tl, time) {
 		tl.add('why_our_landing_sell_item_img', '+=1')
 			.staggerFrom(".why_our_landing_sell_item_img_circle", 1, {
-			drawSVG: "0%",
-			ease: Power2.easeInOut
-		}, 0.5, 'why_our_landing_sell_item_img')
+				drawSVG: "0%",
+				ease: Power2.easeInOut
+			}, 0.5, 'why_our_landing_sell_item_img')
 			.add('why_our_landing_sell_item_img', '-=3.5')
 			.staggerFrom(".why_our_landing_sell_item_img_inner", 1, {
 				opacity: 0,
@@ -1069,6 +1069,7 @@ function allAnim() {
 				ease: Power2.easeInOut
 			}, 0.5, 'why_our_landing_sell_item_img');
 	}
+
 	// why_our_landing_sell
 	if ($('body').hasClass('landing_page')) {
 		cost_of_online_store_bot_decor(tl34);
@@ -1181,7 +1182,10 @@ function allAnim() {
 		tl45.from("#site_card2 #cost_of_online_store_bot_decor_circle", 0.5, {drawSVG: "0%"}, 0.2);
 		tl45.from("#site_card2 #cost_of_online_store_bot_decor_line", 0.6, {drawSVG: "0%"}, 0.5);
 		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_line", 0.8, {drawSVG: "0%"}, 1.3);
-		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_bg", 0.8, {autoAlpha: 0, ease: Power2.easeInOut}, 1.8);
+		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_bg", 0.8, {
+			autoAlpha: 0,
+			ease: Power2.easeInOut
+		}, 1.8);
 		tl45.from("#site_card2 #cost_of_online_store_bot_decor_all_line_body", 1, {
 			autoAlpha: 0,
 			scaleY: 100,
@@ -1274,6 +1278,7 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 0.2);
 	}
+
 	// why_seo_img you_end_up
 	tl57.add("you_end_up", "+=0.7")
 		.staggerFrom(".why_seo_img.you_end_up", 0.8, {
@@ -1323,6 +1328,7 @@ function allAnim() {
 				ease: Power2.easeInOut
 			}, 0.3, "running_PPC");
 	}
+
 	// cost_of_online_store_item run_contextual_advertising
 	if ($('body').hasClass('run_contextual_advertising')) {
 		tl63.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
@@ -1347,6 +1353,7 @@ function allAnim() {
 				ease: Power2.easeInOut
 			}, 0.3, "seven_main_tasks");
 	}
+
 	//	that_you_get_in_the_end
 	tl66.add("that_you_get_in_the_end", "+=0.3")
 		.staggerFrom(".that_you_get_in_the_end_item svg", 0.8, {
@@ -1431,7 +1438,7 @@ function allAnim() {
 		tl72.from("#text4221", 0.5, {opacity: 0, x: -50, ease: Power2.easeInOut}, 1.7);
 	}
 	// whats_next_item_img
-	tl73.from("#g5004234234234", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5,"whats_next_item_img" )
+	tl73.from("#g5004234234234", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5, "whats_next_item_img")
 		.add("whats_next_item_img", "-=0.7")
 		.staggerFrom(".whats_next_item_img_houses", 0.7, {
 			opacity: 0,
@@ -1465,7 +1472,7 @@ function allAnim() {
 		book_now_city(tl78);
 	}
 	//	creating_a_website_item_img 1
-	tl79.from("#g52903efsf", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5,"creating_a_website_item_img_1" )
+	tl79.from("#g52903efsf", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5, "creating_a_website_item_img_1")
 		.from("#g4429asasfasf", 0.7, {
 			opacity: 0,
 			y: 50,
@@ -1484,7 +1491,7 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 0.2, "creating_a_website_item_img_1");
 	//	creating_a_website_item_img 2
-	tl80.from("#g1672612312421", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5,"creating_a_website_item_img_2" )
+	tl80.from("#g1672612312421", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5, "creating_a_website_item_img_2")
 		.from("#g4429asasfasf", 0.7, {
 			opacity: 0,
 			y: 50,
@@ -1503,7 +1510,11 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 0.2, "creating_a_website_item_img_2");
 	//	creating_a_website_item_img 3
-	tl81.from("#g45292342342, #g533923wef", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5,"creating_a_website_item_img_3" )
+	tl81.from("#g45292342342, #g533923wef", 0.7, {
+		opacity: 0,
+		y: 50,
+		ease: Power2.easeInOut
+	}, 0.5, "creating_a_website_item_img_3")
 		.add("creating_a_website_item_img_3", "-=0.3")
 		.staggerFrom(".creating_a_website_item_img_3_particles", 0.4, {
 			opacity: 0,
@@ -1522,13 +1533,17 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 1.6, "creating_a_website_item_img_3");
 	//	.what_else_do.what_content_we_are_creating a
-	tl83.from(".what_else_do.what_content_we_are_creating a", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5 );
+	tl83.from(".what_else_do.what_content_we_are_creating a", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5);
 	// portfolio portfolio_item texts
 	if ($('body').hasClass('texts')) {
 		portfolio_item(tl84);
 	}
 	// .price_for_content .table
-	tl85.staggerFrom(".cost_of_online_store.price_for_content .table tr, .cost_of_online_store.price_for_content .table", 0.7, {autoAlpha: 0, y: 30, ease: Power2.easeInOut}, 0.2 );
+	tl85.staggerFrom(".cost_of_online_store.price_for_content .table tr, .cost_of_online_store.price_for_content .table", 0.7, {
+		autoAlpha: 0,
+		y: 30,
+		ease: Power2.easeInOut
+	}, 0.2);
 	// website_promotion_decor texts
 	if ($('body').hasClass('texts')) {
 		website_promotion_decor(tl86);
@@ -1633,6 +1648,15 @@ function readyPortfolioJSON() {
 
 
 $(document).ready(function () {
+	// hover в header
+	$('.header_nav ul li .drop, .header_nav .dropdown').hover(
+		function () {
+			$('.dropdown').show();
+		},
+		function () {
+			$('.dropdown').hide();
+		}
+	);
 	//вызов функции для появления .portfolio_item при загрузке страницы
 	if ($('body').hasClass('portfolio')) {
 		readyPortfolioJSON();
@@ -1731,13 +1755,13 @@ $(document).ready(function () {
 	//     return false;
 	// });
 	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
-	$(".scroll_to").on("click", function(e) {
-	    e.preventDefault();
-	    var anchor = $(this);
-	    $('html, body').stop().animate({
-	        scrollTop: $("#" + anchor.data('scroll')).offset().top
-	    }, 500);
-	    return false;
+	$(".scroll_to").on("click", function (e) {
+		e.preventDefault();
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $("#" + anchor.data('scroll')).offset().top
+		}, 500);
+		return false;
 	});
 	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
 	// $(".scroll_to").on("click", function(e) {

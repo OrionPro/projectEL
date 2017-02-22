@@ -1355,6 +1355,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .what_else_do .what_else_do_items{margin-top:70px;position:relative;z-index:2}
 .what_else_do .what_else_do_items .what_else_do_item{display:inline-block;vertical-align:top;margin-right:20px}
 .what_else_do .what_else_do_items .what_else_do_item p{width:190px;margin-top:3px;color:#fff;font:16px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.2}
+.what_else_do .what_else_do_items .what_else_do_item a:active,.what_else_do .what_else_do_items .what_else_do_item a:focus,.what_else_do .what_else_do_items .what_else_do_item a:hover{text-decoration:none}
 .what_else_do .what_else_do_line{position:absolute;top:200px;left:14px;z-index:2}
 .what_else_do .what_else_do_cloud{position:absolute;bottom:-434px;left:303px;z-index:1}
 .slider,.slider .slider_item{position:relative}
@@ -1367,13 +1368,13 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .our_portfolio .customNextBtn{background-position:0 -7px;margin-left:10px}
 .slider{margin-top:38px}
 .slider .slider_item:hover .slider_mask{opacity:1}
-.slider .slider_mask{width:100%;height:100%;opacity:0;position:absolute;top:0;left:0;right:0;-webkit-transition:.5s;transition:.5s;background-color:rgba(25,25,25,.69)}
+.slider .slider_mask{width:100%;height:100%;opacity:0;position:absolute;top:0;left:0;right:0;-webkit-transition:opacity,background-color,.5s;transition:opacity,background-color,.5s;background-color:rgba(25,25,25,.69)}
 .slider .slider_mask i{position:absolute;top:-webkit-calc(50% - 35px);top:calc(50% - 35px);left:0;right:0;font-size:24px}
-.slider .slider_mask a{width:161px;height:39px;display:inline-block;position:absolute;top:-webkit-calc(50% - 5px);top:calc(50% - 5px);left:-webkit-calc(50% - 80.5px);left:calc(50% - 80.5px);right:0;border:1px solid #FFF;background:0 0;-webkit-transition:.5s;transition:.5s;z-index:2;text-decoration:none;color:#fff;font:18px RobotoRegular,Arial,sans-serif;line-height:35px}
+.slider .slider_mask a{width:161px;height:39px;display:inline-block;position:absolute;top:-webkit-calc(50% - 5px);top:calc(50% - 5px);left:-webkit-calc(50% - 80.5px);left:calc(50% - 80.5px);right:0;border:1px solid #FFF;background:0 0;-webkit-transition:.5s;transition:.5s;z-index:3;text-decoration:none;color:#fff;font:18px RobotoRegular,Arial,sans-serif;line-height:35px}
 .slider .slider_mask a:hover{text-decoration:none;background:#fff;color:#000}
 .slider .slider_mask a:focus{outline:0}
 .slider .slider_mask .fa{display:block}
-.slider a.slider_link{width:100%;height:100%;position:absolute;top:0;left:0;right:0}
+.slider a.slider_link{width:100%;height:100%;position:absolute;top:0;left:0;right:0;z-index:1}
 .our_achievements{min-height:760px;background:url(../img/our_achievements_clouds.png) center top 88px no-repeat #0b2848;position:relative}
 .our_achievements .our_achievements_top_decoration{position:absolute;top:-32px;left:27px;right:0;text-align:center}
 .our_achievements .our_achievements_txt{margin-top:384px;text-align:center}

@@ -72,6 +72,27 @@ section
 		.dm-modal
 			width: 970px
 			max-width: 80em
+			h2
+				margin-top: 0
+		.close
+			top: 42px
+		.popup_seo_wrap
+			text-align: left
+		.popup_seo_img
+			width: 540px
+			margin-right: 30px
+			display: inline-block
+		.popup_seo_txt
+			width: 320px
+			display: inline-block
+			vertical-align: top
+			p
+				margin-bottom: 8px
+				font-size: 18px
+				color: $main_color
+			span
+				color: #ffffff
+				margin-left: 30px
 .dm-table
 	display: table
 	width: 100%
@@ -285,7 +306,6 @@ section
 	width: 100%
 	min-height: 90px
 	background-color: #001027
-	z-index: 100	
 .header_logo
 	display: inline-block
 	float: left
@@ -296,25 +316,58 @@ section
 		&:hover
 			color: $main_color
 			text-decoration: none
-.header_nav		
+.header_nav
 	display: inline-block
-	position: relative	
+	position: relative
 	ul
 		padding: 0
 		margin: 0 0 0 60px
+		&.dropdown
+			width: 330px
+			display: block
+			background-color: #001027
+			position: absolute
+			top: 55px
+			left: -195px
+			padding: 25px 0 0 40px
+			z-index: 10
+			li
+				display: table
+				margin: 20px 0 20px 0
+				line-height: 35px
+				position: relative
+				a
+					font-size: 14px
+					text-transform: none
+					&:hover:after
+						width: 100%
+					&:after
+						content: ""
+						width: 0
+						height: 1px
+						position: absolute
+						bottom: 0
+						left: 0
+						right: 0
+						background: #334052
+						transition: 0.5s
 		li		
 			list-style: none
 			display: inline-block
 			margin-right: 24px
+			position: relative
+			line-height: 90px
 			a
+				display: inline-block
 				color: $main_txt_color
 				font: 15px $font_Amazing_Grotesk_Ultra
-				line-height: 90px
 				text-transform: uppercase
 				transition: 0.5s
 				&:hover
 					color: $main_color
 					text-decoration: none
+
+
 .header_modal
 	display: inline-block
 	a
@@ -332,7 +385,6 @@ section
 	display: inline-block
 	vertical-align: middle
 	margin-left: 20px
-
 	.header_phone_country
 		a
 			font: 15px $font_Amazing_Grotesk_Demi_Bold

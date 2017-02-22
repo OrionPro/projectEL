@@ -1661,37 +1661,19 @@
 
 </div>
     <!-- Модальное окно -->
-    <div class="popup" id="win" data-modal="modal-1">
+    <div class="popup" data-modal="modal-1">
         <div class="dm-table">
             <div class="dm-cell">
                 <div class="dm-modal">
                     <a href="#" class="close">
                         <i class="fa fa-close"></i>
                     </a>
-                    <p class='sucess_mail'>Заявка отправлена</p>
+                    <p class='sucess_mail'>Ваше письмо отправлено, ответ прийдёт на указанный вами E-mail.</p>
+					<div class="popup_clouds">
+						<img src="img/pop_top_clouds.png" height="253" width="669" alt="">
+					</div>
                     <form id="form">
-                        <div class="popup_clouds">
-                            <img src="img/pop_top_clouds.png" height="253" width="669" alt="">
-                        </div>
-                        <h2>Письмо команде</h2>
-                        <div>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="name" class="modal_form_input" type="text" placeholder="Имя">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="email" class="modal_form_email" type="text" placeholder="E-mail">
-                            </div>
-                        </div>
+                        <h2>Заказать звонок</h2>
                         <div>
                             <div class="modal_form_input_wrap">
                                 <div class="modal_input_error">Заполните поле
@@ -1700,23 +1682,6 @@
                                 </div>
                                 <input name="phone" class="modal_form_phone" type="text" placeholder="Телефон">
                             </div>
-                        </div>
-                        <div>
-                            <div class="select">
-                                <div class="slct_arrow">
-                                    <i class="fa fa-angle-down"></i>
-                                </div>
-                                <a href="#" class="slct">Выбор заголовков:</a>
-                                <ul class="drop">
-                                    <li>Вы крутые</li>
-                                    <li>Я в Вас влюбился</li>
-                                    <li>Быстрей Вас только Флеш</li>
-                                </ul>
-                                <input type="hidden" id="select" name="services">
-                            </div>
-                        </div>
-                        <div>
-                            <textarea type="text" placeholder="Сообщение"></textarea>
                         </div>
                         <input type="hidden" name="form_name" value="Письмо команде">
                         <input type="submit" value="Отправить">
@@ -1727,14 +1692,151 @@
         <div class="overlay">
         </div>
     </div>
+<!-- Модальное окно 2-->
+<div class="popup" data-modal="modal-2">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+					<i class="fa fa-close"></i>
+				</a>
+				<p class='sucess_mail'>Ваше письмо отправлено, ответ прийдёт на указанный вами E-mail.</p>
+				<div class="popup_clouds">
+					<img src="img/pop_top_clouds.png" height="253" width="669" alt="">
+				</div>
+				<form>
+					<h2>Письмо команде</h2>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="name" class="modal_form_input" type="text" placeholder="Имя">
+						</div>
+					</div>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="email" class="modal_form_email" type="text" placeholder="E-mail">
+						</div>
+					</div>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone" type="text" placeholder="Телефон">
+						</div>
+					</div>
+					<div>
+						<div class="select">
+							<div class="slct_arrow">
+								<i class="fa fa-angle-down"></i>
+							</div>
+							<a href="#" class="slct">Выбор заголовков:</a>
+							<ul class="drop">
+								<li>Вы крутые</li>
+								<li>Я в Вас влюбился</li>
+								<li>Быстрей Вас только Флеш</li>
+							</ul>
+							<input type="hidden" id="select" name="services">
+						</div>
+					</div>
+					<div>
+						<textarea type="text" placeholder="Сообщение"></textarea>
+					</div>
+					<input type="hidden" name="form_name" value="Письмо команде">
+					<input type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
+<!-- Модальное окно 3-->
+<div class="popup pop3" data-modal="modal-3">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+					<i class="fa fa-close"></i>
+				</a>
+				<p class='sucess_mail'>Ваше письмо отправлено, ответ прийдёт на указанный вами E-mail.</p>
+				<div class="popup_clouds">
+					<img src="img/pop_top_clouds.png" height="253" width="669" alt="">
+				</div>
+				<form>
+					<h2>Подробнее</h2>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="name" class="modal_form_input" type="text" placeholder="Имя">
+						</div>
+					</div>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="email" class="modal_form_email" type="text" placeholder="E-mail">
+						</div>
+					</div>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone" type="text" placeholder="Телефон">
+						</div>
+					</div>
+					<div>
+						<div class="select">
+							<div class="slct_arrow">
+								<i class="fa fa-angle-down"></i>
+							</div>
+							<a href="#" class="slct">Выбор заголовков:</a>
+							<ul class="drop">
+								<li>Вы крутые</li>
+								<li>Я в Вас влюбился</li>
+								<li>Быстрей Вас только Флеш</li>
+							</ul>
+							<input type="hidden" id="select" name="services">
+						</div>
+					</div>
+					<div>
+						<textarea type="text" placeholder="Сообщение"></textarea>
+					</div>
+					<input type="hidden" name="form_name" value="Письмо команде">
+					<input type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
     <!-- Модальное окно 2-->
-    <div class="popup2" id="win2">
+    <div class="popup pop2">
         <div class="dm-table">
             <div class="dm-cell">
                 <div class="dm-modal">
                     <a href="#" class="close">
                     </a>
-                    <p class='sucess_mail'>Заявка отправлена</p>
+                    <p class='sucess_mail'>Ваше письмо отправлено, ответ прийдёт на указанный вами E-mail.</p>
+					<div class="popup_clouds">
+						<img src="img/pop_top_clouds.png" height="253" width="669" alt="">
+					</div>
                 </div>
             </div>
         </div>
@@ -11529,7 +11631,7 @@
                 </div>
             </div>
             <div class="take_part_txt_item_links">
-                <a href="#" data-modal="modal-1" data-info="Отлично! Хочу сайт" class="modal">Связаться с командой</a>
+                <a href="#" data-modal="modal-2" data-info="Отлично! Хочу сайт" class="modal">Связаться с командой</a>
             </div>
             <div class="take_part_img_bot_decor">
                 <?xml version="1.0" encoding="UTF-8" standalone="no"?>

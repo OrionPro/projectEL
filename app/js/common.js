@@ -1947,9 +1947,10 @@ $(document).ready(function () {
 		// $("body").css({ "overflow": "inherit", "padding-right": "0" });
 	});
 	// закрываем модальное окно
-	$("#win .close").click(function (e) {
+	$(".popup .close").click(function (e) {
 		e.preventDefault();
-		$(".popup").hide("fade", 500);
+		$(this).parents('.popup').hide("fade", 500);
+
 		// $("body").css({ "overflow": "inherit", "padding-right": "0" });
 	});
 	if ($('section').hasClass("map")) {
@@ -2081,21 +2082,21 @@ $(document).ready(function () {
 							function () {
 								$('.popup').hide('fade');
 								form.trigger('reset');
-								$('.dm-modal .sucess_mail').hide();
-								$("#win .close").trigger('click');
+								$('.dm-modal .sucess_mail').addClass('active');
+								$(".popup .close").trigger('click');
 								$('.popup .close').show();
 							}
 						);
 						if (data['form'] == "form") { //Проверяем какая форма, если в форме есть <input type="hidden" name="id_form" value="form_2"> то выполняем код что ниже
 							$('.dm-modal .sucess_mail').show('fade', 500);
-							$('.popup2 .close').hide();
-							$('.popup2').show().delay(2000).fadeOut(
+							$('.pop2 .close').hide();
+							$('.pop2').show().delay(2000).fadeOut(
 								function () {
-									$('.popup2').hide('fade');
+									$('.pop2').hide('fade');
 									form.trigger('reset');
 									$('.dm-modal .sucess_mail').addClass('active');
-									$("#win2 .close").trigger('click');
-									$('.popup2 .close').show();
+									$(".pop2 .close").trigger('click');
+									$('.pop2 .close').show();
 								}
 							);
 						}

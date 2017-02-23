@@ -66,7 +66,7 @@ section{margin-bottom:-2px}
 .header_logo a:hover{color:#eed350}
 .header_nav{display:inline-block;position:relative}
 .header_nav ul{padding:0;margin:0 0 0 60px}
-.header_nav ul.dropdown{width:330px;display:block;background-color:#001027;position:absolute;top:55px;left:-195px;padding:25px 0 0 40px;z-index:10}
+.header_nav ul.dropdown{width:330px;display:none;background-color:#001027;position:absolute;top:55px;left:-195px;padding:25px 0 0 40px;z-index:10}
 .header_nav ul.dropdown li{display:table;margin:20px 0;line-height:35px;position:relative}
 .header_modal,.header_nav ul li,.header_nav ul li a,.header_phone{display:inline-block}
 .header_nav ul.dropdown li a{font-size:14px;text-transform:none}

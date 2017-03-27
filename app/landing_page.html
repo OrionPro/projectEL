@@ -1729,7 +1729,7 @@
 	<div class="loader_inner"></div>
 </div>
 <!-- Модальное окно -->
-<div class="popup" id="win" data-modal="modal-1">
+<div class="popup" data-modal="modal-1">
 	<div class="dm-table">
 		<div class="dm-cell">
 			<div class="dm-modal">
@@ -1785,6 +1785,47 @@
 					</div>
 					<div>
 						<textarea type="text" placeholder="Сообщение"></textarea>
+					</div>
+					<input type="hidden" name="form_name" value="Письмо команде">
+					<input type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
+<!-- Модальное окно 4 -->
+<div class="popup" data-modal="modal-4">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+					<i class="fa fa-close"></i>
+				</a>
+				<p class='sucess_mail'>Ваше письмо отправлено, ответ прийдёт на указанный вами E-mail.</p>
+				<div class="popup_clouds">
+					<img src="img/pop_top_clouds.png" height="253" width="669" alt="">
+				</div>
+				<form>
+					<h2>Заказать звонок</h2>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="name" class="modal_form_input" type="text" placeholder="Имя">
+						</div>
+					</div>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone" type="text" placeholder="Телефон">
+						</div>
 					</div>
 					<input type="hidden" name="form_name" value="Письмо команде">
 					<input type="submit" value="Отправить">
@@ -3515,15 +3556,17 @@
 			<div class="our_work_item_wrap">
 				<div class="our_work_item">
 					<div class="our_work_item_img">
-						<img src="img/our_work_item1.jpg" height="470" width="470" alt="">
+						<a href="#"><span>Смотреть детально</span></a>
+						<img src="img/our_work_item1.jpg" height="432" width="432" alt="">
 					</div>
-					<a href="#" data-modal="modal-1" data-info="ХОЧУ ИНТЕРНЕТ-МАГАЗИН" class="modal">ХОЧУ ИНТЕРНЕТ-МАГАЗИН</a>
+					<a href="#" data-modal="modal-4" data-info="ХОЧУ ИНТЕРНЕТ-МАГАЗИН" class="modal">ХОЧУ ИНТЕРНЕТ-МАГАЗИН</a>
 				</div>
 				<div class="our_work_item">
 					<div class="our_work_item_img">
-						<img src="img/our_work_item2.jpg" height="470" width="470" alt="">
+						<a href="#"><span>Смотреть детально</span></a>
+						<img src="img/our_work_item2.jpg" height="432" width="432" alt="">
 					</div>
-					<a href="#" data-modal="modal-1" data-info="ХОЧУ ИНТЕРНЕТ-МАГАЗИН" class="modal">ХОЧУ ИНТЕРНЕТ-МАГАЗИН</a>
+					<a href="#" data-modal="modal-4" data-info="ХОЧУ ИНТЕРНЕТ-МАГАЗИН" class="modal">ХОЧУ ИНТЕРНЕТ-МАГАЗИН</a>
 				</div>
 			</div>
 			<div class="examples_of_online_stores_decor">

@@ -2155,11 +2155,11 @@ $(document).ready(function () {
 
 if(getCookie('loader')){
 	$(".loader_inner").fadeOut();
-	$(".loader").delay(400).fadeOut("slow");
+	$(".loader").delay(50).fadeOut("fast");
 }else{
 	setCookie('loader');
 	setTimeout(function () {
 		$(".loader_inner").fadeOut();
-		$(".loader").delay(400).fadeOut("slow");
-	},3000)
+		$(".loader").delay(50).fadeOut("fast");
+	}, 2000);
 }

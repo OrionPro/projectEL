@@ -1448,6 +1448,7 @@
         right: 0;
         top: 0;
         width: 100%;
+        width: 100%;
         z-index: 9999
     }
 
@@ -1456,7 +1457,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        background-color: #001027;
+        background-color: transparent;
         height: 216px;
         width: 614px;
         margin-top: -108px;
@@ -1660,6 +1661,15 @@
 		<!--</div>-->
 	<!--</div>-->
 </div>
+<script>
+	var cookieArr = document.cookie.split(';');
+	for (var i = 0; i < cookieArr.length; i++) {
+		if (cookieArr[i].indexOf('loader') >= 0) {
+			document.getElementsByClassName('loader_inner')[0].style.cssText = 'display: none';
+		}
+	}
+
+</script>
     <!-- Модальное окно -->
     <div class="popup" data-modal="modal-1">
         <div class="dm-table">

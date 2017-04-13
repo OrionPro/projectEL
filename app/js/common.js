@@ -1292,6 +1292,11 @@ function allAnim() {
 		}, 0.3, "you_end_up");
 	// why_seo_img run_contextual_advertising
 	tl58.add("run_contextual", "+=0.3")
+		.staggerFrom(".run_contextual_advertising_target", 1.2, {
+			rotation: 360,
+			transformOrigin: "50% 50%",
+			ease: Power1.easeInOut
+		}, 0.5, "run_contextual")
 		.staggerFrom(".why_seo_img.run_contextual_advertising:not('.why_seo_img.seven_main_tasks')", 0.8, {
 			y: 50, autoAlpha: 0,
 			ease: Power2.easeInOut
@@ -1647,14 +1652,14 @@ function readyPortfolioJSON() {
 }
 function getCookie(data) {
 	var cookieArr = document.cookie.split(';');
-	for(var i =0; i < cookieArr.length; i++){
+	for (var i = 0; i < cookieArr.length; i++) {
 		if (cookieArr[i].indexOf(data) >= 0) {
 			return true;
 		}
 	}
 }
 
-function setCookie(data){
+function setCookie(data) {
 	document.cookie = data;
 }
 
@@ -1859,6 +1864,7 @@ $(document).ready(function () {
 	$(".owl-carousel2").owlCarousel({
 		loop: true,
 		items: 4,
+		autoplay: true,
 		dots: false,
 		responsiveClass: false,
 		responsive: {
@@ -2161,5 +2167,7 @@ if(getCookie('loader')){
 	setTimeout(function () {
 		$(".loader_inner").fadeOut();
 		$(".loader").delay(50).fadeOut("fast");
-	}, 2000);
+	}, 1200);
 }
+// $(".loader_inner").fadeOut();
+// $(".loader").fadeOut("slow");

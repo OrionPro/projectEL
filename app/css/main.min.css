@@ -889,7 +889,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .from_idea_to_results .container{position:relative}
 .from_idea_to_results .from_idea_to_results_top_txt{margin-top:177px}
 .from_idea_to_results .from_idea_to_results_top_txt p{width:1137px;margin:0 auto 33px;font-size:24px;line-height:1.2}
-.from_idea_to_results .from_idea_to_results_top_txt p+p{width:1000px}
+.from_idea_to_results .from_idea_to_results_top_txt p+p{width:1000px;margin:0 auto}
 .from_idea_to_results h2{margin-bottom:35px;font-size:48px;color:#eed350}
 .from_idea_to_results h3{font-size:24px;color:#eed350;margin-top:-4px;margin-bottom:6px}
 .from_idea_to_results h3 span{font:24px Amazing_Grotesk_Ultra,Arial,sans-serif}

@@ -930,7 +930,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .cost_of_online_store .cost_of_online_store_item h3{font-size:36px;font-family:Amazing_Grotesk_Ultra,Arial,sans-serif;margin-bottom:0}
 .cost_of_online_store .cost_of_online_store_item p{margin-top:0;line-height:1.2;font-size:24px;color:#8a8a8a}
 .cost_of_online_store .cost_of_online_store_item ul{padding:0 15px;margin:44px 0 0}
-.cost_of_online_store .cost_of_online_store_item ul li{min-height:72px;line-height:70px;list-style:none;font-family:Amazing_Grotesk_Ultra,Arial,sans-serif;font-size:24px}
+.cost_of_online_store .cost_of_online_store_item ul li{min-height:72px;line-height:70px;list-style:none;font-family:Amazing_Grotesk_Ultra,Arial,sans-serif;font-size:18px}
 .cost_of_online_store .cost_of_online_store_item ul li:nth-child(odd){background-color:#eaeaea}
 .cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_for_all{height:150px;background-color:#177898}
 .cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_for_all h4{margin:0;padding-top:30px;color:#eed350;font:72px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1}

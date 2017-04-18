@@ -1666,6 +1666,7 @@
 	for (var i = 0; i < cookieArr.length; i++) {
 		if (cookieArr[i].indexOf('loader') >= 0) {
 			document.getElementsByClassName('loader_inner')[0].style.cssText = 'display: none';
+			document.getElementsByClassName('loader')[0].style.cssText = 'background: #fff';
 		}
 	}
 

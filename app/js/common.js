@@ -1291,12 +1291,12 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 0.3, "you_end_up");
 	// why_seo_img run_contextual_advertising
-	tl58.add("run_contextual", "+=0.3")
+	tl58.add("run_contextual", "+=0.8")
 		.staggerFrom(".run_contextual_advertising_target", 1.2, {
 			rotation: 360,
 			transformOrigin: "50% 50%",
 			ease: Power1.easeInOut
-		}, 0.5, "run_contextual")
+		}, 0.6, "run_contextual")
 		.staggerFrom(".why_seo_img.run_contextual_advertising:not('.why_seo_img.seven_main_tasks')", 0.8, {
 			y: 50, autoAlpha: 0,
 			ease: Power2.easeInOut
@@ -2161,12 +2161,12 @@ $(document).ready(function () {
 
 if(getCookie('loader')){
 	$(".loader_inner").fadeOut();
-	$(".loader").delay(50).fadeOut("fast");
+	$(".loader").delay(10).fadeOut("fast");
 }else{
 	setCookie('loader');
 	setTimeout(function () {
 		$(".loader_inner").fadeOut();
-		$(".loader").delay(50).fadeOut("fast");
+		$(".loader").delay(10).fadeOut("100");
 	}, 1200);
 }
 // $(".loader_inner").fadeOut();

@@ -1118,84 +1118,155 @@ body textarea:required:valid
 	.cost_of_online_store_item_wrap
 		overflow: hidden
 		margin-bottom: 215px
+		padding-left: 85px
 		padding-top: 30px
 		padding-bottom: 30px
-	.cost_of_online_store_item
-		width: 370px
-		margin-right: 28px
-		float: left
-		background-color: #fff
-		color: #000
-		&:first-of-type
-			margin-left: 15px
-		&:last-of-type
-			margin-right: 0
-		&.active
-			box-shadow: 0 0 0 30px $main_color
-			position: relative
-			z-index: 2
-			.cost_of_online_store_item_link
-				a
-					background-color: #b48309
-					&:hover
-						background-color: #fff
-						text-decoration: none
-					&:active
-						background-color: #fff
-						text-decoration: none
-					&:focus
-						background-color: #fff
-						text-decoration: none
-
-		h3
-			font-size: 36px
-			font-family: $font_Amazing_Grotesk_Ultra
-			margin-bottom: 0
-		p
-			margin-top: 0
-			line-height: 1.2
-			font-size: 24px
-			color: #8a8a8a
-		ul
-			padding: 0 15px
-			margin: 44px 0 0 0
-			li
-				min-height: 72px
-				line-height: 70px
-				list-style: none
-				font-family: $font_Amazing_Grotesk_Ultra
-				font-size: 18px
-				&:nth-child(odd)
-					background-color: #eaeaea
-		.cost_of_online_store_item_for_all
-			height: 150px
-			background-color: #177898
-			h4
-				margin: 0
-				padding-top: 30px
-				@include font($main_color, 72px, $font_Amazing_Grotesk_Ultra, 1)
-			p
-				margin-top: 0
-				@include font(#fff, 24px, $font_Amazing_Grotesk_Ultra)
-		.cost_of_online_store_item_link
-			height: 65px
-			a
-				display: block
-				height: 100%
-				line-height: 65px
-				font-size: 30px
-				color: #000
-				background-color: #fff
-				transition: background-color 0.5s
-				&:hover
-					background-color: #b48309
-					text-decoration: none
-				&:active
-					text-decoration: none
-					background-color: #b48309
-				&:focus
-					text-decoration: none
-					background-color: #b48309
+		.table
+			width: 1030px
+			thead
+				tr
+					border-bottom: 1px solid rgba(255,255,255, 0.2)
+					th
+						width: 170px
+						height: 60px
+						@include font($main_color, 18px, $font_Amazing_Grotesk_Ultra)
+						&:first-of-type
+							width: 430px
+							padding-left: 30px
+							text-align: left
+						&:nth-of-type(3)
+							background-color: $main_color
+							color: $main_txt_color
+							border-radius: 10px 10px 0 0
+			tbody
+				tr
+					&:first-of-type
+						height: 25px
+						td
+							&:nth-of-type(3)
+								width: inherit
+								height: 25px
+								display: table-cell
+								line-height: inherit
+					td
+						padding-top: 5px
+						padding-bottom: 5px
+						@include font($main_txt_color, 14px, $font_Amazing_Grotesk_Ultra)
+						&:first-of-type
+							padding-left: 30px
+							text-align: left
+						&:nth-of-type(3)
+							background-color: $main_color
+							display: inline-block
+							width: 100%
+							height: 33px
+							line-height: 33px
+							i
+								color: $main_txt_color
+				i
+					font-size: 18px
+					color: $main_color
+			tfoot
+				tr
+					td
+						@include font($main_color, 36px, $font_Amazing_Grotesk_Ultra)
+						padding-top: 5px
+						padding-bottom: 5px
+						&:first-of-type
+							@include font($main_txt_color, 36px, $font_Amazing_Grotesk_Ultra)
+							padding-left: 30px
+							text-align: left
+					span
+						color: $main_color
+					button
+						@extend %main_btn
+						width: 170px
+						height: 52px
+						vertical-align: middle
+						transition: 0.5s
+						&:hover
+							@extend %main_btn_hover
+						&:active
+							@extend %main_btn_active
+						&:focus
+							@extend %main_btn_focus
+							outline: 0
+	//.cost_of_online_store_item
+	//	width: 370px
+	//	margin-right: 28px
+	//	float: left
+	//	background-color: #fff
+	//	color: #000
+	//	&:first-of-type
+	//		margin-left: 15px
+	//	&:last-of-type
+	//		margin-right: 0
+	//	&.active
+	//		box-shadow: 0 0 0 30px $main_color
+	//		position: relative
+	//		z-index: 2
+	//		.cost_of_online_store_item_link
+	//			a
+	//				background-color: #b48309
+	//				&:hover
+	//					background-color: #fff
+	//					text-decoration: none
+	//				&:active
+	//					background-color: #fff
+	//					text-decoration: none
+	//				&:focus
+	//					background-color: #fff
+	//					text-decoration: none
+	//
+	//	h3
+	//		font-size: 36px
+	//		font-family: $font_Amazing_Grotesk_Ultra
+	//		margin-bottom: 0
+	//	p
+	//		margin-top: 0
+	//		line-height: 1.2
+	//		font-size: 24px
+	//		color: #8a8a8a
+	//	ul
+	//		padding: 0 15px
+	//		margin: 44px 0 0 0
+	//		li
+	//			min-height: 72px
+	//			line-height: 70px
+	//			list-style: none
+	//			font-family: $font_Amazing_Grotesk_Ultra
+	//			font-size: 18px
+	//			&:nth-child(odd)
+	//				background-color: #eaeaea
+	//	.cost_of_online_store_item_for_all
+	//		height: 150px
+	//		background-color: #177898
+	//		h4
+	//			margin: 0
+	//			padding-top: 30px
+	//			@include font($main_color, 72px, $font_Amazing_Grotesk_Ultra, 1)
+	//		p
+	//			margin-top: 0
+	//			@include font(#fff, 24px, $font_Amazing_Grotesk_Ultra)
+	//	.cost_of_online_store_item_link
+	//		height: 65px
+	//		a
+	//			display: block
+	//			height: 100%
+	//			line-height: 65px
+	//			font-size: 30px
+	//			color: #000
+	//			background-color: #fff
+	//			transition: background-color 0.5s
+	//			&:hover
+	//				background-color: #b48309
+	//				text-decoration: none
+	//			&:active
+	//				text-decoration: none
+	//				background-color: #b48309
+	//			&:focus
+	//				text-decoration: none
+	//				background-color: #b48309
 	.cost_of_online_store_bot_decor
 		position: relative
 		svg

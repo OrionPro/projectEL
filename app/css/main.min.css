@@ -1,4 +1,7 @@
 .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button{background-color:#eed350;border:none;text-transform:uppercase;color:#000;font:24px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button:active,.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button:hover{background-color:#d45b3e}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button:focus{background-color:#d45b3e;outline:0}
 .our_work .our_work_item .our_work_item_img a,.portfolio .portfolio_item_mask{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
@@ -920,24 +923,23 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .our_work.examples_of_online_stores .examples_of_online_stores_decor{position:absolute;bottom:-65px;right:0;left:0;text-align:center}
 .cost_of_online_store{background:#0b2848;text-align:center}
 .cost_of_online_store h2{margin-top:100px;margin-bottom:40px;font-size:36px;color:#eed350;text-transform:capitalize}
-.cost_of_online_store .cost_of_online_store_item_wrap{overflow:hidden;margin-bottom:215px;padding-top:30px;padding-bottom:30px}
-.cost_of_online_store .cost_of_online_store_item{width:370px;margin-right:28px;float:left;background-color:#fff;color:#000}
-.cost_of_online_store .cost_of_online_store_item:first-of-type{margin-left:15px}
-.cost_of_online_store .cost_of_online_store_item:last-of-type{margin-right:0}
-.cost_of_online_store .cost_of_online_store_item.active{-webkit-box-shadow:0 0 0 30px #eed350;box-shadow:0 0 0 30px #eed350;position:relative;z-index:2}
-.cost_of_online_store .cost_of_online_store_item.active .cost_of_online_store_item_link a{background-color:#b48309}
-.cost_of_online_store .cost_of_online_store_item.active .cost_of_online_store_item_link a:active,.cost_of_online_store .cost_of_online_store_item.active .cost_of_online_store_item_link a:focus,.cost_of_online_store .cost_of_online_store_item.active .cost_of_online_store_item_link a:hover{background-color:#fff;text-decoration:none}
-.cost_of_online_store .cost_of_online_store_item h3{font-size:36px;font-family:Amazing_Grotesk_Ultra,Arial,sans-serif;margin-bottom:0}
-.cost_of_online_store .cost_of_online_store_item p{margin-top:0;line-height:1.2;font-size:24px;color:#8a8a8a}
-.cost_of_online_store .cost_of_online_store_item ul{padding:0 15px;margin:44px 0 0}
-.cost_of_online_store .cost_of_online_store_item ul li{min-height:72px;line-height:70px;list-style:none;font-family:Amazing_Grotesk_Ultra,Arial,sans-serif;font-size:18px}
-.cost_of_online_store .cost_of_online_store_item ul li:nth-child(odd){background-color:#eaeaea}
-.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_for_all{height:150px;background-color:#177898}
-.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_for_all h4{margin:0;padding-top:30px;color:#eed350;font:72px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1}
-.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_for_all p{margin-top:0;color:#fff;font:24px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
-.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link{height:65px}
-.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a{display:block;height:100%;line-height:65px;font-size:30px;color:#000;background-color:#fff;-webkit-transition:background-color .5s;transition:background-color .5s}
-.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a:active,.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a:focus,.cost_of_online_store .cost_of_online_store_item .cost_of_online_store_item_link a:hover{text-decoration:none;background-color:#b48309}
+.cost_of_online_store .cost_of_online_store_item_wrap{overflow:hidden;margin-bottom:215px;padding-left:85px;padding-top:30px;padding-bottom:30px}
+.cost_of_online_store .cost_of_online_store_item_wrap .table{width:1030px}
+.cost_of_online_store .cost_of_online_store_item_wrap .table thead tr{border-bottom:1px solid rgba(255,255,255,.2)}
+.cost_of_online_store .cost_of_online_store_item_wrap .table thead tr th{width:170px;height:60px;color:#eed350;font:18px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
+.cost_of_online_store .cost_of_online_store_item_wrap .table thead tr th:first-of-type{width:430px;padding-left:30px;text-align:left}
+.cost_of_online_store .cost_of_online_store_item_wrap .table thead tr th:nth-of-type(3){background-color:#eed350;color:#fff;-webkit-border-radius:10px 10px 0 0;border-radius:10px 10px 0 0}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tbody tr:first-of-type{height:25px}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tbody tr:first-of-type td:nth-of-type(3){width:inherit;height:25px;display:table-cell;line-height:inherit}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tbody tr td{padding-top:5px;padding-bottom:5px;color:#fff;font:14px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tbody tr td:first-of-type{padding-left:30px;text-align:left}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tbody tr td:nth-of-type(3){background-color:#eed350;display:inline-block;width:100%;height:33px;line-height:33px}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tbody tr td:nth-of-type(3) i{color:#fff}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tbody i{font-size:18px;color:#eed350}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr td{color:#eed350;font:36px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6;padding-top:5px;padding-bottom:5px}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr td:first-of-type{color:#fff;font:36px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6;padding-left:30px;text-align:left}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr span{color:#eed350}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button{width:170px;height:52px;vertical-align:middle;-webkit-transition:.5s;transition:.5s}
 .cost_of_online_store .cost_of_online_store_bot_decor{position:relative}
 .cost_of_online_store .cost_of_online_store_bot_decor svg{position:absolute;bottom:-33px;left:469px;z-index:10}
 .what_tasks_are_performed{min-height:400px;background:url(../img/what_tasks_are_performed_clouds.png) center top 60px no-repeat #03142e;text-align:center}

@@ -446,7 +446,7 @@ function allAnim() {
 		if ($(window).scrollTop() >= 4300 && $(window).scrollTop() <= 4800) {
 			tl62.resume();
 		}
-		if ($(window).scrollTop() >= 2600 && $(window).scrollTop() <= 3400) {
+		if ($(window).scrollTop() >= 2600 && $(window).scrollTop() <= 3600) {
 			tl63.resume();
 		}
 		if ($(window).scrollTop() >= 3650 && $(window).scrollTop() <= 4200) {
@@ -960,7 +960,7 @@ function allAnim() {
 	}
 	// cost_of_online_store_item
 	if ($('body').hasClass('online_store')) {
-		tl28.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
+		tl28.staggerFrom(".cost_of_online_store_item_wrap .table, .cost_of_online_store_item_wrap .table tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// from_what_is_seo item
 	if ($('body').hasClass('online_store')) {
@@ -1085,7 +1085,7 @@ function allAnim() {
 	}
 	// landing_page cost_of_online_store_item
 	if ($('body').hasClass('landing_page')) {
-		tl36.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
+		tl36.staggerFrom(".cost_of_online_store_item_wrap .table, .cost_of_online_store_item_wrap .table tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// why_our_landing_sell2
 	if ($('body').hasClass('landing_page')) {
@@ -1175,7 +1175,7 @@ function allAnim() {
 	}
 	// cost_of_online_store_item site_card
 	if ($('body').hasClass('site_card')) {
-		tl44.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
+		tl44.staggerFrom(".cost_of_online_store_item_wrap .table, .cost_of_online_store_item_wrap .table tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// cost_of_online_store_bot_decor site_card2
 	if ($('body').hasClass('site_card')) {
@@ -1336,7 +1336,7 @@ function allAnim() {
 
 	// cost_of_online_store_item run_contextual_advertising
 	if ($('body').hasClass('run_contextual_advertising')) {
-		tl63.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
+		tl63.staggerFrom(".cost_of_online_store_item_wrap .table, .cost_of_online_store_item_wrap .table tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// cost_of_online_store_bot_decor run_contextual_advertising
 	if ($('body').hasClass('run_contextual_advertising')) {
@@ -1979,8 +1979,10 @@ $(document).ready(function () {
 		e.preventDefault();
 		var id = $(this).data('modal');
 		var txt = $(this).data('info');
+		var title =  $(this).data('title'); // для изменения title в модалке
 		$(".popup[data-modal=" + id + "]").toggle("fade", 500).find("form").css('display', 'block');
 		$(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
+		$(".popup[data-modal=" + id + "] h2").html(title); // прописать в ссылку data-title="нужный title"
 		// $("body").css({ "overflow": "hidden", "padding-right": "17px" });
 
 	});

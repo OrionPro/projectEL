@@ -1802,6 +1802,40 @@ $(document).ready(function () {
 		}
 
 	});
+	// Анимация плашки
+	if(jQuery(".active_menu").length>0){ // если есть активный пункт меню, то позиционируем двигающуюся плашку на нем
+		var menuWidth = jQuery(".active_menu").outerWidth(); // определяем ширину активного пункта меню
+		var menuLeft = jQuery(".active_menu").position().left; // определяем смещение активного пункта меню слева
+		jQuery(".cost_of_online_store_links_chisel").stop().animate({ // анимируем движущуюся плашку
+			left: menuLeft+'px',
+			width: menuWidth+'px'
+		}, 500, 'linear');
+	}
+	jQuery(".cost_of_online_store_links a").mouseover(function(){ // поведение движущейся плашки при наведении на любой пункт меню. Все тоже самое, что и при наличии активного пункта, только позиция плашки определяется относительно пункта, на который произошло наведение курсора мыши
+		var menuWidth = jQuery(this).outerWidth();
+		var menuLeft = jQuery(this).position().left;
+		jQuery(".cost_of_online_store_links_chisel").stop().animate({
+			left: menuLeft+'px',
+			width: menuWidth+'px'
+		}, 300, 'linear');
+	});
+	jQuery(".cost_of_online_store_links").mouseleave(function(){ // поведение плашки при окончании события наведения мыши на пункт меню (выход курсора мыши на пределы блока, в котором содержится меню)
+		if(jQuery(".active_menu").length<=0){ // если активного пункта нет, то перемещаем плашку за границу экрана
+			jQuery(".cost_of_online_store_links_chisel").stop().animate({
+				left: '-999px',
+				width: '0px'
+			}, 500, 'linear');
+		}
+		else{ // иначе, если есть активный пункт меню – возвращаем плашку на него
+			var menuWidth = jQuery(".active_menu").outerWidth();
+			var menuLeft = jQuery(".active_menu").position().left;
+			jQuery(".cost_of_online_store_links_chisel").stop().animate({
+				left: menuLeft+'px',
+				width: menuWidth+'px'
+			}, 500, 'linear');
+		}
+	});
+
 	// запретить дефолтное событие на ссылку .slider_link
 	$(".slider_link").on("click", function (e) {
 		e.preventDefault();

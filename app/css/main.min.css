@@ -942,6 +942,11 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button{width:170px;height:52px;vertical-align:middle;-webkit-transition:.5s;transition:.5s}
 .cost_of_online_store .cost_of_online_store_bot_decor{position:relative}
 .cost_of_online_store .cost_of_online_store_bot_decor svg{position:absolute;bottom:-33px;left:469px;z-index:10}
+.cost_of_online_store .cost_of_online_store_links{width:1030px;height:53px;line-height:53px;border:1px solid rgba(255,255,255,.2);-webkit-border-radius:25px;border-radius:25px;position:relative;text-align:left}
+.cost_of_online_store .cost_of_online_store_links_item{display:inline-block;vertical-align:middle;margin-right:100px}
+.cost_of_online_store .cost_of_online_store_links_item a{color:#fff;position:relative;z-index:10}
+.cost_of_online_store .cost_of_online_store_links_item a:active,.cost_of_online_store .cost_of_online_store_links_item a:focus,.cost_of_online_store .cost_of_online_store_links_item a:hover{text-decoration:none;color:#fff}
+.cost_of_online_store .cost_of_online_store_links_chisel{width:292px;height:53px;background-color:#eed350;-webkit-border-radius:25px;border-radius:25px;position:absolute;z-index:0}
 .what_tasks_are_performed{min-height:400px;background:url(../img/what_tasks_are_performed_clouds.png) center top 60px no-repeat #03142e;text-align:center}
 .what_tasks_are_performed h2{margin-top:80px;margin-bottom:37px;font-size:36px;color:#eed350;text-transform:capitalize}
 .what_tasks_are_performed h3{font-size:30px;color:#fff}

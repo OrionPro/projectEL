@@ -437,7 +437,7 @@ function allAnim() {
 		if ($(window).scrollTop() >= 600 && $(window).scrollTop() <= 1200) {
 			tl59.resume();
 		}
-		if ($(window).scrollTop() >= 1500 && $(window).scrollTop() <= 2500) {
+		if ($(window).scrollTop() >= 5500 && $(window).scrollTop() <= 6500) {
 			tl60.resume();
 		}
 		if ($(window).scrollTop() >= 2400 && $(window).scrollTop() <= 2800) {
@@ -446,24 +446,24 @@ function allAnim() {
 		if ($(window).scrollTop() >= 4300 && $(window).scrollTop() <= 4800) {
 			tl62.resume();
 		}
-		if ($(window).scrollTop() >= 2600 && $(window).scrollTop() <= 3600) {
+		if ($(window).scrollTop() >= 4100 && $(window).scrollTop() <= 4900) {
 			tl63.resume();
 		}
 		if ($(window).scrollTop() >= 3650 && $(window).scrollTop() <= 4200) {
 			tl64.resume();
 		}
-		if ($(window).scrollTop() >= 4200 && $(window).scrollTop() <= 4800) {
+		if ($(window).scrollTop() >= 1600 && $(window).scrollTop() <= 2600) {
 			tl65.resume();
 		}
-		if ($(window).scrollTop() >= 5100 && $(window).scrollTop() <= 5700) {
+		if ($(window).scrollTop() >= 6700 && $(window).scrollTop() <= 7200) {
 			tl66.resume();
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
-			if ($(window).scrollTop() >= 5500) {
+			if ($(window).scrollTop() >= 6500) {
 				tl67.resume();
 			}
 		} else {
-			if ($(window).scrollTop() >= 5900) {
+			if ($(window).scrollTop() >= 7500) {
 				tl67.resume();
 			}
 		}
@@ -960,7 +960,7 @@ function allAnim() {
 	}
 	// cost_of_online_store_item
 	if ($('body').hasClass('online_store')) {
-		tl28.staggerFrom(".cost_of_online_store_item_wrap .table, .cost_of_online_store_item_wrap .table tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
+		tl28.staggerFrom(".cost_of_online_store_item_wrap .table.active, .cost_of_online_store_item_wrap .table.active tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// from_what_is_seo item
 	if ($('body').hasClass('online_store')) {
@@ -1085,7 +1085,7 @@ function allAnim() {
 	}
 	// landing_page cost_of_online_store_item
 	if ($('body').hasClass('landing_page')) {
-		tl36.staggerFrom(".cost_of_online_store_item_wrap .table, .cost_of_online_store_item_wrap .table tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
+		tl36.staggerFrom(".cost_of_online_store_item_wrap .table.active, .cost_of_online_store_item_wrap .table.active tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// why_our_landing_sell2
 	if ($('body').hasClass('landing_page')) {
@@ -1175,7 +1175,7 @@ function allAnim() {
 	}
 	// cost_of_online_store_item site_card
 	if ($('body').hasClass('site_card')) {
-		tl44.staggerFrom(".cost_of_online_store_item_wrap .table, .cost_of_online_store_item_wrap .table tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
+		tl44.staggerFrom(".cost_of_online_store_item_wrap .table.active, .cost_of_online_store_item_wrap .table.active tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// cost_of_online_store_bot_decor site_card2
 	if ($('body').hasClass('site_card')) {
@@ -1336,7 +1336,7 @@ function allAnim() {
 
 	// cost_of_online_store_item run_contextual_advertising
 	if ($('body').hasClass('run_contextual_advertising')) {
-		tl63.staggerFrom(".cost_of_online_store_item_wrap .table, .cost_of_online_store_item_wrap .table tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
+		tl63.staggerFrom(".cost_of_online_store_item_wrap .table.active, .cost_of_online_store_item_wrap .table.active tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// cost_of_online_store_bot_decor run_contextual_advertising
 	if ($('body').hasClass('run_contextual_advertising')) {
@@ -1663,8 +1663,52 @@ function setCookie(data) {
 	document.cookie = data;
 }
 
+// Табы  в тарифах
+function tabs(parent) {
+	parent.find(".tabs-item").on('click', function (event) { //ссылки которые будут переключать табы
+		event.preventDefault();
+
+		parent.find(".cost_of_online_store_links_item .tabs-item").removeClass('active_menu'); //убираем активные состояния у ссылок
+
+		$(this).addClass('active_menu'); //Добавляем активное состояние у той что нажали
+
+		var data = $(this).data('tab-tariff'); //создаём переменную с датой
+		parent.find('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
+		parent.find('.tabs-wrap[data-tab-tariff=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
+
+	});
+}
 
 $(document).ready(function () {
+
+	tabs($('.cost_of_online_store_item_wrap'));
+	// Определения браузера
+	function getInternetExplorerVersion()
+	{
+		var rv = -1;
+		if (navigator.appName == 'Microsoft Internet Explorer')
+		{
+			var ua = navigator.userAgent;
+			var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+			if (re.exec(ua) != null)
+				rv = parseFloat( RegExp.$1 );
+		}
+		else if (navigator.appName == 'Netscape')
+		{
+			var ua = navigator.userAgent;
+			var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+			if (re.exec(ua) != null)
+				rv = parseFloat( RegExp.$1 );
+		}
+		return rv;
+	}
+	if(getInternetExplorerVersion()!==-1){
+		//Значит это IE
+		$(".cost_of_online_store .cost_of_online_store_links_item").css("margin-right", "72px")
+
+	}
+
+
 	// hover в header
 	$('.header_nav ul li .drop, .header_nav .dropdown').hover(
 		function () {
@@ -1809,7 +1853,7 @@ $(document).ready(function () {
 		jQuery(".cost_of_online_store_links_chisel").stop().animate({ // анимируем движущуюся плашку
 			left: menuLeft+'px',
 			width: menuWidth+'px'
-		}, 500, 'linear');
+		}, 1000, 'easeOutExpo');
 	}
 	jQuery(".cost_of_online_store_links a").mouseover(function(){ // поведение движущейся плашки при наведении на любой пункт меню. Все тоже самое, что и при наличии активного пункта, только позиция плашки определяется относительно пункта, на который произошло наведение курсора мыши
 		var menuWidth = jQuery(this).outerWidth();
@@ -1817,14 +1861,14 @@ $(document).ready(function () {
 		jQuery(".cost_of_online_store_links_chisel").stop().animate({
 			left: menuLeft+'px',
 			width: menuWidth+'px'
-		}, 300, 'linear');
+		}, 700, 'easeOutCirc');
 	});
 	jQuery(".cost_of_online_store_links").mouseleave(function(){ // поведение плашки при окончании события наведения мыши на пункт меню (выход курсора мыши на пределы блока, в котором содержится меню)
 		if(jQuery(".active_menu").length<=0){ // если активного пункта нет, то перемещаем плашку за границу экрана
 			jQuery(".cost_of_online_store_links_chisel").stop().animate({
 				left: '-999px',
 				width: '0px'
-			}, 500, 'linear');
+			}, 500, 'easeOutExpo');
 		}
 		else{ // иначе, если есть активный пункт меню – возвращаем плашку на него
 			var menuWidth = jQuery(".active_menu").outerWidth();
@@ -1832,7 +1876,7 @@ $(document).ready(function () {
 			jQuery(".cost_of_online_store_links_chisel").stop().animate({
 				left: menuLeft+'px',
 				width: menuWidth+'px'
-			}, 500, 'linear');
+			}, 500, 'easeOutExpo');
 		}
 	});
 
@@ -1955,7 +1999,53 @@ $(document).ready(function () {
 		items: 1,
 		dots: true
 	});
+	//  Активация слайдера
+	$(".owl-carousel4").owlCarousel({
+		loop: true,
+		items: 1,
+		autoplay: true,
+		dots: true,
+		responsiveClass: false,
+		responsive: {
+			// breakpoint from 0 up
+			0: {
+				items: 4
+			},
+			// breakpoint from 320 up
+			320: {
+				items: 1
 
+			},
+			// breakpoint from 768 up
+			768: {
+				items: 1
+			},
+			// breakpoint from 992 up
+			992: {
+				items: 1
+			},
+			// breakpoint from up
+			1100: {
+				items: 1
+			},
+			// breakpoint from up
+			1210: {
+				items: 1
+			}
+		}
+	});
+	// Кастомные кнопки управления слайдером
+	var owl4 = $('.owl-carousel4');
+	owl4.owlCarousel();
+	$('.customNextBtn4').click(function () {
+		owl4.trigger('next.owl.carousel', [400]);
+	});
+	// Go to the previous item
+	$('.customPrevBtn4').click(function () {
+		// With optional speed parameter
+		// Parameters has to be in square bracket '[]'
+		owl4.trigger('prev.owl.carousel', [400]);
+	});
 	// Select в модальном окне
 	$(document).click(function () {
 		$('.slct').removeClass('active');

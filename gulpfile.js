@@ -68,6 +68,7 @@ gulp.task('scripts', function() {
 		'app/libs/GreenSock-JS/TweenMax.min.js',
 		'app/libs/GreenSock-JS/DrawSVGPlugin.min.js',
 		'app/libs/animate/animate-css.js',
+		'app/libs/mobile-detect/mobile-detect.min.js',
 		'app/libs/plugins-scroll/plugins-scroll.js',
 		'app/libs/owl.carousel/owl.carousel.min.js',
 		// 'app/libs/owl.carousel/jquery.mousewheel.min.js',

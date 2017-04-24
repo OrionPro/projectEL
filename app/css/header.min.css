@@ -1,7 +1,7 @@
 .fa.fa-pull-left,.fa.pull-left{margin-right:.3em}
 .fa,.fa-stack{display:inline-block}
 .fa-fw,.fa-li{text-align:center}
-.dm-modal .select .drop li a,.dm-modal .select .slct,.header_logo a:hover,.header_modal a,.header_nav ul li a:hover,.header_phone a{text-decoration:none}
+.dm-modal .select .drop li a,.dm-modal .select .slct,.header_logo a:hover,.header_modal a,.header_nav ul li a:active,.header_nav ul li a:focus,.header_nav ul li a:hover,.header_phone a{text-decoration:none}
 .dm-modal input[type=submit]{height:56px;background-color:#eed350;border:none;text-transform:uppercase;color:#000;font:24px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
 .fa-inverse,body{color:#fff}
 .dm-modal input[type=submit]:active,.dm-modal input[type=submit]:hover{background-color:#d45b3e}

@@ -885,8 +885,11 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .website_promotion.selling_site .selling_site_item{margin-top:68px}
 .website_promotion.selling_site .selling_site_item_txt{width:337px;margin-left:31px;color:#eed350;display:inline-block;vertical-align:middle;text-align:right}
 .website_promotion.selling_site .selling_site_item_txt h3{font-size:30px;line-height:1.2}
+.website_promotion.selling_site .selling_site_item_txt a,.website_promotion.selling_site .selling_site_item_txt a:active,.website_promotion.selling_site .selling_site_item_txt a:focus,.website_promotion.selling_site .selling_site_item_txt a:hover{color:#eed350;text-decoration:none}
 .website_promotion.selling_site .selling_site_item_txt2{width:380px;font-size:24px;line-height:1.2;text-align:left;display:inline-block;vertical-align:middle}
+.website_promotion.selling_site .selling_site_item_txt2 a,.website_promotion.selling_site .selling_site_item_txt2 a:active,.website_promotion.selling_site .selling_site_item_txt2 a:focus,.website_promotion.selling_site .selling_site_item_txt2 a:hover{color:#fff;text-decoration:none}
 .website_promotion.selling_site .selling_site_item_img{margin-left:27px;margin-right:20px;display:inline-block;vertical-align:middle}
+.website_promotion.selling_site .selling_site_item_img a{display:inline-block}
 .website_promotion .website_promotion_decor{position:absolute;bottom:-182px;right:0;left:0;text-align:center}
 .from_idea_to_results{min-height:1870px;background:url(../img/main_clouds.png) center top 100px no-repeat,url(../img/selling_site_clouds.png) center bottom 8px no-repeat #0b2848;text-align:center}
 .from_idea_to_results .container{position:relative}
@@ -1201,9 +1204,26 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .cost_of_online_store.results_of_our_clients .results_of_our_clients_slider_item_txt ul span{color:#eed350}
 .cost_of_online_store.results_of_our_clients .owl-controls{position:absolute;right:5px;bottom:5px}
 .cost_of_online_store.results_of_our_clients .owl-controls .owl-dot{width:10px;height:10px;display:inline-block;margin-right:5px;background-color:#f5d9a8;-webkit-border-radius:50%;border-radius:50%;-webkit-transition:.5s;transition:.5s}
+.cost_of_online_store.inner_portfolio .book_now_form input,.cost_of_online_store.inner_portfolio .book_now_form textarea{border:1px solid #03142e;color:#03142e}
 .cost_of_online_store.results_of_our_clients .owl-controls .owl-dot.active,.cost_of_online_store.results_of_our_clients .owl-controls .owl-dot:hover{background-color:#eed350}
 .cost_of_online_store.results_of_our_clients .book_now_form{width:570px;margin:0 auto 200px}
 .cost_of_online_store.results_of_our_clients .book_now_form input[type=submit]{width:100%}
+.cost_of_online_store.inner_portfolio{background-color:#fff}
+.cost_of_online_store.inner_portfolio .inner_portfolio_img{text-align:center;position:relative}
+.cost_of_online_store.inner_portfolio .inner_portfolio_img img{width:100%;display:block;margin:0 auto}
+.cost_of_online_store.inner_portfolio .inner_portfolio_title{position:absolute;top:230px;left:0;right:0;margin:auto}
+.cost_of_online_store.inner_portfolio .inner_portfolio_title h1{color:#03142e;margin-bottom:0}
+.cost_of_online_store.inner_portfolio .inner_portfolio_title p{color:#03142e;font-size:26px}
+.cost_of_online_store.inner_portfolio .book_now_form{width:770px}
+.cost_of_online_store.inner_portfolio .book_now_form input::-webkit-input-placeholder{color:#03142e}
+.cost_of_online_store.inner_portfolio .book_now_form input:-moz-placeholder{color:#03142e}
+.cost_of_online_store.inner_portfolio .book_now_form input::-moz-placeholder{color:#03142e}
+.cost_of_online_store.inner_portfolio .book_now_form input:-ms-input-placeholder{color:#03142e}
+.cost_of_online_store.inner_portfolio .book_now_form textarea::-webkit-input-placeholder{color:#03142e}
+.cost_of_online_store.inner_portfolio .book_now_form textarea:-moz-placeholder{color:#03142e}
+.cost_of_online_store.inner_portfolio .book_now_form textarea::-moz-placeholder{color:#03142e}
+.cost_of_online_store.inner_portfolio .book_now_form textarea:-ms-input-placeholder{color:#03142e}
+.cost_of_online_store.inner_portfolio .book_now_form input[type=submit]{border:none}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

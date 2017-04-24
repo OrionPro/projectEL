@@ -597,6 +597,19 @@ function allAnim() {
 			TweenMax.to($(this).find("p"), 0.7, {color: "#fff"});
 		}
 	);
+	// services  selling_site_item
+	$(".selling_site_item_img").hover(
+		function () {
+			TweenMax.to($(this).find(".selling_site_item_1"), 0.7, {fill: "#d45b3e"});
+			TweenMax.to($(this).find(".selling_site_item_2"), 0.7, {fill: "#c45237"});
+			TweenMax.to($(this).find(".selling_site_item_3"), 0.7, {fill: "#a2361f"});
+		},
+		function () {
+			TweenMax.to($(this).find(".selling_site_item_1"), 0.7, {fill: "#177898"});
+			TweenMax.to($(this).find(".selling_site_item_2"), 0.7, {fill: "#0f7289"});
+			TweenMax.to($(this).find(".selling_site_item_3"), 0.7, {fill: "#0f4e5d"});
+		}
+	);
 	// what_else_do_line
 	tl3.from("#path4159", 0.5, {drawSVG: "0%"}, 0.4);
 	tl3.from("#path4157", 3, {drawSVG: "0%"}, 0.4);
@@ -1683,31 +1696,30 @@ $(document).ready(function () {
 
 	tabs($('.cost_of_online_store_item_wrap'));
 	// Определения браузера
-	function getInternetExplorerVersion()
-	{
-		var rv = -1;
-		if (navigator.appName == 'Microsoft Internet Explorer')
-		{
-			var ua = navigator.userAgent;
-			var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
-			if (re.exec(ua) != null)
-				rv = parseFloat( RegExp.$1 );
-		}
-		else if (navigator.appName == 'Netscape')
-		{
-			var ua = navigator.userAgent;
-			var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
-			if (re.exec(ua) != null)
-				rv = parseFloat( RegExp.$1 );
-		}
-		return rv;
-	}
-	if(getInternetExplorerVersion()!==-1){
-		//Значит это IE
-		$(".cost_of_online_store .cost_of_online_store_links_item").css("margin-right", "72px")
-
+	function get_name_browser() {
+		// получаем данные userAgent
+		var ua = navigator.userAgent;
+		// с помощью регулярок проверяем наличие текста,
+		// соответствующие тому или иному браузеру
+		if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+		if (ua.search(/Firefox/) > 0) return 'Firefox';
+		if (ua.search(/Opera/) > 0) return 'Opera';
+		if (ua.search(/Safari/) > 0) return 'Safari';
+		if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+		if (ua.search(/Trident/) > 0) return 'Trident';
+		// условий может быть и больше.
+		// сейчас сделаны проверки только
+		// для популярных браузеров
+		return 'Не определен';
 	}
 
+	if (get_name_browser() == "Trident" || get_name_browser() == "Internet Explorer" || get_name_browser() == "Firefox") {
+		$(".from_what_is_seo .from_what_is_seo_bot_decor svg").css("bottom", "-217px");
+		$(".website_promotion .website_promotion_decor").css("bottom", "-177px");
+		$(".cost_of_online_store .cost_of_online_store_links_item").css("margin-right", "72px");
+		$(".what_else_do.form_style .examples_of_online_stores_decor").css("bottom", "-524px");
+		$(".from_idea_to_results .from_idea_to_results_decor").css("bottom", "-144px");
+	}
 
 	// hover в header
 	$('.header_nav ul li .drop, .header_nav .dropdown').hover(

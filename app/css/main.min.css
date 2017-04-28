@@ -747,12 +747,13 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .book_now .book_now_form{width:370px;margin-top:100px;margin-left:211px;position:relative;z-index:1}
 .book_now .book_now_form input,.book_now .book_now_form textarea{width:100%;padding-left:25px;background-color:transparent;margin-bottom:20px;color:#fff}
 .book_now .book_now_form input{height:55px;border:1px solid #FFF;font:18px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
+.book_now .book_now_form textarea,.select .drop li{font:18px Amazing_Grotesk_Demi_Bold,Arial,sans-serif}
 .book_now .book_now_form input:active,.book_now .book_now_form input:focus{outline:0}
 .book_now .book_now_form input::-webkit-input-placeholder{color:#fff;opacity:1}
 .book_now .book_now_form input:-moz-placeholder{color:#fff;opacity:1}
 .book_now .book_now_form input::-moz-placeholder{color:#fff;opacity:1}
 .book_now .book_now_form input:-ms-input-placeholder{color:#fff;opacity:1}
-.book_now .book_now_form textarea{height:200px;padding-top:20px;font:18px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
+.book_now .book_now_form textarea{height:200px;padding-top:20px;line-height:1.6}
 .book_now .book_now_form textarea:active,.book_now .book_now_form textarea:focus{outline:0}
 .book_now .book_now_form textarea::-webkit-input-placeholder{color:#fff;opacity:1}
 .book_now .book_now_form textarea:-moz-placeholder{color:#fff;opacity:1}
@@ -768,6 +769,16 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .modal_form_input_wrap .modal_input_error.form_error{display:block}
 .modal_form_input_wrap .modal_error_chest_img{width:9px;position:relative;background-image:url(../img/modal_error_chest_img.png);top:-31px;left:0;height:9px}
 .modal_form_input_wrap .modal_error_triangle{width:9px;position:relative;background-image:url(../img/modal_error_triangle.png);top:-43px;left:10px;height:8px}
+.select{position:relative;text-align:left}
+.select .drop{width:100%;max-height:200px;overflow:auto;margin:0 auto;padding:0;border-top:none;display:none;position:absolute;background-color:#fff;top:50px;left:0;right:0;z-index:10}
+.select .drop li{list-style:none;border-bottom:none;border-top:none;cursor:pointer;display:block;color:#000;line-height:1.2;padding:7px 15px 7px 25px}
+.select .drop li:hover{background-color:rgba(0,0,0,.2);outline:0}
+.select .drop li a{text-decoration:none}
+.select .slct{width:100%;height:50px;padding-left:25px;padding-right:30px;margin-bottom:15px;display:block;color:#fff;font:18px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;background:0 0;border:1px solid #FFF;line-height:50px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;text-decoration:none;position:relative;-webkit-transition:color 1s;transition:color 1s}
+.select .slct.active{color:#000;background:#fff}
+.select .slct_arrow{position:absolute;top:9px;right:10px;font-size:24px}
+.select .slct_arrow .fa{-webkit-transition:.3s;transition:.3s}
+.select .slct_arrow.active .fa{color:#000;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);z-index:10;position:relative}
 .website_promotion{min-height:1560px;background:url(../img/main_clouds.png) center top 400px no-repeat #03142e}
 .website_promotion .container{position:relative}
 .website_promotion h1{margin-top:130px;text-align:center;color:#eed350;font:48px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.2}

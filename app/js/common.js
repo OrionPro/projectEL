@@ -1634,7 +1634,7 @@ function filterBtn(arrImg, arrUrl) {
 function readyPortfolioJSON() {
 	var imgSource = [],  //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json)
 		urlSource = [];
-	$.getJSON("../ajax/items.json", function (data) {
+	$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
 		var category = data.items;
 		var j = 0;
 		$('.portfolio_item_wrap .portfolio_item').each(function () {
@@ -1658,8 +1658,13 @@ function readyPortfolioJSON() {
 	}).complete(function () {
 		TweenMax.staggerFrom(".portfolio_item_wrap .portfolio_item", 2, {y: 30, autoAlpha: 0}, 0.2);
 	});
-	$('#portfolio_item_btn').click(function () {
+	$(document).on('click','#portfolio_item_btn',function () {
 		filterBtn(imgSource, urlSource);
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $("#" + anchor.data('scroll')).offset().top
+			}, 1000);
+			
 	});
 
 }
@@ -1752,7 +1757,7 @@ $(document).ready(function () {
 		var value = $(this).data("filter");
 		var imgSource = [], //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json) 
 			urlSource = [];
-		$.getJSON("../ajax/items.json", function (data) {
+		$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
 			var category = data.items;
 			var j = 0;
 

@@ -1751,6 +1751,7 @@ $(document).ready(function () {
 	$('.portfolio_tabs a').click(function () {
 		//убираем событие на клик у кнопки
 		$('.portfolio_item_btn').off();
+		$('#portfolio_item_btn2').off();
 		$('#portfolio_item_btn').attr("id", "portfolio_item_btn2");
 		// убирает активные у всех и делает актовной this
 		$('.portfolio .portfolio_tabs a').removeClass("active");

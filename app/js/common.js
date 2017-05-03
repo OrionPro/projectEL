@@ -11,7 +11,7 @@ $(window).resize(function () {
 	//Ваш код
 });
 $(window).scroll(function () {
-	console.log($(window).scrollTop());
+	//console.log($(window).scrollTop());
 	if ($(window).scrollTop() >= 10 && $(window).scrollTop() <= 199) {
 		// tl.reverse();
 	}
@@ -437,7 +437,7 @@ function allAnim() {
 		if ($(window).scrollTop() >= 600 && $(window).scrollTop() <= 1200) {
 			tl59.resume();
 		}
-		if ($(window).scrollTop() >= 1500 && $(window).scrollTop() <= 2500) {
+		if ($(window).scrollTop() >= 5500 && $(window).scrollTop() <= 6500) {
 			tl60.resume();
 		}
 		if ($(window).scrollTop() >= 2400 && $(window).scrollTop() <= 2800) {
@@ -446,24 +446,24 @@ function allAnim() {
 		if ($(window).scrollTop() >= 4300 && $(window).scrollTop() <= 4800) {
 			tl62.resume();
 		}
-		if ($(window).scrollTop() >= 2600 && $(window).scrollTop() <= 3400) {
+		if ($(window).scrollTop() >= 4100 && $(window).scrollTop() <= 4900) {
 			tl63.resume();
 		}
 		if ($(window).scrollTop() >= 3650 && $(window).scrollTop() <= 4200) {
 			tl64.resume();
 		}
-		if ($(window).scrollTop() >= 4200 && $(window).scrollTop() <= 4800) {
+		if ($(window).scrollTop() >= 1600 && $(window).scrollTop() <= 2600) {
 			tl65.resume();
 		}
-		if ($(window).scrollTop() >= 5100 && $(window).scrollTop() <= 5700) {
+		if ($(window).scrollTop() >= 6700 && $(window).scrollTop() <= 7200) {
 			tl66.resume();
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
-			if ($(window).scrollTop() >= 5500) {
+			if ($(window).scrollTop() >= 6500) {
 				tl67.resume();
 			}
 		} else {
-			if ($(window).scrollTop() >= 5900) {
+			if ($(window).scrollTop() >= 7500) {
 				tl67.resume();
 			}
 		}
@@ -595,6 +595,19 @@ function allAnim() {
 			TweenMax.to($(this).find(".path4278"), 0.7, {fill: "#0f7289"});
 			TweenMax.to($(this).find(".path4393"), 0.7, {fill: "#0f4e5d"});
 			TweenMax.to($(this).find("p"), 0.7, {color: "#fff"});
+		}
+	);
+	// services  selling_site_item
+	$(".selling_site_item_img").hover(
+		function () {
+			TweenMax.to($(this).find(".selling_site_item_1"), 0.7, {fill: "#d45b3e"});
+			TweenMax.to($(this).find(".selling_site_item_2"), 0.7, {fill: "#c45237"});
+			TweenMax.to($(this).find(".selling_site_item_3"), 0.7, {fill: "#a2361f"});
+		},
+		function () {
+			TweenMax.to($(this).find(".selling_site_item_1"), 0.7, {fill: "#177898"});
+			TweenMax.to($(this).find(".selling_site_item_2"), 0.7, {fill: "#0f7289"});
+			TweenMax.to($(this).find(".selling_site_item_3"), 0.7, {fill: "#0f4e5d"});
 		}
 	);
 	// what_else_do_line
@@ -960,7 +973,7 @@ function allAnim() {
 	}
 	// cost_of_online_store_item
 	if ($('body').hasClass('online_store')) {
-		tl28.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
+		tl28.staggerFrom(".cost_of_online_store_item_wrap .table.active, .cost_of_online_store_item_wrap .table.active tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// from_what_is_seo item
 	if ($('body').hasClass('online_store')) {
@@ -1085,7 +1098,7 @@ function allAnim() {
 	}
 	// landing_page cost_of_online_store_item
 	if ($('body').hasClass('landing_page')) {
-		tl36.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
+		tl36.staggerFrom(".cost_of_online_store_item_wrap .table.active, .cost_of_online_store_item_wrap .table.active tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// why_our_landing_sell2
 	if ($('body').hasClass('landing_page')) {
@@ -1175,7 +1188,7 @@ function allAnim() {
 	}
 	// cost_of_online_store_item site_card
 	if ($('body').hasClass('site_card')) {
-		tl44.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
+		tl44.staggerFrom(".cost_of_online_store_item_wrap .table.active, .cost_of_online_store_item_wrap .table.active tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// cost_of_online_store_bot_decor site_card2
 	if ($('body').hasClass('site_card')) {
@@ -1291,12 +1304,12 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 0.3, "you_end_up");
 	// why_seo_img run_contextual_advertising
-	tl58.add("run_contextual", "+=0.3")
+	tl58.add("run_contextual", "+=0.8")
 		.staggerFrom(".run_contextual_advertising_target", 1.2, {
 			rotation: 360,
 			transformOrigin: "50% 50%",
 			ease: Power1.easeInOut
-		}, 0.5, "run_contextual")
+		}, 0.6, "run_contextual")
 		.staggerFrom(".why_seo_img.run_contextual_advertising:not('.why_seo_img.seven_main_tasks')", 0.8, {
 			y: 50, autoAlpha: 0,
 			ease: Power2.easeInOut
@@ -1336,7 +1349,7 @@ function allAnim() {
 
 	// cost_of_online_store_item run_contextual_advertising
 	if ($('body').hasClass('run_contextual_advertising')) {
-		tl63.staggerFrom(".cost_of_online_store_item", 1, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.5);
+		tl63.staggerFrom(".cost_of_online_store_item_wrap .table.active, .cost_of_online_store_item_wrap .table.active tr", 0.7, {autoAlpha: 0, y: 50, ease: Power2.easeInOut}, 0.2);
 	}
 	// cost_of_online_store_bot_decor run_contextual_advertising
 	if ($('body').hasClass('run_contextual_advertising')) {
@@ -1580,6 +1593,7 @@ function filterBtn(arrImg, arrUrl) {
 	var limit = 0,
 		arr = [],
 		i = 0; // для итерации id в шаблон
+		arr.length = null;
 	//обнуляем id при клике если они есть
 	$(".portfolio_item_wrap .portfolio_item").each(function () {
 		var index = $(this).attr('id');
@@ -1606,22 +1620,21 @@ function filterBtn(arrImg, arrUrl) {
 
 		var index = $(this).attr('id');
 		if (index != 'not-add') {
-			TweenMax.staggerFrom("#" + index, 2, {y: 40, autoAlpha: 0}, 0.5);
+			TweenMax.from("#" + index, 2, {y: 40, autoAlpha: 0}, 0.5);
 		}
-
-
 	});
 	//Если не осталось в массиве итемов элементов убираем кнопку добавить ещё
 	if (arrImg.length == 0) {
-		$('#portfolio_item_btn').css('display', "none");
+		$('.portfolio_item_btn').css('display', "none");
 	}
 
 }
+
 // При загрузке функция выдаёт все portfolio_item из app\ajax\image.json
 function readyPortfolioJSON() {
 	var imgSource = [],  //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json)
 		urlSource = [];
-	$.getJSON("../ajax/items.json", function (data) {
+	$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
 		var category = data.items;
 		var j = 0;
 		$('.portfolio_item_wrap .portfolio_item').each(function () {
@@ -1635,9 +1648,9 @@ function readyPortfolioJSON() {
 				if (j > 9) {
 					imgSource.push(src[i].img);
 					urlSource.push(src[i].url);
-					$('#portfolio_item_btn').css('display', "block");
+					$('.portfolio_item_btn').css('display', "block");
 				} else {
-					$('#portfolio_item_btn').css('display', "none");
+					$('.portfolio_item_btn').css('display', "none");
 					$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
 				}
 			}
@@ -1645,11 +1658,18 @@ function readyPortfolioJSON() {
 	}).complete(function () {
 		TweenMax.staggerFrom(".portfolio_item_wrap .portfolio_item", 2, {y: 30, autoAlpha: 0}, 0.2);
 	});
-	$('#portfolio_item_btn').click(function () {
+	$(document).on('click','#portfolio_item_btn',function () {
+		console.log("ready");
 		filterBtn(imgSource, urlSource);
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $("#" + anchor.data('scroll')).offset().top
+			}, 1000);
+			
 	});
 
 }
+// Функция проверки и установки cookie
 function getCookie(data) {
 	var cookieArr = document.cookie.split(';');
 	for (var i = 0; i < cookieArr.length; i++) {
@@ -1663,8 +1683,51 @@ function setCookie(data) {
 	document.cookie = data;
 }
 
+// Табы  в тарифах
+function tabs(parent) {
+	parent.find(".tabs-item").on('click', function (event) { //ссылки которые будут переключать табы
+		event.preventDefault();
+
+		parent.find(".cost_of_online_store_links_item .tabs-item").removeClass('active_menu'); //убираем активные состояния у ссылок
+
+		$(this).addClass('active_menu'); //Добавляем активное состояние у той что нажали
+
+		var data = $(this).data('tab-tariff'); //создаём переменную с датой
+		parent.find('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
+		parent.find('.tabs-wrap[data-tab-tariff=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
+
+	});
+}
 
 $(document).ready(function () {
+
+	tabs($('.cost_of_online_store_item_wrap'));
+	// Определения браузера
+	function get_name_browser() {
+		// получаем данные userAgent
+		var ua = navigator.userAgent;
+		// с помощью регулярок проверяем наличие текста,
+		// соответствующие тому или иному браузеру
+		if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+		if (ua.search(/Firefox/) > 0) return 'Firefox';
+		if (ua.search(/Opera/) > 0) return 'Opera';
+		if (ua.search(/Safari/) > 0) return 'Safari';
+		if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+		if (ua.search(/Trident/) > 0) return 'Trident';
+		// условий может быть и больше.
+		// сейчас сделаны проверки только
+		// для популярных браузеров
+		return 'Не определен';
+	}
+
+	if (get_name_browser() == "Trident" || get_name_browser() == "Internet Explorer" || get_name_browser() == "Firefox") {
+		$(".from_what_is_seo .from_what_is_seo_bot_decor svg").css("bottom", "-217px");
+		$(".website_promotion .website_promotion_decor").css("bottom", "-177px");
+		$(".cost_of_online_store .cost_of_online_store_links_item").css("margin-right", "72px");
+		$(".what_else_do.form_style .examples_of_online_stores_decor").css("bottom", "-524px");
+		$(".from_idea_to_results .from_idea_to_results_decor").css("bottom", "-144px");
+	}
+
 	// hover в header
 	$('.header_nav ul li .drop, .header_nav .dropdown').hover(
 		function () {
@@ -1687,16 +1750,19 @@ $(document).ready(function () {
 	//Filter при нажатии на табы
 	$('.portfolio_tabs a').click(function () {
 		//убираем событие на клик у кнопки
-		$('#portfolio_item_btn').off();
-
+		$('.portfolio_item_btn').off();
+		$('#portfolio_item_btn').attr("id", "portfolio_item_btn2");
 		// убирает активные у всех и делает актовной this
 		$('.portfolio .portfolio_tabs a').removeClass("active");
 		$(this).addClass("active");
 		//часть getJSON
 		var value = $(this).data("filter");
-		var imgSource = [], //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json) 
+		var imgSource = [], //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json)
 			urlSource = [];
-		$.getJSON("../ajax/items.json", function (data) {
+			imgSource.length = null;
+			urlSource.length = null;
+
+		$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
 			var category = data.items;
 			var j = 0;
 
@@ -1712,9 +1778,9 @@ $(document).ready(function () {
 						if (j > 9) {
 							imgSource.push(src[i].img);
 							urlSource.push(src[i].url);
-							$('#portfolio_item_btn').css('display', "block");
+							$('.portfolio_item_btn').css('display', "block");
 						} else {
-							$('#portfolio_item_btn').css('display', "none");
+							$('.portfolio_item_btn').css('display', "none");
 							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
 
 						}
@@ -1727,9 +1793,9 @@ $(document).ready(function () {
 						if (j > 9) {
 							imgSource.push(src[i].img);
 							urlSource.push(src[i].url);
-							$('#portfolio_item_btn').css('display', "block");
+							$('.portfolio_item_btn').css('display', "block");
 						} else {
-							$('#portfolio_item_btn').css('display', "none");
+							$('.portfolio_item_btn').css('display', "none");
 							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
 						}
 					}
@@ -1740,8 +1806,13 @@ $(document).ready(function () {
 			TweenMax.staggerFrom(".portfolio_item_wrap .portfolio_item", 2, {y: 30, autoAlpha: 0}, 0.2);
 		});
 
-		$('#portfolio_item_btn').click(function () {
+		$(document).on("click", "#portfolio_item_btn2", function () {
 			filterBtn(imgSource, urlSource);
+			console.log("filter");
+			var anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $("#" + anchor.data('scroll')).offset().top
+			}, 1000);
 		});
 
 	});
@@ -1802,6 +1873,40 @@ $(document).ready(function () {
 		}
 
 	});
+	// Анимация плашки
+	if(jQuery(".active_menu").length>0){ // если есть активный пункт меню, то позиционируем двигающуюся плашку на нем
+		var menuWidth = jQuery(".active_menu").outerWidth(); // определяем ширину активного пункта меню
+		var menuLeft = jQuery(".active_menu").position().left; // определяем смещение активного пункта меню слева
+		jQuery(".cost_of_online_store_links_chisel").stop().animate({ // анимируем движущуюся плашку
+			left: menuLeft+'px',
+			width: menuWidth+'px'
+		}, 1000, 'easeOutExpo');
+	}
+	jQuery(".cost_of_online_store_links a").mouseover(function(){ // поведение движущейся плашки при наведении на любой пункт меню. Все тоже самое, что и при наличии активного пункта, только позиция плашки определяется относительно пункта, на который произошло наведение курсора мыши
+		var menuWidth = jQuery(this).outerWidth();
+		var menuLeft = jQuery(this).position().left;
+		jQuery(".cost_of_online_store_links_chisel").stop().animate({
+			left: menuLeft+'px',
+			width: menuWidth+'px'
+		}, 700, 'easeOutCirc');
+	});
+	jQuery(".cost_of_online_store_links").mouseleave(function(){ // поведение плашки при окончании события наведения мыши на пункт меню (выход курсора мыши на пределы блока, в котором содержится меню)
+		if(jQuery(".active_menu").length<=0){ // если активного пункта нет, то перемещаем плашку за границу экрана
+			jQuery(".cost_of_online_store_links_chisel").stop().animate({
+				left: '-999px',
+				width: '0px'
+			}, 500, 'easeOutExpo');
+		}
+		else{ // иначе, если есть активный пункт меню – возвращаем плашку на него
+			var menuWidth = jQuery(".active_menu").outerWidth();
+			var menuLeft = jQuery(".active_menu").position().left;
+			jQuery(".cost_of_online_store_links_chisel").stop().animate({
+				left: menuLeft+'px',
+				width: menuWidth+'px'
+			}, 500, 'easeOutExpo');
+		}
+	});
+
 	// запретить дефолтное событие на ссылку .slider_link
 	$(".slider_link").on("click", function (e) {
 		e.preventDefault();
@@ -1921,7 +2026,53 @@ $(document).ready(function () {
 		items: 1,
 		dots: true
 	});
+	//  Активация слайдера
+	$(".owl-carousel4").owlCarousel({
+		loop: true,
+		items: 1,
+		autoplay: true,
+		dots: true,
+		responsiveClass: false,
+		responsive: {
+			// breakpoint from 0 up
+			0: {
+				items: 4
+			},
+			// breakpoint from 320 up
+			320: {
+				items: 1
 
+			},
+			// breakpoint from 768 up
+			768: {
+				items: 1
+			},
+			// breakpoint from 992 up
+			992: {
+				items: 1
+			},
+			// breakpoint from up
+			1100: {
+				items: 1
+			},
+			// breakpoint from up
+			1210: {
+				items: 1
+			}
+		}
+	});
+	// Кастомные кнопки управления слайдером
+	var owl4 = $('.owl-carousel4');
+	owl4.owlCarousel();
+	$('.customNextBtn4').click(function () {
+		owl4.trigger('next.owl.carousel', [400]);
+	});
+	// Go to the previous item
+	$('.customPrevBtn4').click(function () {
+		// With optional speed parameter
+		// Parameters has to be in square bracket '[]'
+		owl4.trigger('prev.owl.carousel', [400]);
+	});
 	// Select в модальном окне
 	$(document).click(function () {
 		$('.slct').removeClass('active');
@@ -1979,8 +2130,10 @@ $(document).ready(function () {
 		e.preventDefault();
 		var id = $(this).data('modal');
 		var txt = $(this).data('info');
+		var title =  $(this).data('title'); // для изменения title в модалке
 		$(".popup[data-modal=" + id + "]").toggle("fade", 500).find("form").css('display', 'block');
 		$(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
+		$(".popup[data-modal=" + id + "] h2").html(title); // прописать в ссылку data-title="нужный title"
 		// $("body").css({ "overflow": "hidden", "padding-right": "17px" });
 
 	});
@@ -2161,12 +2314,12 @@ $(document).ready(function () {
 
 if(getCookie('loader')){
 	$(".loader_inner").fadeOut();
-	$(".loader").delay(50).fadeOut("fast");
+	$(".loader").delay(10).fadeOut("fast");
 }else{
 	setCookie('loader');
 	setTimeout(function () {
 		$(".loader_inner").fadeOut();
-		$(".loader").delay(50).fadeOut("fast");
+		$(".loader").delay(10).fadeOut("100");
 	}, 1200);
 }
 // $(".loader_inner").fadeOut();

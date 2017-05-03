@@ -2,1686 +2,1872 @@
 <html class="no-js" lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <title>Elite Studio</title>
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-    <meta property="og:image" content="path/to/image.jpg">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-    <!-- Bootstrap v3.3.4 Grid Styles -->
-    <style>
-    html {
-        font-family: sans-serif;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%
-    }
-    
-    body {
-        margin: 0
-    }
-    
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    main,
-    menu,
-    nav,
-    section,
-    summary {
-        display: block
-    }
-    
-    audio,
-    canvas,
-    progress,
-    video {
-        display: inline-block;
-        vertical-align: baseline
-    }
-    
-    audio:not([controls]) {
-        display: none;
-        height: 0
-    }
-    
-    [hidden],
-    template {
-        display: none
-    }
-    
-    a {
-        background-color: transparent
-    }
-    
-    a:active,
-    a:hover {
-        outline: 0
-    }
-    
-    abbr[title] {
-        border-bottom: 1px dotted
-    }
-    
-    b,
-    strong {
-        font-weight: 700
-    }
-    
-    dfn {
-        font-style: italic
-    }
-    
-    h1 {
-        font-size: 2em;
-        margin: .67em 0
-    }
-    
-    mark {
-        background: #ff0;
-        color: #000
-    }
-    
-    small {
-        font-size: 80%
-    }
-    
-    sub,
-    sup {
-        font-size: 75%;
-        line-height: 0;
-        position: relative;
-        vertical-align: baseline
-    }
-    
-    sup {
-        top: -.5em
-    }
-    
-    sub {
-        bottom: -.25em
-    }
-    
-    img {
-        border: 0
-    }
-    
-    svg:not(:root) {
-        overflow: hidden
-    }
-    
-    figure {
-        margin: 1em 40px
-    }
-    
-    hr {
-        -moz-box-sizing: content-box;
-        -webkit-box-sizing: content-box;
-        box-sizing: content-box;
-        height: 0
-    }
-    
-    pre {
-        overflow: auto
-    }
-    
-    code,
-    kbd,
-    pre,
-    samp {
-        font-family: monospace, monospace;
-        font-size: 1em
-    }
-    
-    button,
-    input,
-    optgroup,
-    select,
-    textarea {
-        color: inherit;
-        font: inherit;
-        margin: 0
-    }
-    
-    button {
-        overflow: visible
-    }
-    
-    button,
-    select {
-        text-transform: none
-    }
-    
-    button,
-    html input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
-        -webkit-appearance: button;
-        cursor: pointer
-    }
-    
-    button[disabled],
-    html input[disabled] {
-        cursor: default
-    }
-    
-    button::-moz-focus-inner,
-    input::-moz-focus-inner {
-        border: 0;
-        padding: 0
-    }
-    
-    input {
-        line-height: normal
-    }
-    
-    input[type="checkbox"],
-    input[type="radio"] {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0
-    }
-    
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-        height: auto
-    }
-    
-    input[type="search"] {
-        -webkit-appearance: textfield;
-        -moz-box-sizing: content-box;
-        -webkit-box-sizing: content-box;
-        box-sizing: content-box
-    }
-    
-    input[type="search"]::-webkit-search-cancel-button,
-    input[type="search"]::-webkit-search-decoration {
-        -webkit-appearance: none
-    }
-    
-    fieldset {
-        border: 1px solid silver;
-        margin: 0 2px;
-        padding: .35em .625em .75em
-    }
-    
-    legend {
-        border: 0;
-        padding: 0
-    }
-    
-    textarea {
-        overflow: auto
-    }
-    
-    optgroup {
-        font-weight: 700
-    }
-    
-    table {
-        border-collapse: collapse;
-        border-spacing: 0
-    }
-    
-    td,
-    th {
-        padding: 0
-    }
-    
-    * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box
-    }
-    
-    :before,
-    :after {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box
-    }
-    
-    html {
-        font-size: 10px;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-    }
-    
-    body {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        line-height: 1.42857143;
-        color: #333;
-        background-color: #fff
-    }
-    
-    input,
-    button,
-    select,
-    textarea {
-        font-family: inherit;
-        font-size: inherit;
-        line-height: inherit
-    }
-    
-    a {
-        color: #337ab7;
-        text-decoration: none
-    }
-    
-    a:hover,
-    a:focus {
-        color: #23527c;
-        text-decoration: underline
-    }
-    
-    a:focus {
-        outline: thin dotted;
-        outline: 5px auto -webkit-focus-ring-color;
-        outline-offset: -2px
-    }
-    
-    figure {
-        margin: 0
-    }
-    
-    img {
-        vertical-align: middle
-    }
-    
-    .img-responsive {
-        display: block;
-        max-width: 100%;
-        height: auto
-    }
-    
-    .img-rounded {
-        border-radius: 6px
-    }
-    
-    .img-thumbnail {
-        padding: 4px;
-        line-height: 1.42857143;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        -webkit-transition: all .2s ease-in-out;
-        -o-transition: all .2s ease-in-out;
-        transition: all .2s ease-in-out;
-        display: inline-block;
-        max-width: 100%;
-        height: auto
-    }
-    
-    .img-circle {
-        border-radius: 50%
-    }
-    
-    hr {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        border: 0;
-        border-top: 1px solid #eee
-    }
-    
-    .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0
-    }
-    
-    .sr-only-focusable:active,
-    .sr-only-focusable:focus {
-        position: static;
-        width: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        clip: auto
-    }
-    
-    [role="button"] {
-        cursor: pointer
-    }
-    
-    .container {
-        margin-right: auto;
-        margin-left: auto;
-        padding-left: 15px;
-        padding-right: 15px
-    }
-    
-    @media (min-width:768px) {}
-    
-    @media (min-width:992px) {}
-    
-    @media (min-width:1200px) {}
-    
-    .container-fluid {
-        margin-right: auto;
-        margin-left: auto;
-        padding-left: 15px;
-        padding-right: 15px
-    }
-    
-    .row {
-        margin-left: -15px;
-        margin-right: -15px
-    }
-    
-    .col-xs-1,
-    .col-sm-1,
-    .col-md-1,
-    .col-lg-1,
-    .col-xs-2,
-    .col-sm-2,
-    .col-md-2,
-    .col-lg-2,
-    .col-xs-3,
-    .col-sm-3,
-    .col-md-3,
-    .col-lg-3,
-    .col-xs-4,
-    .col-sm-4,
-    .col-md-4,
-    .col-lg-4,
-    .col-xs-5,
-    .col-sm-5,
-    .col-md-5,
-    .col-lg-5,
-    .col-xs-6,
-    .col-sm-6,
-    .col-md-6,
-    .col-lg-6,
-    .col-xs-7,
-    .col-sm-7,
-    .col-md-7,
-    .col-lg-7,
-    .col-xs-8,
-    .col-sm-8,
-    .col-md-8,
-    .col-lg-8,
-    .col-xs-9,
-    .col-sm-9,
-    .col-md-9,
-    .col-lg-9,
-    .col-xs-10,
-    .col-sm-10,
-    .col-md-10,
-    .col-lg-10,
-    .col-xs-11,
-    .col-sm-11,
-    .col-md-11,
-    .col-lg-11,
-    .col-xs-12,
-    .col-sm-12,
-    .col-md-12,
-    .col-lg-12 {
-        position: relative;
-        min-height: 1px;
-        padding-left: 15px;
-        padding-right: 15px
-    }
-    
-    .col-xs-1,
-    .col-xs-2,
-    .col-xs-3,
-    .col-xs-4,
-    .col-xs-5,
-    .col-xs-6,
-    .col-xs-7,
-    .col-xs-8,
-    .col-xs-9,
-    .col-xs-10,
-    .col-xs-11,
-    .col-xs-12 {
-        float: left
-    }
-    
-    .col-xs-12 {
-        width: 100%
-    }
-    
-    .col-xs-11 {
-        width: 91.66666667%
-    }
-    
-    .col-xs-10 {
-        width: 83.33333333%
-    }
-    
-    .col-xs-9 {
-        width: 75%
-    }
-    
-    .col-xs-8 {
-        width: 66.66666667%
-    }
-    
-    .col-xs-7 {
-        width: 58.33333333%
-    }
-    
-    .col-xs-6 {
-        width: 50%
-    }
-    
-    .col-xs-5 {
-        width: 41.66666667%
-    }
-    
-    .col-xs-4 {
-        width: 33.33333333%
-    }
-    
-    .col-xs-3 {
-        width: 25%
-    }
-    
-    .col-xs-2 {
-        width: 16.66666667%
-    }
-    
-    .col-xs-1 {
-        width: 8.33333333%
-    }
-    
-    .col-xs-pull-12 {
-        right: 100%
-    }
-    
-    .col-xs-pull-11 {
-        right: 91.66666667%
-    }
-    
-    .col-xs-pull-10 {
-        right: 83.33333333%
-    }
-    
-    .col-xs-pull-9 {
-        right: 75%
-    }
-    
-    .col-xs-pull-8 {
-        right: 66.66666667%
-    }
-    
-    .col-xs-pull-7 {
-        right: 58.33333333%
-    }
-    
-    .col-xs-pull-6 {
-        right: 50%
-    }
-    
-    .col-xs-pull-5 {
-        right: 41.66666667%
-    }
-    
-    .col-xs-pull-4 {
-        right: 33.33333333%
-    }
-    
-    .col-xs-pull-3 {
-        right: 25%
-    }
-    
-    .col-xs-pull-2 {
-        right: 16.66666667%
-    }
-    
-    .col-xs-pull-1 {
-        right: 8.33333333%
-    }
-    
-    .col-xs-pull-0 {
-        right: auto
-    }
-    
-    .col-xs-push-12 {
-        left: 100%
-    }
-    
-    .col-xs-push-11 {
-        left: 91.66666667%
-    }
-    
-    .col-xs-push-10 {
-        left: 83.33333333%
-    }
-    
-    .col-xs-push-9 {
-        left: 75%
-    }
-    
-    .col-xs-push-8 {
-        left: 66.66666667%
-    }
-    
-    .col-xs-push-7 {
-        left: 58.33333333%
-    }
-    
-    .col-xs-push-6 {
-        left: 50%
-    }
-    
-    .col-xs-push-5 {
-        left: 41.66666667%
-    }
-    
-    .col-xs-push-4 {
-        left: 33.33333333%
-    }
-    
-    .col-xs-push-3 {
-        left: 25%
-    }
-    
-    .col-xs-push-2 {
-        left: 16.66666667%
-    }
-    
-    .col-xs-push-1 {
-        left: 8.33333333%
-    }
-    
-    .col-xs-push-0 {
-        left: auto
-    }
-    
-    .col-xs-offset-12 {
-        margin-left: 100%
-    }
-    
-    .col-xs-offset-11 {
-        margin-left: 91.66666667%
-    }
-    
-    .col-xs-offset-10 {
-        margin-left: 83.33333333%
-    }
-    
-    .col-xs-offset-9 {
-        margin-left: 75%
-    }
-    
-    .col-xs-offset-8 {
-        margin-left: 66.66666667%
-    }
-    
-    .col-xs-offset-7 {
-        margin-left: 58.33333333%
-    }
-    
-    .col-xs-offset-6 {
-        margin-left: 50%
-    }
-    
-    .col-xs-offset-5 {
-        margin-left: 41.66666667%
-    }
-    
-    .col-xs-offset-4 {
-        margin-left: 33.33333333%
-    }
-    
-    .col-xs-offset-3 {
-        margin-left: 25%
-    }
-    
-    .col-xs-offset-2 {
-        margin-left: 16.66666667%
-    }
-    
-    .col-xs-offset-1 {
-        margin-left: 8.33333333%
-    }
-    
-    .col-xs-offset-0 {
-        margin-left: 0
-    }
-    
-    @media (min-width:768px) {
-        .col-sm-1,
-        .col-sm-2,
-        .col-sm-3,
-        .col-sm-4,
-        .col-sm-5,
-        .col-sm-6,
-        .col-sm-7,
-        .col-sm-8,
-        .col-sm-9,
-        .col-sm-10,
-        .col-sm-11,
-        .col-sm-12 {
-            float: left
-        }
-        .col-sm-12 {
-            width: 100%
-        }
-        .col-sm-11 {
-            width: 91.66666667%
-        }
-        .col-sm-10 {
-            width: 83.33333333%
-        }
-        .col-sm-9 {
-            width: 75%
-        }
-        .col-sm-8 {
-            width: 66.66666667%
-        }
-        .col-sm-7 {
-            width: 58.33333333%
-        }
-        .col-sm-6 {
-            width: 50%
-        }
-        .col-sm-5 {
-            width: 41.66666667%
-        }
-        .col-sm-4 {
-            width: 33.33333333%
-        }
-        .col-sm-3 {
-            width: 25%
-        }
-        .col-sm-2 {
-            width: 16.66666667%
-        }
-        .col-sm-1 {
-            width: 8.33333333%
-        }
-        .col-sm-pull-12 {
-            right: 100%
-        }
-        .col-sm-pull-11 {
-            right: 91.66666667%
-        }
-        .col-sm-pull-10 {
-            right: 83.33333333%
-        }
-        .col-sm-pull-9 {
-            right: 75%
-        }
-        .col-sm-pull-8 {
-            right: 66.66666667%
-        }
-        .col-sm-pull-7 {
-            right: 58.33333333%
-        }
-        .col-sm-pull-6 {
-            right: 50%
-        }
-        .col-sm-pull-5 {
-            right: 41.66666667%
-        }
-        .col-sm-pull-4 {
-            right: 33.33333333%
-        }
-        .col-sm-pull-3 {
-            right: 25%
-        }
-        .col-sm-pull-2 {
-            right: 16.66666667%
-        }
-        .col-sm-pull-1 {
-            right: 8.33333333%
-        }
-        .col-sm-pull-0 {
-            right: auto
-        }
-        .col-sm-push-12 {
-            left: 100%
-        }
-        .col-sm-push-11 {
-            left: 91.66666667%
-        }
-        .col-sm-push-10 {
-            left: 83.33333333%
-        }
-        .col-sm-push-9 {
-            left: 75%
-        }
-        .col-sm-push-8 {
-            left: 66.66666667%
-        }
-        .col-sm-push-7 {
-            left: 58.33333333%
-        }
-        .col-sm-push-6 {
-            left: 50%
-        }
-        .col-sm-push-5 {
-            left: 41.66666667%
-        }
-        .col-sm-push-4 {
-            left: 33.33333333%
-        }
-        .col-sm-push-3 {
-            left: 25%
-        }
-        .col-sm-push-2 {
-            left: 16.66666667%
-        }
-        .col-sm-push-1 {
-            left: 8.33333333%
-        }
-        .col-sm-push-0 {
-            left: auto
-        }
-        .col-sm-offset-12 {
-            margin-left: 100%
-        }
-        .col-sm-offset-11 {
-            margin-left: 91.66666667%
-        }
-        .col-sm-offset-10 {
-            margin-left: 83.33333333%
-        }
-        .col-sm-offset-9 {
-            margin-left: 75%
-        }
-        .col-sm-offset-8 {
-            margin-left: 66.66666667%
-        }
-        .col-sm-offset-7 {
-            margin-left: 58.33333333%
-        }
-        .col-sm-offset-6 {
-            margin-left: 50%
-        }
-        .col-sm-offset-5 {
-            margin-left: 41.66666667%
-        }
-        .col-sm-offset-4 {
-            margin-left: 33.33333333%
-        }
-        .col-sm-offset-3 {
-            margin-left: 25%
-        }
-        .col-sm-offset-2 {
-            margin-left: 16.66666667%
-        }
-        .col-sm-offset-1 {
-            margin-left: 8.33333333%
-        }
-        .col-sm-offset-0 {
-            margin-left: 0
-        }
-    }
-    
-    @media (min-width:992px) {
-        .col-md-1,
-        .col-md-2,
-        .col-md-3,
-        .col-md-4,
-        .col-md-5,
-        .col-md-6,
-        .col-md-7,
-        .col-md-8,
-        .col-md-9,
-        .col-md-10,
-        .col-md-11,
-        .col-md-12 {
-            float: left
-        }
-        .col-md-12 {
-            width: 100%
-        }
-        .col-md-11 {
-            width: 91.66666667%
-        }
-        .col-md-10 {
-            width: 83.33333333%
-        }
-        .col-md-9 {
-            width: 75%
-        }
-        .col-md-8 {
-            width: 66.66666667%
-        }
-        .col-md-7 {
-            width: 58.33333333%
-        }
-        .col-md-6 {
-            width: 50%
-        }
-        .col-md-5 {
-            width: 41.66666667%
-        }
-        .col-md-4 {
-            width: 33.33333333%
-        }
-        .col-md-3 {
-            width: 25%
-        }
-        .col-md-2 {
-            width: 16.66666667%
-        }
-        .col-md-1 {
-            width: 8.33333333%
-        }
-        .col-md-pull-12 {
-            right: 100%
-        }
-        .col-md-pull-11 {
-            right: 91.66666667%
-        }
-        .col-md-pull-10 {
-            right: 83.33333333%
-        }
-        .col-md-pull-9 {
-            right: 75%
-        }
-        .col-md-pull-8 {
-            right: 66.66666667%
-        }
-        .col-md-pull-7 {
-            right: 58.33333333%
-        }
-        .col-md-pull-6 {
-            right: 50%
-        }
-        .col-md-pull-5 {
-            right: 41.66666667%
-        }
-        .col-md-pull-4 {
-            right: 33.33333333%
-        }
-        .col-md-pull-3 {
-            right: 25%
-        }
-        .col-md-pull-2 {
-            right: 16.66666667%
-        }
-        .col-md-pull-1 {
-            right: 8.33333333%
-        }
-        .col-md-pull-0 {
-            right: auto
-        }
-        .col-md-push-12 {
-            left: 100%
-        }
-        .col-md-push-11 {
-            left: 91.66666667%
-        }
-        .col-md-push-10 {
-            left: 83.33333333%
-        }
-        .col-md-push-9 {
-            left: 75%
-        }
-        .col-md-push-8 {
-            left: 66.66666667%
-        }
-        .col-md-push-7 {
-            left: 58.33333333%
-        }
-        .col-md-push-6 {
-            left: 50%
-        }
-        .col-md-push-5 {
-            left: 41.66666667%
-        }
-        .col-md-push-4 {
-            left: 33.33333333%
-        }
-        .col-md-push-3 {
-            left: 25%
-        }
-        .col-md-push-2 {
-            left: 16.66666667%
-        }
-        .col-md-push-1 {
-            left: 8.33333333%
-        }
-        .col-md-push-0 {
-            left: auto
-        }
-        .col-md-offset-12 {
-            margin-left: 100%
-        }
-        .col-md-offset-11 {
-            margin-left: 91.66666667%
-        }
-        .col-md-offset-10 {
-            margin-left: 83.33333333%
-        }
-        .col-md-offset-9 {
-            margin-left: 75%
-        }
-        .col-md-offset-8 {
-            margin-left: 66.66666667%
-        }
-        .col-md-offset-7 {
-            margin-left: 58.33333333%
-        }
-        .col-md-offset-6 {
-            margin-left: 50%
-        }
-        .col-md-offset-5 {
-            margin-left: 41.66666667%
-        }
-        .col-md-offset-4 {
-            margin-left: 33.33333333%
-        }
-        .col-md-offset-3 {
-            margin-left: 25%
-        }
-        .col-md-offset-2 {
-            margin-left: 16.66666667%
-        }
-        .col-md-offset-1 {
-            margin-left: 8.33333333%
-        }
-        .col-md-offset-0 {
-            margin-left: 0
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .col-lg-1,
-        .col-lg-2,
-        .col-lg-3,
-        .col-lg-4,
-        .col-lg-5,
-        .col-lg-6,
-        .col-lg-7,
-        .col-lg-8,
-        .col-lg-9,
-        .col-lg-10,
-        .col-lg-11,
-        .col-lg-12 {
-            float: left
-        }
-        .col-lg-12 {
-            width: 100%
-        }
-        .col-lg-11 {
-            width: 91.66666667%
-        }
-        .col-lg-10 {
-            width: 83.33333333%
-        }
-        .col-lg-9 {
-            width: 75%
-        }
-        .col-lg-8 {
-            width: 66.66666667%
-        }
-        .col-lg-7 {
-            width: 58.33333333%
-        }
-        .col-lg-6 {
-            width: 50%
-        }
-        .col-lg-5 {
-            width: 41.66666667%
-        }
-        .col-lg-4 {
-            width: 33.33333333%
-        }
-        .col-lg-3 {
-            width: 25%
-        }
-        .col-lg-2 {
-            width: 16.66666667%
-        }
-        .col-lg-1 {
-            width: 8.33333333%
-        }
-        .col-lg-pull-12 {
-            right: 100%
-        }
-        .col-lg-pull-11 {
-            right: 91.66666667%
-        }
-        .col-lg-pull-10 {
-            right: 83.33333333%
-        }
-        .col-lg-pull-9 {
-            right: 75%
-        }
-        .col-lg-pull-8 {
-            right: 66.66666667%
-        }
-        .col-lg-pull-7 {
-            right: 58.33333333%
-        }
-        .col-lg-pull-6 {
-            right: 50%
-        }
-        .col-lg-pull-5 {
-            right: 41.66666667%
-        }
-        .col-lg-pull-4 {
-            right: 33.33333333%
-        }
-        .col-lg-pull-3 {
-            right: 25%
-        }
-        .col-lg-pull-2 {
-            right: 16.66666667%
-        }
-        .col-lg-pull-1 {
-            right: 8.33333333%
-        }
-        .col-lg-pull-0 {
-            right: auto
-        }
-        .col-lg-push-12 {
-            left: 100%
-        }
-        .col-lg-push-11 {
-            left: 91.66666667%
-        }
-        .col-lg-push-10 {
-            left: 83.33333333%
-        }
-        .col-lg-push-9 {
-            left: 75%
-        }
-        .col-lg-push-8 {
-            left: 66.66666667%
-        }
-        .col-lg-push-7 {
-            left: 58.33333333%
-        }
-        .col-lg-push-6 {
-            left: 50%
-        }
-        .col-lg-push-5 {
-            left: 41.66666667%
-        }
-        .col-lg-push-4 {
-            left: 33.33333333%
-        }
-        .col-lg-push-3 {
-            left: 25%
-        }
-        .col-lg-push-2 {
-            left: 16.66666667%
-        }
-        .col-lg-push-1 {
-            left: 8.33333333%
-        }
-        .col-lg-push-0 {
-            left: auto
-        }
-        .col-lg-offset-12 {
-            margin-left: 100%
-        }
-        .col-lg-offset-11 {
-            margin-left: 91.66666667%
-        }
-        .col-lg-offset-10 {
-            margin-left: 83.33333333%
-        }
-        .col-lg-offset-9 {
-            margin-left: 75%
-        }
-        .col-lg-offset-8 {
-            margin-left: 66.66666667%
-        }
-        .col-lg-offset-7 {
-            margin-left: 58.33333333%
-        }
-        .col-lg-offset-6 {
-            margin-left: 50%
-        }
-        .col-lg-offset-5 {
-            margin-left: 41.66666667%
-        }
-        .col-lg-offset-4 {
-            margin-left: 33.33333333%
-        }
-        .col-lg-offset-3 {
-            margin-left: 25%
-        }
-        .col-lg-offset-2 {
-            margin-left: 16.66666667%
-        }
-        .col-lg-offset-1 {
-            margin-left: 8.33333333%
-        }
-        .col-lg-offset-0 {
-            margin-left: 0
-        }
-    }
-    
-    .clearfix:before,
-    .clearfix:after,
-    .container:before,
-    .container:after,
-    .container-fluid:before,
-    .container-fluid:after,
-    .row:before,
-    .row:after {
-        content: " ";
-        display: table
-    }
-    
-    .clearfix:after,
-    .container:after,
-    .container-fluid:after,
-    .row:after {
-        clear: both
-    }
-    
-    .center-block {
-        display: block;
-        margin-left: auto;
-        margin-right: auto
-    }
-    
-    .pull-right {
-        float: right!important
-    }
-    
-    .pull-left {
-        float: left!important
-    }
-    
-    .hide {
-        display: none!important
-    }
-    
-    .show {
-        display: block!important
-    }
-    
-    .invisible {
-        visibility: hidden
-    }
-    
-    .text-hide {
-        font: 0/0 a;
-        color: transparent;
-        text-shadow: none;
-        background-color: transparent;
-        border: 0
-    }
-    
-    .hidden {
-        display: none!important
-    }
-    
-    .affix {
-        position: fixed
-    }
-    
-    .visible-xs,
-    .visible-sm,
-    .visible-md,
-    .visible-lg {
-        display: none!important
-    }
-    
-    .visible-xs-block,
-    .visible-xs-inline,
-    .visible-xs-inline-block,
-    .visible-sm-block,
-    .visible-sm-inline,
-    .visible-sm-inline-block,
-    .visible-md-block,
-    .visible-md-inline,
-    .visible-md-inline-block,
-    .visible-lg-block,
-    .visible-lg-inline,
-    .visible-lg-inline-block {
-        display: none!important
-    }
-    
-    @media (max-width:767px) {
-        .visible-xs {
-            display: block!important
-        }
-        table.visible-xs {
-            display: table
-        }
-        tr.visible-xs {
-            display: table-row!important
-        }
-        th.visible-xs,
-        td.visible-xs {
-            display: table-cell!important
-        }
-        .visible-xs-block {
-            display: block!important
-        }
-        .visible-xs-inline {
-            display: inline!important
-        }
-        .visible-xs-inline-block {
-            display: inline-block!important
-        }
-    }
-    
-    @media (min-width:768px) and (max-width:991px) {
-        .visible-sm {
-            display: block!important
-        }
-        table.visible-sm {
-            display: table
-        }
-        tr.visible-sm {
-            display: table-row!important
-        }
-        th.visible-sm,
-        td.visible-sm {
-            display: table-cell!important
-        }
-        .visible-sm-block {
-            display: block!important
-        }
-        .visible-sm-inline {
-            display: inline!important
-        }
-        .visible-sm-inline-block {
-            display: inline-block!important
-        }
-    }
-    
-    @media (min-width:992px) and (max-width:1199px) {
-        .visible-md {
-            display: block!important
-        }
-        table.visible-md {
-            display: table
-        }
-        tr.visible-md {
-            display: table-row!important
-        }
-        th.visible-md,
-        td.visible-md {
-            display: table-cell!important
-        }
-        .visible-md-block {
-            display: block!important
-        }
-        .visible-md-inline {
-            display: inline!important
-        }
-        .visible-md-inline-block {
-            display: inline-block!important
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .visible-lg {
-            display: block!important
-        }
-        table.visible-lg {
-            display: table
-        }
-        tr.visible-lg {
-            display: table-row!important
-        }
-        th.visible-lg,
-        td.visible-lg {
-            display: table-cell!important
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .visible-lg-block {
-            display: block!important
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .visible-lg-inline {
-            display: inline!important
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .visible-lg-inline-block {
-            display: inline-block!important
-        }
-    }
-    
-    @media (max-width:767px) {
-        .hidden-xs {
-            display: none!important
-        }
-    }
-    
-    @media (min-width:768px) and (max-width:991px) {
-        .hidden-sm {
-            display: none!important
-        }
-    }
-    
-    @media (min-width:992px) and (max-width:1199px) {
-        .hidden-md {
-            display: none!important
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .hidden-lg {
-            display: none!important
-        }
-    }
-    
-    .visible-print {
-        display: none!important
-    }
-    
-    @media print {
-        .visible-print {
-            display: block!important
-        }
-        table.visible-print {
-            display: table
-        }
-        tr.visible-print {
-            display: table-row!important
-        }
-        th.visible-print,
-        td.visible-print {
-            display: table-cell!important
-        }
-    }
-    
-    .visible-print-block {
-        display: none!important
-    }
-    
-    @media print {
-        .visible-print-block {
-            display: block!important
-        }
-    }
-    
-    .visible-print-inline {
-        display: none!important
-    }
-    
-    @media print {
-        .visible-print-inline {
-            display: inline!important
-        }
-    }
-    
-    .visible-print-inline-block {
-        display: none!important
-    }
-    
-    @media print {
-        .visible-print-inline-block {
-            display: inline-block!important
-        }
-    }
-    
-    @media print {
-        .hidden-print {
-            display: none!important
-        }
-    }
-    </style>
-    <!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
-    <style>
-    html .loader {
-        background: #fff;
-        bottom: 0;
-        height: 100%;
-        left: 0;
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 100%;
-        z-index: 9999
-    }
-    
-    html .loader .loader_inner {
-        background-image: url(../img/preloader.gif);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-color: #fff;
-        height: 60px;
-        width: 60px;
-        margin-top: -30px;
-        margin-left: -30px;
-        left: 50%;
-        top: 50%;
-        position: absolute
-    }
-    </style>
-    <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
-    <script>
-    ! function(e) {
-        "use strict";
+	<meta charset="utf-8">
+	<title>Elite Studio</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width">
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<!-- Bootstrap v3.3.4 Grid Styles -->
+	<style>
+		html {
+			font-family: sans-serif;
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%
+		}
 
-        function t(e, t, n) {
-            e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
-        }
+		body {
+			margin: 0
+		}
 
-        function n(t, n) {
-            return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
-        }
+		article,
+		aside,
+		details,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		main,
+		menu,
+		nav,
+		section,
+		summary {
+			display: block
+		}
 
-        function a(t, a) {
-            if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
-            else {
-                var s = r.createElement("link");
-                s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
-            }
-        }
+		audio,
+		canvas,
+		progress,
+		video {
+			display: inline-block;
+			vertical-align: baseline
+		}
 
-        function l(e, t) {
-            var n = new XMLHttpRequest;
-            n.open("GET", t, !0), n.onreadystatechange = function() {
-                4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
-            }, n.send()
-        }
+		audio:not([controls]) {
+			display: none;
+			height: 0
+		}
 
-        function o(e) {
-            var t = r.createElement("style");
-            t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
-        }
-        var r = e.document;
-        e.loadCSS = function(e, t, n) {
-            var a, l = r.createElement("link");
-            if (t) a = t;
-            else {
-                var o;
-                o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
-            }
-            var s = r.styleSheets;
-            l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
-            var c = function(e) {
-                for (var t = l.href, n = s.length; n--;)
-                    if (s[n].href === t) return e();
-                setTimeout(function() {
-                    c(e)
-                })
-            };
-            return l.onloadcssdefined = c, c(function() {
-                l.media = n || "all"
-            }), l
-        }, e.loadLocalStorageCSS = function(l, o) {
-            n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function() {
-                a(l, o)
-            })
-        }
-    }(this);
-    </script>
-    <!-- Load CSS Start -->
-    <script>
-    loadLocalStorageCSS("webfonts", "css/fonts.min.css?ver=1.0.0");
-    </script>
-    <script>
-    loadCSS("css/header.min.css?ver=1.0.0", false, "all");
-    </script>
-    <script>
-    loadCSS("css/main.min.css?ver=1.0.0", false, "all");
-    </script>
-    <!-- Load CSS End -->
-    <!-- Load CSS Compiled without JS -->
-    <noscript>
-        <link rel="stylesheet" href="css/fonts.min.css">
-        <link rel="stylesheet" href="css/main.min.css">
-    </noscript>
+		[hidden],
+		template {
+			display: none
+		}
+
+		a {
+			background-color: transparent
+		}
+
+		a:active,
+		a:hover {
+			outline: 0
+		}
+
+		abbr[title] {
+			border-bottom: 1px dotted
+		}
+
+		b,
+		strong {
+			font-weight: 700
+		}
+
+		dfn {
+			font-style: italic
+		}
+
+		h1 {
+			font-size: 2em;
+			margin: .67em 0
+		}
+
+		mark {
+			background: #ff0;
+			color: #000
+		}
+
+		small {
+			font-size: 80%
+		}
+
+		sub,
+		sup {
+			font-size: 75%;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline
+		}
+
+		sup {
+			top: -.5em
+		}
+
+		sub {
+			bottom: -.25em
+		}
+
+		img {
+			border: 0
+		}
+
+		svg:not(:root) {
+			overflow: hidden
+		}
+
+		figure {
+			margin: 1em 40px
+		}
+
+		hr {
+			-moz-box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box;
+			height: 0
+		}
+
+		pre {
+			overflow: auto
+		}
+
+		code,
+		kbd,
+		pre,
+		samp {
+			font-family: monospace, monospace;
+			font-size: 1em
+		}
+
+		button,
+		input,
+		optgroup,
+		select,
+		textarea {
+			color: inherit;
+			font: inherit;
+			margin: 0
+		}
+
+		button {
+			overflow: visible
+		}
+
+		button,
+		select {
+			text-transform: none
+		}
+
+		button,
+		html input[type="button"],
+		input[type="reset"],
+		input[type="submit"] {
+			-webkit-appearance: button;
+			cursor: pointer
+		}
+
+		button[disabled],
+		html input[disabled] {
+			cursor: default
+		}
+
+		button::-moz-focus-inner,
+		input::-moz-focus-inner {
+			border: 0;
+			padding: 0
+		}
+
+		input {
+			line-height: normal
+		}
+
+		input[type="checkbox"],
+		input[type="radio"] {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 0
+		}
+
+		input[type="number"]::-webkit-inner-spin-button,
+		input[type="number"]::-webkit-outer-spin-button {
+			height: auto
+		}
+
+		input[type="search"] {
+			-webkit-appearance: textfield;
+			-moz-box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box
+		}
+
+		input[type="search"]::-webkit-search-cancel-button,
+		input[type="search"]::-webkit-search-decoration {
+			-webkit-appearance: none
+		}
+
+		fieldset {
+			border: 1px solid silver;
+			margin: 0 2px;
+			padding: .35em .625em .75em
+		}
+
+		legend {
+			border: 0;
+			padding: 0
+		}
+
+		textarea {
+			overflow: auto
+		}
+
+		optgroup {
+			font-weight: 700
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		td,
+		th {
+			padding: 0
+		}
+
+		* {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		:before,
+		:after {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		html {
+			font-size: 10px;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+		}
+
+		body {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			line-height: 1.42857143;
+			color: #333;
+			background-color: #fff
+		}
+
+		input,
+		button,
+		select,
+		textarea {
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit
+		}
+
+		a {
+			color: #337ab7;
+			text-decoration: none
+		}
+
+		a:hover,
+		a:focus {
+			color: #23527c;
+			text-decoration: underline
+		}
+
+		a:focus {
+			outline: thin dotted;
+			outline: 5px auto -webkit-focus-ring-color;
+			outline-offset: -2px
+		}
+
+		figure {
+			margin: 0
+		}
+
+		img {
+			vertical-align: middle
+		}
+
+		.img-responsive {
+			display: block;
+			max-width: 100%;
+			height: auto
+		}
+
+		.img-rounded {
+			border-radius: 6px
+		}
+
+		.img-thumbnail {
+			padding: 4px;
+			line-height: 1.42857143;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			-webkit-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			display: inline-block;
+			max-width: 100%;
+			height: auto
+		}
+
+		.img-circle {
+			border-radius: 50%
+		}
+
+		hr {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border: 0;
+			border-top: 1px solid #eee
+		}
+
+		.sr-only {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			padding: 0;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			border: 0
+		}
+
+		.sr-only-focusable:active,
+		.sr-only-focusable:focus {
+			position: static;
+			width: auto;
+			height: auto;
+			margin: 0;
+			overflow: visible;
+			clip: auto
+		}
+
+		[role="button"] {
+			cursor: pointer
+		}
+
+		.container {
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: 15px;
+			padding-right: 15px
+		}
+
+		@media (min-width: 768px) {
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+		}
+
+		.container-fluid {
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: 15px;
+			padding-right: 15px
+		}
+
+		.row {
+			margin-left: -15px;
+			margin-right: -15px
+		}
+
+		.col-xs-1,
+		.col-sm-1,
+		.col-md-1,
+		.col-lg-1,
+		.col-xs-2,
+		.col-sm-2,
+		.col-md-2,
+		.col-lg-2,
+		.col-xs-3,
+		.col-sm-3,
+		.col-md-3,
+		.col-lg-3,
+		.col-xs-4,
+		.col-sm-4,
+		.col-md-4,
+		.col-lg-4,
+		.col-xs-5,
+		.col-sm-5,
+		.col-md-5,
+		.col-lg-5,
+		.col-xs-6,
+		.col-sm-6,
+		.col-md-6,
+		.col-lg-6,
+		.col-xs-7,
+		.col-sm-7,
+		.col-md-7,
+		.col-lg-7,
+		.col-xs-8,
+		.col-sm-8,
+		.col-md-8,
+		.col-lg-8,
+		.col-xs-9,
+		.col-sm-9,
+		.col-md-9,
+		.col-lg-9,
+		.col-xs-10,
+		.col-sm-10,
+		.col-md-10,
+		.col-lg-10,
+		.col-xs-11,
+		.col-sm-11,
+		.col-md-11,
+		.col-lg-11,
+		.col-xs-12,
+		.col-sm-12,
+		.col-md-12,
+		.col-lg-12 {
+			position: relative;
+			min-height: 1px;
+			padding-left: 15px;
+			padding-right: 15px
+		}
+
+		.col-xs-1,
+		.col-xs-2,
+		.col-xs-3,
+		.col-xs-4,
+		.col-xs-5,
+		.col-xs-6,
+		.col-xs-7,
+		.col-xs-8,
+		.col-xs-9,
+		.col-xs-10,
+		.col-xs-11,
+		.col-xs-12 {
+			float: left
+		}
+
+		.col-xs-12 {
+			width: 100%
+		}
+
+		.col-xs-11 {
+			width: 91.66666667%
+		}
+
+		.col-xs-10 {
+			width: 83.33333333%
+		}
+
+		.col-xs-9 {
+			width: 75%
+		}
+
+		.col-xs-8 {
+			width: 66.66666667%
+		}
+
+		.col-xs-7 {
+			width: 58.33333333%
+		}
+
+		.col-xs-6 {
+			width: 50%
+		}
+
+		.col-xs-5 {
+			width: 41.66666667%
+		}
+
+		.col-xs-4 {
+			width: 33.33333333%
+		}
+
+		.col-xs-3 {
+			width: 25%
+		}
+
+		.col-xs-2 {
+			width: 16.66666667%
+		}
+
+		.col-xs-1 {
+			width: 8.33333333%
+		}
+
+		.col-xs-pull-12 {
+			right: 100%
+		}
+
+		.col-xs-pull-11 {
+			right: 91.66666667%
+		}
+
+		.col-xs-pull-10 {
+			right: 83.33333333%
+		}
+
+		.col-xs-pull-9 {
+			right: 75%
+		}
+
+		.col-xs-pull-8 {
+			right: 66.66666667%
+		}
+
+		.col-xs-pull-7 {
+			right: 58.33333333%
+		}
+
+		.col-xs-pull-6 {
+			right: 50%
+		}
+
+		.col-xs-pull-5 {
+			right: 41.66666667%
+		}
+
+		.col-xs-pull-4 {
+			right: 33.33333333%
+		}
+
+		.col-xs-pull-3 {
+			right: 25%
+		}
+
+		.col-xs-pull-2 {
+			right: 16.66666667%
+		}
+
+		.col-xs-pull-1 {
+			right: 8.33333333%
+		}
+
+		.col-xs-pull-0 {
+			right: auto
+		}
+
+		.col-xs-push-12 {
+			left: 100%
+		}
+
+		.col-xs-push-11 {
+			left: 91.66666667%
+		}
+
+		.col-xs-push-10 {
+			left: 83.33333333%
+		}
+
+		.col-xs-push-9 {
+			left: 75%
+		}
+
+		.col-xs-push-8 {
+			left: 66.66666667%
+		}
+
+		.col-xs-push-7 {
+			left: 58.33333333%
+		}
+
+		.col-xs-push-6 {
+			left: 50%
+		}
+
+		.col-xs-push-5 {
+			left: 41.66666667%
+		}
+
+		.col-xs-push-4 {
+			left: 33.33333333%
+		}
+
+		.col-xs-push-3 {
+			left: 25%
+		}
+
+		.col-xs-push-2 {
+			left: 16.66666667%
+		}
+
+		.col-xs-push-1 {
+			left: 8.33333333%
+		}
+
+		.col-xs-push-0 {
+			left: auto
+		}
+
+		.col-xs-offset-12 {
+			margin-left: 100%
+		}
+
+		.col-xs-offset-11 {
+			margin-left: 91.66666667%
+		}
+
+		.col-xs-offset-10 {
+			margin-left: 83.33333333%
+		}
+
+		.col-xs-offset-9 {
+			margin-left: 75%
+		}
+
+		.col-xs-offset-8 {
+			margin-left: 66.66666667%
+		}
+
+		.col-xs-offset-7 {
+			margin-left: 58.33333333%
+		}
+
+		.col-xs-offset-6 {
+			margin-left: 50%
+		}
+
+		.col-xs-offset-5 {
+			margin-left: 41.66666667%
+		}
+
+		.col-xs-offset-4 {
+			margin-left: 33.33333333%
+		}
+
+		.col-xs-offset-3 {
+			margin-left: 25%
+		}
+
+		.col-xs-offset-2 {
+			margin-left: 16.66666667%
+		}
+
+		.col-xs-offset-1 {
+			margin-left: 8.33333333%
+		}
+
+		.col-xs-offset-0 {
+			margin-left: 0
+		}
+
+		@media (min-width: 768px) {
+			.col-sm-1,
+			.col-sm-2,
+			.col-sm-3,
+			.col-sm-4,
+			.col-sm-5,
+			.col-sm-6,
+			.col-sm-7,
+			.col-sm-8,
+			.col-sm-9,
+			.col-sm-10,
+			.col-sm-11,
+			.col-sm-12 {
+				float: left
+			}
+
+			.col-sm-12 {
+				width: 100%
+			}
+
+			.col-sm-11 {
+				width: 91.66666667%
+			}
+
+			.col-sm-10 {
+				width: 83.33333333%
+			}
+
+			.col-sm-9 {
+				width: 75%
+			}
+
+			.col-sm-8 {
+				width: 66.66666667%
+			}
+
+			.col-sm-7 {
+				width: 58.33333333%
+			}
+
+			.col-sm-6 {
+				width: 50%
+			}
+
+			.col-sm-5 {
+				width: 41.66666667%
+			}
+
+			.col-sm-4 {
+				width: 33.33333333%
+			}
+
+			.col-sm-3 {
+				width: 25%
+			}
+
+			.col-sm-2 {
+				width: 16.66666667%
+			}
+
+			.col-sm-1 {
+				width: 8.33333333%
+			}
+
+			.col-sm-pull-12 {
+				right: 100%
+			}
+
+			.col-sm-pull-11 {
+				right: 91.66666667%
+			}
+
+			.col-sm-pull-10 {
+				right: 83.33333333%
+			}
+
+			.col-sm-pull-9 {
+				right: 75%
+			}
+
+			.col-sm-pull-8 {
+				right: 66.66666667%
+			}
+
+			.col-sm-pull-7 {
+				right: 58.33333333%
+			}
+
+			.col-sm-pull-6 {
+				right: 50%
+			}
+
+			.col-sm-pull-5 {
+				right: 41.66666667%
+			}
+
+			.col-sm-pull-4 {
+				right: 33.33333333%
+			}
+
+			.col-sm-pull-3 {
+				right: 25%
+			}
+
+			.col-sm-pull-2 {
+				right: 16.66666667%
+			}
+
+			.col-sm-pull-1 {
+				right: 8.33333333%
+			}
+
+			.col-sm-pull-0 {
+				right: auto
+			}
+
+			.col-sm-push-12 {
+				left: 100%
+			}
+
+			.col-sm-push-11 {
+				left: 91.66666667%
+			}
+
+			.col-sm-push-10 {
+				left: 83.33333333%
+			}
+
+			.col-sm-push-9 {
+				left: 75%
+			}
+
+			.col-sm-push-8 {
+				left: 66.66666667%
+			}
+
+			.col-sm-push-7 {
+				left: 58.33333333%
+			}
+
+			.col-sm-push-6 {
+				left: 50%
+			}
+
+			.col-sm-push-5 {
+				left: 41.66666667%
+			}
+
+			.col-sm-push-4 {
+				left: 33.33333333%
+			}
+
+			.col-sm-push-3 {
+				left: 25%
+			}
+
+			.col-sm-push-2 {
+				left: 16.66666667%
+			}
+
+			.col-sm-push-1 {
+				left: 8.33333333%
+			}
+
+			.col-sm-push-0 {
+				left: auto
+			}
+
+			.col-sm-offset-12 {
+				margin-left: 100%
+			}
+
+			.col-sm-offset-11 {
+				margin-left: 91.66666667%
+			}
+
+			.col-sm-offset-10 {
+				margin-left: 83.33333333%
+			}
+
+			.col-sm-offset-9 {
+				margin-left: 75%
+			}
+
+			.col-sm-offset-8 {
+				margin-left: 66.66666667%
+			}
+
+			.col-sm-offset-7 {
+				margin-left: 58.33333333%
+			}
+
+			.col-sm-offset-6 {
+				margin-left: 50%
+			}
+
+			.col-sm-offset-5 {
+				margin-left: 41.66666667%
+			}
+
+			.col-sm-offset-4 {
+				margin-left: 33.33333333%
+			}
+
+			.col-sm-offset-3 {
+				margin-left: 25%
+			}
+
+			.col-sm-offset-2 {
+				margin-left: 16.66666667%
+			}
+
+			.col-sm-offset-1 {
+				margin-left: 8.33333333%
+			}
+
+			.col-sm-offset-0 {
+				margin-left: 0
+			}
+		}
+
+		@media (min-width: 992px) {
+			.col-md-1,
+			.col-md-2,
+			.col-md-3,
+			.col-md-4,
+			.col-md-5,
+			.col-md-6,
+			.col-md-7,
+			.col-md-8,
+			.col-md-9,
+			.col-md-10,
+			.col-md-11,
+			.col-md-12 {
+				float: left
+			}
+
+			.col-md-12 {
+				width: 100%
+			}
+
+			.col-md-11 {
+				width: 91.66666667%
+			}
+
+			.col-md-10 {
+				width: 83.33333333%
+			}
+
+			.col-md-9 {
+				width: 75%
+			}
+
+			.col-md-8 {
+				width: 66.66666667%
+			}
+
+			.col-md-7 {
+				width: 58.33333333%
+			}
+
+			.col-md-6 {
+				width: 50%
+			}
+
+			.col-md-5 {
+				width: 41.66666667%
+			}
+
+			.col-md-4 {
+				width: 33.33333333%
+			}
+
+			.col-md-3 {
+				width: 25%
+			}
+
+			.col-md-2 {
+				width: 16.66666667%
+			}
+
+			.col-md-1 {
+				width: 8.33333333%
+			}
+
+			.col-md-pull-12 {
+				right: 100%
+			}
+
+			.col-md-pull-11 {
+				right: 91.66666667%
+			}
+
+			.col-md-pull-10 {
+				right: 83.33333333%
+			}
+
+			.col-md-pull-9 {
+				right: 75%
+			}
+
+			.col-md-pull-8 {
+				right: 66.66666667%
+			}
+
+			.col-md-pull-7 {
+				right: 58.33333333%
+			}
+
+			.col-md-pull-6 {
+				right: 50%
+			}
+
+			.col-md-pull-5 {
+				right: 41.66666667%
+			}
+
+			.col-md-pull-4 {
+				right: 33.33333333%
+			}
+
+			.col-md-pull-3 {
+				right: 25%
+			}
+
+			.col-md-pull-2 {
+				right: 16.66666667%
+			}
+
+			.col-md-pull-1 {
+				right: 8.33333333%
+			}
+
+			.col-md-pull-0 {
+				right: auto
+			}
+
+			.col-md-push-12 {
+				left: 100%
+			}
+
+			.col-md-push-11 {
+				left: 91.66666667%
+			}
+
+			.col-md-push-10 {
+				left: 83.33333333%
+			}
+
+			.col-md-push-9 {
+				left: 75%
+			}
+
+			.col-md-push-8 {
+				left: 66.66666667%
+			}
+
+			.col-md-push-7 {
+				left: 58.33333333%
+			}
+
+			.col-md-push-6 {
+				left: 50%
+			}
+
+			.col-md-push-5 {
+				left: 41.66666667%
+			}
+
+			.col-md-push-4 {
+				left: 33.33333333%
+			}
+
+			.col-md-push-3 {
+				left: 25%
+			}
+
+			.col-md-push-2 {
+				left: 16.66666667%
+			}
+
+			.col-md-push-1 {
+				left: 8.33333333%
+			}
+
+			.col-md-push-0 {
+				left: auto
+			}
+
+			.col-md-offset-12 {
+				margin-left: 100%
+			}
+
+			.col-md-offset-11 {
+				margin-left: 91.66666667%
+			}
+
+			.col-md-offset-10 {
+				margin-left: 83.33333333%
+			}
+
+			.col-md-offset-9 {
+				margin-left: 75%
+			}
+
+			.col-md-offset-8 {
+				margin-left: 66.66666667%
+			}
+
+			.col-md-offset-7 {
+				margin-left: 58.33333333%
+			}
+
+			.col-md-offset-6 {
+				margin-left: 50%
+			}
+
+			.col-md-offset-5 {
+				margin-left: 41.66666667%
+			}
+
+			.col-md-offset-4 {
+				margin-left: 33.33333333%
+			}
+
+			.col-md-offset-3 {
+				margin-left: 25%
+			}
+
+			.col-md-offset-2 {
+				margin-left: 16.66666667%
+			}
+
+			.col-md-offset-1 {
+				margin-left: 8.33333333%
+			}
+
+			.col-md-offset-0 {
+				margin-left: 0
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.col-lg-1,
+			.col-lg-2,
+			.col-lg-3,
+			.col-lg-4,
+			.col-lg-5,
+			.col-lg-6,
+			.col-lg-7,
+			.col-lg-8,
+			.col-lg-9,
+			.col-lg-10,
+			.col-lg-11,
+			.col-lg-12 {
+				float: left
+			}
+
+			.col-lg-12 {
+				width: 100%
+			}
+
+			.col-lg-11 {
+				width: 91.66666667%
+			}
+
+			.col-lg-10 {
+				width: 83.33333333%
+			}
+
+			.col-lg-9 {
+				width: 75%
+			}
+
+			.col-lg-8 {
+				width: 66.66666667%
+			}
+
+			.col-lg-7 {
+				width: 58.33333333%
+			}
+
+			.col-lg-6 {
+				width: 50%
+			}
+
+			.col-lg-5 {
+				width: 41.66666667%
+			}
+
+			.col-lg-4 {
+				width: 33.33333333%
+			}
+
+			.col-lg-3 {
+				width: 25%
+			}
+
+			.col-lg-2 {
+				width: 16.66666667%
+			}
+
+			.col-lg-1 {
+				width: 8.33333333%
+			}
+
+			.col-lg-pull-12 {
+				right: 100%
+			}
+
+			.col-lg-pull-11 {
+				right: 91.66666667%
+			}
+
+			.col-lg-pull-10 {
+				right: 83.33333333%
+			}
+
+			.col-lg-pull-9 {
+				right: 75%
+			}
+
+			.col-lg-pull-8 {
+				right: 66.66666667%
+			}
+
+			.col-lg-pull-7 {
+				right: 58.33333333%
+			}
+
+			.col-lg-pull-6 {
+				right: 50%
+			}
+
+			.col-lg-pull-5 {
+				right: 41.66666667%
+			}
+
+			.col-lg-pull-4 {
+				right: 33.33333333%
+			}
+
+			.col-lg-pull-3 {
+				right: 25%
+			}
+
+			.col-lg-pull-2 {
+				right: 16.66666667%
+			}
+
+			.col-lg-pull-1 {
+				right: 8.33333333%
+			}
+
+			.col-lg-pull-0 {
+				right: auto
+			}
+
+			.col-lg-push-12 {
+				left: 100%
+			}
+
+			.col-lg-push-11 {
+				left: 91.66666667%
+			}
+
+			.col-lg-push-10 {
+				left: 83.33333333%
+			}
+
+			.col-lg-push-9 {
+				left: 75%
+			}
+
+			.col-lg-push-8 {
+				left: 66.66666667%
+			}
+
+			.col-lg-push-7 {
+				left: 58.33333333%
+			}
+
+			.col-lg-push-6 {
+				left: 50%
+			}
+
+			.col-lg-push-5 {
+				left: 41.66666667%
+			}
+
+			.col-lg-push-4 {
+				left: 33.33333333%
+			}
+
+			.col-lg-push-3 {
+				left: 25%
+			}
+
+			.col-lg-push-2 {
+				left: 16.66666667%
+			}
+
+			.col-lg-push-1 {
+				left: 8.33333333%
+			}
+
+			.col-lg-push-0 {
+				left: auto
+			}
+
+			.col-lg-offset-12 {
+				margin-left: 100%
+			}
+
+			.col-lg-offset-11 {
+				margin-left: 91.66666667%
+			}
+
+			.col-lg-offset-10 {
+				margin-left: 83.33333333%
+			}
+
+			.col-lg-offset-9 {
+				margin-left: 75%
+			}
+
+			.col-lg-offset-8 {
+				margin-left: 66.66666667%
+			}
+
+			.col-lg-offset-7 {
+				margin-left: 58.33333333%
+			}
+
+			.col-lg-offset-6 {
+				margin-left: 50%
+			}
+
+			.col-lg-offset-5 {
+				margin-left: 41.66666667%
+			}
+
+			.col-lg-offset-4 {
+				margin-left: 33.33333333%
+			}
+
+			.col-lg-offset-3 {
+				margin-left: 25%
+			}
+
+			.col-lg-offset-2 {
+				margin-left: 16.66666667%
+			}
+
+			.col-lg-offset-1 {
+				margin-left: 8.33333333%
+			}
+
+			.col-lg-offset-0 {
+				margin-left: 0
+			}
+		}
+
+		.clearfix:before,
+		.clearfix:after,
+		.container:before,
+		.container:after,
+		.container-fluid:before,
+		.container-fluid:after,
+		.row:before,
+		.row:after {
+			content: " ";
+			display: table
+		}
+
+		.clearfix:after,
+		.container:after,
+		.container-fluid:after,
+		.row:after {
+			clear: both
+		}
+
+		.center-block {
+			display: block;
+			margin-left: auto;
+			margin-right: auto
+		}
+
+		.pull-right {
+			float: right !important
+		}
+
+		.pull-left {
+			float: left !important
+		}
+
+		.hide {
+			display: none !important
+		}
+
+		.show {
+			display: block !important
+		}
+
+		.invisible {
+			visibility: hidden
+		}
+
+		.text-hide {
+			font: 0/0 a;
+			color: transparent;
+			text-shadow: none;
+			background-color: transparent;
+			border: 0
+		}
+
+		.hidden {
+			display: none !important
+		}
+
+		.affix {
+			position: fixed
+		}
+
+		.visible-xs,
+		.visible-sm,
+		.visible-md,
+		.visible-lg {
+			display: none !important
+		}
+
+		.visible-xs-block,
+		.visible-xs-inline,
+		.visible-xs-inline-block,
+		.visible-sm-block,
+		.visible-sm-inline,
+		.visible-sm-inline-block,
+		.visible-md-block,
+		.visible-md-inline,
+		.visible-md-inline-block,
+		.visible-lg-block,
+		.visible-lg-inline,
+		.visible-lg-inline-block {
+			display: none !important
+		}
+
+		@media (max-width: 767px) {
+			.visible-xs {
+				display: block !important
+			}
+
+			table.visible-xs {
+				display: table
+			}
+
+			tr.visible-xs {
+				display: table-row !important
+			}
+
+			th.visible-xs,
+			td.visible-xs {
+				display: table-cell !important
+			}
+
+			.visible-xs-block {
+				display: block !important
+			}
+
+			.visible-xs-inline {
+				display: inline !important
+			}
+
+			.visible-xs-inline-block {
+				display: inline-block !important
+			}
+		}
+
+		@media (min-width: 768px) and (max-width: 991px) {
+			.visible-sm {
+				display: block !important
+			}
+
+			table.visible-sm {
+				display: table
+			}
+
+			tr.visible-sm {
+				display: table-row !important
+			}
+
+			th.visible-sm,
+			td.visible-sm {
+				display: table-cell !important
+			}
+
+			.visible-sm-block {
+				display: block !important
+			}
+
+			.visible-sm-inline {
+				display: inline !important
+			}
+
+			.visible-sm-inline-block {
+				display: inline-block !important
+			}
+		}
+
+		@media (min-width: 992px) and (max-width: 1199px) {
+			.visible-md {
+				display: block !important
+			}
+
+			table.visible-md {
+				display: table
+			}
+
+			tr.visible-md {
+				display: table-row !important
+			}
+
+			th.visible-md,
+			td.visible-md {
+				display: table-cell !important
+			}
+
+			.visible-md-block {
+				display: block !important
+			}
+
+			.visible-md-inline {
+				display: inline !important
+			}
+
+			.visible-md-inline-block {
+				display: inline-block !important
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.visible-lg {
+				display: block !important
+			}
+
+			table.visible-lg {
+				display: table
+			}
+
+			tr.visible-lg {
+				display: table-row !important
+			}
+
+			th.visible-lg,
+			td.visible-lg {
+				display: table-cell !important
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.visible-lg-block {
+				display: block !important
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.visible-lg-inline {
+				display: inline !important
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.visible-lg-inline-block {
+				display: inline-block !important
+			}
+		}
+
+		@media (max-width: 767px) {
+			.hidden-xs {
+				display: none !important
+			}
+		}
+
+		@media (min-width: 768px) and (max-width: 991px) {
+			.hidden-sm {
+				display: none !important
+			}
+		}
+
+		@media (min-width: 992px) and (max-width: 1199px) {
+			.hidden-md {
+				display: none !important
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.hidden-lg {
+				display: none !important
+			}
+		}
+
+		.visible-print {
+			display: none !important
+		}
+
+		@media print {
+			.visible-print {
+				display: block !important
+			}
+
+			table.visible-print {
+				display: table
+			}
+
+			tr.visible-print {
+				display: table-row !important
+			}
+
+			th.visible-print,
+			td.visible-print {
+				display: table-cell !important
+			}
+		}
+
+		.visible-print-block {
+			display: none !important
+		}
+
+		@media print {
+			.visible-print-block {
+				display: block !important
+			}
+		}
+
+		.visible-print-inline {
+			display: none !important
+		}
+
+		@media print {
+			.visible-print-inline {
+				display: inline !important
+			}
+		}
+
+		.visible-print-inline-block {
+			display: none !important
+		}
+
+		@media print {
+			.visible-print-inline-block {
+				display: inline-block !important
+			}
+		}
+
+		@media print {
+			.hidden-print {
+				display: none !important
+			}
+		}
+	</style>
+	<!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
+	<style>
+		html .loader {
+			background: #fff;
+			bottom: 0;
+			height: 100%;
+			left: 0;
+			position: fixed;
+			right: 0;
+			top: 0;
+			width: 100%;
+			z-index: 9999
+		}
+
+		html .loader .loader_inner {
+			background-image: url(../img/preloader.gif);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: #fff;
+			height: 60px;
+			width: 60px;
+			margin-top: -30px;
+			margin-left: -30px;
+			left: 50%;
+			top: 50%;
+			position: absolute
+		}
+	</style>
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>
+		!function (e) {
+			"use strict";
+
+			function t(e, t, n) {
+				e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+			}
+
+			function n(t, n) {
+				return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
+			}
+
+			function a(t, a) {
+				if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
+				else {
+					var s = r.createElement("link");
+					s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
+				}
+			}
+
+			function l(e, t) {
+				var n = new XMLHttpRequest;
+				n.open("GET", t, !0), n.onreadystatechange = function () {
+					4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
+				}, n.send()
+			}
+
+			function o(e) {
+				var t = r.createElement("style");
+				t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
+			}
+
+			var r = e.document;
+			e.loadCSS = function (e, t, n) {
+				var a, l = r.createElement("link");
+				if (t) a = t;
+				else {
+					var o;
+					o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
+				}
+				var s = r.styleSheets;
+				l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+				var c = function (e) {
+					for (var t = l.href, n = s.length; n--;)
+						if (s[n].href === t) return e();
+					setTimeout(function () {
+						c(e)
+					})
+				};
+				return l.onloadcssdefined = c, c(function () {
+					l.media = n || "all"
+				}), l
+			}, e.loadLocalStorageCSS = function (l, o) {
+				n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function () {
+					a(l, o)
+				})
+			}
+		}(this);
+	</script>
+	<!-- Load CSS Start -->
+	<script>
+		loadLocalStorageCSS("webfonts", "css/fonts.min.css?ver=1.0.0");
+	</script>
+	<script>
+		loadCSS("css/header.min.css?ver=1.0.0", false, "all");
+	</script>
+	<script>
+		loadCSS("css/main.min.css?ver=1.0.0", false, "all");
+	</script>
+	<!-- Load CSS End -->
+	<!-- Load CSS Compiled without JS -->
+	<noscript>
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+	</noscript>
 </head>
 
 <body class="services">
-    <div class="loader">
-        <div class="loader_inner"></div>
-    </div>
-    <!-- Модальное окно -->
-    <div class="popup" data-modal="modal-1">
-        <div class="dm-table">
-            <div class="dm-cell">
-                <div class="dm-modal">
-                    <a href="#" class="close">
-                        <i class="fa fa-close"></i>
-                    </a>
-                    <p class='sucess_mail'>Заявка отправлена</p>
-                    <form id="form">
-                        <div class="popup_clouds">
-                            <img src="img/pop_top_clouds.png" height="253" width="669" alt="">
-                        </div>
-                        <h2>Письмо команде</h2>
-                        <div>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="name" class="modal_form_input" type="text" placeholder="Имя">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="email" class="modal_form_email" type="text" placeholder="E-mail">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="phone" class="modal_form_phone" type="text" placeholder="Телефон">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="select">
-                                <div class="slct_arrow">
-                                    <i class="fa fa-angle-down"></i>
-                                </div>
-                                <a href="#" class="slct">Выбор заголовков:</a>
-                                <ul class="drop">
-                                    <li>Вы крутые</li>
-                                    <li>Я в Вас влюбился</li>
-                                    <li>Быстрей Вас только Флеш</li>
-                                </ul>
-                                <input type="hidden" id="select" name="services">
-                            </div>
-                        </div>
-                        <div>
-                            <textarea type="text" placeholder="Сообщение"></textarea>
-                        </div>
-                        <input type="hidden" name="form_name" value="Письмо команде">
-                        <input type="submit" value="Отправить">
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="overlay">
-        </div>
-    </div>
-    <!-- Модальное окно 2-->
-    <div class="popup pop2">
-        <div class="dm-table">
-            <div class="dm-cell">
-                <div class="dm-modal">
-                    <a href="#" class="close">
-                    </a>
-                    <p class='sucess_mail'>Ваше письмо отправлено, ответ прийдёт на указанный вами E-mail.</p>
-                    <div class="popup_clouds">
-                        <img src="img/pop_top_clouds.png" height="253" width="669" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Здесь пишем код -->
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="header_logo">
-                    <a href="index.html" title="Logo"><img src="img/header_logo.gif" height="57" width="143" alt=""></a>
-                </div>
-                <nav class="header_nav">
-                    <ul>
-                        <li>
-                            <a href="#">Главная</a>
-                        </li>
-                        <li>
-                            <a href="#">Услуги</a>
-                        </li>
-                        <li>
-                            <a href="#">Рекомендации</a>
-                        </li>
-                        <li>
-                            <a href="#">Портфолио</a>
-                        </li>
-                        <li>
-                            <a href="#">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header_modal">
-                    <a data-modal="modal-1" data-info="Заказать звонок." class="modal" href="#">Заказать звонок</a>
-                </div>
-                <div class="header_phone">
-                    <div class="header_phone_country">
-                        <a class="active" data-tab="1" href="#">Украина</a>
-                        <a data-tab="2" href="#">Россия</a>
-                    </div>
-                    <a class="active" data-tab="1" href="tel:+380671266556">+38 (067) 126-65-56</a>
-                    <a data-tab="2" href="tel:+380671266556">+37 (111) 111-11-11</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- selling_site -->
-    <section class="website_promotion selling_site">
-        <div class="container">
-            <div class="row">
-                <h1>Хотите Продающий Сайт?</h1>
-                <div class="main_content_txt_wrap">
-                    <p>Мы разрабатываем сайты для любой сферы деятельности. Благодаря индивидуальному подходу, наши сайты всегда оправдывают ожидания заказчиков и приносят отличную прибыль.</p>
-                    <p>Также, наша студия сдвигает с места даже самые “непродвигаемые” сайты. Собираем информацию, анализируем, находим слабые места и сильные стороны. Исправляем “базу” и приступаем к продвижению.</p>
-                </div>
-                <div class="selling_site_img">
-                    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                    <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                    <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="svg2" sodipodi:docname="line 3.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="2px" height="1292px" viewBox="0 0 2 1292" enable-background="new 0 0 2 1292" xml:space="preserve">
+<div class="loader">
+	<div class="loader_inner"></div>
+</div>
+<!-- Модальное окно -->
+<div class="popup" data-modal="modal-1">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+					<i class="fa fa-close"></i>
+				</a>
+				<p class='sucess_mail'>Заявка отправлена</p>
+				<form id="form">
+					<div class="popup_clouds">
+						<img src="img/pop_top_clouds.png" height="253" width="669" alt="">
+					</div>
+					<h2>Письмо команде</h2>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="name" class="modal_form_input" type="text" placeholder="Имя">
+						</div>
+					</div>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="email" class="modal_form_email" type="text" placeholder="E-mail">
+						</div>
+					</div>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone" type="text" placeholder="Телефон">
+						</div>
+					</div>
+					<div>
+						<div class="select">
+							<div class="slct_arrow">
+								<i class="fa fa-angle-down"></i>
+							</div>
+							<a href="#" class="slct">Выбор заголовков:</a>
+							<ul class="drop">
+								<li>Вы крутые</li>
+								<li>Я в Вас влюбился</li>
+								<li>Быстрей Вас только Флеш</li>
+							</ul>
+							<input type="hidden" id="select" name="services">
+						</div>
+					</div>
+					<div>
+						<textarea type="text" placeholder="Сообщение"></textarea>
+					</div>
+					<input type="hidden" name="form_name" value="Письмо команде">
+					<input type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
+<!-- Модальное окно 2-->
+<div class="popup pop2">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+				</a>
+				<p class='sucess_mail'>Ваше письмо отправлено, ответ прийдёт на указанный вами E-mail.</p>
+				<div class="popup_clouds">
+					<img src="img/pop_top_clouds.png" height="253" width="669" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Здесь пишем код -->
+<header class="header">
+	<div class="container">
+		<div class="row">
+			<div class="header_logo">
+				<a href="index.html" title="Logo">
+					<img src="img/header_logo.gif" height="57" width="143" alt="">
+				</a>
+			</div>
+			<nav class="header_nav">
+				<ul>
+					<li>
+						<a href="#">Главная</a>
+					</li>
+					<li>
+						<a href="#">Услуги</a>
+					</li>
+					<li>
+						<a href="#">Рекомендации</a>
+					</li>
+					<li>
+						<a href="#">Портфолио</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header_modal">
+				<a data-modal="modal-1" data-info="Заказать звонок." class="modal" href="#">Заказать звонок</a>
+			</div>
+			<div class="header_phone">
+				<div class="header_phone_country">
+					<a class="active" data-tab="1" href="#">Украина</a>
+					<a data-tab="2" href="#">Россия</a>
+				</div>
+				<a class="active" data-tab="1" href="tel:+380671266556">+38 (067) 126-65-56</a>
+				<a data-tab="2" href="tel:+380671266556">+37 (111) 111-11-11</a>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- selling_site -->
+<section class="website_promotion selling_site">
+	<div class="container">
+		<div class="row">
+			<h1>Хотите Продающий Сайт?</h1>
+			<div class="main_content_txt_wrap">
+				<p>Мы разрабатываем сайты для любой сферы деятельности. Благодаря индивидуальному подходу, наши сайты
+					всегда оправдывают ожидания заказчиков и приносят отличную прибыль.</p>
+				<p>Также, наша студия сдвигает с места даже самые “непродвигаемые” сайты. Собираем информацию,
+					анализируем, находим слабые места и сильные стороны. Исправляем “базу” и приступаем к
+					продвижению.</p>
+			</div>
+			<div class="selling_site_img">
+				<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+				<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+				<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="svg2" sodipodi:docname="line 3.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="2px" height="1292px" viewBox="0 0 2 1292" enable-background="new 0 0 2 1292" xml:space="preserve">
                         <metadata id="metadata21">
                             <rdf:RDF>
                                 <cc:Work rdf:about="">
@@ -1709,16 +1895,16 @@
                             </g>
                         </g>
                     </svg>
-                </div>
-                <div class="selling_site_item_wrap">
-                    <div class="selling_site_item">
-                        <div class="selling_site_item_txt">
-                            <h3>Разработка<br/> взрывных сайтов</h3>
-                        </div>
-                        <div class="selling_site_item_img">
-                            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                            <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Динамит 1.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171px" height="171px" viewBox="0 0 171 171" enable-background="new 0 0 171 171" xml:space="preserve">
+			</div>
+			<div class="selling_site_item_wrap">
+				<div class="selling_site_item">
+					<div class="selling_site_item_txt">
+						<h3>Разработка<br/> взрывных сайтов</h3>
+					</div>
+					<div class="selling_site_item_img">
+						<a href="#"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+						<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+						<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Динамит 1.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171px" height="171px" viewBox="0 0 171 171" enable-background="new 0 0 171 171" xml:space="preserve">
                                 <metadata id="metadata57">
                                     <rdf:RDF>
                                         <cc:Work rdf:about="">
@@ -1755,10 +1941,10 @@
                                         <path style="opacity:0.2;fill:none;stroke:#ffffff;stroke-width:1" d="m 84.97,0.164 c 46.624,0 84.5,37.876 84.5,84.5 0,46.624 -37.876,84.5 -84.5,84.5 -46.624,0 -84.49999999,-37.876 -84.49999999,-84.5 C 0.47000001,38.04 38.346,0.164 84.97,0.164 Z" enable-background="new    " inkscape:connector-curvature="0" class="path4271" />
                                     </g>
                                     <g id="g4245">
-                                        <circle style="opacity:1;fill:#177898;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path4236" cx="84.970001" cy="84.664001" r="74" />
-                                        <path style="opacity:1;fill:#0f7289;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 84.972656,10.664062 0,147.999998 a 74,74 0 0 0 73.998044,-73.999998 74,74 0 0 0 -73.998044,-74 z" id="circle4238" inkscape:connector-curvature="0" />
+                                        <circle style="opacity:1;fill:#177898;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path4236" class="selling_site_item_1" cx="84.970001" cy="84.664001" r="74" />
+                                        <path style="opacity:1;fill:#0f7289;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 84.972656,10.664062 0,147.999998 a 74,74 0 0 0 73.998044,-73.999998 74,74 0 0 0 -73.998044,-74 z" class="selling_site_item_2" id="circle4238" inkscape:connector-curvature="0" />
                                     </g>
-                                    <path mask="url(#mask4257)" sodipodi:nodetypes="ccccccccccccccc" inkscape:connector-curvature="0" id="path4249" d="m 52.977766,128.1869 35.764135,35.38848 25.809399,-3.35876 26.5165,-16.61701 14.14214,-21.74353 7.77817,-21.2132 0.35356,-8.485286 0,-5.656854 0,-2.828428 0.43327,-1.616996 -75.749049,-43.674772 -5.804201,7.461556 -0.02053,5.3033 0,59.22019 z" style="fill:#0f4e5d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                                    <path mask="url(#mask4257)" sodipodi:nodetypes="ccccccccccccccc" inkscape:connector-curvature="0" class="selling_site_item_3" id="path4249" d="m 52.977766,128.1869 35.764135,35.38848 25.809399,-3.35876 26.5165,-16.61701 14.14214,-21.74353 7.77817,-21.2132 0.35356,-8.485286 0,-5.656854 0,-2.828428 0.43327,-1.616996 -75.749049,-43.674772 -5.804201,7.461556 -0.02053,5.3033 0,59.22019 z" style="fill:#0f4e5d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
                                     <g id="g4868" transform="matrix(1.0238137,-0.01468996,0.01498313,1.0037808,-232.2455,-301.62017)">
                                         <path id="path7" inkscape:connector-curvature="0" d="m 304.568,344.8 -0.4,-1.1 6,-2.4 0.4,1.1 -6,2.4 z" style="fill:#ec690b" />
                                         <path id="path9" inkscape:connector-curvature="0" d="m 301.968,344.3 -1.2,0 0,-8.3 1.2,0 0,8.3 z" style="fill:#ec690b" />
@@ -1789,23 +1975,23 @@
                                         <path id="path59" inkscape:connector-curvature="0" d="m 320.268,391.1 7.4,23.9 -6.8,2.1 -7.4,-23.9 6.8,-2.1 z" style="fill:#56230e" />
                                     </g>
                                 </g>
-                            </svg>
-                        </div>
-                        <div class="selling_site_item_txt2">
-                            <p>Landing page,
-                                <br/> интернет-магазин,
-                                <br/> сайт-визитка.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="selling_site_item">
-                        <div class="selling_site_item_txt">
-                            <h3>Продвижение<br/>  со скоростью пули</h3>
-                        </div>
-                        <div class="selling_site_item_img">
-                            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                            <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Револьвер 1.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171px" height="171px" viewBox="0 0 171 171" enable-background="new 0 0 171 171" xml:space="preserve">
+                            </svg></a>
+					</div>
+					<div class="selling_site_item_txt2">
+						<p>Landing page,
+							<br/> интернет-магазин,
+							<br/> сайт-визитка.
+						</p>
+					</div>
+				</div>
+				<div class="selling_site_item">
+					<div class="selling_site_item_txt">
+						<h3>Продвижение<br/> со скоростью пули</h3>
+					</div>
+					<div class="selling_site_item_img">
+						<a href="#"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+						<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+						<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Револьвер 1.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171px" height="171px" viewBox="0 0 171 171" enable-background="new 0 0 171 171" xml:space="preserve">
                                 <metadata id="metadata84">
                                     <rdf:RDF>
                                         <cc:Work rdf:about="">
@@ -1842,10 +2028,10 @@
                                         <path style="opacity:0.2;fill:none;stroke:#ffffff;stroke-width:1" d="m 84.762893,0.81044662 c 46.623997,0 84.499997,37.87600038 84.499997,84.50000038 0,46.624003 -37.876,84.500003 -84.499997,84.500003 -46.624,0 -84.49999993,-37.876 -84.49999993,-84.500003 0,-46.624 37.87599993,-84.50000038 84.49999993,-84.50000038 z" enable-background="new    " inkscape:connector-curvature="0" class="path4271" />
                                     </g>
                                     <g id="g4350">
-                                        <path id="path4213" sodipodi:type="inkscape:offset" inkscape:radius="0" inkscape:original="M 305.55859 322.66992 A 74 74 0 0 0 231.55859 396.66992 A 74 74 0 0 0 305.55859 470.66992 A 74 74 0 0 0 379.55859 396.66992 A 74 74 0 0 0 305.55859 322.66992 z " d="m 305.55859,322.66992 a 74,74 0 0 0 -74,74 74,74 0 0 0 74,74 74,74 0 0 0 74,-74 74,74 0 0 0 -74,-74 z" style="fill:#177898" transform="translate(-220.79569,-311.35947)" />
-                                        <path style="fill:#0f7289;fill-opacity:1" d="m 84.765625,11.310547 0,148.000003 a 74,74 0 0 0 73.998045,-74.000003 74,74 0 0 0 -73.998045,-74 z" id="path4343" inkscape:connector-curvature="0" />
+                                        <path id="path4213" class="selling_site_item_1" sodipodi:type="inkscape:offset" inkscape:radius="0" inkscape:original="M 305.55859 322.66992 A 74 74 0 0 0 231.55859 396.66992 A 74 74 0 0 0 305.55859 470.66992 A 74 74 0 0 0 379.55859 396.66992 A 74 74 0 0 0 305.55859 322.66992 z " d="m 305.55859,322.66992 a 74,74 0 0 0 -74,74 74,74 0 0 0 74,74 74,74 0 0 0 74,-74 74,74 0 0 0 -74,-74 z" style="fill:#177898" transform="translate(-220.79569,-311.35947)" />
+                                        <path style="fill:#0f7289;fill-opacity:1" d="m 84.765625,11.310547 0,148.000003 a 74,74 0 0 0 73.998045,-74.000003 74,74 0 0 0 -73.998045,-74 z" id="path4343" class="selling_site_item_2" inkscape:connector-curvature="0" />
                                     </g>
-                                    <path mask="url(#mask4362)" sodipodi:nodetypes="ccsccccccccccccc" inkscape:connector-curvature="0" id="path4354" d="m 37.523438,117.24219 47.242187,47.27344 c 0,0 13.484375,0.98437 14.484375,0.73437 1,-0.25 34,-16.25 34,-16.25 l 22.25,-27.25 5,-17.5 3.25,-11 0,-3 L 138.04933,63.433978 96.25,53.5 94.25,55.25 84.828125,49.555444 82.734375,48.3125 82.25,58.75 l -46.5,55 z" style="fill:#0f4e5d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                                    <path mask="url(#mask4362)" class="selling_site_item_3" sodipodi:nodetypes="ccsccccccccccccc" inkscape:connector-curvature="0" id="path4354" d="m 37.523438,117.24219 47.242187,47.27344 c 0,0 13.484375,0.98437 14.484375,0.73437 1,-0.25 34,-16.25 34,-16.25 l 22.25,-27.25 5,-17.5 3.25,-11 0,-3 L 138.04933,63.433978 96.25,53.5 94.25,55.25 84.828125,49.555444 82.734375,48.3125 82.25,58.75 l -46.5,55 z" style="fill:#0f4e5d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
                                     <g transform="translate(-0.70772308,-2.9060497)" id="g4286">
                                         <g transform="matrix(1.1422939,0,0,1.2201376,-275.14016,-383.92353)" id="g5073">
                                             <path style="fill:#c2d0e0" d="m 308.991,365.777 -38.891,38.891 5.645,5.645 38.891,-38.891 -5.645,-5.645 z" inkscape:connector-curvature="0" id="path4889" />
@@ -1910,25 +2096,25 @@
                                         </g>
                                     </g>
                                 </g>
-                            </svg>
-                        </div>
-                        <div class="selling_site_item_txt2">
-                            <p>Cбор семантического ядра,
-                                <br/> внутренняя/внешняя
-                                <br/>оптимизация
-                            </p>
-                        </div>
-                    </div>
-                    <div class="selling_site_item">
-                        <div class="selling_site_item_txt">
-                            <h3>
-                                Реклама, бьющая<br/> точно в цель
-                            </h3>
-                        </div>
-                        <div class="selling_site_item_img">
-                            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                            <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Шляпа 1.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171px" height="171px" viewBox="0 0 171 171" enable-background="new 0 0 171 171" xml:space="preserve">
+                            </svg></a>
+					</div>
+					<div class="selling_site_item_txt2">
+						<p>Cбор семантического ядра,
+							<br/> внутренняя/внешняя
+							<br/>оптимизация
+						</p>
+					</div>
+				</div>
+				<div class="selling_site_item">
+					<div class="selling_site_item_txt">
+						<h3>
+							Реклама, бьющая<br/> точно в цель
+						</h3>
+					</div>
+					<div class="selling_site_item_img">
+						<a href="#"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+						<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+						<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Шляпа 1.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171px" height="171px" viewBox="0 0 171 171" enable-background="new 0 0 171 171" xml:space="preserve">
                                 <metadata id="metadata46">
                                     <rdf:RDF>
                                         <cc:Work rdf:about="">
@@ -1965,10 +2151,10 @@
                                         <path style="opacity:0.2;fill:none;stroke:#ffffff;stroke-width:1" d="m 85.595,0.82025 c 46.624,0 84.5,37.876 84.5,84.5 0,46.624 -37.876,84.5 -84.5,84.5 -46.624,0 -84.5,-37.876 -84.5,-84.5 0,-46.624 37.876,-84.5 84.5,-84.5 z" enable-background="new    " inkscape:connector-curvature="0" class="path4271" />
                                     </g>
                                     <g id="g4217">
-                                        <path id="path4213" sodipodi:type="inkscape:offset" inkscape:radius="0" inkscape:original="M 305.55859 322.66992 A 74 74 0 0 0 231.55859 396.66992 A 74 74 0 0 0 305.55859 470.66992 A 74 74 0 0 0 379.55859 396.66992 A 74 74 0 0 0 305.55859 322.66992 z " d="m 305.55859,322.66992 a 74,74 0 0 0 -74,74 74,74 0 0 0 74,74 74,74 0 0 0 74,-74 74,74 0 0 0 -74,-74 z" style="fill:#177898;fill-opacity:1" transform="translate(-219.96359,-311.34967)" />
-                                        <path style="fill:#0f7289;fill-opacity:1" d="M 85.59375 11.320312 L 85.59375 159.32031 A 74 74 0 0 0 85.595703 159.32031 A 74 74 0 0 0 159.5957 85.320312 A 74 74 0 0 0 85.595703 11.320312 A 74 74 0 0 0 85.59375 11.320312 z " id="path4212" />
+                                        <path id="path4213" class="selling_site_item_1" sodipodi:type="inkscape:offset" inkscape:radius="0" inkscape:original="M 305.55859 322.66992 A 74 74 0 0 0 231.55859 396.66992 A 74 74 0 0 0 305.55859 470.66992 A 74 74 0 0 0 379.55859 396.66992 A 74 74 0 0 0 305.55859 322.66992 z " d="m 305.55859,322.66992 a 74,74 0 0 0 -74,74 74,74 0 0 0 74,74 74,74 0 0 0 74,-74 74,74 0 0 0 -74,-74 z" style="fill:#177898;fill-opacity:1" transform="translate(-219.96359,-311.34967)" />
+                                        <path style="fill:#0f7289;fill-opacity:1" d="M 85.59375 11.320312 L 85.59375 159.32031 A 74 74 0 0 0 85.595703 159.32031 A 74 74 0 0 0 159.5957 85.320312 A 74 74 0 0 0 85.595703 11.320312 A 74 74 0 0 0 85.59375 11.320312 z " class="selling_site_item_2" id="path4212" />
                                     </g>
-                                    <path mask="url(#mask4229)" sodipodi:nodetypes="cccccccccsccccc" inkscape:connector-curvature="0" id="path4221" d="M 39.09375,99.5625 48.5,108.25 35.638214,111.03466 90.625,166.375 121.5,158 l 30.75,-27 11,-24 L 164,94.75 128.69922,56.832031 c 0,0 -9.69922,12.417969 -10.94922,12.667969 -1.25,0.25 -6,1.5 -6,1.5 L 100.32322,58.954505 64.25,90.75 60.75,91 Z" style="fill:#0f4e5d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                                    <path mask="url(#mask4229)" class="selling_site_item_3" sodipodi:nodetypes="cccccccccsccccc" inkscape:connector-curvature="0" id="path4221" d="M 39.09375,99.5625 48.5,108.25 35.638214,111.03466 90.625,166.375 121.5,158 l 30.75,-27 11,-24 L 164,94.75 128.69922,56.832031 c 0,0 -9.69922,12.417969 -10.94922,12.667969 -1.25,0.25 -6,1.5 -6,1.5 L 100.32322,58.954505 64.25,90.75 60.75,91 Z" style="fill:#0f4e5d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
                                     <g id="g4534" transform="matrix(1.1787563,0,0,1.2124386,-273.81511,-389.05602)">
                                         <g id="g4526">
                                             <path id="path4410" inkscape:connector-curvature="0" d="m 284.574,394.897 0.462,1.386 -13.146,4.382 -0.462,-1.386 13.146,-4.382 z" style="fill:#e2c0a4" />
@@ -1990,23 +2176,23 @@
                                         </g>
                                     </g>
                                 </g>
-                            </svg>
-                        </div>
-                        <div class="selling_site_item_txt2">
-                            <p>
-                                Настройка яндекс.директ,
-                                <br/> google adwords
-                            </p>
-                        </div>
-                    </div>
-                    <div class="selling_site_item">
-                        <div class="selling_site_item_txt">
-                            <h3>Фирменный стиль<br/> на долгие года</h3>
-                        </div>
-                        <div class="selling_site_item_img">
-                            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                            <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Перо 1.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171px" height="171px" viewBox="0 0 171 171" enable-background="new 0 0 171 171" xml:space="preserve">
+                            </svg></a>
+					</div>
+					<div class="selling_site_item_txt2">
+						<p>
+							Настройка яндекс.директ,
+							<br/> google adwords
+						</p>
+					</div>
+				</div>
+				<div class="selling_site_item">
+					<div class="selling_site_item_txt">
+						<h3>Фирменный стиль<br/> на долгие года</h3>
+					</div>
+					<div class="selling_site_item_img">
+						<a href="#"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+						<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+						<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Перо 1.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171px" height="171px" viewBox="0 0 171 171" enable-background="new 0 0 171 171" xml:space="preserve">
                                 <metadata id="metadata77">
                                     <rdf:RDF>
                                         <cc:Work rdf:about="">
@@ -2044,10 +2230,10 @@
                                     </g>
                                     <path transform="translate(-220.08859,-311.00592)" style="fill:#177898;fill-opacity:0" d="m 305.55859,322.66992 a 74,74 0 0 0 -74,74 74,74 0 0 0 74,74 74,74 0 0 0 74,-74 74,74 0 0 0 -74,-74 z" inkscape:original="M 305.55859 322.66992 A 74 74 0 0 0 231.55859 396.66992 A 74 74 0 0 0 305.55859 470.66992 A 74 74 0 0 0 379.55859 396.66992 A 74 74 0 0 0 305.55859 322.66992 z " inkscape:radius="0" sodipodi:type="inkscape:offset" id="path4213" />
                                     <g id="g4281">
-                                        <path style="fill:#177898" d="m 305.55859,322.66992 a 74,74 0 0 0 -74,74 74,74 0 0 0 74,74 74,74 0 0 0 74,-74 74,74 0 0 0 -74,-74 z" inkscape:original="M 305.55859 322.66992 A 74 74 0 0 0 231.55859 396.66992 A 74 74 0 0 0 305.55859 470.66992 A 74 74 0 0 0 379.55859 396.66992 A 74 74 0 0 0 305.55859 322.66992 z " inkscape:radius="0" sodipodi:type="inkscape:offset" id="path4289" transform="translate(-220.08859,-311.00592)" />
-                                        <path style="fill:#0f7289;fill-opacity:1" d="m 85.46875,11.664062 0,147.999998 a 74,74 0 0 0 0.002,0 74,74 0 0 0 73.999997,-73.999998 74,74 0 0 0 -73.999997,-74 74,74 0 0 0 -0.002,0 z" id="path4276" inkscape:connector-curvature="0" />
+                                        <path style="fill:#177898" class="selling_site_item_1" d="m 305.55859,322.66992 a 74,74 0 0 0 -74,74 74,74 0 0 0 74,74 74,74 0 0 0 74,-74 74,74 0 0 0 -74,-74 z" inkscape:original="M 305.55859 322.66992 A 74 74 0 0 0 231.55859 396.66992 A 74 74 0 0 0 305.55859 470.66992 A 74 74 0 0 0 379.55859 396.66992 A 74 74 0 0 0 305.55859 322.66992 z " inkscape:radius="0" sodipodi:type="inkscape:offset" id="path4289" transform="translate(-220.08859,-311.00592)" />
+                                        <path style="fill:#0f7289;fill-opacity:1" d="m 85.46875,11.664062 0,147.999998 a 74,74 0 0 0 0.002,0 74,74 0 0 0 73.999997,-73.999998 74,74 0 0 0 -73.999997,-74 74,74 0 0 0 -0.002,0 z" class="selling_site_item_2" id="path4276" inkscape:connector-curvature="0" />
                                     </g>
-                                    <path mask="url(#mask4294)" sodipodi:nodetypes="cccccccccc" inkscape:connector-curvature="0" id="path4285" d="m 68.68801,133.09259 33.04698,32.51572 27.66555,-13.16986 20.5061,-21.21321 12.37437,-25.10229 2.29809,-12.904696 0.35356,-4.419417 -47.02797,-47.074838 -49.206877,79.393721 z" style="fill:#0f4e5d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                                    <path mask="url(#mask4294)" sodipodi:nodetypes="cccccccccc" inkscape:connector-curvature="0" id="path4285" class="selling_site_item_3" d="m 68.68801,133.09259 33.04698,32.51572 27.66555,-13.16986 20.5061,-21.21321 12.37437,-25.10229 2.29809,-12.904696 0.35356,-4.419417 -47.02797,-47.074838 -49.206877,79.393721 z" style="fill:#0f4e5d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
                                     <g transform="translate(-2.2214758e-4,1.671163e-4)" id="g4830">
                                         <g id="g4709" transform="matrix(0.96064909,0,0,0.96901202,-208.16335,-298.78778)">
                                             <path id="path4421" sodipodi:nodetypes="ccccc" inkscape:connector-curvature="0" d="m 339.407,351.373 4.771,9.264 -7.659,18.778 -4.713,-7.042 7.601,-21 z" style="fill:#353535" />
@@ -2099,25 +2285,25 @@
                                         </g>
                                     </g>
                                 </g>
-                            </svg>
-                        </div>
-                        <div class="selling_site_item_txt2">
-                            <p>
-                                Дизайн, логотип,
-                                <br/> оформление, брендбук
-                            </p>
-                        </div>
-                    </div>
-                    <div class="selling_site_item">
-                        <div class="selling_site_item_txt">
-                            <h3>
-                                Тексты Ярче<br/> Ковбойских Шпор
-                            </h3>
-                        </div>
-                        <div class="selling_site_item_img">
-                            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                            <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Ботинок 1.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171px" height="171px" viewBox="0 0 171 171" enable-background="new 0 0 171 171" xml:space="preserve">
+                            </svg></a>
+					</div>
+					<div class="selling_site_item_txt2">
+						<p>
+							Дизайн, логотип,
+							<br/> оформление, брендбук
+						</p>
+					</div>
+				</div>
+				<div class="selling_site_item">
+					<div class="selling_site_item_txt">
+						<h3>
+							Тексты Ярче<br/> Ковбойских Шпор
+						</h3>
+					</div>
+					<div class="selling_site_item_img">
+						<a href="#"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+						<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+						<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Ботинок 1.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171px" height="171px" viewBox="0 0 171 171" enable-background="new 0 0 171 171" xml:space="preserve">
                                 <metadata id="metadata60">
                                     <rdf:RDF>
                                         <cc:Work rdf:about="">
@@ -2155,10 +2341,10 @@
                                     </g>
                                     <path id="path4272" sodipodi:nodetypes="cccsccccc" inkscape:connector-curvature="0" mask="url(#mask4280)" d="m 49.05,115.879 57.723,45.222 22.981,-10.253 c 0,0 19.976,-19.799 20.683,-20.506 0.707,-0.707 10.607,-26.517 10.607,-26.517 l 1.591,-14.496 -54.734,-43.2 -28.174,70.247 -30.677,-0.497 z" style="fill:#0f4e5d" />
                                     <g id="g4258">
-                                        <circle style="opacity:1;fill:#177898;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path4249" cx="85.470001" cy="85.664001" r="74" />
-                                        <path style="opacity:1;fill:#0f7289;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 85.46875,11.664062 0,147.999998 a 74,74 0 0 0 0.002,0 74,74 0 0 0 73.999997,-73.999998 74,74 0 0 0 -73.999997,-74 74,74 0 0 0 -0.002,0 z" id="circle4251" inkscape:connector-curvature="0" />
+                                        <circle style="opacity:1;fill:#177898;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" class="selling_site_item_1" id="path4249" cx="85.470001" cy="85.664001" r="74" />
+                                        <path style="opacity:1;fill:#0f7289;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 85.46875,11.664062 0,147.999998 a 74,74 0 0 0 0.002,0 74,74 0 0 0 73.999997,-73.999998 74,74 0 0 0 -73.999997,-74 74,74 0 0 0 -0.002,0 z" class="selling_site_item_2" id="circle4251" inkscape:connector-curvature="0" />
                                     </g>
-                                    <path mask="url(#mask4270)" sodipodi:nodetypes="cccccccccccsc" inkscape:connector-curvature="0" id="path4262" d="M 52.34375,118.28125 97.062501,163.0625 122.25,157.5 l 21.875,-16 11.25,-18.875 6.625,-17 1,-6.375001 -51.375,-50.46875 -4.23437,-1.8125 -4.64844,-2.195313 -10.111201,61.526294 c 0,0 -18.73833,12.02081 -20.506097,12.02081 -1.767767,0 -19.781142,-0.0393 -19.781142,-0.0393 z" style="fill:#0f4e5d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                                    <path mask="url(#mask4270)" sodipodi:nodetypes="cccccccccccsc" inkscape:connector-curvature="0" id="path4262" class="selling_site_item_3" d="M 52.34375,118.28125 97.062501,163.0625 122.25,157.5 l 21.875,-16 11.25,-18.875 6.625,-17 1,-6.375001 -51.375,-50.46875 -4.23437,-1.8125 -4.64844,-2.195313 -10.111201,61.526294 c 0,0 -18.73833,12.02081 -20.506097,12.02081 -1.767767,0 -19.781142,-0.0393 -19.781142,-0.0393 z" style="fill:#0f4e5d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
                                     <g id="g4634" transform="translate(-222.9975,-311.11104)">
                                         <path id="path4342" inkscape:connector-curvature="0" d="m 277.095,427.635 c 0,0 10.487,6.027 15.575,6.201 4.823,0.569 17.355,0.886 17.355,0.886 0,0 2.204,-3.357 10.68,-4.872 4.366,0.068 20.47,0 20.47,0 l 0.445,-58.466 c 0,0 -3.162,-12.959 -12.905,-12.845 -5.765,-0.149 -6.23,0 -6.23,0 0,0 -11.595,0.51 -12.46,12.784 -0.068,9.37 -0.445,33.281 -0.445,33.281 0,0 -1.313,17.81 -20.025,20.375 -6.116,0.322 -6.23,0 -6.23,0 0,0 -5.585,-1.32 -5.785,-2.214 -0.465,2.534 -0.445,4.87 -0.445,4.87 l 0,0 z" style="fill:#b3462b" />
                                         <path id="path4310" inkscape:connector-curvature="0" d="m 326.041,414.328 0,-56.62 c 0,0 11.81,-1.637 15.521,12.97 0.124,9.468 0,33.764 0,33.764 0,0 -2.077,4.511 -4.565,3.595 0.122,2.616 0,3.595 0,3.595 0,0 0.12,3.073 -3.196,4.044 -0.923,-0.1 -0.913,0 -0.913,0 0,0 -1.293,-1.74 -2.283,-1.348 -1.641,0.071 -4.564,0 -4.564,0 l 0,0 z" style="fill:#533118" />
@@ -2195,20 +2381,20 @@
                                         <path id="rect4632" d="m 337.467,408.622 1.568,0 c 0.238,0 0.431,0.193 0.431,0.431 l 0,2.319 c 0,0.238 -0.193,0.431 -0.431,0.431 l -1.568,0 c -0.238,0 -0.431,-0.193 -0.431,-0.431 l 0,-2.319 c -10e-4,-0.238 0.192,-0.431 0.431,-0.431 z" inkscape:connector-curvature="0" style="fill:#b3462b" />
                                     </g>
                                 </g>
-                            </svg>
-                        </div>
-                        <div class="selling_site_item_txt2">
-                            <p>
-                                Сео текст, продающий текст,
-                                <br/> копирайтинг, рерайтинг
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="website_promotion_decor">
-                    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                    <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                    <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Layer_1" x="0px" y="0px" width="319" height="89" viewBox="0 0 319 89" enable-background="new 0 0 319 374" xml:space="preserve" inkscape:version="0.91 r13725" sodipodi:docname="Декор 1.svg">
+                            </svg></a>
+					</div>
+					<div class="selling_site_item_txt2">
+						<p>
+							Сео текст, продающий текст,
+							<br/> копирайтинг, рерайтинг
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="website_promotion_decor">
+				<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+				<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+				<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Layer_1" x="0px" y="0px" width="319" height="89" viewBox="0 0 319 89" enable-background="new 0 0 319 374" xml:space="preserve" inkscape:version="0.91 r13725" sodipodi:docname="Декор 1.svg">
                         <metadata id="metadata39">
                             <rdf:RDF>
                                 <cc:Work rdf:about="">
@@ -2228,25 +2414,27 @@
                         </g>
                         <path style="opacity:0.2;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 1.0251263,31.637375 46.9999997,-23.25 45.762456,7.95028 61.643798,-15.70028 40.10341,20.16628 41.04789,-15.44024 43.48707,16.26346 18.56155,-1.41421 19.44544,11.66726" id="path42022323" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccc" />
                     </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Секция from_idea_to_results -->
-    <section class="from_idea_to_results">
-        <div class="container">
-            <div class="row">
-                <div class="from_idea_to_results_top_txt">
-                    <p>Мы выкладываемся на 101%, чтобы ваш сайт вызывал желание купить.
-                        <br /> Дизайн соответствует тематике сайта, текст цепляет внимание и вызывает интерес. Каждый блок вызывает конкретную эмоцию, которая подтолкнёт человека к покупке.</p>
-                    <p>Забудьте про космические бюджеты на оплату разнообразной рекламы, потому что теперь ваш ресурс будет содержать информацию, которая поможет принять одно верное решение - купить ваш продукт.</p>
-                </div>
-                <h2>Путь От Идеи К Результату</h2>
-                <div class="from_idea_to_results_item">
-                    <div class="from_idea_to_results_img">
-                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                        <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Обсуждение.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171" height="171" viewBox="0 0 171 171" enable-background="new 0 0 612 792" xml:space="preserve">
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Секция from_idea_to_results -->
+<section class="from_idea_to_results">
+	<div class="container">
+		<div class="row">
+			<div class="from_idea_to_results_top_txt">
+				<p>Мы выкладываемся на 101%, чтобы ваш сайт вызывал желание купить.
+					<br/> Дизайн соответствует тематике сайта, текст цепляет внимание и вызывает интерес. Каждый блок
+					вызывает конкретную эмоцию, которая подтолкнёт человека к покупке.</p>
+				<p>Забудьте про космические бюджеты на оплату разнообразной рекламы, потому что теперь ваш ресурс будет
+					содержать информацию, которая поможет принять одно верное решение - купить ваш продукт.</p>
+			</div>
+			<h2>Путь От Идеи К Результату</h2>
+			<div class="from_idea_to_results_item">
+				<div class="from_idea_to_results_img">
+					<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+					<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+					<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Обсуждение.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171" height="171" viewBox="0 0 171 171" enable-background="new 0 0 612 792" xml:space="preserve">
                             <metadata id="metadata29">
                                 <rdf:RDF>
                                     <cc:Work rdf:about="">
@@ -2292,25 +2480,28 @@
                                 <text y="107.73209" x="50.501694" font-size="70" id="text25" style="font-size:70px;font-family:FontAwesome;fill:#ffffff"></text>
                             </g>
                         </svg>
-                    </div>
-                    <div class="from_idea_to_results_txt">
-                        <h3><span>1.</span> Обсуждение</h3>
-                        <p>
-                            Старший маркетолог, копирайтер и дизайнер собирают по крупицам всё, что даст «взрывной» результат. Так начинается план по завоеванию сердец клиентов.
-                        </p>
-                        <p>
-                            Можете не задумываться о сложности поставленных задач, потому что наши специалисты щёлкают любые трудности в работе как семечки.
-                        </p>
-                        <p>
-                            В итоге обсуждения проекта мы подписываем договор,который закрепляем общими договорённостями. Подписи поставлены - проект вступает в силу и команда начинает трудиться.
-                        </p>
-                    </div>
-                </div>
-                <div class="from_idea_to_results_item">
-                    <div class="from_idea_to_results_img">
-                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                        <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Создания концепта.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171" height="171" viewBox="0 0 171 171" enable-background="new 0 0 612 792" xml:space="preserve">
+				</div>
+				<div class="from_idea_to_results_txt">
+					<h3><span>1.</span> Обсуждение</h3>
+					<p>
+						Старший маркетолог, копирайтер и дизайнер собирают по крупицам всё, что даст «взрывной»
+						результат. Так начинается план по завоеванию сердец клиентов.
+					</p>
+					<p>
+						Можете не задумываться о сложности поставленных задач, потому что наши специалисты щёлкают любые
+						трудности в работе как семечки.
+					</p>
+					<p>
+						В итоге обсуждения проекта мы подписываем договор,который закрепляем общими договорённостями.
+						Подписи поставлены - проект вступает в силу и команда начинает трудиться.
+					</p>
+				</div>
+			</div>
+			<div class="from_idea_to_results_item">
+				<div class="from_idea_to_results_img">
+					<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+					<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+					<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Создания концепта.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171" height="171" viewBox="0 0 171 171" enable-background="new 0 0 612 792" xml:space="preserve">
                             <metadata id="metadata29">
                                 <rdf:RDF>
                                     <cc:Work rdf:about="">
@@ -2356,30 +2547,34 @@
                                 <text y="110.0032" x="55.816574" font-size="70" id="text25" style="font-size:70px;font-family:FontAwesome;fill:#ffffff"></text>
                             </g>
                         </svg>
-                    </div>
-                    <div class="from_idea_to_results_txt">
-                        <h3><span>2.</span>Создания концепта</h3>
-                        <p>
-                            Концепция — это главный ответ на вопрос “Зачем?” Это ядро, от которого отталкивается деятельность компании.
-                        </p>
-                        <p>
-                            Ключевая идея - это главный ориентир для вашего бизнеса. Вам будет проще принимать решения, связанные с продвижением и развитием, если вы будете чётко знать, что ваша компания из себя представляет.
-                        </p>
-                        <p>
-                            Ваши сотрудники должны видеть, что компания действует продуманно и двигается по намеченному пути. Значит в этой компании стоит остаться, здесь есть перспектива.
-                        </p>
-                        <p>
-                            Как говорил Чеширский Кот:
-                            <br /> “Если ты не знаешь, куда хочешь прийти, то тебе всё равно, какую дорогу выбрать”.
-                            <br /> Мы создадим для вас лучший ориентир, который поможет выбрать лучшую дорогу.
-                        </p>
-                    </div>
-                </div>
-                <div class="from_idea_to_results_item">
-                    <div class="from_idea_to_results_img">
-                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                        <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Выполнение.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171" height="171" viewBox="0 0 171 171" enable-background="new 0 0 612 792" xml:space="preserve">
+				</div>
+				<div class="from_idea_to_results_txt">
+					<h3><span>2.</span>Создания концепта</h3>
+					<p>
+						Концепция — это главный ответ на вопрос “Зачем?” Это ядро, от которого отталкивается
+						деятельность компании.
+					</p>
+					<p>
+						Ключевая идея - это главный ориентир для вашего бизнеса. Вам будет проще принимать решения,
+						связанные с продвижением и развитием, если вы будете чётко знать, что ваша компания из себя
+						представляет.
+					</p>
+					<p>
+						Ваши сотрудники должны видеть, что компания действует продуманно и двигается по намеченному
+						пути. Значит в этой компании стоит остаться, здесь есть перспектива.
+					</p>
+					<p>
+						Как говорил Чеширский Кот:
+						<br/> “Если ты не знаешь, куда хочешь прийти, то тебе всё равно, какую дорогу выбрать”.
+						<br/> Мы создадим для вас лучший ориентир, который поможет выбрать лучшую дорогу.
+					</p>
+				</div>
+			</div>
+			<div class="from_idea_to_results_item">
+				<div class="from_idea_to_results_img">
+					<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+					<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+					<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Выполнение.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171" height="171" viewBox="0 0 171 171" enable-background="new 0 0 612 792" xml:space="preserve">
                             <metadata id="metadata29">
                                 <rdf:RDF>
                                     <cc:Work rdf:about="">
@@ -2425,26 +2620,29 @@
                                 <text y="110.38802" x="50.489735" font-size="70" id="text25" style="font-size:70px;font-family:FontAwesome;fill:#ffffff"></text>
                             </g>
                         </svg>
-                    </div>
-                    <div class="from_idea_to_results_txt">
-                        <h3><span>3.</span> Выполнение</h3>
-                        <p>
-                            Когда готова вся теоретическая часть, каждый специалист берётся за свою задачу. Мы относимся к новому бизнес-проекту как к маленькому ребёнку. Аккуратная забота и самое продуктивное взращивание.
-                        </p>
-                        <p>
-                            Только тот проект, в котором учтены все мелочи, даёт взрывной эффект. Мы это не только знаем, но ещё используем.
-                        </p>
-                        <p>
-                            Да, нам не лень.
-                            <br /> Просто нас прёт только крутой результат.
-                        </p>
-                    </div>
-                </div>
-                <div class="from_idea_to_results_item">
-                    <div class="from_idea_to_results_img">
-                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                        <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Счастливый клиент.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171" height="171" viewBox="0 0 171 171" enable-background="new 0 0 612 792" xml:space="preserve">
+				</div>
+				<div class="from_idea_to_results_txt">
+					<h3><span>3.</span> Выполнение</h3>
+					<p>
+						Когда готова вся теоретическая часть, каждый специалист берётся за свою задачу. Мы относимся к
+						новому бизнес-проекту как к маленькому ребёнку. Аккуратная забота и самое продуктивное
+						взращивание.
+					</p>
+					<p>
+						Только тот проект, в котором учтены все мелочи, даёт взрывной эффект. Мы это не только знаем, но
+						ещё используем.
+					</p>
+					<p>
+						Да, нам не лень.
+						<br/> Просто нас прёт только крутой результат.
+					</p>
+				</div>
+			</div>
+			<div class="from_idea_to_results_item">
+				<div class="from_idea_to_results_img">
+					<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+					<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+					<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Слой_1" sodipodi:docname="Счастливый клиент.svg" inkscape:version="0.91 r13725" x="0px" y="0px" width="171" height="171" viewBox="0 0 171 171" enable-background="new 0 0 612 792" xml:space="preserve">
                             <metadata id="metadata29">
                                 <rdf:RDF>
                                     <cc:Work rdf:about="">
@@ -2490,29 +2688,32 @@
                                 <text y="110.55559" x="50.417229" font-size="70" id="text25" style="font-size:70px;font-family:FontAwesome;fill:#ffffff"></text>
                             </g>
                         </svg>
-                    </div>
-                    <div class="from_idea_to_results_txt">
-                        <h3><span>4.</span> Счастливый клиент</h3>
-                        <p>
-                            А ещё, мы очень любим, когда нас от души благодарят. Именно от души. Мы всегда вкладываем душу в работу, поэтому благодарят нас тоже с душой.
-                        </p>
-                        <p>
-                            Каждый специалист ELITE-STUDIO приближает клиента к счастью, потому что не останавливается в развитии и оттачивает мастерство в своём деле.
-                        </p>
-                        <p>
-                            Мы взрываем устаревшие концепции и реализуем креативные идеи. Наша главная цель - дать максимум тому, кто к нам обратился.
-                        </p>
-                        <p>
-                            Хотели получить кайф от результата и обойти конкурентов?
-                            <br /> Тогда вы обратились по адресу!
-                        </p>
-                    </div>
-                </div>
-                <div class="from_idea_to_results_decor">
-                    <?xml version="1.0" encoding="utf-8"?>
-                    <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                    <svg version="1.1" id="svg2" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" sodipodi:docname="Р”РµРєРѕСЂ 2.svg" inkscape:version="0.91 r13725" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="249px" height="93px" viewBox="0 0 249 93" enable-background="new 0 0 249 93" xml:space="preserve">
+				</div>
+				<div class="from_idea_to_results_txt">
+					<h3><span>4.</span> Счастливый клиент</h3>
+					<p>
+						А ещё, мы очень любим, когда нас от души благодарят. Именно от души. Мы всегда вкладываем душу в
+						работу, поэтому благодарят нас тоже с душой.
+					</p>
+					<p>
+						Каждый специалист ELITE-STUDIO приближает клиента к счастью, потому что не останавливается в
+						развитии и оттачивает мастерство в своём деле.
+					</p>
+					<p>
+						Мы взрываем устаревшие концепции и реализуем креативные идеи. Наша главная цель - дать максимум
+						тому, кто к нам обратился.
+					</p>
+					<p>
+						Хотели получить кайф от результата и обойти конкурентов?
+						<br/> Тогда вы обратились по адресу!
+					</p>
+				</div>
+			</div>
+			<div class="from_idea_to_results_decor">
+				<?xml version="1.0" encoding="utf-8"?>
+				<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+				<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+				<svg version="1.1" id="svg2" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" sodipodi:docname="Р”РµРєРѕСЂ 2.svg" inkscape:version="0.91 r13725" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="249px" height="93px" viewBox="0 0 249 93" enable-background="new 0 0 249 93" xml:space="preserve">
                         <sodipodi:namedview units="px" inkscape:cy="-17.663192" inkscape:cx="26.294741" inkscape:zoom="1.4" showgrid="false" borderopacity="1.0" pagecolor="#ffffff" bordercolor="#666666" id="base" inkscape:current-layer="layer1" inkscape:window-maximized="1" inkscape:window-y="-8" inkscape:window-x="-8" inkscape:window-height="801" inkscape:window-width="1536" inkscape:pageshadow="2" inkscape:pageopacity="0.0" inkscape:document-units="px">
                         </sodipodi:namedview>
                         <g id="layer1" transform="translate(0,-959.36216)" inkscape:label="Layer 1" inkscape:groupmode="layer">
@@ -2538,94 +2739,112 @@
                             </g>
                         </g>
                     </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="copyright">
-                    <p>© 2015 EliteStudio.pro</p>
-                    <p>Попадаем точно в цель!</p>
-                </div>
-                <nav class="footer_nav">
-                    <ul>
-                        <li>
-                            <a href="#">Главная</a>
-                        </li>
-                        <li>
-                            <a href="#">Услуги</a>
-                        </li>
-                        <li>
-                            <a href="#">Рекомендации</a>
-                        </li>
-                        <li>
-                            <a href="#">Портфолио</a>
-                        </li>
-                        <li>
-                            <a href="#">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="footer_phone_mail">
-                    <div>
-                        <a href="tel:380671266556"><i class="fa fa-phone-square"></i>+38 (067) 126-65-56</a>
-                    </div>
-                    <div>
-                        <a class="mail" href="mailto:order@elitestudio.pro"><i class="fa fa-envelope-square"></i>order@elitestudio.pro</a>
-                    </div>
-                </div>
-                <div class="footer_social">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-vk"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="hidden"></div>
-    <!--[if lt IE 9]>
-    <script src="libs/html5shiv/es5-shim.min.js"></script>
-    <script src="libs/html5shiv/html5shiv.min.js"></script>
-    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>`
-    <script src="libs/respond/respond.min.js"></script>
-    <![endif]-->
-    <!-- Load Scripts Start -->
-    <script>
-    var scr = {
-        "scripts": [{
-            "src": "js/libs.js",
-            "async": false
-        }, {
-            "src": "js/common.js",
-            "async": false
-        }]
-    };
-    ! function(t, n, r) {
-        "use strict";
-        var c = function(t) {
-            if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
-            for (var r = 0; r < t.length; r++) {
-                var c = n.createElement("script"),
-                    e = t[r];
-                c.src = e.src, c.async = e.async, n.body.appendChild(c)
-            }
-            return !0
-        };
-        t.addEventListener ? t.addEventListener("load", function() {
-            c(r.scripts);
-        }, !1) : t.attachEvent ? t.attachEvent("onload", function() {
-            c(r.scripts)
-        }) : t.onload = function() {
-            c(r.scripts)
-        }
-    }(window, document, scr);
-    </script>
-    <!-- Load Scripts End -->
+			</div>
+		</div>
+	</div>
+</section>
+<!-- footer -->
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="copyright">
+				<p>© 2015 EliteStudio.pro</p>
+				<p>Попадаем точно в цель!</p>
+			</div>
+			<nav class="footer_nav">
+				<ul>
+					<li>
+						<a href="#">Главная</a>
+					</li>
+					<li>
+						<a href="#">Услуги</a>
+					</li>
+					<li>
+						<a href="#">Рекомендации</a>
+					</li>
+					<li>
+						<a href="#">Портфолио</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footer_phone_mail">
+				<div>
+					<a href="tel:380671266556">
+						<i class="fa fa-phone-square"></i>
+						+38 (067) 126-65-56
+					</a>
+				</div>
+				<div>
+					<a class="mail" href="mailto:order@elitestudio.pro">
+						<i class="fa fa-envelope-square"></i>
+						order@elitestudio.pro
+					</a>
+				</div>
+			</div>
+			<div class="footer_social">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="fa fa-instagram"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-vk"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-facebook-square"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="hidden"></div>
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/es5-shim.min.js"></script>
+<script src="libs/html5shiv/html5shiv.min.js"></script>
+<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>`
+<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+<!-- Load Scripts Start -->
+<script>
+	var scr = {
+		"scripts": [{
+			"src": "js/libs.js",
+			"async": false
+		}, {
+			"src": "js/common.js",
+			"async": false
+		}]
+	};
+	!function (t, n, r) {
+		"use strict";
+		var c = function (t) {
+			if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+			for (var r = 0; r < t.length; r++) {
+				var c = n.createElement("script"),
+						e = t[r];
+				c.src = e.src, c.async = e.async, n.body.appendChild(c)
+			}
+			return !0
+		};
+		t.addEventListener ? t.addEventListener("load", function () {
+			c(r.scripts);
+		}, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+			c(r.scripts)
+		}) : t.onload = function () {
+			c(r.scripts)
+		}
+	}(window, document, scr);
+</script>
+<!-- Load Scripts End -->
 </body>
 
 </html>

@@ -464,6 +464,70 @@ body textarea:required:valid
 		top: -43px
 		left: 10px
 		height: 8px
+.select
+	position: relative
+	text-align: left
+	.drop
+		width: 100%
+		max-height: 200px
+		overflow: auto
+		margin: 0 auto
+		padding: 0
+		border-top: none
+		display: none
+		position: absolute
+		background-color: #fff
+		top: 50px
+		left: 0
+		right: 0
+		z-index: 10
+		li
+			list-style: none
+			border-bottom: none
+			border-top: none
+			cursor: pointer
+			display: block
+			@include font($auxiliary_txt_color, 18px,  $font_Amazing_Grotesk_Demi_Bold, 1.2)
+			padding: 7px 15px 7px 25px
+			&:hover
+				background-color: rgba(0,0,0,0.2)
+				outline: 0
+			a
+				text-decoration: none
+	.slct
+		width: 100%
+		height: 50px
+		padding-left: 25px
+		padding-right: 30px
+		margin-bottom: 15px
+		display: block
+		@include font(#fff, 18px,  $font_Amazing_Grotesk_Demi_Bold, 1.2)
+		background: transparent
+		border: 1px solid #FFF
+		line-height: 50px
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		-o-text-overflow: ellipsis
+		text-decoration: none
+		position: relative
+		transition: color 1s
+		&.active
+			color: #000
+			background: #fff
+
+	.slct_arrow
+		position: absolute
+		top: 9px
+		right: 10px
+		font-size: 24px
+		.fa
+			transition: 0.3s
+		&.active .fa
+			color: #000
+			transform: rotate(180deg)
+			z-index: 10
+			position: relative
 //	Секция website_promotion
 .website_promotion
 	min-height: 1560px
@@ -941,6 +1005,18 @@ body textarea:required:valid
 			h3
 				font-size: 30px
 				line-height: 1.2
+			a
+				color: $main_color
+				text-decoration: none
+				&:hover
+					color: $main_color
+					text-decoration: none
+				&:active
+					color: $main_color
+					text-decoration: none
+				&:focus
+					color: $main_color
+					text-decoration: none
 		.selling_site_item_txt2
 			width: 380px
 			font-size: 24px
@@ -948,11 +1024,25 @@ body textarea:required:valid
 			text-align: left
 			display: inline-block
 			vertical-align: middle
+			a
+				color: $main_txt_color
+				text-decoration: none
+				&:hover
+					color: $main_txt_color
+					text-decoration: none
+				&:active
+					color: $main_txt_color
+					text-decoration: none
+				&:focus
+					color: $main_txt_color
+					text-decoration: none
 		.selling_site_item_img
 			margin-left: 27px
 			margin-right: 20px
 			display: inline-block
 			vertical-align: middle
+			a
+				display: inline-block
 	.website_promotion_decor
 		position: absolute
 		bottom: -182px
@@ -1109,6 +1199,10 @@ body textarea:required:valid
 .cost_of_online_store
 	background: #0b2848
 	text-align: center
+	&.run
+		background: #03142e
+		.cost_of_online_store_item_wrap
+			margin-bottom: 70px
 	h2
 		margin-top: 100px
 		margin-bottom: 40px
@@ -1118,84 +1212,159 @@ body textarea:required:valid
 	.cost_of_online_store_item_wrap
 		overflow: hidden
 		margin-bottom: 215px
+		padding-left: 85px
 		padding-top: 30px
 		padding-bottom: 30px
-	.cost_of_online_store_item
-		width: 370px
-		margin-right: 28px
-		float: left
-		background-color: #fff
-		color: #000
-		&:first-of-type
-			margin-left: 15px
-		&:last-of-type
-			margin-right: 0
-		&.active
-			box-shadow: 0 0 0 30px $main_color
-			position: relative
-			z-index: 2
-			.cost_of_online_store_item_link
-				a
-					background-color: #b48309
-					&:hover
-						background-color: #fff
-						text-decoration: none
-					&:active
-						background-color: #fff
-						text-decoration: none
-					&:focus
-						background-color: #fff
-						text-decoration: none
-
-		h3
-			font-size: 36px
-			font-family: $font_Amazing_Grotesk_Ultra
-			margin-bottom: 0
-		p
-			margin-top: 0
-			line-height: 1.2
-			font-size: 24px
-			color: #8a8a8a
-		ul
-			padding: 0 15px
-			margin: 44px 0 0 0
-			li
-				min-height: 72px
-				line-height: 70px
-				list-style: none
-				font-family: $font_Amazing_Grotesk_Ultra
-				font-size: 24px
-				&:nth-child(odd)
-					background-color: #eaeaea
-		.cost_of_online_store_item_for_all
-			height: 150px
-			background-color: #177898
-			h4
-				margin: 0
-				padding-top: 30px
-				@include font($main_color, 72px, $font_Amazing_Grotesk_Ultra, 1)
-			p
-				margin-top: 0
-				@include font(#fff, 24px, $font_Amazing_Grotesk_Ultra)
-		.cost_of_online_store_item_link
-			height: 65px
-			a
-				display: block
-				height: 100%
-				line-height: 65px
-				font-size: 30px
-				color: #000
-				background-color: #fff
-				transition: background-color 0.5s
-				&:hover
-					background-color: #b48309
-					text-decoration: none
-				&:active
-					text-decoration: none
-					background-color: #b48309
-				&:focus
-					text-decoration: none
-					background-color: #b48309
+		.table
+			width: 1030px
+			display: none !important
+			&.active
+				display: block !important
+			thead
+				tr
+					border-bottom: 1px solid rgba(255,255,255, 0.2)
+					th
+						width: 19.5%
+						height: 60px
+						@include font($main_color, 18px, $font_Amazing_Grotesk_Ultra)
+						&:first-of-type
+							width: 430px
+							padding-left: 30px
+							text-align: left
+						&:nth-of-type(3)
+							background-color: $main_color
+							color: $main_txt_color
+							border-radius: 10px 10px 0 0
+			tbody
+				tr
+					&:first-of-type
+						height: 25px
+						td
+							&:nth-of-type(3)
+								width: inherit
+								height: 25px
+								display: table-cell
+								line-height: inherit
+					td
+						padding-top: 5px
+						padding-bottom: 5px
+						@include font($main_txt_color, 14px, $font_Amazing_Grotesk_Ultra)
+						&:first-of-type
+							padding-left: 30px
+							text-align: left
+						&:nth-of-type(3)
+							background-color: $main_color
+							display: inline-block
+							width: 100%
+							height: 33px
+							line-height: 33px
+							i
+								color: $main_txt_color
+				i
+					font-size: 18px
+					color: $main_color
+			tfoot
+				tr
+					td
+						@include font($main_color, 36px, $font_Amazing_Grotesk_Ultra)
+						padding-top: 5px
+						padding-bottom: 5px
+						&:first-of-type
+							@include font($main_txt_color, 36px, $font_Amazing_Grotesk_Ultra)
+							padding-left: 30px
+							text-align: left
+					span
+						color: $main_color
+					button
+						@extend %main_btn
+						width: 170px
+						height: 52px
+						line-height: 52px
+						vertical-align: middle
+						transition: 0.5s
+						&:hover
+							@extend %main_btn_hover
+						&:active
+							@extend %main_btn_active
+						&:focus
+							@extend %main_btn_focus
+							outline: 0
+	//.cost_of_online_store_item
+	//	width: 370px
+	//	margin-right: 28px
+	//	float: left
+	//	background-color: #fff
+	//	color: #000
+	//	&:first-of-type
+	//		margin-left: 15px
+	//	&:last-of-type
+	//		margin-right: 0
+	//	&.active
+	//		box-shadow: 0 0 0 30px $main_color
+	//		position: relative
+	//		z-index: 2
+	//		.cost_of_online_store_item_link
+	//			a
+	//				background-color: #b48309
+	//				&:hover
+	//					background-color: #fff
+	//					text-decoration: none
+	//				&:active
+	//					background-color: #fff
+	//					text-decoration: none
+	//				&:focus
+	//					background-color: #fff
+	//					text-decoration: none
+	//
+	//	h3
+	//		font-size: 36px
+	//		font-family: $font_Amazing_Grotesk_Ultra
+	//		margin-bottom: 0
+	//	p
+	//		margin-top: 0
+	//		line-height: 1.2
+	//		font-size: 24px
+	//		color: #8a8a8a
+	//	ul
+	//		padding: 0 15px
+	//		margin: 44px 0 0 0
+	//		li
+	//			min-height: 72px
+	//			line-height: 70px
+	//			list-style: none
+	//			font-family: $font_Amazing_Grotesk_Ultra
+	//			font-size: 18px
+	//			&:nth-child(odd)
+	//				background-color: #eaeaea
+	//	.cost_of_online_store_item_for_all
+	//		height: 150px
+	//		background-color: #177898
+	//		h4
+	//			margin: 0
+	//			padding-top: 30px
+	//			@include font($main_color, 72px, $font_Amazing_Grotesk_Ultra, 1)
+	//		p
+	//			margin-top: 0
+	//			@include font(#fff, 24px, $font_Amazing_Grotesk_Ultra)
+	//	.cost_of_online_store_item_link
+	//		height: 65px
+	//		a
+	//			display: block
+	//			height: 100%
+	//			line-height: 65px
+	//			font-size: 30px
+	//			color: #000
+	//			background-color: #fff
+	//			transition: background-color 0.5s
+	//			&:hover
+	//				background-color: #b48309
+	//				text-decoration: none
+	//			&:active
+	//				text-decoration: none
+	//				background-color: #b48309
+	//			&:focus
+	//				text-decoration: none
+	//				background-color: #b48309
 	.cost_of_online_store_bot_decor
 		position: relative
 		svg
@@ -1203,6 +1372,61 @@ body textarea:required:valid
 			bottom: -33px
 			left: 469px
 			z-index: 10
+	.cost_of_online_store_links
+		width: 1030px
+		height: 53px
+		margin-bottom: 20px
+		line-height: 53px
+		border: 1px solid rgba(255,255,255, 0.2)
+		border-radius: 25px
+		position: relative
+		text-align: left
+	.cost_of_online_store_links_item
+		display: inline-block
+		vertical-align: middle
+		margin-right: 73px
+		&:last-of-type
+			margin-right: 0 !important
+		a
+			display: inline-block
+			padding-left: 55px
+			padding-right: 35px
+			color: #fff
+			position: relative
+			z-index: 10
+			@include font($main_txt_color, 14px, $font_Amazing_Grotesk_Ultra)
+			&:hover
+				text-decoration: none
+				color: #fff
+				outline: 0
+			&:active
+				text-decoration: none
+				color: #fff
+				outline: 0
+			&:focus
+				text-decoration: none
+				color: #fff
+				outline: 0
+		i
+			display: inline-block
+			vertical-align: middle
+			position: absolute
+			top: 0
+			left: 20px
+			&.img_1
+				@include sprite($cost_of_online_store_links_item1)
+			&.img_2
+				@include sprite($cost_of_online_store_links_item2)
+			&.img_3
+				@include sprite($cost_of_online_store_links_item3)
+	.cost_of_online_store_links_chisel
+		width: 292px
+		height: 53px
+		background-color: #eed350
+		border-radius: 25px
+		position: absolute
+		z-index: 0
+
 //	Секция what_tasks_are_performed
 .what_tasks_are_performed
 	min-height: 400px
@@ -1431,7 +1655,7 @@ body textarea:required:valid
 		i
 			font-size: 48px
 			color: #ffffff
-	#portfolio_item_btn
+	.portfolio_item_btn
 		width: 370px
 		height: 60px
 		background-color: #eed350
@@ -1728,16 +1952,10 @@ body textarea:required:valid
 .what_else_do
 	&.running_PPC_advertising
 		position: relative
-		background: url(../img/what_tasks_are_performed_clouds.png) center top 100px no-repeat #03142e
+		background: url(../img/what_tasks_are_performed_clouds.png) center top 100px no-repeat #0b2848
 		h2
-			margin-top: 220px
-		.examples_of_online_stores_decor
-			position: absolute
-			bottom: -63px
-			right: 0
-			left: 0
-			text-align: center
-			z-index: 10
+			margin-top: 90px
+
 //	Секция  seven_main_tasks
 .what_else_do
 	&.seven_main_tasks
@@ -1745,7 +1963,7 @@ body textarea:required:valid
 		h2
 			text-transform: capitalize
 			margin-bottom: 40px
-			margin-bottom: 40px
+			margin-top: 230px
 		.what_else_do_items
 			width: 830px
 			margin: auto
@@ -1753,12 +1971,19 @@ body textarea:required:valid
 			width: 245px
 			p
 				font-size: 17.7px
+		.examples_of_online_stores_decor
+			position: absolute
+			bottom: -63px
+			right: 0
+			left: 0
+			text-align: center
+			z-index: 10
 //	Секция that_you_get_in_the_end
 .that_you_get_in_the_end
 	background: url(../img/what_tasks_are_performed_clouds.png) center top 100px no-repeat #03142e
 	h2
 		width: 550px
-		margin: 47px auto 30px
+		margin: 90px auto 30px
 		font-size: 36px
 		color: $main_color
 		position: relative
@@ -2109,6 +2334,142 @@ body textarea:required:valid
 			p
 				font-size: 18px
 
+//	Секция results_of_our_clients
+.cost_of_online_store
+	&.results_of_our_clients
+		overflow: visible
+		.results_of_our_clients_title
+			h2
+				width: 580px
+				margin: 47px auto 30px
+				font-size: 36px
+				color: #eed350
+				position: relative
+				&:after
+					content: ""
+					background: url(../img/why_our_landing_sell_h2_decor.png)
+					display: block
+					width: 68px
+					height: 74px
+					position: absolute
+					left: -27px
+					top: -40px
+		.results_of_our_clients_slider
+			width: 970px
+			position: relative
+			margin: 0 auto 125px
+			border: 10px solid #f5d9a8
+			i
+				font-size: 72px
+				color: $main_color
+				transition: 0.5s
+				&:hover
+					color: $auxiliary_color
+			.customBtn
+				display: inline-block
+				position: absolute
+				cursor: pointer
+			.customPrevBtn4
+				top: calc(50% - 36px)
+				left: -65px
+			.customNextBtn4
+				top: calc(50% - 36px)
+				right: -65px
+		.results_of_our_clients_slider_item
+			width: 950px
+			height: 400px
+			position: relative
+		.results_of_our_clients_slider_item_txt
+			position: absolute
+			top: 80px
+			left: 180px
+			z-index: 10
+			text-align: left
+			h3
+				margin-bottom: 0
+				margin-top: 0
+				@include font($main_color, 30px, $font_Amazing_Grotesk_Demi_Bold, 1.3)
+			ul
+				padding: 0
+				margin: 0
+				li
+					list-style: none
+					@include font($main_txt_color, 24px, $font_Amazing_Grotesk_Demi_Bold, 1.4)
+				span
+					color: $main_color
+		.owl-controls
+			position: absolute
+			right: 5px
+			bottom: 5px
+			.owl-dot
+				width: 10px
+				height: 10px
+				display: inline-block
+				margin-right: 5px
+				background-color: #f5d9a8
+				border-radius: 50%
+				transition: 0.5s
+				&:hover
+					background-color: $main_color
+				&.active
+					background-color: $main_color
+		.book_now_form
+			width: 570px
+			margin: 0 auto 200px
+			input[type=submit]
+				width: 100%
+
+
+//	Секция  inner_portfolio
+.cost_of_online_store
+	&.inner_portfolio
+		background-color: #ffffff
+		.inner_portfolio_img
+			text-align: center
+			position: relative
+			img
+				width: 100%
+				display: block
+				margin: 0 auto
+		.inner_portfolio_title
+			position: absolute
+			top: 230px
+			left: 0
+			right: 0
+			margin: auto
+			h1
+				color: #03142e
+				margin-bottom: 0px
+			p
+				color: #03142e
+				font-size: 26px
+		.book_now_form
+			width: 770px
+			input
+				color: #03142e
+				border: 1px solid #03142e
+				&::-webkit-input-placeholder
+					color: #03142e
+				&:-moz-placeholder
+					color: #03142e
+				&::-moz-placeholder
+					color: #03142e
+				&:-ms-input-placeholder
+					color: #03142e
+			textarea
+				color: #03142e
+				border: 1px solid #03142e
+				&::-webkit-input-placeholder
+					color: #03142e
+				&:-moz-placeholder
+					color: #03142e
+				&::-moz-placeholder
+					color: #03142e
+				&:-ms-input-placeholder
+					color: #03142e
+			input[type=submit]
+				border: none
+//	Секция
 //	Секция
 //	Секция
 //	Секция
@@ -2183,6 +2544,7 @@ body textarea:required:valid
 		margin-top: -35px
 		text-align: center
 		font-size: 24px
+		clear: both
 		ul
 			padding: 0
 			margin: 0

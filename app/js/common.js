@@ -1593,7 +1593,7 @@ function filterBtn(arrImg, arrUrl) {
 	var limit = 0,
 		arr = [],
 		i = 0; // для итерации id в шаблон
-		arr.length = null;
+		arr.length = 0;
 	//обнуляем id при клике если они есть
 	$(".portfolio_item_wrap .portfolio_item").each(function () {
 		var index = $(this).attr('id');
@@ -1760,8 +1760,8 @@ $(document).ready(function () {
 		var value = $(this).data("filter");
 		var imgSource = [], //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json)
 			urlSource = [];
-			imgSource.length = null;
-			urlSource.length = null;
+			imgSource.length = 0;
+			urlSource.length = 0;
 
 		$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
 			var category = data.items;

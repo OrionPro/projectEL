@@ -11,7 +11,7 @@ $(window).resize(function () {
 	//Ваш код
 });
 $(window).scroll(function () {
-	console.log($(window).scrollTop());
+	//console.log($(window).scrollTop());
 	if ($(window).scrollTop() >= 10 && $(window).scrollTop() <= 199) {
 		// tl.reverse();
 	}
@@ -1619,10 +1619,47 @@ function filterBtn(arrImg, arrUrl) {
 
 		var index = $(this).attr('id');
 		if (index != 'not-add') {
-			TweenMax.staggerFrom("#" + index, 2, {y: 40, autoAlpha: 0}, 0.5);
+			TweenMax.from("#" + index, 2, {y: 40, autoAlpha: 0}, 0.5);
 		}
+	});
+	//Если не осталось в массиве итемов элементов убираем кнопку добавить ещё
+	if (arrImg.length == 0) {
+		$('#portfolio_item_btn').css('display', "none");
+	}
+
+}
+function filterBtn(arrImg, arrUrl) {
+	var limit = 0,
+		arr = [],
+		i = 0; // для итерации id в шаблон
+	//обнуляем id при клике если они есть
+	$(".portfolio_item_wrap .portfolio_item").each(function () {
+		var index = $(this).attr('id');
+		if (index != "not-add") {
+			$(this).attr('id', '')
+		}
+	});
+
+	for (var g = 0; g < arrImg.length; g++) {
+		i++;
+		if (limit < 3) {
+
+			$(".portfolio_item_wrap").append(elemTpl(arrImg[g], arrUrl[g], i));
+
+			arr.push(elemTpl(arrImg[g], arrUrl[g]));
 
 
+			limit++;
+		}
+	}
+	arrImg.splice(0, 3);
+	//делаем анимацию у тех элементов, которые добавялем на кнопку загрузить ещё
+	$(".portfolio_item_wrap .portfolio_item").each(function () {
+
+		var index = $(this).attr('id');
+		if (index != 'not-add') {
+			TweenMax.from("#" + index, 2, {y: 40, autoAlpha: 0}, 0.5);
+		}
 	});
 	//Если не осталось в массиве итемов элементов убираем кнопку добавить ещё
 	if (arrImg.length == 0) {
@@ -1668,6 +1705,7 @@ function readyPortfolioJSON() {
 	});
 
 }
+// Функция проверки и установки cookie
 function getCookie(data) {
 	var cookieArr = document.cookie.split(';');
 	for (var i = 0; i < cookieArr.length; i++) {
@@ -1755,8 +1793,9 @@ $(document).ready(function () {
 		$(this).addClass("active");
 		//часть getJSON
 		var value = $(this).data("filter");
-		var imgSource = [], //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json) 
+		var imgSource = [], //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json)
 			urlSource = [];
+
 		$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
 			var category = data.items;
 			var j = 0;
@@ -1801,7 +1840,7 @@ $(document).ready(function () {
 			TweenMax.staggerFrom(".portfolio_item_wrap .portfolio_item", 2, {y: 30, autoAlpha: 0}, 0.2);
 		});
 
-		$('#portfolio_item_btn').click(function () {
+		$(document).on("click", "#portfolio_item_btn", function () {
 			filterBtn(imgSource, urlSource);
 		});
 

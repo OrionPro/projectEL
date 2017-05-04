@@ -1593,6 +1593,7 @@ function filterBtn(arrImg, arrUrl) {
 	var limit = 0,
 		arr = [],
 		i = 0; // для итерации id в шаблон
+		arr.length = 0;
 	//обнуляем id при клике если они есть
 	$(".portfolio_item_wrap .portfolio_item").each(function () {
 		var index = $(this).attr('id');
@@ -1624,7 +1625,7 @@ function filterBtn(arrImg, arrUrl) {
 	});
 	//Если не осталось в массиве итемов элементов убираем кнопку добавить ещё
 	if (arrImg.length == 0) {
-		$('#portfolio_item_btn').css('display', "none");
+		$('.portfolio_item_btn').css('display', "none");
 	}
 
 }
@@ -1647,9 +1648,9 @@ function readyPortfolioJSON() {
 				if (j > 9) {
 					imgSource.push(src[i].img);
 					urlSource.push(src[i].url);
-					$('#portfolio_item_btn').css('display', "block");
+					$('.portfolio_item_btn').css('display', "block");
 				} else {
-					$('#portfolio_item_btn').css('display', "none");
+					$('.portfolio_item_btn').css('display', "none");
 					$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
 				}
 			}
@@ -1658,6 +1659,7 @@ function readyPortfolioJSON() {
 		TweenMax.staggerFrom(".portfolio_item_wrap .portfolio_item", 2, {y: 30, autoAlpha: 0}, 0.2);
 	});
 	$(document).on('click','#portfolio_item_btn',function () {
+		console.log("ready");
 		filterBtn(imgSource, urlSource);
 		var anchor = $(this);
 		$('html, body').stop().animate({
@@ -1748,8 +1750,9 @@ $(document).ready(function () {
 	//Filter при нажатии на табы
 	$('.portfolio_tabs a').click(function () {
 		//убираем событие на клик у кнопки
-		$('#portfolio_item_btn').off();
-
+		$('.portfolio_item_btn').off();
+		$('#portfolio_item_btn2').off();
+		$('#portfolio_item_btn').attr("id", "portfolio_item_btn2");
 		// убирает активные у всех и делает актовной this
 		$('.portfolio .portfolio_tabs a').removeClass("active");
 		$(this).addClass("active");
@@ -1757,6 +1760,8 @@ $(document).ready(function () {
 		var value = $(this).data("filter");
 		var imgSource = [], //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json)
 			urlSource = [];
+			imgSource.length = 0;
+			urlSource.length = 0;
 
 		$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
 			var category = data.items;
@@ -1774,9 +1779,9 @@ $(document).ready(function () {
 						if (j > 9) {
 							imgSource.push(src[i].img);
 							urlSource.push(src[i].url);
-							$('#portfolio_item_btn').css('display', "block");
+							$('.portfolio_item_btn').css('display', "block");
 						} else {
-							$('#portfolio_item_btn').css('display', "none");
+							$('.portfolio_item_btn').css('display', "none");
 							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
 
 						}
@@ -1789,9 +1794,9 @@ $(document).ready(function () {
 						if (j > 9) {
 							imgSource.push(src[i].img);
 							urlSource.push(src[i].url);
-							$('#portfolio_item_btn').css('display', "block");
+							$('.portfolio_item_btn').css('display', "block");
 						} else {
-							$('#portfolio_item_btn').css('display', "none");
+							$('.portfolio_item_btn').css('display', "none");
 							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
 						}
 					}
@@ -1802,8 +1807,13 @@ $(document).ready(function () {
 			TweenMax.staggerFrom(".portfolio_item_wrap .portfolio_item", 2, {y: 30, autoAlpha: 0}, 0.2);
 		});
 
-		$(document).on("click", "#portfolio_item_btn", function () {
+		$(document).on("click", "#portfolio_item_btn2", function () {
 			filterBtn(imgSource, urlSource);
+			console.log("filter");
+			var anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $("#" + anchor.data('scroll')).offset().top
+			}, 1000);
 		});
 
 	});

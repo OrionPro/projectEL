@@ -463,7 +463,7 @@ function allAnim() {
 				tl67.resume();
 			}
 		} else {
-			if ($(window).scrollTop() >= 7500) {
+			if ($(window).scrollTop() >= 7200) {
 				tl67.resume();
 			}
 		}
@@ -1829,7 +1829,16 @@ $(document).ready(function () {
 		$(".header_phone a:not('.header_phone .header_phone_country a')[data-tab=" + data + "]").show('fade', 200).addClass("active"); //если таб соответствует тому, какой data
 		//атрибут в ссылке то делаем его активным
 	});
-
+	//footer_phone_mail переключение телефона
+	$(".footer_phone_mail .header_phone_country a").on('click', function (e) { //ссылки которые будут переключать табы
+		e.preventDefault();
+		$(".footer_phone_mail .header_phone_country a").removeClass('active'); //убираем активные состояния у ссылок
+		$(this).addClass('active'); //Добавляем активное состояние у той что нажали
+		var data = $(this).data('tab'); //создаём переменную с датой
+		$(".footer_phone_mail a:not('.footer_phone_mail .header_phone_country a,  .footer .footer_phone_mail a.mail')").hide().removeClass('active'); //убираем активные состояния у табов
+		$(".footer_phone_mail a:not('.footer_phone_mail .header_phone_country a, .footer .footer_phone_mail a.mail')[data-tab=" + data + "]").show('fade', 200).addClass("active"); //если таб соответствует тому, какой data
+		//атрибут в ссылке то делаем его активным
+	});
 	// для инициализации tooltips
 	// $( document ).tooltip({
 	//   track: true
@@ -2313,15 +2322,18 @@ $(document).ready(function () {
 
 });
 
-if(getCookie('loader')){
+// if(getCookie('loader')){
+// 	$(".loader_inner").fadeOut();
+// 	$(".loader").delay(10).fadeOut("fast");
+// }else{
+// 	setCookie('loader');
+// 	setTimeout(function () {
+// 		$(".loader_inner").fadeOut();
+// 		$(".loader").delay(10).fadeOut("100");
+// 	}, 2000);
+// }
+setTimeout(function () {
 	$(".loader_inner").fadeOut();
-	$(".loader").delay(10).fadeOut("fast");
-}else{
-	setCookie('loader');
-	setTimeout(function () {
-		$(".loader_inner").fadeOut();
-		$(".loader").delay(10).fadeOut("100");
-	}, 1200);
-}
-// $(".loader_inner").fadeOut();
-// $(".loader").fadeOut("slow");
+	$(".loader").fadeOut("fast");
+}, 800);
+

@@ -2525,6 +2525,21 @@ body textarea:required:valid
 		vertical-align: top
 		margin-left: 31px
 		margin-top: 30px
+		.header_phone_country
+			a
+				transition: 0.5s
+				margin-right: 75px
+				&:last-of-type
+					margin-right: 0
+				&:hover
+					color: $main_color
+					text-decoration: none
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+				&.active
+					color: $main_color
 		a
 			display: inline-block
 			font-size: 22px
@@ -2537,6 +2552,10 @@ body textarea:required:valid
 				text-decoration: none
 			&.mail
 				font-size: 20px
+		& > a
+			display: none
+		& > a.active
+			display: block !important
 		.fa
 			color: $main_color
 			margin-right: 14px

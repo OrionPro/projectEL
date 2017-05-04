@@ -1738,7 +1738,7 @@ $(document).ready(function () {
 		}
 	);
 	//вызов функции для появления .portfolio_item при загрузке страницы
-	if ($('body').hasClass('portfolio')) {
+	if ($('body').hasClass('portfolio_page')) {
 		readyPortfolioJSON();
 	}
 
@@ -1762,6 +1762,9 @@ $(document).ready(function () {
 			urlSource = [];
 			imgSource.length = 0;
 			urlSource.length = 0;
+		console.log(imgSource);
+		console.log(urlSource);
+
 
 		$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
 			var category = data.items;

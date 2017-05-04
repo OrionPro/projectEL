@@ -740,7 +740,7 @@ section{margin-bottom:-2px}
 .dm-modal .select .slct_arrow.active .fa{color:#000;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);z-index:10;position:relative}
 .close{position:absolute;right:30px;top:70px;width:20px;height:20px;display:block}
 .close .fa{font-size:18px;color:#d45b3e}
-.header{width:100%;min-height:90px;background-color:#001027}
+.header{width:100%;min-height:90px;background-color:#001027;text-align:center}
 .header_logo{display:inline-block;float:left;margin-top:15px;margin-left:13px}
 .header_logo a:hover{color:#eed350}
 .header_nav{display:inline-block;position:relative}

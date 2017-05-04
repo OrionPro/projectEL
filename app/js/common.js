@@ -1583,38 +1583,34 @@ function allAnim() {
 //	Начало вывода табов с помощью ajax
 
 //	Шаблон для portfolio_item
-function elemTpl(imgSrc, link, idValue) {
+function elemTpl(imgSrc, link, idValue, i) {
 
 
-	return "<div id=" + idValue + " class='portfolio_item'> <a target='_blank' href=" + link + "> </a>  <div class='portfolio_item_img'> <img src=" + imgSrc + "> </div> <div class='portfolio_item_mask'> <i class='fa fa-search-plus'></i> </div> </div>";
+	return "<div id=" + idValue + " data-item=" + i + " class='portfolio_item'> <a target='_blank' href=" + link + "> </a>  <div class='portfolio_item_img'> <img src=" + imgSrc + "> </div> <div class='portfolio_item_mask'> <i class='fa fa-search-plus'></i> </div> </div>";
 }
 //Функция которая срабатывает при нажатии на #portfolio_item_btn и выводит по три элемента
-function filterBtn(arrImg, arrUrl) {
+function filterBtn(arrMore) {
 	var limit = 0,
 		arr = [],
-		i = 0; // для итерации id в шаблон
-		arr.length = 0;
+		i = 0, // для итерации id в шаблон
+		j = parseInt($($(".portfolio_item_wrap .portfolio_item")[$(".portfolio_item_wrap .portfolio_item").length - 1]).attr("data-item"));
 	//обнуляем id при клике если они есть
 	$(".portfolio_item_wrap .portfolio_item").each(function () {
 		var index = $(this).attr('id');
 		if (index != "not-add") {
-			$(this).attr('id', '')
+			$(this).attr('id', '');
 		}
 	});
 
-	for (var g = 0; g < arrImg.length; g++) {
-		i++;
-		if (limit < 3) {
-
-			$(".portfolio_item_wrap").append(elemTpl(arrImg[g], arrUrl[g], i));
-
-			arr.push(elemTpl(arrImg[g], arrUrl[g]));
-
-
-			limit++;
+	for (var g = 0; g < arrMore.length; g++) {
+		if(j < g){
+			if(i < 3){
+				$(".portfolio_item_wrap").append(elemTpl(arrMore[g].img, arrMore[g].url, i ,  g));
+			}
+			i++;
 		}
 	}
-	arrImg.splice(0, 3);
+
 	//делаем анимацию у тех элементов, которые добавялем на кнопку загрузить ещё
 	$(".portfolio_item_wrap .portfolio_item").each(function () {
 
@@ -1624,7 +1620,7 @@ function filterBtn(arrImg, arrUrl) {
 		}
 	});
 	//Если не осталось в массиве итемов элементов убираем кнопку добавить ещё
-	if (arrImg.length == 0) {
+	if (arrMore.length == $(".portfolio_item_wrap .portfolio_item").length) {
 		$('.portfolio_item_btn').css('display', "none");
 	}
 
@@ -1632,8 +1628,7 @@ function filterBtn(arrImg, arrUrl) {
 
 // При загрузке функция выдаёт все portfolio_item из app\ajax\image.json
 function readyPortfolioJSON() {
-	var imgSource = [],  //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json)
-		urlSource = [];
+	var more = [];
 	$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
 		var category = data.items;
 		var j = 0;
@@ -1643,16 +1638,15 @@ function readyPortfolioJSON() {
 		for (var key in category) {
 			var src = data.items[key];
 
-			for (var i = 0; i < src.length; i++) {
-				j++;
-				if (j > 9) {
-					imgSource.push(src[i].img);
-					urlSource.push(src[i].url);
+			for (var i = 0; i < src.length; i++) {				
+				more.push(src[i]);
+				if (j > 8) {
 					$('.portfolio_item_btn').css('display', "block");
 				} else {
 					$('.portfolio_item_btn').css('display', "none");
-					$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
+					$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add", j));
 				}
+				j++;
 			}
 		}
 	}).complete(function () {
@@ -1660,7 +1654,8 @@ function readyPortfolioJSON() {
 	});
 	$(document).on('click','#portfolio_item_btn',function () {
 		console.log("ready");
-		filterBtn(imgSource, urlSource);
+		console.log(more);		
+		filterBtn(more);
 		var anchor = $(this);
 		$('html, body').stop().animate({
 			scrollTop: $("#" + anchor.data('scroll')).offset().top
@@ -1750,25 +1745,20 @@ $(document).ready(function () {
 	//Filter при нажатии на табы
 	$('.portfolio_tabs a').click(function () {
 		//убираем событие на клик у кнопки
-		$('.portfolio_item_btn').off();
-		$('#portfolio_item_btn2').off();
+		$(document).off("click", "#portfolio_item_btn");
+		$(document).off("click", "#portfolio_item_btn2");
 		$('#portfolio_item_btn').attr("id", "portfolio_item_btn2");
 		// убирает активные у всех и делает актовной this
 		$('.portfolio .portfolio_tabs a').removeClass("active");
 		$(this).addClass("active");
 		//часть getJSON
 		var value = $(this).data("filter");
-		var imgSource = [], //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json)
-			urlSource = [];
-			imgSource.length = 0;
-			urlSource.length = 0;
-		console.log(imgSource);
-		console.log(urlSource);
-
-
+		var more = [];
+			
 		$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
 			var category = data.items;
 			var j = 0;
+
 
 			$('.portfolio_item_wrap .portfolio_item').each(function () {
 				$(this).remove();
@@ -1777,31 +1767,32 @@ $(document).ready(function () {
 
 				if (key == value) {
 					var src = data.items[key];
+					more = src;
 					for (var i = 0; i < src.length; i++) {
 						j++;
 						if (j > 9) {
-							imgSource.push(src[i].img);
-							urlSource.push(src[i].url);
+							// imgSource.push(src[i].img);
+							// urlSource.push(src[i].url);
 							$('.portfolio_item_btn').css('display', "block");
 						} else {
 							$('.portfolio_item_btn').css('display', "none");
-							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
+							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add", i));
 
 						}
 
 					}
 				} else if (value == 'all') {
 					var src = data.items[key];
-					for (var i = 0; i < src.length; i++) {
-						j++;
-						if (j > 9) {
-							imgSource.push(src[i].img);
-							urlSource.push(src[i].url);
+
+					for (var i = 0; i < src.length; i++) {						
+						more.push(src[i]);
+						if (j > 8) {
 							$('.portfolio_item_btn').css('display', "block");
 						} else {
 							$('.portfolio_item_btn').css('display', "none");
-							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add"));
+							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add", j));
 						}
+						j++;
 					}
 				}
 			}
@@ -1811,8 +1802,8 @@ $(document).ready(function () {
 		});
 
 		$(document).on("click", "#portfolio_item_btn2", function () {
-			filterBtn(imgSource, urlSource);
-			console.log("filter");
+			console.log(more);
+			filterBtn(more);
 			var anchor = $(this);
 			$('html, body').stop().animate({
 				scrollTop: $("#" + anchor.data('scroll')).offset().top

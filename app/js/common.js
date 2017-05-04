@@ -1628,45 +1628,7 @@ function filterBtn(arrImg, arrUrl) {
 	}
 
 }
-function filterBtn(arrImg, arrUrl) {
-	var limit = 0,
-		arr = [],
-		i = 0; // для итерации id в шаблон
-	//обнуляем id при клике если они есть
-	$(".portfolio_item_wrap .portfolio_item").each(function () {
-		var index = $(this).attr('id');
-		if (index != "not-add") {
-			$(this).attr('id', '')
-		}
-	});
 
-	for (var g = 0; g < arrImg.length; g++) {
-		i++;
-		if (limit < 3) {
-
-			$(".portfolio_item_wrap").append(elemTpl(arrImg[g], arrUrl[g], i));
-
-			arr.push(elemTpl(arrImg[g], arrUrl[g]));
-
-
-			limit++;
-		}
-	}
-	arrImg.splice(0, 3);
-	//делаем анимацию у тех элементов, которые добавялем на кнопку загрузить ещё
-	$(".portfolio_item_wrap .portfolio_item").each(function () {
-
-		var index = $(this).attr('id');
-		if (index != 'not-add') {
-			TweenMax.from("#" + index, 2, {y: 40, autoAlpha: 0}, 0.5);
-		}
-	});
-	//Если не осталось в массиве итемов элементов убираем кнопку добавить ещё
-	if (arrImg.length == 0) {
-		$('#portfolio_item_btn').css('display', "none");
-	}
-
-}
 // При загрузке функция выдаёт все portfolio_item из app\ajax\image.json
 function readyPortfolioJSON() {
 	var imgSource = [],  //массивы ключей (добавляем сюда новый массив, если добавляется новый ключ в json)

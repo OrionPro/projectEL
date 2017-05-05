@@ -1623,44 +1623,43 @@ function filterBtn(arrMore) {
 	if (arrMore.length == $(".portfolio_item_wrap .portfolio_item").length) {
 		$('.portfolio_item_btn').css('display', "none");
 	}
-
 }
 
 // При загрузке функция выдаёт все portfolio_item из app\ajax\image.json
 function readyPortfolioJSON() {
-	var more = [];
+	var more = [],
+		items = [];
 	$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
-		var category = data.items;
+		var json = data;
+
 		var j = 0;
 		$('.portfolio_item_wrap .portfolio_item').each(function () {
 			$(this).remove();
 		});
-		for (var key in category) {
-			var src = data.items[key];
 
-			for (var i = 0; i < src.length; i++) {				
-				more.push(src[i]);
+		json.map(function (el) {
+				more.push(el);
+
 				if (j > 8) {
 					$('.portfolio_item_btn').css('display', "block");
 				} else {
 					$('.portfolio_item_btn').css('display', "none");
-					$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add", j));
+					$(".portfolio_item_wrap").append(elemTpl(el.img, el.url, "not-add", j));
 				}
 				j++;
-			}
-		}
+			});
+
+
 	}).complete(function () {
 		TweenMax.staggerFrom(".portfolio_item_wrap .portfolio_item", 2, {y: 30, autoAlpha: 0}, 0.2);
 	});
 	$(document).on('click','#portfolio_item_btn',function () {
 		console.log("ready");
-		console.log(more);		
 		filterBtn(more);
 		var anchor = $(this);
 		$('html, body').stop().animate({
 			scrollTop: $("#" + anchor.data('scroll')).offset().top
 			}, 1000);
-			
 	});
 
 }
@@ -1696,6 +1695,11 @@ function tabs(parent) {
 
 $(document).ready(function () {
 
+	// Уменьшение кнопки в таблицах при изменении ширины
+	if($(".cost_of_online_store .cost_of_online_store_item_wrap .table thead tr th:first-of-type").innerWidth() >= 470 ){
+		$(".cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button").css("width", "150");
+	}
+	// Инициализация таба
 	tabs($('.cost_of_online_store_item_wrap'));
 	// Определения браузера
 	function get_name_browser() {
@@ -1756,53 +1760,77 @@ $(document).ready(function () {
 		var more = [];
 			
 		$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
-			var category = data.items;
+			var json = data;
 			var j = 0;
-
-
+			
 			$('.portfolio_item_wrap .portfolio_item').each(function () {
 				$(this).remove();
 			});
-			for (var key in category) {
+			json.map(function (el) {
 
-				if (key == value) {
-					var src = data.items[key];
-					more = src;
-					for (var i = 0; i < src.length; i++) {
-						j++;
-						if (j > 9) {
-							// imgSource.push(src[i].img);
-							// urlSource.push(src[i].url);
-							$('.portfolio_item_btn').css('display', "block");
-						} else {
-							$('.portfolio_item_btn').css('display', "none");
-							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add", i));
-
-						}
+				if(el.category == value){
+					more.push(el);
+					if (j > 8) {
+						$('.portfolio_item_btn').css('display', "block");
+					} else {
+						$('.portfolio_item_btn').css('display', "none");
+						$(".portfolio_item_wrap").append(elemTpl(el.img, el.url, "not-add", j));
 
 					}
-				} else if (value == 'all') {
-					var src = data.items[key];
-
-					for (var i = 0; i < src.length; i++) {						
-						more.push(src[i]);
-						if (j > 8) {
-							$('.portfolio_item_btn').css('display', "block");
-						} else {
-							$('.portfolio_item_btn').css('display', "none");
-							$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add", j));
-						}
-						j++;
-					}
+					j++;
 				}
-			}
+				else if(value == "all"){
+					more.push(el);
+					if (j > 8) {
+						$('.portfolio_item_btn').css('display', "block");
+					} else {
+						$('.portfolio_item_btn').css('display', "none");
+						$(".portfolio_item_wrap").append(elemTpl(el.img, el.url, "not-add", j));
+
+					}
+					j++;
+				}
+			});
+			
+			// for (var key in category) {
+			//
+			// 	if (key == value) {
+			// 		var src = data.items[key];
+			// 		more = src;
+			// 		for (var i = 0; i < src.length; i++) {
+			// 			j++;
+			// 			if (j > 9) {
+			// 				// imgSource.push(src[i].img);
+			// 				// urlSource.push(src[i].url);
+			// 				$('.portfolio_item_btn').css('display', "block");
+			// 			} else {
+			// 				$('.portfolio_item_btn').css('display', "none");
+			// 				$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add", i));
+			//
+			// 			}
+			//
+			// 		}
+			// 	} else if (value == 'all') {
+			// 		var src = data.items[key];
+			//
+			// 		for (var i = 0; i < src.length; i++) {
+			// 			more.push(src[i]);
+			// 			if (j > 8) {
+			// 				$('.portfolio_item_btn').css('display', "block");
+			// 			} else {
+			// 				$('.portfolio_item_btn').css('display', "none");
+			// 				$(".portfolio_item_wrap").append(elemTpl(src[i].img, src[i].url, "not-add", j));
+			// 			}
+			// 			j++;
+			// 		}
+			// 	}
+			// }
 
 		}).complete(function () {
 			TweenMax.staggerFrom(".portfolio_item_wrap .portfolio_item", 2, {y: 30, autoAlpha: 0}, 0.2);
 		});
 
 		$(document).on("click", "#portfolio_item_btn2", function () {
-			console.log(more);
 			filterBtn(more);
 			var anchor = $(this);
 			$('html, body').stop().animate({
@@ -2201,29 +2229,29 @@ $(document).ready(function () {
 				error.push(false); // нет ошибки
 			}
 			$(this).focus(function () {
-				$(this).siblings().hide("fade", 500);
+				$(this).siblings(".modal_input_error").hide("fade", 500);
 			});
 
 		});
 		form.find('.modal_form_phone').each(function () { // пробежим по каждому полю в форме
 			var pattern = /^(\+|d+)*\d[\d\(\)\-]{4,14}\d$/;
 			if ($(this).val() == '') { // если пустое
-				$(this).siblings().show("fade", 500);
+				$(this).siblings(".modal_input_error").show("fade", 500);
 				error.push(true); // ошибка
 				if ($(this).siblings().hasClass('input_error_phone')) {
-					$(this).siblings().removeClass('input_error_phone').text("").prepend("Заполните поле<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
+					$(this).siblings(".modal_input_error").removeClass('input_error_phone').text("").prepend("Заполните поле<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
 				}
 			} else if ($(this).val() !== '') {
 				if ($(this).val().match(pattern)) {
-					$(this).siblings().hide("fade", 500);
+					$(this).siblings(".modal_input_error").hide("fade", 500);
 					error.push(false); // нет ошибок
 				} else {
-					$(this).siblings().show("fade", 500).addClass('input_error_phone').text("").prepend("Введите правильный телефон<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
+					$(this).siblings(".modal_input_error").show("fade", 500).addClass('input_error_phone').text("").prepend("Введите правильный телефон<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
 					error.push(true); // ошибка
 				}
 			}
 			$(this).focus(function () {
-				$(this).siblings().hide("fade", 500);
+				$(this).siblings(".modal_input_error").hide("fade", 500);
 			});
 
 		});
@@ -2233,20 +2261,20 @@ $(document).ready(function () {
 				$(this).siblings().show("fade", 500);
 				error.push(true); // ошибка
 				if ($(this).siblings().hasClass('input_error_email')) {
-					$(this).siblings().removeClass('input_error_email').text("").prepend("Заполните поле<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
+					$(this).siblings(".modal_input_error").removeClass('input_error_email').text("").prepend("Заполните поле<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
 				}
 
 			} else if ($(this).val() !== '') {
 				if ($(this).val().match(pattern)) {
-					$(this).siblings().hide("fade", 500).removeClass('input_error_email');
+					$(this).siblings(".modal_input_error").hide("fade", 500).removeClass('input_error_email');
 					error.push(false); // нет ошибок
 				} else {
-					$(this).siblings().show("fade", 500).addClass('input_error_email').text("").prepend("Введите правильный Email<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
+					$(this).siblings(".modal_input_error").show("fade", 500).addClass('input_error_email').text("").prepend("Введите правильный Email<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
 					error.push(true); // ошибка
 				}
 			}
 			$(this).focus(function () {
-				$(this).siblings().hide("fade", 500);
+				$(this).siblings(".modal_input_error").hide("fade", 500);
 			});
 
 		});
@@ -2329,5 +2357,5 @@ $(document).ready(function () {
 setTimeout(function () {
 	$(".loader_inner").fadeOut();
 	$(".loader").fadeOut("fast");
-}, 800);
+}, 1200);
 

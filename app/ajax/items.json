@@ -1,75 +1,90 @@
-{
-    "items": {
-        "lp": [{
-                "img": "img/portfolio_img1.jpg",
-                "url": "https://habrahabr.ru/post/319674/"
-            }, {
-                "img": "img/portfolio_img1.jpg",
-                "url": "http://"
-            }, {
-                "img": "img/portfolio_img1.jpg",
-                "url": "http://"
-            }, {
-                "img": "img/portfolio_img1.jpg",
-                "url": "http://"
-            }
-
-        ],
-
-        "viz": [{
-            "img": "img/portfolio_img2.jpg",
-            "url": "http://1"
-        }, {
-            "img": "img/portfolio_img2.jpg",
-            "url": "http://2"
-        }, {
-            "img": "img/portfolio_img2.jpg",
-            "url": "http://3"
-        },{
-            "img": "img/portfolio_img2.jpg",
-            "url": "http://4"
-        }, {
-            "img": "img/portfolio_img2.jpg",
-            "url": "http://5"
-        }, {
-            "img": "img/portfolio_img2.jpg",
-            "url": "http://6"
-        },
-        {
-            "img": "img/portfolio_img2.jpg",
-            "url": "http://7"
-        }, {
-            "img": "img/portfolio_img2.jpg",
-            "url": "http://8"
-        }, {
-            "img": "img/portfolio_img2.jpg",
-            "url": "http://9"
-        },{
-            "img": "img/portfolio_img2.jpg",
-            "url": "http://10"
-        }],
-        "im": [{
-            "img": "img/portfolio_img3.jpg",
-            "url": "http://"
-        }, {
-            "img": "img/portfolio_img3.jpg",
-            "url": "http://"
-        }, {
-            "img": "img/portfolio_img3.jpg",
-            "url": "http://"
-        },{
-            "img": "img/portfolio_img3.jpg",
-            "url": "http://"
-        }, {
-            "img": "img/portfolio_img3.jpg",
-            "url": "http://"
-        }, {
-            "img": "img/portfolio_img3.jpg",
-            "url": "http://"
-        },{
-            "img": "img/portfolio_img3.jpg",
-            "url": "http://"
-        }]
+[
+	{
+	  	"img": "img/portfolio_img1.jpg",
+	    "url": "https://habrahabr.ru/post/319674/",
+	    "category": "1"
+    }, {
+        "img": "img/portfolio_img1.jpg",
+        "url": "http://",
+         "category": "1"
+    }, {
+        "img": "img/portfolio_img1.jpg",
+        "url": "http://",
+         "category": "1"
+    }, {
+        "img": "img/portfolio_img1.jpg",
+        "url": "http://",
+        "category": "1"
+    },
+     {
+        "img": "img/portfolio_img2.jpg",
+        "url": "http://1",
+        "category": "2"
+    }, {
+        "img": "img/portfolio_img2.jpg",
+        "url": "http://2",
+        "category": "2"
+    }, {
+        "img": "img/portfolio_img2.jpg",
+        "url": "http://3",
+         "category": "2"
+    }, {
+        "img": "img/portfolio_img2.jpg",
+        "url": "http://4",
+         "category": "2"
+    }, {
+        "img": "img/portfolio_img2.jpg",
+        "url": "http://5",
+         "category": "2"
+    }, {
+        "img": "img/portfolio_img2.jpg",
+        "url": "http://6",
+         "category": "2"
+    }, {
+        "img": "img/portfolio_img2.jpg",
+        "url": "http://7",
+         "category": "2"
+    }, {
+        "img": "img/portfolio_img2.jpg",
+        "url": "http://8",
+         "category": "2"
+    }, {
+        "img": "img/portfolio_img2.jpg",
+        "url": "http://9",
+         "category": "2"
+    }, {
+        "img": "img/portfolio_img2.jpg",
+        "url": "http://10",
+         "category": "2"
+    }, {
+        "img": "img/portfolio_img3.jpg",
+        "url": "http://",
+        "category": "3"
+    }, {
+        "img": "img/portfolio_img3.jpg",
+        "url": "http://",
+        "category": "3"
+    }, {
+        "img": "img/portfolio_img3.jpg",
+        "url": "http://",
+         "category": "3"
+    }, {
+        "img": "img/portfolio_img3.jpg",
+        "url": "http://",
+         "category": "3"
+    }, {
+        "img": "img/portfolio_img3.jpg",
+        "url": "http://",
+         "category": "3"
+    }, {
+        "img": "img/portfolio_img3.jpg",
+        "url": "http://",
+         "category": "3"
+    }, {
+        "img": "img/portfolio_img3.jpg",
+        "url": "http://",
+         "category": "3"
     }
 
-}
+]
+

@@ -1245,7 +1245,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .footer .footer_nav ul li:last-of-type{margin-right:0}
 .footer .footer_nav ul li a{text-transform:uppercase;font-size:14.5px;color:#fff;-webkit-transition:.5s;transition:.5s}
 .footer .footer_nav ul li a:hover{text-decoration:none;color:#eed350}
-.footer .footer_phone_mail{display:inline-block;vertical-align:top;margin-left:31px;margin-top:30px}
+.footer .footer_phone_mail{width:280px;display:inline-block;vertical-align:top;margin-left:31px;margin-top:30px}
 .footer .footer_phone_mail .header_phone_country a{-webkit-transition:.5s;transition:.5s;margin-right:75px}
 .footer .footer_phone_mail .header_phone_country a:last-of-type{margin-right:0}
 .footer .footer_phone_mail .header_phone_country a:hover{color:#eed350;text-decoration:none}

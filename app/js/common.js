@@ -2064,6 +2064,7 @@ $(document).ready(function () {
 		items: 1,
 		autoplay: true,
 		dots: true,
+		autoplayHoverPause: true,
 		responsiveClass: false,
 		responsive: {
 			// breakpoint from 0 up

@@ -1629,7 +1629,7 @@ function filterBtn(arrMore) {
 function readyPortfolioJSON() {
 	var more = [],
 		items = [];
-	$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
+	$.getJSON("http://elitestudio.pro/ajax/items.json", function (data) {
 		var json = data;
 
 		var j = 0;
@@ -1759,7 +1759,7 @@ $(document).ready(function () {
 		var value = $(this).data("filter");
 		var more = [];
 			
-		$.getJSON("http://work.melfori.com/elit/ajax/items.json", function (data) {
+		$.getJSON("http://elitestudio.pro/ajax/items.json", function (data) {
 			var json = data;
 			var j = 0;
 			
@@ -2293,7 +2293,7 @@ $(document).ready(function () {
 			var data = form.serialize(); // подготавливаем данные
 			$.ajax({ // инициализируем ajax запрос
 				type: 'POST', // отправляем в POST формате, можно GET
-				url: 'mail.php', // путь до обработчика, у нас он лежит в той же папке
+				url: '/mail.php', // путь до обработчика, у нас он лежит в той же папке
 				dataType: 'json', // ответ ждем в json формате
 				data: data, // данные для отправки
 				beforeSend: function (data) { // событие до отправки

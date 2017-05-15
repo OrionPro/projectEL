@@ -762,6 +762,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .book_now .book_now_form input[type=submit]{width:270px;height:68px;background-color:#FFB819;padding-left:0;text-transform:uppercase;border:none;color:#000;font:24px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6;-webkit-transition:.5s;transition:.5s}
 .book_now .book_now_form input[type=submit]:hover{background-color:#c45237}
 .book_now .book_now_city{position:absolute;bottom:-62px;right:-351px;z-index:0}
+.book_now .book_now_city.texts{bottom:-72px;right:-355px}
 .modal_form_input_wrap{position:relative;display:block;text-align:center}
 .modal_form_input_wrap .modal_input_error{width:141px;height:35px;display:none;position:absolute;right:-25px;top:43px;padding-left:10px;color:#000;font:12px/35px Amazing_Grotesk_Regular,Arial,sans-serif;background-color:#fff;border:1px solid #C8C8C8;-webkit-box-shadow:0 0 10px rgba(0,0,0,.3);box-shadow:0 0 10px rgba(0,0,0,.3);z-index:100}
 .modal_form_input_wrap .modal_input_error.input_error_email{width:215px}
@@ -770,7 +771,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .modal_form_input_wrap .modal_error_chest_img{width:9px;position:relative;background-image:url(../img/modal_error_chest_img.png);top:-31px;left:0;height:9px}
 .modal_form_input_wrap .modal_error_triangle{width:9px;position:relative;background-image:url(../img/modal_error_triangle.png);top:-43px;left:10px;height:8px}
 .select{position:relative;text-align:left}
-.select .drop{width:100%;max-height:200px;overflow:auto;margin:0 auto;padding:0;border-top:none;display:none;position:absolute;background-color:#fff;top:50px;left:0;right:0;z-index:10}
+.select .drop{width:100%;max-height:232px;overflow:auto;margin:0 auto;padding:0;border-top:none;display:none;position:absolute;background-color:#fff;top:50px;left:0;right:0;z-index:10}
 .select .drop li{list-style:none;border-bottom:none;border-top:none;cursor:pointer;display:block;color:#000;line-height:1.2;padding:7px 15px 7px 25px}
 .select .drop li:hover{background-color:rgba(0,0,0,.2);outline:0}
 .select .drop li a{text-decoration:none}
@@ -935,6 +936,8 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .our_work.examples_of_online_stores h2{margin-top:253px;font-size:36px}
 .our_work.examples_of_online_stores .our_work_item a{padding-left:20px;padding-right:20px}
 .our_work.examples_of_online_stores .examples_of_online_stores_decor{position:absolute;bottom:-65px;right:0;left:0;text-align:center}
+.our_work.no_top_decor{min-height:800px}
+.our_work.no_top_decor h2{margin-top:75px}
 .cost_of_online_store{background:#0b2848;text-align:center}
 .cost_of_online_store.run{background:#03142e}
 .cost_of_online_store.run .cost_of_online_store_item_wrap{margin-bottom:70px}

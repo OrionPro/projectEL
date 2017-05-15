@@ -422,7 +422,9 @@ body textarea:required:valid
 		bottom: -62px
 		right: -351px
 		z-index: 0
-
+		&.texts
+			bottom: -72px
+			right: -355px
 .modal_form_input_wrap
 	position: relative
 	display: block
@@ -469,7 +471,7 @@ body textarea:required:valid
 	text-align: left
 	.drop
 		width: 100%
-		max-height: 200px
+		max-height: 232px
 		overflow: auto
 		margin: 0 auto
 		padding: 0
@@ -1195,6 +1197,10 @@ body textarea:required:valid
 			right: 0
 			left: 0
 			text-align: center
+	&.no_top_decor
+		min-height: 800px
+		h2
+			margin-top: 75px
 //	Секция cost_of_online_store
 .cost_of_online_store
 	background: #0b2848

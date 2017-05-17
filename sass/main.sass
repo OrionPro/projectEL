@@ -1611,19 +1611,19 @@ body textarea:required:valid
 				color: $main_color
 				text-decoration: underline
 	.portfolio_item_wrap
-		min-height: 700px
-
+		width: 790px
+		margin: auto
 	.portfolio_item
 		width: 370px
 		float: left
-		margin-right: 30px
-		margin-bottom: 30px
+		margin-right: 20px
+		margin-bottom: 20px
 		border: 15px solid $main_color
 		position: relative
 		overflow: hidden
-		&:nth-of-type(3n+1)
+		&:nth-of-type(2n+1)
 			margin-left: 15px
-		&:nth-of-type(3n)
+		&:nth-of-type(2n)
 			margin-right: 0
 		&:hover .portfolio_item_mask
 			opacity: 1
@@ -1878,6 +1878,7 @@ body textarea:required:valid
 //	Секция form_style_portfolio
 .our_work
 	&.form_style_portfolio
+		min-height: 400px
 		h2
 			margin-top: 100px
 		.portfolio_item

@@ -2164,9 +2164,11 @@ $(document).ready(function () {
 		var id = $(this).data('modal');
 		var txt = $(this).data('info');
 		var title =  $(this).data('title'); // для изменения title в модалке
+		var img = $(this).data('img');
 		$(".popup[data-modal=" + id + "]").toggle("fade", 500).find("form").css('display', 'block');
 		$(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
 		$(".popup[data-modal=" + id + "] h2").html(title); // прописать в ссылку data-title="нужный title"
+		$(".popup[data-modal=" + id + "] .modal_img img").attr('src', img);
 		// $("body").css({ "overflow": "hidden", "padding-right": "17px" });
 
 	});

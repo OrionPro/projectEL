@@ -24,6 +24,18 @@ $(window).scroll(function () {
 
 
 });
+// Функция для определения, какая секция активная
+function activeSection(section, startTop = 0, startBotton = 0) {
+	section = '.' + section;
+	if ($(section).offset() !== undefined) {
+		var topPosition = $(section).offset().top - startTop,
+			bottomPosition = $(section).offset().top + $(section).height() - startBotton;
+		if (($(window).scrollTop() >= topPosition) && ($(window).scrollTop() <= bottomPosition)) {
+			return true;
+		}
+	}
+}
+
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
 var tl3 = new TimelineMax(); // what_else_do_line
@@ -354,12 +366,12 @@ function allAnim() {
 			tl37.resume();
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
-			if ($(window).scrollTop() >= 6300) {
-				tl38.resume();
+			if (this.activeSection('what_tasks_are_performed', 1200, 0)) {
+				this.tl38.resume();
 			}
 		} else {
-			if ($(window).scrollTop() >= 6800) {
-				tl38.resume();
+			if (this.activeSection('what_tasks_are_performed', 500, 0)) {
+				this.tl38.resume();
 			}
 		}
 		if ($(window).scrollTop() >= 1500 && $(window).scrollTop() <= 2400) {
@@ -390,12 +402,12 @@ function allAnim() {
 			}
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
-			if ($(window).scrollTop() >= 4300) {
-				tl46.resume();
+			if (this.activeSection('what_tasks_are_performed', 1200, 0)) {
+				this.tl46.resume();
 			}
 		} else {
-			if ($(window).scrollTop() >= 5000) {
-				tl46.resume();
+			if (this.activeSection('what_tasks_are_performed', 500, 0)) {
+				this.tl46.resume();
 			}
 		}
 		if ($(window).scrollTop() >= 5300 && $(window).scrollTop() <= 6000) {

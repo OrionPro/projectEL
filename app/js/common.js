@@ -35,7 +35,17 @@ function activeSection(section, startTop = 0, startBotton = 0) {
 		}
 	}
 }
+function urlhash(){
+	var url = window.location.hash;
+	var reg = /\d/; // находим первую цифру после #
 
+	var id  = url.match(reg);
+	if (id) {
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+		var target_top = $('#' + id).offset().top;
+		$('body, html').stop().animate({scrollTop: target_top}, 3000);
+	}
+}
 var tl = new TimelineMax(); // скалы и дома вверху
 var tl2 = new TimelineMax(); //  ковбой
 var tl3 = new TimelineMax(); // what_else_do_line
@@ -327,12 +337,12 @@ function allAnim() {
 			tl28.resume();
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
-			if ($(window).scrollTop() >= 2500) {
-				tl29.resume();
+			if (this.activeSection('what_tasks_are_performed', 1200, 0)) {
+				this.tl29.resume();
 			}
 		} else {
-			if ($(window).scrollTop() >= 3300) {
-				tl29.resume();
+			if (this.activeSection('what_tasks_are_performed', 500, 0)) {
+				this.tl29.resume();
 			}
 		}
 		if ($(window).scrollTop() >= 400 && $(window).scrollTop() <= 900) {
@@ -858,15 +868,15 @@ function allAnim() {
 		ease: Power2.easeInOut
 	}, 0.5, '-=2').from("#bottom ", 2.5, {autoAlpha: 0, width: 100, ease: Power2.easeInOut}, '-=2.5');
 	// selling_site_item_img circle
-	tl20.staggerFrom(".selling_site_item_img_svg", 1, {
+	tl20.staggerFrom(".selling_site_item_img_svg", 2, {
 		autoAlpha: 0,
 		y: 50,
 		ease: Power2.easeInOut
-	}, 0.7, 'selling_site_item_img').staggerFrom(".selling_site_item h3", 1, {
+	}, 0.7, 'selling_site_item_img').staggerFrom(".selling_site_item h3", 2, {
 		autoAlpha: 0,
 		x: 50,
 		ease: Power2.easeInOut
-	}, 0.7, 'selling_site_item_img').staggerFrom(".selling_site_item p", 1, {
+	}, 0.7, 'selling_site_item_img').staggerFrom(".selling_site_item p", 2, {
 		autoAlpha: 0,
 		x: -50,
 		ease: Power2.easeInOut
@@ -941,17 +951,17 @@ function allAnim() {
 			ease: Power2.easeInOut
 		}, 0.5, 'from_idea_to_results_decor');
 	//online_store_img & landing_page
-	tl24.from("#rect4136", 1, {drawSVG: "50% 50%"}, 0.5, 'online_store_img')
+	tl24.from("#rect4136", 1, {drawSVG: "50% 50%"}, 1.2, 'online_store_img')
 		.from("#g4231", 1, {
 			autoAlpha: 0,
 			y: 50,
 			ease: Power2.easeInOut
-		}, 0.5, 'online_store_img')
+		}, 1.2, 'online_store_img')
 		.from("#g42872352", 1, {
 			autoAlpha: 0,
 			y: 50,
 			ease: Power2.easeInOut
-		}, 0.5, 'online_store_img');
+		}, 1.2, 'online_store_img');
 	// does_the_sale_item_img_circle
 	tl25.from(".does_the_sale_item_img_circle", 1, {
 		rotation: 360,
@@ -1241,7 +1251,7 @@ function allAnim() {
 			.staggerFrom(".what_tasks_are_performed_img_circle", 1.4, {drawSVG: "50% 50%"}, 1.1, 'what_tasks_are_performed_img');
 	}
 	// creating_a_corporate_identity_img
-	tl49.staggerFrom(".creating_a_corporate_identity_img_g1", 1, {
+	tl49.staggerFrom(".creating_a_corporate_identity_img_g1", 2, {
 		autoAlpha: 0,
 		x: 50,
 		ease: Power2.easeInOut
@@ -1502,7 +1512,7 @@ function allAnim() {
 		book_now_city(tl78);
 	}
 	//	creating_a_website_item_img 1
-	tl79.from("#g52903efsf", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 0.5, "creating_a_website_item_img_1")
+	tl79.from("#g52903efsf", 0.7, {opacity: 0, y: 50, ease: Power2.easeInOut}, 1.2, "creating_a_website_item_img_1")
 		.from("#g4429asasfasf", 0.7, {
 			opacity: 0,
 			y: 50,
@@ -1706,6 +1716,8 @@ function tabs(parent) {
 }
 
 $(document).ready(function () {
+
+	urlhash();
 
 	// Уменьшение кнопки в таблицах при изменении ширины
 	if($(".cost_of_online_store .cost_of_online_store_item_wrap .table thead tr th:first-of-type").innerWidth() >= 470 ){

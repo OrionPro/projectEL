@@ -35,6 +35,7 @@ function activeSection(section, startTop = 0, startBotton = 0) {
 		}
 	}
 }
+// Функция для перехода на нужную секцию при переходе по url
 function urlhash(){
 	var url = window.location.hash;
 	var reg = /\d/; // находим первую цифру после #

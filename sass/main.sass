@@ -2484,7 +2484,87 @@ body textarea:required:valid
 					color: #03142e
 			input[type=submit]
 				border: none
-//	Секция
+//	Секция website_promotion
+.website_promotion
+	&.webdesign
+		min-height: 650px
+		.website_promotion_clouds
+			bottom: -390px
+//	Секция correct_design
+.what_else_do
+	&.correct_design
+		padding-bottom: 75px
+		h2
+			margin-top: 50px
+			margin-bottom: 45px
+		.correct_design_img
+			margin-right: 30px
+			float: left
+			border: 15px solid #eed350
+		.correct_design_txt
+			width: 660px
+			float: left
+			text-align: left
+			h3
+				margin: 0
+				@include font($main_color, 30px, $font_Amazing_Grotesk_Demi_Bold)
+			p
+				width: 100%
+				margin: 0
+				font-size: 24px
+			.correct_design_txt_item
+				margin-bottom: 15px
+				&:first-of-type
+					margin-top: -12px
+		.what_else_do_cloud
+			bottom: -300px
+//	Секция design_correctness
+.free_audit
+	&.design_correctness
+		p
+			margin-bottom: 45px
+//	Секция divine_design
+.our_achievements
+	&.divine_design
+		background-color: #0b2848
+		h2
+			margin-bottom: 30px
+		.suitable_for_landing_items
+			margin-bottom: 180px
+		.suitable_for_landing_item
+			margin-bottom: 22px
+		.cost_of_online_store_bot_decor
+			svg
+				bottom: -35px
+//	Секция designer_cost_of_services
+.what_else_do
+	&.designer_cost_of_services
+		background-color: #03142e
+		h2
+			margin-top: 130px
+		.table
+			width: 1030px
+			margin-left: 115px
+			padding-left: 30px
+			text-align: left
+			thead
+				th
+					&:first-of-type
+						width: 500px
+			button
+				@extend %main_btn
+				width: 270px
+				height: 52px
+				line-height: 52px
+				vertical-align: middle
+				transition: 0.5s
+				&:hover
+					@extend %main_btn_hover
+				&:active
+					@extend %main_btn_active
+				&:focus
+					@extend %main_btn_focus
+					outline: 0
 //	Секция
 //	Секция
 //	Секция

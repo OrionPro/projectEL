@@ -1,7 +1,7 @@
 .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}
-.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button{background-color:#eed350;border:none;text-transform:uppercase;color:#000;font:24px Amazing_Grotesk_Demi_Bold,Arial,sans-serif}
-.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button:active,.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button:hover{background-color:#d45b3e}
-.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button:focus{background-color:#d45b3e;outline:0}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button,.what_else_do.designer_cost_of_services .table button{background-color:#eed350;border:none;text-transform:uppercase;color:#000;font:24px Amazing_Grotesk_Demi_Bold,Arial,sans-serif}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button:active,.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button:hover,.what_else_do.designer_cost_of_services .table button:active,.what_else_do.designer_cost_of_services .table button:hover{background-color:#d45b3e}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button:focus,.what_else_do.designer_cost_of_services .table button:focus{background-color:#d45b3e;outline:0}
 .our_work .our_work_item .our_work_item_img a,.portfolio .portfolio_item_mask{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
@@ -960,6 +960,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr td:first-of-type{color:#fff;font:36px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6;padding-left:30px;text-align:left}
 .cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr span{color:#eed350}
 .cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button{width:170px;height:52px;line-height:52px;vertical-align:middle;-webkit-transition:.5s;transition:.5s}
+.cost_of_online_store .cost_of_online_store_item_wrap .table tfoot tr button:focus{outline:0}
 .cost_of_online_store .cost_of_online_store_bot_decor{position:relative}
 .cost_of_online_store .cost_of_online_store_bot_decor svg{position:absolute;bottom:-33px;left:469px;z-index:10}
 .cost_of_online_store .cost_of_online_store_links{width:1030px;height:53px;margin-bottom:20px;line-height:53px;border:1px solid rgba(255,255,255,.2);-webkit-border-radius:25px;border-radius:25px;position:relative;text-align:left}
@@ -1242,6 +1243,29 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .cost_of_online_store.inner_portfolio .book_now_form textarea::-moz-placeholder{color:#03142e}
 .cost_of_online_store.inner_portfolio .book_now_form textarea:-ms-input-placeholder{color:#03142e}
 .cost_of_online_store.inner_portfolio .book_now_form input[type=submit]{border:none}
+.website_promotion.webdesign{min-height:650px}
+.website_promotion.webdesign .website_promotion_clouds{bottom:-390px}
+.what_else_do.correct_design{padding-bottom:75px}
+.what_else_do.correct_design h2{margin-top:50px;margin-bottom:45px}
+.what_else_do.correct_design .correct_design_img{margin-right:30px;float:left;border:15px solid #eed350}
+.what_else_do.correct_design .correct_design_txt{width:660px;float:left;text-align:left}
+.what_else_do.correct_design .correct_design_txt h3{margin:0;color:#eed350;font:30px Amazing_Grotesk_Demi_Bold,Arial,sans-serif;line-height:1.6}
+.what_else_do.correct_design .correct_design_txt p{width:100%;margin:0;font-size:24px}
+.what_else_do.correct_design .correct_design_txt .correct_design_txt_item{margin-bottom:15px}
+.what_else_do.correct_design .correct_design_txt .correct_design_txt_item:first-of-type{margin-top:-12px}
+.what_else_do.correct_design .what_else_do_cloud{bottom:-300px}
+.free_audit.design_correctness p{margin-bottom:45px}
+.our_achievements.divine_design{background-color:#0b2848}
+.our_achievements.divine_design h2{margin-bottom:30px}
+.our_achievements.divine_design .suitable_for_landing_items{margin-bottom:180px}
+.our_achievements.divine_design .suitable_for_landing_item{margin-bottom:22px}
+.our_achievements.divine_design .cost_of_online_store_bot_decor svg{bottom:-35px}
+.what_else_do.designer_cost_of_services{background-color:#03142e}
+.what_else_do.designer_cost_of_services h2{margin-top:130px}
+.what_else_do.designer_cost_of_services .table{width:1030px;margin-left:115px;padding-left:30px;text-align:left}
+.what_else_do.designer_cost_of_services .table thead th:first-of-type{width:500px}
+.what_else_do.designer_cost_of_services .table button{width:270px;height:52px;line-height:52px;vertical-align:middle;-webkit-transition:.5s;transition:.5s}
+.what_else_do.designer_cost_of_services .table button:focus{outline:0}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

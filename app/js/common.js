@@ -338,18 +338,18 @@ function allAnim() {
 			tl28.resume();
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
-			if (this.activeSection('what_tasks_are_performed', 1200, 0)) {
+			if (activeSection('what_tasks_are_performed', 1200, 0)) {
 				this.tl29.resume();
 			}
 		} else {
-			if (this.activeSection('what_tasks_are_performed', 500, 0)) {
+			if (activeSection('what_tasks_are_performed', 500, 0)) {
 				this.tl29.resume();
 			}
 		}
 		if ($(window).scrollTop() >= 400 && $(window).scrollTop() <= 900) {
 			tl30.resume();
 		}
-		if ($(window).scrollTop() >= 1200 && $(window).scrollTop() <= 1700) {
+		if (activeSection('suitable_for_landing', 100, 0)) {
 			tl31.resume();
 		}
 		if ($(window).scrollTop() >= 1900 && $(window).scrollTop() <= 2900) {
@@ -379,9 +379,11 @@ function allAnim() {
 		if (window.matchMedia("(max-width: 1200px)").matches) {
 			if (this.activeSection('what_tasks_are_performed', 1200, 0)) {
 				this.tl38.resume();
+
 			}
 		} else {
 			if (this.activeSection('what_tasks_are_performed', 500, 0)) {
+				console.log($('this'));
 				this.tl38.resume();
 			}
 		}
@@ -521,11 +523,11 @@ function allAnim() {
 			tl77.resume();
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
-			if ($(window).scrollTop() >= 6500) {
+			if (activeSection('book_now', 1200, 0)) {
 				tl78.resume();
 			}
 		} else {
-			if ($(window).scrollTop() >= 7100) {
+			if (activeSection('book_now', 500, 0)) {
 				tl78.resume();
 			}
 		}

@@ -1260,12 +1260,24 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .our_achievements.divine_design .suitable_for_landing_items{margin-bottom:180px}
 .our_achievements.divine_design .suitable_for_landing_item{margin-bottom:22px}
 .our_achievements.divine_design .cost_of_online_store_bot_decor svg{bottom:-35px}
-.what_else_do.designer_cost_of_services{background-color:#03142e}
+.what_else_do.designer_cost_of_services{background-color:#03142e;min-height:480px;padding-bottom:100px}
 .what_else_do.designer_cost_of_services h2{margin-top:130px}
-.what_else_do.designer_cost_of_services .table{width:1030px;margin-left:115px;padding-left:30px;text-align:left}
-.what_else_do.designer_cost_of_services .table thead th:first-of-type{width:500px}
+.what_else_do.designer_cost_of_services .table{width:1030px;margin-left:115px;text-align:left}
+.what_else_do.designer_cost_of_services .table thead tr{border-bottom:1px solid #354358}
+.what_else_do.designer_cost_of_services .table thead th{padding:10px 0;font-size:18px;font-family:Amazing_Grotesk_Ultra,Arial,sans-serif;color:#eed350}
+.what_else_do.designer_cost_of_services .table thead th:first-of-type{padding:10px 0 10px 30px;width:500px}
+.what_else_do.designer_cost_of_services .table thead th:nth-of-type(2){width:200px}
+.what_else_do.designer_cost_of_services .table tbody tr.empty{height:15px}
+.what_else_do.designer_cost_of_services .table tbody tr:nth-last-of-type(1) td{border-bottom:1px solid #354358;padding:0}
+.what_else_do.designer_cost_of_services .table tbody td{padding:12px 0;font-size:24px;font-family:Amazing_Grotesk_Ultra,Arial,sans-serif}
+.what_else_do.designer_cost_of_services .table tbody td:first-of-type{padding:12px 0 12px 30px}
 .what_else_do.designer_cost_of_services .table button{width:270px;height:52px;line-height:52px;vertical-align:middle;-webkit-transition:.5s;transition:.5s}
 .what_else_do.designer_cost_of_services .table button:focus{outline:0}
+.what_else_do.like_creating_masterpiece{min-height:400px;padding-top:90px;padding-bottom:95px}
+.what_else_do.like_creating_masterpiece h2{margin-top:0;margin-bottom:50px;text-transform:none;line-height:1.2}
+.what_else_do.like_creating_masterpiece .like_creating_masterpiece_item{width:370px;margin-right:30px;text-align:center;float:left}
+.what_else_do.like_creating_masterpiece .like_creating_masterpiece_item_img{margin-bottom:10px}
+.what_else_do.like_creating_masterpiece .like_creating_masterpiece_item_txt p{width:100%}
 .footer{min-height:170px;background-color:#142131;color:#fff;font:22px Amazing_Grotesk_Ultra,Arial,sans-serif;line-height:1.6}
 .footer.seo .footer_nav{margin-top:-30px}
 .footer .copyright{display:inline-block;margin-top:55px;margin-left:10px;text-transform:uppercase;font-size:20px}

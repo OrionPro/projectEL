@@ -25,7 +25,9 @@ $(window).scroll(function () {
 
 });
 // Функция для определения, какая секция активная
-function activeSection(section, startTop = 0, startBotton = 0) {
+function activeSection(section, startTop, startBotton) {
+	if (typeof startTop === 'undefined') startTop = 0;
+	if (typeof startBotton === 'undefined') startBotton = 0;
 	section = '.' + section;
 	if ($(section).offset() !== undefined) {
 		var topPosition = $(section).offset().top - startTop,

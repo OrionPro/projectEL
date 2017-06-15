@@ -281,12 +281,12 @@ function allAnim() {
 			tl9.resume();
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {
-			if ($(window).scrollTop() >= 4600) {
-				tl10.resume();
+			if (activeSection('book_now', 1200, 0)) {
+				this.tl10.resume();
 			}
 		} else {
-			if ($(window).scrollTop() >= 5600) {
-				tl10.resume();
+			if (activeSection('book_now', 500, 0)) {
+				this.tl10.resume();
 			}
 		}
 		if (window.matchMedia("(max-width: 1200px)").matches) {

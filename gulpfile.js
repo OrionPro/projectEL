@@ -11,7 +11,7 @@ var 	gulp         = require('gulp'),
 		spritesmith  = require('gulp.spritesmith');
 		livereload  = require('gulp-livereload');
 
-gulp.task('browser-sync', ['styles', 'scripts'], function() {
+gulp.task('browser-sync', ['styles', 'libs', 'scripts'], function() {
 		browserSync.init({
 				server: {
 						baseDir: "app"
@@ -59,7 +59,7 @@ gulp.task('sprite', function() {
     spriteData.css.pipe(gulp.dest('sprite/')); // путь, куда сохраняем стили
 });
 
-gulp.task('scripts', function() {
+gulp.task('libs', function() {
 	return gulp.src([
 		'app/libs/modernizr/modernizr.js',
 		'app/libs/jquery/jquery-1.12.4.min.js',
@@ -76,14 +76,22 @@ gulp.task('scripts', function() {
 		'app/libs/matchMedia/matchMedia.addListener.js'
 		])
 		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
+		.pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('app/js/'));
 });
-
+gulp.task('scripts', function() {
+	return gulp.src([
+		"js/common.js"
+		])
+		.pipe(uglify()) //Minify main.js
+		.pipe(gulp.dest('app/js/'))
+		.pipe(livereload());
+});
 gulp.task('watch', function () {
 	 var server = livereload({ start: true });	
 	gulp.watch('sass/*.sass', ['styles']);
-	gulp.watch('app/libs/**/*.js', ['scripts']);
+	gulp.watch('app/libs/**/*.js', ['libs']);
+	gulp.watch('app/js/*.js', ['scripts']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 });

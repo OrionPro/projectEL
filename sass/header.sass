@@ -313,7 +313,6 @@ section
 		font-size: 18px
 		color: $auxiliary_color
 // конец модального
-.main_content_item_img
 
 // Header 
 .header
@@ -321,9 +320,11 @@ section
 	min-height: 90px
 	background-color: #001027
 	text-align: center
+	.row
+		display: flex
+		flex-direction: row
 .header_logo
-	display: inline-block
-	float: left
+	display: inline-flex
 	margin-top: 15px
 	margin-left: 13px
 	a
@@ -334,6 +335,8 @@ section
 .header_nav
 	display: inline-block
 	position: relative
+	margin-right: auto
+	margin-left: auto
 	ul
 		padding: 0
 		margin: 0 0 0 60px
@@ -386,7 +389,9 @@ section
 				&:focus
 					text-decoration: none
 
-
+.header-right
+	display: inline-flex
+	align-items: center
 .header_modal
 	display: inline-block
 	a

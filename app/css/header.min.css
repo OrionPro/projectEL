@@ -743,20 +743,22 @@ section{margin-bottom:-2px}
 .close{position:absolute;right:30px;top:70px;width:20px;height:20px;display:block}
 .close .fa{font-size:18px;color:#d45b3e}
 .header{width:100%;min-height:90px;background-color:#001027;text-align:center}
-.header_logo{display:inline-block;float:left;margin-top:15px;margin-left:13px}
+.header .row{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}
+.header_logo{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;margin-top:15px;margin-left:13px}
 .header_logo a:hover{color:#eed350}
-.header_nav{display:inline-block;position:relative}
+.header_nav{display:inline-block;position:relative;margin-right:auto;margin-left:auto}
 .header_nav ul{padding:0;margin:0 0 0 60px}
 .header_nav ul.dropdown{width:330px;display:none;background-color:#001027;position:absolute;top:55px;left:-195px;padding:25px 0 0 40px;z-index:10}
 .header_nav ul.dropdown li{display:table;margin:20px 0;line-height:35px;position:relative}
-.header_modal,.header_nav ul li,.header_nav ul li a,.header_phone{display:inline-block}
 .header_nav ul.dropdown li a{font-size:14px;text-transform:none}
 .header_nav ul.dropdown li a:hover:after{width:100%}
 .header_nav ul.dropdown li a:after{content:"";width:0;height:1px;position:absolute;bottom:0;left:0;right:0;background:#334052;-webkit-transition:.5s;transition:.5s}
 .header_modal a,.header_nav ul li a{-webkit-transition:.5s;text-transform:uppercase}
-.header_nav ul li{list-style:none;margin-right:24px;position:relative;line-height:90px}
-.header_nav ul li a{color:#fff;font:15px Amazing_Grotesk_Ultra,Arial,sans-serif;transition:.5s}
+.header_nav ul li{list-style:none;display:inline-block;margin-right:24px;position:relative;line-height:90px}
+.header_nav ul li a{display:inline-block;color:#fff;font:15px Amazing_Grotesk_Ultra,Arial,sans-serif;transition:.5s}
 .header_nav ul li a:hover{color:#eed350}
+.header-right{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+.header_modal,.header_phone{display:inline-block}
 .header_modal a{padding:10px 8px;color:#000;background-color:#eed350;transition:.5s}
 .header_modal a:hover{background-color:#c45237}
 .header_phone{vertical-align:middle;margin-left:20px}

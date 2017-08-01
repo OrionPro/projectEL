@@ -2622,15 +2622,20 @@ body textarea:required:valid
 
 // Секия footer 
 .footer
-	min-height: 170px
+	padding-top: 32.5px
+	padding-bottom: 32.5px
 	background-color: #142131
 	@include font(#fff, 22px, $font_Amazing_Grotesk_Ultra)
+	.row
+		display: flex
+		flex-direction: row
+		align-items: center
 	&.seo
 		.footer_nav
 			margin-top: -30px
 	.copyright
-		display: inline-block
-		margin-top: 55px
+		display: inline-flex
+		flex-direction: column
 		margin-left: 10px
 		text-transform: uppercase
 		font-size: 20px
@@ -2640,10 +2645,10 @@ body textarea:required:valid
 			color: #b0a79e
 			text-transform: none
 	.footer_nav
-		display: inline-block
-		vertical-align: middle
-		margin-left: 46px
-		margin-top: -65px
+		display: inline-flex
+		align-items: center
+		margin-right: auto
+		margin-left: auto
 		ul
 			padding: 0
 			margin: 0
@@ -2664,13 +2669,11 @@ body textarea:required:valid
 	.footer_phone_mail
 		width: 280px
 		display: inline-block
-		vertical-align: top
-		margin-left: 31px
-		margin-top: 30px
 		.header_phone_country
+			display: flex
 			a
 				transition: 0.5s
-				margin-right: 75px
+				margin-right: auto
 				&:last-of-type
 					margin-right: 0
 				&:hover
@@ -2702,7 +2705,6 @@ body textarea:required:valid
 			color: $main_color
 			margin-right: 14px
 	.footer_social
-		margin-top: -35px
 		text-align: center
 		font-size: 24px
 		clear: both

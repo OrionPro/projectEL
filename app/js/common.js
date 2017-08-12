@@ -1593,7 +1593,7 @@ function filterBtn(arrMore) {
 	var limit = 0,
 		arr = [],
 		i = 0, // для итерации id в шаблон
-		j = parseInt($($(".portfolio_item_wrap .portfolio_item")[$(".portfolio_item_wrap .portfolio_item").length - 1]).attr("data-item"));
+		j = $(".portfolio_item_wrap .portfolio_item").last().attr("data-item"); // узнаём при клике сколько всего выведено чтобы начать отчёт от последнего
 	//обнуляем id при клике если они есть
 	$(".portfolio_item_wrap .portfolio_item").each(function () {
 		var index = $(this).attr('id');

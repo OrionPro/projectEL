@@ -1720,7 +1720,8 @@ function filterBtn(arrMore) {
 	var limit = 0,
 		arr = [],
 		i = 0, // для итерации id в шаблон
-		j = parseInt($($(".portfolio_item_wrap .portfolio_item")[$(".portfolio_item_wrap .portfolio_item").length - 1]).attr("data-item"));
+		//j = parseInt($($(".portfolio_item_wrap .portfolio_item")[$(".portfolio_item_wrap .portfolio_item").length - 1]).attr("data-item")); // версия Ильи
+		j = $(".portfolio_item_wrap .portfolio_item").last().attr("data-item"); // проще в понимании версия
 	//обнуляем id при клике если они есть
 	$(".portfolio_item_wrap .portfolio_item").each(function () {
 		var index = $(this).attr('id');

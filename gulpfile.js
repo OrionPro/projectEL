@@ -3,15 +3,13 @@ var 	gulp         = require('gulp'),
 		autoprefixer = require('gulp-autoprefixer'),
 		minifycss    = require('gulp-minify-css'),
 		rename       = require('gulp-rename'),
-		browserSync  = require('browser-sync').create(),		
+		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
 		uglify       = require('gulp-uglify');
-		imagemin 	 = require('gulp-imagemin');
-		imageminSvgo = require('imagemin-svgo');
 		spritesmith  = require('gulp.spritesmith');
 		livereload  = require('gulp-livereload');
 
-gulp.task('browser-sync', ['styles', 'scripts'], function() {
+gulp.task('browser-sync', ['styles', 'libs', 'scripts'], function() {
 		browserSync.init({
 				server: {
 						baseDir: "app"
@@ -34,12 +32,6 @@ gulp.task('styles', function () {
 	.pipe(livereload());
 });
 
-gulp.task('compress-img', function () {
-	return gulp.src('app/img/*')
-        .pipe(imagemin({ proressive: true }))
-        .pipe(gulp.dest('app/img'));
-});
-
 gulp.task('default', function () {
     return gulp.src('app/img/*.svg')
         .pipe(imageminSvgo()())
@@ -59,7 +51,7 @@ gulp.task('sprite', function() {
     spriteData.css.pipe(gulp.dest('sprite/')); // путь, куда сохраняем стили
 });
 
-gulp.task('scripts', function() {
+gulp.task('libs', function() {
 	return gulp.src([
 		'app/libs/modernizr/modernizr.js',
 		'app/libs/jquery/jquery-1.12.4.min.js',
@@ -76,16 +68,24 @@ gulp.task('scripts', function() {
 		'app/libs/matchMedia/matchMedia.addListener.js'
 		])
 		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
+		.pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('app/js/'));
 });
-
+gulp.task('scripts', function() {
+	return gulp.src([
+		"js/common.js"
+		])
+		.pipe(uglify()) //Minify main.js
+		.pipe(gulp.dest('app/js/'))
+		.pipe(livereload());
+});
 gulp.task('watch', function () {
 	 var server = livereload({ start: true });	
 	gulp.watch('sass/*.sass', ['styles']);
-	gulp.watch('app/libs/**/*.js', ['scripts']);
+	gulp.watch('app/libs/**/*.js', ['libs']);
+	gulp.watch('app/js/*.js', ['scripts']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['browser-sync', 'watch', 'compress-img', 'sprite']);
+gulp.task('default', ['browser-sync', 'watch', 'sprite']);

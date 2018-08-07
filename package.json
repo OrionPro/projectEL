@@ -24,6 +24,7 @@
 		"gulp.spritesmith": "^6.2.1",
 		"hoek": "^5.0.3",
 		"imagemin-svgo": "^5.2.0",
+		"lodash": "^4.17.10",
 		"static-eval": "^2.0.0"
 	}
 }
